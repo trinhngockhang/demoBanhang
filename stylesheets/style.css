@@ -563,6 +563,7 @@ ul.flat-support li {
 	display:inline-block;
 	line-height:38px;
 	height:37px;
+	padding-right: 7px;
 }
 
 ul.flat-support li a {
@@ -759,7 +760,7 @@ ul.flat-unstyled li > ul > li > a {
 /* Top Search */
 .top-search {
 	padding:27px 0;
-	padding-left:47px;
+	padding-left:0px;
 	margin-right:-21px;
 }
 
