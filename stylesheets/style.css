@@ -3316,6 +3316,10 @@ ol.comment-list li.comment .comment-text .comment-content p {
 	border-bottom-color:transparent!important;
 }
 
+.row.advantage2 {
+	padding-top: 15px;
+}
+
 @-webkit-keyframes effect-2 {
 	from {
 		-webkit-transform:rotate(0deg);
