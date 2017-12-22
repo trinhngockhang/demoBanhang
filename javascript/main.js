@@ -929,7 +929,7 @@
                     $(this).parent('.box-search').children('.search-suggestions').css({
                         opacity: '1',
                         visibility: 'visible',
-                        top: '77px'
+                        top: '50px'
                     });
                 }));
                 $( "form.form-search .box-search input" ).on('blur', (function() {
