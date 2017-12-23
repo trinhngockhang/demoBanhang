@@ -1585,7 +1585,7 @@
 .imagebox.style4 {
 	padding:29px 16px 20px;
 	text-align:left;
-	border:2px solid #e5e5e5;
+	border:2px solid #0000;
 	border-radius:8px;
 	min-height:auto;
 	-webkit-transition:all 0.3s ease-in-out;
@@ -1597,6 +1597,10 @@
 
 .imagebox:hover.style4 {
 	border:2px solid #f28b00;
+}
+.imagebox:hover.style4 .box-cart.style2.home .btn-add-cart.home a {
+	
+    visibility: unset;
 }
 
 

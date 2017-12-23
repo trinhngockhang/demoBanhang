@@ -200,7 +200,7 @@ body {
     height: 68px;
 }
 img.img_tittle {
-	height: 86%;
+	height: 68%;
     width: 100%;
 }
 a {
@@ -241,6 +241,7 @@ img {
 }
 .box-cart.style2.home .btn-add-cart.home a {
 	width: 100%;
+	visibility: hidden;
 	height:100%;
 }
 
