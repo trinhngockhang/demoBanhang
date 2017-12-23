@@ -380,7 +380,7 @@
 
         var slideMostViewer_s3 = function() {
             $(".owl-carousel-6").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: true,
                 dots: true,
                 responsive: true,
@@ -416,7 +416,7 @@
 
         var slideBrand = function() {
             $(".owl-carousel-5").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: false,
                 dots: false,
                 responsive: true,
@@ -446,7 +446,7 @@
 
         var slideAccessories = function() {
             $(".owl-carousel-7").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: true,
                 dots: false,
                 responsive: true,
@@ -458,7 +458,7 @@
 
         var slideTeam = function() {
             $(".owl-carousel-8").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: false,
                 dots: true,
                 responsive: true,
@@ -492,7 +492,7 @@
 
         var slideBrand_s2 = function() {
             $(".owl-carousel-9").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: false,
                 dots: true,
                 responsive: true,
@@ -530,7 +530,7 @@
 
         var slideProduct_s2 = function() {
             $(".owl-carousel-10").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: false,
                 dots: true,
                 responsive: true,
@@ -566,7 +566,7 @@
 
         var slider_s2 = function() {
             $(".owl-carousel-11").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: false,
                 dots: true,
                 responsive: true,
@@ -578,7 +578,7 @@
 
         var slideProduct_s3 = function() {
             $(".owl-carousel-12").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: true,
                 dots: false,
                 responsive: true,
@@ -590,7 +590,7 @@
 
         var slideMostViewer_s4 = function() {
             $(".owl-carousel-13").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: true,
                 dots: false,
                 responsive: true,
@@ -626,7 +626,7 @@
 
         var slideProduct_s4 = function() {
             $(".owl-carousel-14").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: true,
                 dots: false,
                 responsive: true,
@@ -638,7 +638,7 @@
 
         var slideProduct_s5 = function() {
             $(".owl-carousel-15").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: true,
                 dots: true,
                 responsive: true,
@@ -650,7 +650,7 @@
 
         var slideProduct_s6 = function() {
             $(".owl-carousel-16").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: false,
                 dots: true,
                 responsive: true,
@@ -662,7 +662,7 @@
 
         var slideTestimonial = function() {
             $(".owl-carousel-17").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: false,
                 responsive: true,
                 margin:0,
@@ -673,7 +673,7 @@
 
         var slideProduct_s7 = function() {
             $(".owl-carousel-18").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: false,
                 responsive: true,
                 margin:0,
@@ -684,7 +684,7 @@
 
         var slideProduct_s8 = function() {
             $(".owl-carousel-19").owlCarousel({
-                autoplay:true,
+                autoplay:false,
                 nav: false,
                 dots: true,
                 responsive: true,

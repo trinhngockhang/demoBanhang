@@ -413,7 +413,9 @@
 }
 
 @media only screen and (max-width:991px) {
-	
+	#li-top {
+		display: none;
+	}
 	.header-middle #logo.style1 {
 		line-height:70px;margin-bottom:0px;
 	}

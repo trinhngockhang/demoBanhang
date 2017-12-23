@@ -4473,7 +4473,7 @@ input[type="checkbox"]:checked + label:before {
 .box-cart.style2 .btn-add-cart a {
 	display:inline-block;
 	height:55px;
-	line-height:55px;
+	line-height:38px;
 	text-align:center;
 	color:#fff;
 	background-color:#f92400;
