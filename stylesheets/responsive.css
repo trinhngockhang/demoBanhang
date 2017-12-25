@@ -413,6 +413,10 @@
 }
 
 @media only screen and (max-width:991px) {
+
+	.banner-mobile {
+		display: inline-block;
+	}
 	#li-top {
 		display: none;
 	}
@@ -456,7 +460,9 @@
 	.flat-product-content .container {
 		padding:30px 15px;
 	}
-
+	section.flat-row.flat-banner-box {
+		display: none;
+	}
 	.box-cart .inner-box > a > .price {
 		display:none;
 	}
