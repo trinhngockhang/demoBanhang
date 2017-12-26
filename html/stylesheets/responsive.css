@@ -91,7 +91,9 @@
 }
 
 @media only screen and (min-width:1200px) and (max-width:1366px) {
-	
+	.img-submenu-mobile {
+		display: none;
+	}
 	#mega-menu > ul.menu > li .drop-menu {
 		left:258px;width:879px;
 	}
@@ -395,7 +397,9 @@
 }
 
 @media only screen and (min-width:992px) {
-	
+	.img-submenu-mobile {
+		display: none;
+	}
 	ul.submenu {
 		word-spacing:2px;
 	}
@@ -414,6 +418,9 @@
 }
 
 @media only screen and (max-width:991px) {
+	.img-submenu-mobile {
+		display: inline;
+	}
 	#header-mobile {
 		display:block;
 	}

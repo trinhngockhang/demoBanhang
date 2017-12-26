@@ -5521,6 +5521,7 @@ ul.menu li.column-1 .submenu > li > a i {
 }
 .img-submenu-mobile {
 	padding-right: 10px;
+	display:none;
 }
 #mainnav-mobi ul > li > a {
 	text-decoration:none;
