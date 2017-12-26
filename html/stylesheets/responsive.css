@@ -335,7 +335,7 @@
 	}
 
 	.drop-menu > .one-third:first-child {
-		padding-left:15px;n
+		padding-left:15px;
 	}
 
 	.box-right .img-line {
@@ -420,7 +420,9 @@
 	#header {
 		display: none;
 	}
-
+	.submenu {
+		display: none;
+	}
 	.banner-mobile {
 		display: inline-block;
 	}
@@ -506,6 +508,7 @@
 
 	.mainnav ul.menu > li:hover > .submenu {
 		top:100%;
+		display: block;
 	}
 
 	#mainnav-mobi ul > li > a >.submenu {
@@ -537,7 +540,6 @@
 	.box-right .img-line img:first-child,
 	.box-left .img-line img:first-child,
 	.flat-newsletter .form-newsletter .right {
-		display:none;
 	}
 
 	#mainnav-mobi ul > li > a >.submenu li a {
@@ -1171,9 +1173,6 @@
 		border-bottom:none;
 	}
 
-	.banner-box {
-		display:none;
-	}
 
 	.flat-newsletter .form-newsletter .left .title {
 		float:none;margin-right:0px;margin-bottom:15px;

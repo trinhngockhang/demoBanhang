@@ -98,7 +98,6 @@
                         $('#header').after($mobileMenu);
                         hasChildMenu.children('ul').hide();
                         hasChildMenu.children('a').after('<span class="btn-submenu"></span>');
-                        hasChildMenuMega.children('div.submenu').hide();
                         $('ul.submenu-child').hide();
                         hasChildMenuMega.find('h3').append('<span class="btn-submenu-child"></span>');
                         $('.btn-menu').removeClass('active');
