@@ -305,7 +305,7 @@
                 responsive: true,
                 margin:0,
                 loop:true,
-                items:1
+                items:2
             });
         };// slide Counter
 
@@ -317,7 +317,7 @@
                 responsive: true,
                 margin:3,
                 loop:true,
-                items:4,
+                items:5,
                 responsive:{
                     0:{
                         items: 2,
@@ -337,10 +337,10 @@
                          margin:20,
                     },
                     991:{
-                        items: 4
+                        items: 5
                     },
                     1200: {
-                        items: 4
+                        items: 5
                     }
                 }
             });
@@ -357,7 +357,7 @@
                 items:4,
                 responsive:{
                     0:{
-                        items: 1,
+                        items: 2,
                         dots: false,
                         nav: true,
                     },
@@ -389,7 +389,7 @@
                 items:7,
                 responsive:{
                     0:{
-                        items: 1,
+                        items: 2,
                         dots: false
                     },
 
@@ -467,7 +467,7 @@
                 items:4,
                 responsive:{
                     0:{
-                        items: 1,
+                        items: 2,
                         dots: false,
                         nav: true,
                     },
@@ -501,7 +501,7 @@
                 items:6,
                 responsive:{
                     0:{
-                        items: 1,
+                        items: 2,
                         dots: false,
                         nav: true,
                     },

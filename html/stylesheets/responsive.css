@@ -414,6 +414,10 @@
 
 @media only screen and (max-width:991px) {
 
+	#header {
+		display: none;
+	}
+
 	.banner-mobile {
 		display: inline-block;
 	}
@@ -476,7 +480,7 @@
 	}
 
 	.top-search form.form-search .box-search input {
-		padding-left:140px;
+		padding-left:73px;
 	}
 
 	.btn-menu,
@@ -1669,11 +1673,9 @@
 	}
 
 	.top-search form.form-search .cat-wrap {
-		display:none;
 	}
 
 	.top-search form.form-search .box-search input {
-		padding-left:15px;
 	}
 
 	.box-cart .inner-box .dropdown-box {
