@@ -5516,14 +5516,17 @@ ul.menu li.column-1 .submenu > li > a i {
 	position:relative;
 	text-align:left;
 	cursor:pointer;
+	border-bottom: solid;
 	display:block;
 }
-
+.img-submenu-mobile {
+	padding-right: 10px;
+}
 #mainnav-mobi ul > li > a {
 	text-decoration:none;
 	height:50px;
 	line-height:50px;
-	padding:0 20px;
+	padding:0 2px;
 	color:black;
 	border:none;
 }
