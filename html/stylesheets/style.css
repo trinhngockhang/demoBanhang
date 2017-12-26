@@ -306,7 +306,8 @@ img.img_tittle {
     overflow: hidden;
 }
 .row.header-mobile {
-	padding-left: 6%;
+	margin: 0;
+	box-shadow: 0 0 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
 }
 a {
 	text-decoration:none;
@@ -1047,7 +1048,9 @@ ul.flat-unstyled li > ul > li > a {
 }
 
 #header-mobile {
-	padding-left: 23px;
+	padding-left: 6px;
+	padding-right: 6px;
+    padding-top: 10px;
 }
 .cart-span-mobile {
 	position: absolute;
@@ -4489,14 +4492,16 @@ ul.flat-unstyled li > ul > li > a {
 
 .top-search form.form-search .box-search .btn-search {
 	position:absolute;
-	top:11px;
-	right:30px;
+	top:0px;
+	right:0px;
 }
 
 .cart-mobile {
 	padding-left: 26px;
 }
-
+.btn-menu.mobile {
+	dislay:block;
+}
 .top-search form.form-search .box-search .search-suggestions {
 	width:800px;
 	overflow:hidden;
@@ -4718,6 +4723,44 @@ ul.flat-unstyled li > ul > li > a {
 	-ms-transition:all 0.3s ease-in-out;
 	-o-transition:all 0.3s ease-in-out;
 	transition:all 0.3s ease-in-out;
+}
+
+ .inner-box:hover > .dropdown-box.mobile {
+	top:55px;
+	opacity:1;
+	visibility:visible;
+	-webkit-transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-ms-transition:all 0.3s ease-in-out;
+	-o-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+.inner-box .dropdown-box.mobile {
+	padding:25px 20px 32px;
+	position:absolute;
+	background-color:#fff;
+	border-radius:8px;
+	top:53px;
+	width:332px;
+	right:0;
+	opacity:0;
+	visibility:hidden;
+	z-index:99;
+	box-shadow:0px 2px 3px 0px rgba(72, 72, 72, 0.15);
+	-webkit-transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-ms-transition:all 0.3s ease-in-out;
+	-o-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+
+#header-mobile{
+display:none;
+}
+.col-2.inner-box {
+	padding: 0px;
+	padding-top:8px;
+	padding-left: 8px;
 }
 
 .box-cart .inner-box .dropdown-box:before {
@@ -5383,6 +5426,7 @@ ul.menu li.column-1 .submenu > li > a i {
 	left:0;
 	z-index:1000;
 	background-color:#222222;
+	top: 60px;
 }
 
 #mainnav-mobi > ul {
@@ -5459,7 +5503,20 @@ ul.menu li.column-1 .submenu > li > a i {
 #mainnav-mobi ul.menu li.has-mega-menu .submenu .row:not(:last-child) {
 	margin:0;
 }
-
+.icon-cart.mobile span{
+	position: absolute;
+    background-color: #f28b00;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    color: #f4f4f4;
+    font-size: 11px;
+    border-radius: 50%;
+}
+#input-mobile {
+	border:none;
+	padding:0;
+}
 /* Button Menu */
 .btn-menu,
 .btn-menu-mega {
@@ -5471,7 +5528,7 @@ ul.menu li.column-1 .submenu > li > a i {
 	top:10px;
 	width:25px;
 	height:25px;
-	border:2px solid #fff;
+	border:2px solid rgb(14, 13, 13);
 	padding:15px 18px 17px;
 	border-radius:4px;
 	z-index:8;
