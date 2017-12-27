@@ -4305,7 +4305,7 @@ ul.flat-unstyled li > ul > li > a {
 }
 
 .lazy-image__container.home-category-list__category-grid-thumbnail {
-    max-height: 221px;
+    max-height: 100px;
 }
 
 .flat-row.flat-banner-box.mobile {
@@ -4374,7 +4374,7 @@ img.js-responsive-image.img-responsive.img__simple-banner {
 
 .home-category-list__category-grid-name {
 	text-align: center;
-	color:#f28b00;
+	color:#000000;
 	padding-top: 29px;
 }
 .show-search button:before {
@@ -5592,7 +5592,7 @@ border: 1px solid #f28b00;
 
 #mainnav-mobi ul.menu li.has-mega-menu .submenu {
 	background:white;
-	margin-top: -355px;
+	margin-top: -357px;
     margin-left: 27%;
 	right:0px;
 	width: 70%;
