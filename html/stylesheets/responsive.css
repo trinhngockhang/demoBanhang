@@ -422,6 +422,12 @@
 }
 
 @media only screen and (max-width:991px) {
+	.sub-child {
+		height: 100%;
+		width: 100%;
+		overflow-y: scroll;
+		padding-right: 17px;
+	}
 	.img-submenu-mobile {
 		display: inline;
 	}
@@ -432,6 +438,7 @@
 		display: none;
 	}
 	.submenu {
+		overflow: hidden;
 	}
 	.banner-mobile {
 		display: inline-block;
