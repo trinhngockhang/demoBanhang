@@ -422,6 +422,9 @@
 }
 
 @media only screen and (max-width:991px) {
+	#mainnav > ul.menu > li.has-mega-menu.mobile {
+		display: block;
+	}
 	.sub-child {
 		height: 100%;
 		width: 100%;

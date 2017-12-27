@@ -1152,7 +1152,9 @@ ul.flat-unstyled li > ul > li > a {
 	margin-bottom:28px;
 	overflow:hidden;
 }
-
+#mainnav > ul.menu > li.has-mega-menu.mobile {
+	display: none;
+}
 .search-suggestions .box-suggestions ul li .image {
 	width:40px;
 	float:left;
