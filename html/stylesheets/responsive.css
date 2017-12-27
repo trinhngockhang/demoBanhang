@@ -422,6 +422,12 @@
 }
 
 @media only screen and (max-width:991px) {
+	#mainnav-mobi ul > li > a {
+		line-height: 28px;
+	}
+	p.menu-item {
+		margin-left: 35px;
+	}
 	#mainnav > ul.menu > li.has-mega-menu.mobile {
 		display: block;
 	}
@@ -433,7 +439,8 @@
 	}
 	.img-submenu-mobile {
 		max-width: 34px;
-		display: inline;
+		display: block;
+		margin-left: 48px;
 	}
 	#header-mobile {
 		display:block;
