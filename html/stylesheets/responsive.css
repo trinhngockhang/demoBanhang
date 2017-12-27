@@ -397,6 +397,10 @@
 }
 
 @media only screen and (min-width:992px) {
+	.banner-mobile {
+		display: block;
+		padding: 4px 99px;
+	}
 	.img-submenu-mobile {
 		display: none;
 	}
