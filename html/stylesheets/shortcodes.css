@@ -3189,6 +3189,7 @@ main#home-4 {
 
 .owl-carousel-3.owl-theme .owl-controls .owl-dots {
 	padding:20px 0 3px;
+	display: none;
 }
 
 .owl-carousel-3.owl-theme.style2 .owl-controls {

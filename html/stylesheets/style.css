@@ -3366,20 +3366,49 @@ ol.comment-list li.comment .comment-text .comment-content p {
 	color:#484848;
 	margin-bottom:12px;
 }
-
+.cover {
+	background: #e86363;
+    height: 100%;
+	background-image: url("/html/images/slider/cover.jpg");
+}
 .comment-respond .form-comment form div input {
 	height:40px;
 }
-
+img.avatar {
+    max-height: 243px;
+    width: 100%;
+}
 .comment-respond .form-comment form .comment-form-comment {
 	width:88.4%;
 }
-
+.info-detail {
+    display: block;
+    padding-bottom: 5px;
+    padding-top: 26px;
+}
+p.info-cate {
+    padding: 0px 8px;
+    display: inline;
+    font-size: 15px;
+}
+.div-info{
+	display:inline;
+}
+p.info{
+	display:inline;
+	font-size: 15px;
+	color:rgba(240, 111, 6, 0.842)
+}
+.icon-info {
+	display:inline;
+}
 .comment-respond .form-comment form .comment-form-comment textarea {
 	height:158px;
 	border-radius:10px;
 }
-
+.row.info {
+    padding-left: 36px;
+}
 .comment-respond .form-comment form .btn-submit button {
 	background-color:#f92400;
 	font-family:'Open Sans';
@@ -3602,10 +3631,10 @@ body {
 
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, caption, canvas, center, cite, code,
 dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, form, footer, header, hgroup, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav,object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, tt, table, tbody, textarea, tfoot, thead, time, tr, th, td, u, ul, var, video {
-	font-family:inherit;
+	font-family:roboto;
 	font-size:100%;
-	font-weight:inherit;
-	font-style:inherit;
+	font-weight:roboto;
+	font-style:roboto;
 	vertical-align:baseline;
 	margin:0;
 	padding:0;
@@ -3729,7 +3758,7 @@ input::-moz-focus-inner {
 	left: 18px;
 }
 body {
-	font-family:inherit;
+	font-family:roboto;
 	font-size:13px;
 	line-height:24px;
 	font-weight:400;
@@ -4644,6 +4673,10 @@ img.js-responsive-image.img-responsive.img__simple-banner {
 .search-suggestions .box-suggestions ul li .info-product .price .regular {
 	font-size:13px;
 }
+.row.shop {
+	height: 100%;
+    padding: 25px 108px;
+}
 
 .search-suggestions .box-cat {
 	width:45%;
@@ -4661,7 +4694,7 @@ img.js-responsive-image.img-responsive.img__simple-banner {
 
 /* Box Cart */
 .box-cart {
-	text-align: right;
+	text-align: center;
     padding: 12px 0;
 }
 

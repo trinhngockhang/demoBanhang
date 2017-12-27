@@ -312,7 +312,7 @@
             $(".owl-carousel-3").owlCarousel({
                 autoplay:false,
                 nav: true,
-                dots: true,
+                dots : false,
                 responsive: true,
                 margin:3,
                 loop:true,
@@ -349,7 +349,7 @@
             $(".owl-carousel-4").owlCarousel({
                 autoplay:false,
                 nav: false,
-                dots: true,
+                dots: false,
                 responsive: true,
                 margin:20,
                 loop:true,
@@ -381,7 +381,7 @@
             $(".owl-carousel-6").owlCarousel({
                 autoplay:false,
                 nav: true,
-                dots: true,
+                dots : false,
                 responsive: true,
                 margin:25,
                 loop:true,
@@ -459,7 +459,7 @@
             $(".owl-carousel-8").owlCarousel({
                 autoplay:false,
                 nav: false,
-                dots: true,
+                dots : false,
                 responsive: true,
                 margin:30,
                 loop:true,
@@ -493,7 +493,7 @@
             $(".owl-carousel-9").owlCarousel({
                 autoplay:false,
                 nav: false,
-                dots: true,
+                dots : false,
                 responsive: true,
                 margin:30,
                 loop:true,
@@ -531,7 +531,7 @@
             $(".owl-carousel-10").owlCarousel({
                 autoplay:false,
                 nav: false,
-                dots: true,
+                dots : false,
                 responsive: true,
                 margin:30,
                 loop:true,
@@ -567,7 +567,7 @@
             $(".owl-carousel-11").owlCarousel({
                 autoplay:false,
                 nav: false,
-                dots: true,
+                dots : false,
                 responsive: true,
                 margin:20,
                 loop:true,
@@ -639,7 +639,7 @@
             $(".owl-carousel-15").owlCarousel({
                 autoplay:false,
                 nav: true,
-                dots: true,
+                dots : false,
                 responsive: true,
                 margin:20,
                 loop:true,
@@ -651,7 +651,7 @@
             $(".owl-carousel-16").owlCarousel({
                 autoplay:false,
                 nav: false,
-                dots: true,
+                dots : false,
                 responsive: true,
                 margin:0,
                 loop:true,
@@ -685,7 +685,7 @@
             $(".owl-carousel-19").owlCarousel({
                 autoplay:false,
                 nav: false,
-                dots: true,
+                dots : false,
                 responsive: true,
                 margin:30,
                 loop:true,
