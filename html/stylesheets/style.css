@@ -3381,6 +3381,9 @@ img.avatar {
 	margin-top: -63px;
 	border: 4px solid #fff;
 }
+h2.home__title.home__title--section-5 {
+    padding: 17px;
+}
 .comment-respond .form-comment form .comment-form-comment {
 	width:88.4%;
 }
@@ -5565,6 +5568,7 @@ ul.menu li.column-1 .submenu > li > a i {
 }
 
 #mainnav-mobi > ul {
+	width: 102.35px;
 	display:block;
 	list-style:none;
 	margin:0;
@@ -5640,9 +5644,9 @@ border: 1px solid #f28b00;
 #mainnav-mobi ul.menu li.has-mega-menu .submenu {
 	background:white;
 	margin-top: -736px;
-    margin-left: 27%;
+    margin-left: 21%;
 	right:0px;
-	width: 70%;
+	width: 75%;
 	position: absolute;;
 	display: none;
 	float: right;
