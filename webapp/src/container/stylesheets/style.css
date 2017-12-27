@@ -2133,7 +2133,7 @@ ul.menu li.column-1 .submenu > li > a i {
 -------------------------------------------------------------- */
 .flat-breadcrumb {
 	border-bottom:1px solid #e5e5e5;
-	padding:16px 0;
+	/* padding:16px 0; */
 }
 
 .flat-breadcrumb ul.breadcrumbs li {
@@ -5571,7 +5571,7 @@ ul.menu li.column-1 .submenu > li > a i {
 -------------------------------------------------------------- */
 .flat-breadcrumb {
 	border-bottom:1px solid #e5e5e5;
-	padding:16px 0;
+	padding:1px 0;
 }
 
 .flat-breadcrumb ul.breadcrumbs li {

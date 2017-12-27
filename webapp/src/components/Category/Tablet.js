@@ -7,40 +7,29 @@ export default class Tablet extends React.Component {
                     <div className="main-shop">
                         <div className="wrap-imagebox">
                             <div className="flat-row-title">
-                                <h3>Mobile & Tablet</h3>
-                                <span>
-                                    Showing 1–15 of 20 results
-									</span>
-                                <div className="clearfix"></div>
-                            </div>
-                            <div className="sort-product">
-                                <ul className="icons">
-                                    <li>
-                                        <img src="./images/icons/list-1.png" alt="" />
-                                    </li>
-                                    <li>
-                                        <img src="./images/icons/list-2.png" alt="" />
-                                    </li>
-                                </ul>
-                                <div className="sort">
-                                    <div className="popularity">
-                                        <select name="popularity">
-                                            <option value="">Sort by popularity</option>
-                                            <option value="">Sort by popularity</option>
-                                            <option value="">Sort by popularity</option>
-                                            <option value="">Sort by popularity</option>
-                                        </select>
+                                <h3 className="TITLE">Điện thoại di động & Máy tính bảng</h3>
+                                
+                                <div className="sort-product" style={{float: 'right'}}>
+                                    <div className="sort" style={{float: 'left'}}>
+                                        <div className="popularity">
+                                            <select name="popularity">
+                                                <option value="">Độ phổ biến</option>
+                                                <option value="">Giá từ thấp đến cao</option>
+                                                <option value="">Giá từ cao đến thấp</option>
+                                        
+                                            </select>
+                                        </div>
+                                        <ul className="icons" style={{float: 'right'}}>
+                                            <li>
+                                                <img src="./images/icons/list-1.png" alt="" />
+                                            </li>
+                                            <li>
+                                                <img src="./images/icons/list-2.png" alt="" />
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div className="showed">
-                                        <select name="showed">
-                                            <option value="">Show 15</option>
-                                            <option value="">Show 15</option>
-                                            <option value="">Show 15</option>
-                                            <option value="">Show 15</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="clearfix"></div>
+                                   
+                                </div>    
                             </div>
                             <div className="tab-product">
                                 <div className="row sort-box">
@@ -73,15 +62,15 @@ export default class Tablet extends React.Component {
                                                 <div className="box-bottom">
                                                     <div className="btn-add-cart">
                                                         <a href="#" title="">
-                                                            <img src="./images/icons/add-cart.png" alt="" />Add to Cart
+                                                            <img src="./images/icons/add-cart.png" alt="" />Mua
 															</a>
                                                     </div>
                                                     <div className="compare-wishlist">
                                                         <a href="#" className="compare" title="">
-                                                            <img src="./images/icons/compare.png" alt="" />Compare
+                                                            <img src="./images/icons/compare.png" alt="" />Quan tâm
 															</a>
                                                         <a href="#" className="wishlist" title="">
-                                                            <img src="./images/icons/wishlist.png" alt="" />Wishlist
+                                                            <img src="./images/icons/wishlist.png" alt="" />Ưa chuộng
 															</a>
                                                     </div>
                                                 </div>
@@ -117,15 +106,15 @@ export default class Tablet extends React.Component {
                                                 <div className="box-bottom">
                                                     <div className="btn-add-cart">
                                                         <a href="#" title="">
-                                                            <img src="./images/icons/add-cart.png" alt="" />Add to Cart
+                                                            <img src="./images/icons/add-cart.png" alt="" />Mua
 															</a>
                                                     </div>
                                                     <div className="compare-wishlist">
                                                         <a href="#" className="compare" title="">
-                                                            <img src="./images/icons/compare.png" alt="" />Compare
+                                                            <img src="./images/icons/compare.png" alt="" />Quan tâm
 															</a>
                                                         <a href="#" className="wishlist" title="">
-                                                            <img src="./images/icons/wishlist.png" alt="" />Wishlist
+                                                            <img src="./images/icons/wishlist.png" alt="" />Ưa chuộng
 															</a>
                                                     </div>
                                                 </div>
@@ -162,15 +151,15 @@ export default class Tablet extends React.Component {
                                                 <div className="box-bottom">
                                                     <div className="btn-add-cart">
                                                         <a href="#" title="">
-                                                            <img src="./images/icons/add-cart.png" alt="" />Add to Cart
+                                                            <img src="./images/icons/add-cart.png" alt="" />Mua
 															</a>
                                                     </div>
                                                     <div className="compare-wishlist">
                                                         <a href="#" className="compare" title="">
-                                                            <img src="./images/icons/compare.png" alt="" />Compare
+                                                            <img src="./images/icons/compare.png" alt="" />Quan tâm
 															</a>
                                                         <a href="#" className="wishlist" title="">
-                                                            <img src="./images/icons/wishlist.png" alt="" />Wishlist
+                                                            <img src="./images/icons/wishlist.png" alt="" />Ưa chuộng
 															</a>
                                                     </div>
                                                 </div>
@@ -206,18 +195,18 @@ export default class Tablet extends React.Component {
                                                 <div className="box-bottom">
                                                     <div className="btn-add-cart">
                                                         <a href="#" title="">
-                                                            <img src="./images/icons/add-cart.png" alt="" />Add to Cart
+                                                            <img src="./images/icons/add-cart.png" alt="" />Mua
 															</a>
                                                     </div>
                                                     <div className="compare-wishlist">
                                                         <span className="compare">
                                                             <a href="#" title="">
-                                                                <img src="./images/icons/compare.png" alt="" />Compare
+                                                                <img src="./images/icons/compare.png" alt="" />Quan tâm
 																</a>
                                                         </span>
                                                         <span className="wishlist">
                                                             <a href="#" title="">
-                                                                <img src="./images/icons/wishlist.png" alt="" />Wishlist
+                                                                <img src="./images/icons/wishlist.png" alt="" />Ưa chuộng
 																</a>
                                                         </span>
                                                     </div>
@@ -254,15 +243,15 @@ export default class Tablet extends React.Component {
                                                 <div className="box-bottom">
                                                     <div className="btn-add-cart">
                                                         <a href="#" title="">
-                                                            <img src="./images/icons/add-cart.png" alt="" />Add to Cart
+                                                            <img src="./images/icons/add-cart.png" alt="" />Mua
 															</a>
                                                     </div>
                                                     <div className="compare-wishlist">
                                                         <a href="#" className="compare" title="">
-                                                            <img src="./images/icons/compare.png" alt="" />Compare
+                                                            <img src="./images/icons/compare.png" alt="" />Quan tâm
 															</a>
                                                         <a href="#" className="wishlist" title="">
-                                                            <img src="./images/icons/wishlist.png" alt="" />Wishlist
+                                                            <img src="./images/icons/wishlist.png" alt="" />Ưa chuộng
 															</a>
                                                     </div>
                                                 </div>
@@ -298,15 +287,15 @@ export default class Tablet extends React.Component {
                                                 <div className="box-bottom">
                                                     <div className="btn-add-cart">
                                                         <a href="#" title="">
-                                                            <img src="./images/icons/add-cart.png" alt="" />Add to Cart
+                                                            <img src="./images/icons/add-cart.png" alt="" />Mua
 															</a>
                                                     </div>
                                                     <div className="compare-wishlist">
                                                         <a href="#" className="compare" title="">
-                                                            <img src="./images/icons/compare.png" alt="" />Compare
+                                                            <img src="./images/icons/compare.png" alt="" />Quan tâm
 															</a>
                                                         <a href="#" className="wishlist" title="">
-                                                            <img src="./images/icons/wishlist.png" alt="" />Wishlist
+                                                            <img src="./images/icons/wishlist.png" alt="" />Ưa chuộng
 															</a>
                                                     </div>
                                                 </div>
@@ -810,12 +799,12 @@ export default class Tablet extends React.Component {
                         </div>
                         <div className="blog-pagination">
                             <span>
-                                Showing 1–15 of 20 results
+                                1–15 trên 20 sản phẩm
 								</span>
                             <ul className="flat-pagination style1">
                                 <li className="prev">
                                     <a href="#" title="">
-                                        <img src="./images/icons/left-1.png" alt="" />Prev Page
+                                        <img src="./images/icons/left-1.png" alt="" />Trang trước
 										</a>
                                 </li>
                                 <li>
@@ -832,7 +821,7 @@ export default class Tablet extends React.Component {
                                 </li>
                                 <li className="next">
                                     <a href="#" title="">
-                                        Next Page<img src="./images/icons/right-1.png" alt="" />
+                                        Trang sau<img src="./images/icons/right-1.png" alt="" />
                                     </a>
                                 </li>
                             </ul>

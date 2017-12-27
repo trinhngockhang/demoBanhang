@@ -4,23 +4,23 @@ export default class SideBar extends React.Component {
     render() {
         return (
             <div className="col-lg-2 col-md-3">
-                <div className="sidebar ">
+                <div className="sidebar" style={{marginTop: '18px'}}>
                     <div className="widget widget-categories">
                         <div className="widget-title">
-                            <h3>Categories<span></span></h3>
+                            <h3>Danh mục liên quan<span></span></h3>
                         </div>
                         <ul className="cat-list style1 widget-content">
                             <li>
-                                <span>Accessories<i>(03)</i></span>
+                                <span>Phụ kiện<i>(03)</i></span>
                                 <ul className="cat-child">
                                     <li>
                                         <a href="#" title="">TV</a>
                                     </li>
                                     <li>
-                                        <a href="#" title="">Monitors</a>
+                                        <a href="#" title="">Màn hình</a>
                                     </li>
                                     <li>
-                                        <a href="#" title="">Software</a>
+                                        <a href="#" title="">Phần mềm</a>
                                     </li>
                                 </ul>
                             </li>
@@ -31,24 +31,24 @@ export default class SideBar extends React.Component {
                                         <a href="#" title="">Go Pro</a>
                                     </li>
                                     <li>
-                                        <a href="#" title="">Video</a>
+                                        <a href="#" title="">Máy quay phim</a>
                                     </li>
                                     <li>
-                                        <a href="#" title="">Software</a>
+                                        <a href="#" title="">Ứng dụng</a>
                                     </li>
                                 </ul>
                             </li>
                             <li className="">
-                                <span>Computers<i>(56)</i></span>
+                                <span>Máy tính<i>(56)</i></span>
                                 <ul className="cat-child">
                                     <li>
-                                        <a href="#" title="">Desktop</a>
+                                        <a href="#" title="">Bàn</a>
                                     </li>
                                     <li>
-                                        <a href="#" title="">Monitors</a>
+                                        <a href="#" title="">Màn hình</a>
                                     </li>
                                     <li>
-                                        <a href="#" title="">Software</a>
+                                        <a href="#" title="">Phần mềm</a>
                                     </li>
                                 </ul>
                             </li>
@@ -59,37 +59,37 @@ export default class SideBar extends React.Component {
                                         <a href="#" title="">Desktop</a>
                                     </li>
                                     <li>
-                                        <a href="#" title="">Monitors</a>
+                                        <a href="#" title="">Màn hình</a>
                                     </li>
                                     <li>
-                                        <a href="#" title="">Software</a>
+                                        <a href="#" title="">Phần mềm</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <span>Networking<i>(03)</i></span>
+                                <span>Thiết bị mạng<i>(02)</i></span>
                                 <ul className="cat-child">
                                     <li>
                                         <a href="#" title="">Monitors</a>
                                     </li>
                                     <li>
-                                        <a href="#" title="">Software</a>
+                                        <a href="#" title="">Phần mềm</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <span>Old Products<i>(89)</i></span>
+                                <span>Sản phẩm cũ<i>(89)</i></span>
                                 <ul className="cat-child">
                                     <li>
-                                        <a href="#" title="">Monitors</a>
+                                        <a href="#" title="">Phụ kiện</a>
                                     </li>
                                     <li>
-                                        <a href="#" title="">Software</a>
+                                        <a href="#" title="">Phần mềm</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <span>Smartphones<i>(90)</i></span>
+                                <span>Điện thoại di động<i>(90)</i></span>
                                 <ul className="cat-child">
                                     <li>
                                         <a href="#" title="">Apple</a>
@@ -109,13 +109,13 @@ export default class SideBar extends React.Component {
                                 </ul>
                             </li>
                             <li>
-                                <span>Software<i>(23)</i></span>
+                                <span>Phần mềm<i>(23)</i></span>
                                 <ul className="cat-child">
                                     <li>
-                                        <a href="#" title="">Desktop</a>
+                                        <a href="#" title="">Máy tính</a>
                                     </li>
                                     <li>
-                                        <a href="#" title="">Monitors</a>
+                                        <a href="#" title="">Quản lý</a>
                                     </li>
                                     <li>
                                         <a href="#" title="">BKAV</a>
@@ -126,10 +126,10 @@ export default class SideBar extends React.Component {
                     </div>
                     <div className="widget widget-price">
                         <div className="widget-title">
-                            <h3>Price<span></span></h3>
+                            <h3>Giá<span></span></h3>
                         </div>
                         <div className="widget-content">
-                            <p>Price</p>
+                            <p>Giá</p>
                             <div className="price search-filter-input">
                                 <div id="slider-range" className="price-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div className="ui-slider-range ui-corner-all ui-widget-header" ></div><span tabIndex="0" className="ui-slider-handle ui-corner-all ui-state-default"></span><span tabIndex="0" className="ui-slider-handle ui-corner-all ui-state-default"></span></div>
                                 <p className="amount">
@@ -140,7 +140,7 @@ export default class SideBar extends React.Component {
                     </div>
                     <div className="widget widget-brands">
                         <div className="widget-title">
-                            <h3>Brands<span></span></h3>
+                            <h3>Thương hiệu<span></span></h3>
                         </div>
                         <div className="widget-content">
                             <form action="#" method="get" acceptCharset="utf-8">
@@ -184,7 +184,7 @@ export default class SideBar extends React.Component {
                     </div>
                     <div className="widget widget-color">
                         <div className="widget-title">
-                            <h3>Color<span></span></h3>
+                            <h3>Màu<span></span></h3>
                             <div style={{height: '2px'}}></div>
                         </div>
                         <div className="widget-content">
@@ -195,40 +195,40 @@ export default class SideBar extends React.Component {
                             <ul className="box-checkbox scroll">
                                 <li className="check-box">
                                     <input type="checkbox" id="check1" name="check1" />
-                                    <label htmlFor="check1">Black <span>(4)</span></label>
+                                    <label htmlFor="check1">Đen <span>(4)</span></label>
                                 </li>
                                 <li className="check-box">
                                     <input type="checkbox" id="check2" name="check2" />
-                                    <label htmlFor="check2">Yellow <span>(2)</span></label>
+                                    <label htmlFor="check2">Vàng <span>(2)</span></label>
                                 </li>
                                 <li className="check-box">
                                     <input type="checkbox" id="check3" name="check3" />
-                                    <label htmlFor="check3">White <span>(2)</span></label>
+                                    <label htmlFor="check3">Trắng <span>(2)</span></label>
                                 </li>
                                 <li className="check-box">
                                     <input type="checkbox" id="check4" name="check4" />
-                                    <label htmlFor="check4">Blue <span>(2)</span></label>
+                                    <label htmlFor="check4">Xanh nước biển <span>(2)</span></label>
                                 </li>
                                 <li className="check-box">
                                     <input type="checkbox" id="check5" name="check5" />
-                                    <label htmlFor="check5">Red <span>(1)</span></label>
+                                    <label htmlFor="check5">Đỏ <span>(1)</span></label>
                                 </li>
                                 <li className="check-box">
                                     <input type="checkbox" id="check6" name="check6" />
-                                    <label htmlFor="check6">Pink <span>(3)</span></label>
+                                    <label htmlFor="check6">Hồng <span>(3)</span></label>
                                 </li>
                                 <li className="check-box">
                                     <input type="checkbox" id="check7" name="check7" />
-                                    <label htmlFor="check7">Green <span>(4)</span></label>
+                                    <label htmlFor="check7">Xanh lá cây <span>(4)</span></label>
                                 </li>
                                 <li className="check-box">
                                     <input type="checkbox" id="check8" name="check8" />
-                                    <label htmlFor="check8">Gold <span>(4)</span></label>
+                                    <label htmlFor="check8">Vàng <span>(4)</span></label>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div className="widget widget-banner">
+                    {/* <div className="widget widget-banner">
                         <div className="banner-box">
                             <div className="inner-box">
                                 <a href="#" title="">
@@ -236,7 +236,7 @@ export default class SideBar extends React.Component {
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )

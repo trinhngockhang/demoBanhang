@@ -1,5 +1,7 @@
 @media only screen and (max-width:1900px) {
-	
+	.owl-carousel-3.owl-theme .owl-controls .owl-dots {
+		display: none;
+	}
 	footer.style1 {
 		margin:0px;
 	}
@@ -397,6 +399,7 @@
 	
 	ul.submenu {
 		word-spacing:2px;
+
 	}
 
 	.submenu {
@@ -413,7 +416,7 @@
 }
 
 @media only screen and (max-width:991px) {
-
+	
 	.banner-mobile {
 		display: inline-block;
 	}
@@ -428,9 +431,9 @@
 		line-height:70px;margin-right:40px;
 	}
 
-	.owl-carousel-11.owl-theme .owl-controls .owl-dots {
+	/* .owl-carousel-11.owl-theme .owl-controls .owl-dots {
 		bottom: 0;
-	}
+	} */
 
 	.btn-menu.style1 {
 		background:#333;top:17px;
@@ -1759,6 +1762,11 @@
 
 }
 
-@media (max-width:320px) {
-	
+@media only screen and (max-width:900px) {	
+	.main-shop .wrap-imagebox .flat-row-title h3 {
+		display: none;
+	}
+	.main-shop .wrap-imagebox .flat-row-title .sort-product .sort .popularity {
+		display:inline-block;
+	}
 }

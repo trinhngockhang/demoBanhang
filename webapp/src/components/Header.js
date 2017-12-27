@@ -63,25 +63,25 @@ export default class Header extends React.Component {
                                                 <div className="all-categories">
                                                     <div className="cat-list-search">
                                                         <div className="title">
-                                                            Electronics
+                                                            Thiết bị điện tử
                                         </div>
                                                         <ul>
-                                                            <li>Components</li>
+                                                            <li>Bộ kết nối</li>
                                                             <li>Laptop</li>
-                                                            <li>Monitor</li>
+                                                            <li>Bộ điều khiển</li>
                                                             <li>Mp3 player</li>
-                                                            <li>Scanners</li>
+                                                            <li>Máy in</li>
                                                         </ul>
                                                     </div>
                                                     <div className="cat-list-search">
                                                         <div className="title">
-                                                            Furniture
+                                                            Đồ nội thất
                                         </div>
                                                         <ul>
-                                                            <li>Bookcases</li>
-                                                            <li>Barstools</li>
-                                                            <li>TV stands</li>
-                                                            <li>Desks</li>
+                                                            <li>Tủ sách</li>
+                                                            <li>Ghế đứng</li>
+                                                            <li>TV</li>
+                                                            <li>Bàn làm việc</li>
                                                             <li>Accent chairs</li>
                                                         </ul>
                                                     </div>

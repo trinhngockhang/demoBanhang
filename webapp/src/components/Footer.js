@@ -51,23 +51,23 @@ export default class Footer extends React.Component {
                             <div className="col-lg-3 col-md-6">
                                 <div className="widget-ft widget-categories-ft">
                                     <div className="widget-title">
-                                        <h3>Find By Categories</h3>
+                                        <h3>Danh mục</h3>
                                     </div>
                                     <ul className="cat-list-ft">
                                         <li>
-                                            <a href="#" title="">Desktops</a>
+                                            <a href="#" title="">Máy tính bàn</a>
                                         </li>
                                         <li>
                                             <a href="#" title="">Laptops &amp; Notebooks</a>
                                         </li>
                                         <li>
-                                            <a href="#" title="">Components</a>
+                                            <a href="#" title="">Thiết bị điện tử</a>
                                         </li>
                                         <li>
-                                            <a href="#" title="">Tablets</a>
+                                            <a href="#" title="">Máy tính bảng</a>
                                         </li>
                                         <li>
-                                            <a href="#" title="">Software</a>
+                                            <a href="#" title="">Phần mềm</a>
                                         </li>
                                         <li>
                                             <a href="#" title="">Phones &amp; PDAs</a>
@@ -81,42 +81,42 @@ export default class Footer extends React.Component {
                             <div className="col-lg-2 col-md-6">
                                 <div className="widget-ft widget-menu">
                                     <div className="widget-title">
-                                        <h3>Customer Care</h3>
+                                        <h3>Chăm sóc khách hàng</h3>
                                     </div>
                                     <ul>
                                         <li>
                                             <a href="#" title="">
-                                                Contact us
+                                                Liên hệ
 									</a>
                                         </li>
                                         <li>
                                             <a href="#" title="">
-                                                Site Map
+                                                Địa chỉ
 									</a>
                                         </li>
                                         <li>
                                             <a href="#" title="">
-                                                My Account
+                                                Tài khoản 
 									</a>
                                         </li>
                                         <li>
                                             <a href="#" title="">
-                                                Wish List
+                                                Hàng hóa yêu thích
 									</a>
                                         </li>
                                         <li>
                                             <a href="#" title="">
-                                                Delivery Information
+                                                Thông tin giao hàng
 									</a>
                                         </li>
                                         <li>
                                             <a href="#" title="">
-                                                Privacy Policy
+                                                Chích sách bảo mật
 									</a>
                                         </li>
                                         <li>
                                             <a href="#" title="">
-                                                Terms &amp; Conditions
+                                                Điều khoản &amp; Chính sách
 									</a>
                                         </li>
                                     </ul>
@@ -125,14 +125,14 @@ export default class Footer extends React.Component {
                             <div className="col-lg-4 col-md-6">
                                 <div className="widget-ft widget-newsletter">
                                     <div className="widget-title">
-                                        <h3>Sign Up To New Letter</h3>
+                                        <h3>Đăng kí nhận thư mời</h3>
                                     </div>
-                                    <p>Make sure that you never miss our interesting <br />
-                                        news by joining our newsletter program
+                                    <p>Hãy chắc chắn rằng bạn không bao giờ bỏ lỡ lời mời hấp dẫn <br />
+                                       bằng cách tham gia các chương trình tin tức của công ty
 							</p>
                                     <form action="#" className="subscribe-form" method="get" acceptCharset="utf-8">
                                         <div className="subscribe-content">
-                                            <input type="text" name="email" className="subscribe-email" placeholder="Your E-Mail" />
+                                            <input type="text" name="email" className="subscribe-email" placeholder="E-Mail của bạn" />
                                             <button type="submit"><img src="./images/icons/right-2.png" alt="" /></button>
                                         </div>
                                     </form>
@@ -170,7 +170,7 @@ export default class Footer extends React.Component {
                             <div className="col-md-12">
                                 <div className="widget widget-apps">
                                     <div className="widget-title">
-                                        <h3>Mobile Apps</h3>
+                                        <h3>Ứng dụng điện thoại</h3>
                                     </div>
                                     <ul className="app-list">
                                         <li className="app-store">
@@ -180,7 +180,7 @@ export default class Footer extends React.Component {
                                                 </div>
                                                 <div className="text">
                                                     <h4>App Store</h4>
-                                                    <p>Available now on the</p>
+                                                    <p>Có sẵn trên</p>
                                                 </div>
                                             </a>
                                         </li>
@@ -191,7 +191,7 @@ export default class Footer extends React.Component {
                                                 </div>
                                                 <div className="text">
                                                     <h4>Google Play</h4>
-                                                    <p>Get in on</p>
+                                                    <p>Tải về</p>
                                                 </div>
                                             </a>
                                         </li>
