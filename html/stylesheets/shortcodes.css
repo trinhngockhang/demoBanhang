@@ -4488,6 +4488,10 @@ input[type="checkbox"]:checked + label:before {
 	font-weight:600;
 }
 
+.box-cart.style2 .btn-add-cart a.add {
+	line-height: 58px;
+}
+
 .box-cart.style2 .btn-add-cart a:hover {
 	background-color:#e4a88d;
 	

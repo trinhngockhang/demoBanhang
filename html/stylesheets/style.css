@@ -5583,7 +5583,6 @@ ul.menu li.column-1 .submenu > li > a i {
 	position:static;
 	text-align:left;
 	cursor:pointer;
-	border-bottom: 1px solid #ccc;
 	display:block;
 }
 .img-submenu-mobile {

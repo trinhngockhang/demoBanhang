@@ -587,7 +587,7 @@
 	}
 
 	#mainnav-mobi ul.menu li.has-mega-menu .submenu .row ul li {
-		border-top:none;border-bottom:1px solid #333;
+		border: none;
 	}
 
 	#mainnav-mobi ul.menu li.has-mega-menu .submenu .row ul li > a {
