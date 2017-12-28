@@ -122,7 +122,6 @@ export default class Advertisement extends React.Component {
                                 </a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
