@@ -1051,7 +1051,7 @@ ul.flat-unstyled li > ul > li > a {
 #header-mobile {
 	position: fixed;
     width: 100%;
-    z-index: 11;
+    z-index: 101;
     padding-left: 5%;
     padding-top: 10px;
     background: white;
@@ -5566,7 +5566,7 @@ ul.menu li.column-1 .submenu > li > a i {
 	width:100%;
 	position:fixed;
 	left:0;
-	z-index:10;
+	z-index:100;
 	background-color:#222222;
 	top: 57px;
 }
@@ -5582,6 +5582,7 @@ ul.menu li.column-1 .submenu > li > a i {
 }
 
 #mainnav-mobi ul li {
+	border-bottom: 1px solid #ccc;
 	background: #eff0f5;
 	margin:0;
 	position:static;

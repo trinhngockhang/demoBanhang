@@ -428,6 +428,17 @@
 
 
 @media only screen and (max-width:991px) {
+	.info-shop {
+		padding-top: 61px;
+	}
+	.row.shop {
+		padding: 0px;
+	}
+	.cover {
+		width: 34%;
+		height: 100%;
+		margin-left: 32%;
+	}
 	#mainnav-mobi ul.menu li.has-mega-menu .submenu.first {
 		display: block;
 		overflow-y: scroll;
