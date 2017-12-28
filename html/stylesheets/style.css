@@ -307,7 +307,8 @@ img.img_tittle {
 }
 .row.header-mobile {
 	margin: 0;
-	box-shadow: 0 0 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
+    width: 95%;
 }
 a {
 	text-decoration:none;
@@ -1048,9 +1049,12 @@ ul.flat-unstyled li > ul > li > a {
 }
 
 #header-mobile {
-	padding-left: 6px;
-	padding-right: 6px;
+	position: fixed;
+    width: 100%;
+    z-index: 11;
+    padding-left: 5%;
     padding-top: 10px;
+    background: white;
 }
 .cart-span-mobile {
 	position: absolute;
@@ -5562,7 +5566,7 @@ ul.menu li.column-1 .submenu > li > a i {
 	width:100%;
 	position:absolute;
 	left:0;
-	z-index:1000;
+	z-index:10;
 	background-color:#222222;
 	top: 60px;
 }
