@@ -397,6 +397,11 @@
 }
 
 @media only screen and (min-width:992px) {
+	.home-category-list__category-grid-name {
+		text-align: center;
+		color: #000000;
+		padding-top: 159px;
+	}
 	.banner-mobile {
 		display: block;
 		padding: 4px 99px;
@@ -421,7 +426,22 @@
 	}
 }
 
+
 @media only screen and (max-width:991px) {
+	#mainnav-mobi ul.menu li.has-mega-menu .submenu.first {
+		display: block;
+		overflow-y: scroll;
+	}
+	#mainnav-mobi ul.menu li.has-mega-menu.first {
+		background: white;
+		
+	}
+	#mainnav-mobi ul.menu li.has-mega-menu.second:hover ~ #mainnav-mobi ul.menu li.has-mega-menu.first{
+		background: #101a4e;
+	}
+	#mainnav-mobi ul.menu li.has-mega-menu.first:hover {
+		background: white;
+	}
 	.col-sm-6.col-xs-12.no-padding {
 		padding: 0px 10px;
 	}
@@ -546,7 +566,7 @@
 	}
 
 	.mainnav ul.menu > li:hover > .submenu {
-		top:100%;
+		
 		display: block;
 	}
 
