@@ -5635,17 +5635,11 @@ ul.menu li.column-1 .submenu > li > a i {
 	color:#fff;
 }
 #mainnav-mobi ul.menu li.has-mega-menu:hover > .submenu {
-	display: block;
+	/* display: block; */
 	overflow-y: scroll;
 }
 #mainnav-mobi ul.menu li.has-mega-menu:hover  {
 	background: white;
-}
-#mainnav-mobi ul.menu li.has-mega-menu:hover > a > p.menu-item {
-	color: rgb(245, 114, 36);
-}
-#mainnav-mobi ul.menu li.has-mega-menu:hover > a > i {
-	color: rgb(245, 114, 36);
 }
 .col-lg-3.col-md-12.col-6:hover {
 border: 1px solid #f28b00; 
@@ -5662,7 +5656,7 @@ border: 1px solid #f28b00;
 	display: none;
 	float: right;
 	z-index: 1;
-	height: 680px;
+	height: 595px;
 }
 
 #mainnav-mobi ul.menu li.has-mega-menu h3.cat-title {

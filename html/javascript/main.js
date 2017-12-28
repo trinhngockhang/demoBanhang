@@ -96,6 +96,34 @@
                         var hasChildMenuMega = $('#mainnav-mobi').find('li:has(div.submenu)');
                         var secondSubMenu = $('li.has-mega-menu.second');
                         var firstSubMenu = $('li.has-mega-menu.first');
+                        var subMenu = $ ('li.has-mega-menu');
+                        subMenu.click(function(){
+                            subMenu.css({
+                                background:'#eff0f5'
+                            })
+                            $('.menu-item').css({
+                                color:"black"
+                            })
+                            $('i').css({
+                                color:"#9e9e9e"
+                            })
+                            $(this).children().children('.menu-item').css({
+                                color: 'rgb(245, 114, 36)'
+                            })
+                            $(this).children().children('i').css({
+                                color: 'rgb(245, 114, 36)'
+                            })
+                            $(this).css({
+                                background: 'white'
+                            })
+                            console.log('a');
+                            $('.submenu').css({
+                                display:'none'
+                            })
+                            $(this).children('.submenu').css({
+                                display:'block'
+                            })
+                        })
                         secondSubMenu.mouseover(function(){
                             $("li.has-mega-menu.first").css({
                                 background: '#eff0f5'
