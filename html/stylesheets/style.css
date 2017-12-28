@@ -5564,11 +5564,11 @@ ul.menu li.column-1 .submenu > li > a i {
 	display:block;
 	margin:0 auto;
 	width:100%;
-	position:absolute;
+	position:fixed;
 	left:0;
 	z-index:10;
 	background-color:#222222;
-	top: 60px;
+	top: 57px;
 }
 
 #mainnav-mobi > ul {
