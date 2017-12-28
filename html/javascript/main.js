@@ -94,14 +94,28 @@
                         var $mobileMenu = $('#mainnav').attr('id', 'mainnav-mobi').hide();
                         var hasChildMenu = $('#mainnav-mobi').find('li:has(ul)');
                         var hasChildMenuMega = $('#mainnav-mobi').find('li:has(div.submenu)');
-
+                        var secondSubMenu = $('li.has-mega-menu.second');
+                        var firstSubMenu = $('li.has-mega-menu.first');
+                        secondSubMenu.mouseover(function(){
+                            $("li.has-mega-menu.first").css({
+                                background: '#eff0f5'
+                            })
+                        })
+                        firstSubMenu.mouseover(function(){
+                            firstSubMenu.css({
+                                background:"white"
+                            })
+                        })
                         $('#header').after($mobileMenu);
                         hasChildMenu.children('ul').hide();
                         hasChildMenu.children('a').after('<span class="btn-submenu"></span>');
                         $('ul.submenu-child').hide();
                         hasChildMenuMega.find('h3').append('<span class="btn-submenu-child"></span>');
                         $('.btn-menu').removeClass('active');
-
+                        $('btn-menu').click(function(){
+                            console.log("aa");
+                            $('div.banner-mobile').hide();
+                        })
                     } else {
                         var $desktopMenu = $('#mainnav-mobi').attr('id', 'mainnav').removeAttr('style');
                         $desktopMenu.find('.submenu').removeAttr('style');
@@ -148,10 +162,11 @@
 
                     if ( $('body').hasClass('grid') ) {
                         if (currMenuType === 'mobile') {
+
                             var $mobileMenuMegaV2 = $('#mega-menu').attr('id', 'mega-mobile').hide();
                             var ChildMenuMegaV2 = $('.header-bottom').find('.grid-right');
                             var ChildDropmenuV2 = $('.drop-menu').children('.one-third');
-
+                           
                             $('.btn-mega').hide();
                             $('#header').after($mobileMenuMegaV2);
                             ChildMenuMegaV2.append('<div class="btn-menu-mega"><span></span></div>');
@@ -1198,6 +1213,8 @@
                 });
             });
         }; // Overlay
+
+
 
         var removePreloader = function() { 
             $(window).on('load', function() {
