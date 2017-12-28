@@ -484,6 +484,7 @@
 	}
 	.banner-mobile {
 		display: inline-block;
+		margin-top: 60px;
 	}
 	#li-top {
 		display: none;
