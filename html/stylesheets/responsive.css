@@ -434,6 +434,15 @@
 	}
 	#mainnav-mobi ul.menu li.has-mega-menu.first {
 		background: white;
+		color: rgb(245, 114, 36);
+		
+	}
+	#mainnav-mobi ul.menu li.has-mega-menu.first p{
+		color: rgb(245, 114, 36);
+		
+	}
+	#mainnav-mobi ul.menu li.has-mega-menu.first i{
+		color: rgb(245, 114, 36);
 		
 	}
 	#mainnav-mobi ul.menu li.has-mega-menu.second:hover ~ #mainnav-mobi ul.menu li.has-mega-menu.first{
@@ -469,9 +478,11 @@
 	}
 	.img-submenu-mobile {
 		max-width: 34px;
+		color: rgb(158, 158, 158);
 		display: block;
 		margin-left: 40px;
 		margin-top: -14px;
+		font-size: 22px;
 	}
 	#header-mobile {
 		display:block;

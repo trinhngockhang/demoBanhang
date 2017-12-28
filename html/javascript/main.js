@@ -100,10 +100,22 @@
                             $("li.has-mega-menu.first").css({
                                 background: '#eff0f5'
                             })
+                            $("li.has-mega-menu.first p").css({
+                                color: 'black'
+                            })
+                            $("li.has-mega-menu.first i").css({
+                                color: 'rgb(158, 158, 158)'
+                            })
                         })
                         firstSubMenu.mouseover(function(){
                             firstSubMenu.css({
                                 background:"white"
+                            })
+                            $("li.has-mega-menu.first p").css({
+                                color: '#f28b00'
+                            })
+                            $("li.has-mega-menu.first i").css({
+                                color: '#f28b00'
                             })
                         })
                         $('#header').after($mobileMenu);
@@ -113,7 +125,6 @@
                         hasChildMenuMega.find('h3').append('<span class="btn-submenu-child"></span>');
                         $('.btn-menu').removeClass('active');
                         $('btn-menu').click(function(){
-                            console.log("aa");
                             $('div.banner-mobile').hide();
                         })
                     } else {
