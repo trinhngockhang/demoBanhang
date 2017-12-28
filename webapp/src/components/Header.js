@@ -63,25 +63,25 @@ export default class Header extends React.Component {
                                                 <div className="all-categories">
                                                     <div className="cat-list-search">
                                                         <div className="title">
-                                                            Electronics
+                                                            Thiết bị điện tử
                                         </div>
                                                         <ul>
-                                                            <li>Components</li>
+                                                            <li>Bộ kết nối</li>
                                                             <li>Laptop</li>
-                                                            <li>Monitor</li>
+                                                            <li>Bộ điều khiển</li>
                                                             <li>Mp3 player</li>
-                                                            <li>Scanners</li>
+                                                            <li>Máy in</li>
                                                         </ul>
                                                     </div>
                                                     <div className="cat-list-search">
                                                         <div className="title">
-                                                            Furniture
+                                                            Đồ nội thất
                                         </div>
                                                         <ul>
-                                                            <li>Bookcases</li>
-                                                            <li>Barstools</li>
-                                                            <li>TV stands</li>
-                                                            <li>Desks</li>
+                                                            <li>Tủ sách</li>
+                                                            <li>Ghế đứng</li>
+                                                            <li>TV</li>
+                                                            <li>Bàn làm việc</li>
                                                             <li>Accent chairs</li>
                                                         </ul>
                                                     </div>
@@ -322,688 +322,720 @@ export default class Header extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="header-bottom">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-md-9 col-12">
-                                    <div className="nav-wrap">
-                                        <div id="mainnav" className="mainnav">
-                                            <ul className="menu">
-                                                <li className="has-mega-menu">
-                                                    <a href="#" title="">Điện tử</a>
-                                                    <div className="submenu">
-                                                        <div className="row">
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Đồng hồ</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Laptop</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Thiết bị khác</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li className="has-mega-menu">
-                                                    <a href="#" title="">Thời trang</a>
-                                                    <div className="submenu">
-                                                        <div className="row">
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Đồng hồ</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Laptop</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Thiết bị khác</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li className="has-mega-menu">
-                                                    <a href="#" title="">Đồ gia dụng</a>
-                                                    <div className="submenu">
-                                                        <div className="row">
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Đồng hồ</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Laptop</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Thiết bị khác</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li className="has-mega-menu">
-                                                    <a href="#" title="">Thể thao</a>
-                                                    <div className="submenu">
-                                                        <div className="row">
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Đồng hồ</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Laptop</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Thiết bị khác</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li className="has-mega-menu">
-                                                    <a href="#" title="">Đồ cho bé</a>
-                                                    <div className="submenu">
-                                                        <div className="row">
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Đồng hồ</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Laptop</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Thiết bị khác</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li className="has-mega-menu">
-                                                    <a href="#" title="">Phụ kiện</a>
-                                                    <div className="submenu">
-                                                        <div className="row">
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Đồng hồ</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Laptop</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Thiết bị khác</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li className="has-mega-menu">
-                                                    <a href="#" title="">Xe máy,ô tô</a>
-                                                    <div className="submenu">
-                                                        <div className="row">
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Đồng hồ</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Laptop</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                            <div className="col-lg-3 col-md-12">
-                                                                <a className="home-category-list__category-grid" href="">
-                                                                    <div className="home-category-list__category-grid-content">
-                                                                        <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                                            <img className="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
-                                                                            </img>
-                                                                        </div>
-                                                                        <div className="home-category-list__category-grid-name">Thiết bị khác</div>
-                                                                    </div>
-                                                                </a>
-
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-01.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="banner-box">
-                                                                    <div className="inner-box">
-                                                                        <a href="#" title="">
-                                                                            <img src="./images/banner_boxes/submenu-02.png" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
+                    <div class="header-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-12">
+                                <div class="nav-wrap">
+                                    <div id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li class="has-mega-menu">
+												<a href="#" title="">
+														<img src="./images/icons/computer.png" class="img-submenu-mobile" alt="">
+													<p class="menu-item">Điện tử</p>	
+													</a>
+												<div class="submenu">
+													<div class="row">
+														<div class="col-lg-3 col-md-12 col-6">
+															<a class="home-category-list__category-grid" href="">
+																<div class="home-category-list__category-grid-content">
+																	<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																		<img class="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
+																	</img>
+																	</div>
+																	<div class="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
+																</div>
+															</a>
+															
+														</div><!-- /.col-lg-3 col-md-12 -->
+														<div class="col-lg-3 col-md-12 col-6">
+																<a class="home-category-list__category-grid" href="">
+																	<div class="home-category-list__category-grid-content">
+																		<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																			<img class="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
+																		</img>
+																		</div>
+																		<div class="home-category-list__category-grid-name">Đồng hồ</div>
+																	</div>
+																</a>
+																
+														</div><!-- /.col-lg-3 col-md-12 -->
+														<div class="col-lg-3 col-md-12 col-6">
+																<a class="home-category-list__category-grid" href="">
+																	<div class="home-category-list__category-grid-content">
+																		<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																			<img class="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
+																		</img>
+																		</div>
+																		<div class="home-category-list__category-grid-name">Laptop</div>
+																	</div>
+																</a>
+																
+														</div><!-- /.col-lg-3 col-md-12 -->
+														<div class="col-lg-3 col-md-12 col-6">
+																<a class="home-category-list__category-grid" href="">
+																	<div class="home-category-list__category-grid-content">
+																		<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																			<img class="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
+																		</img>
+																		</div>
+																		<div class="home-category-list__category-grid-name">Thiết bị khác</div>
+																	</div>
+																</a>
+																
+														</div><!-- /.col-lg-3 col-md-12 -->
+													</div><!-- /.row -->
+													<div class="row banner-mobile">
+														<div class="col-md-6">
+															<div class="banner-box">
+																<div class="inner-box">
+																	<a href="#" title="">
+																		<img src="./images/banner_boxes/submenu-01.png" alt="">
+																	</a>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="banner-box">
+																<div class="inner-box">
+																	<a href="#" title="">
+																		<img src="./images/banner_boxes/submenu-02.png" alt="">
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row banner-mobile">	
+														<div class="col-md-6">
+															<div class="banner-box">
+																<div class="inner-box">
+																	<a href="#" title="">
+																		<img src="./images/banner_boxes/submenu-01.png" alt="">
+																	</a>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="banner-box">
+																<div class="inner-box">
+																	<a href="#" title="">
+																		<img src="./images/banner_boxes/submenu-02.png" alt="">
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div><!-- /.row -->
+												</div><!-- /.submenu -->
+											</li>
+											<li class="has-mega-menu">
+													<a href="#" title="">
+															<img src="./images/icons/clothes.png" class="img-submenu-mobile" alt="">
+														<p class="menu-item">Thời trang</p></a>
+													<div class="submenu">
+														<div class="row">
+															<div class="col-lg-3 col-md-12 col-6">
+																<a class="home-category-list__category-grid" href="">
+																	<div class="home-category-list__category-grid-content">
+																		<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																			<img class="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
+																		</img>
+																		</div>
+																		<div class="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
+																	</div>
+																</a>
+																
+															</div><!-- /.col-lg-3 col-md-12 -->
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Đồng hồ</div>
+																		</div>
+																	</a>
+																	
+															</div><!-- /.col-lg-3 col-md-12 -->
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Laptop</div>
+																		</div>
+																	</a>
+																	
+															</div><!-- /.col-lg-3 col-md-12 -->
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Thiết bị khác</div>
+																		</div>
+																	</a>
+																	
+															</div><!-- /.col-lg-3 col-md-12 -->
+														</div><!-- /.row -->
+														<div class="row">
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-01.png" alt="">
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-02.png" alt="">
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">	
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-01.png" alt="">
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-02.png" alt="">
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div><!-- /.row -->
+													</div><!-- /.submenu -->
+											</li>
+											<li class="has-mega-menu">
+													<a href="#" title="">
+															<img src="./images/icons/bed.png" class="img-submenu-mobile" alt="">
+													<p class="menu-item">Đồ gia dụng</p>	</a>
+													<div class="submenu">
+														<div class="row">
+															<div class="col-lg-3 col-md-12 col-6">
+																<a class="home-category-list__category-grid" href="">
+																	<div class="home-category-list__category-grid-content">
+																		<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																			<img class="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
+																		</img>
+																		</div>
+																		<div class="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
+																	</div>
+																</a>
+																
+															</div><!-- /.col-lg-3 col-md-12 -->
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Đồng hồ</div>
+																		</div>
+																	</a>
+																	
+															</div><!-- /.col-lg-3 col-md-12 -->
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Laptop</div>
+																		</div>
+																	</a>
+																	
+															</div><!-- /.col-lg-3 col-md-12 -->
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Thiết bị khác</div>
+																		</div>
+																	</a>
+																	
+															</div><!-- /.col-lg-3 col-md-12 -->
+														</div><!-- /.row -->
+														<div class="row">
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-01.png" alt="">
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-02.png" alt="">
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">	
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-01.png" alt="">
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-02.png" alt="">
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div><!-- /.row -->
+													</div><!-- /.submenu -->
+											</li>
+											<li class="has-mega-menu">
+													<a href="#" title=""><img src="./images/icons/sport.png" class="img-submenu-mobile" alt="">
+														<p class="menu-item">Thể thao</p></a>
+													<div class="submenu">
+														<div class="row">
+															<div class="col-lg-3 col-md-12 col-6">
+																<a class="home-category-list__category-grid" href="">
+																	<div class="home-category-list__category-grid-content">
+																		<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																			<img class="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
+																		</img>
+																		</div>
+																		<div class="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
+																	</div>
+																</a>
+																
+															</div><!-- /.col-lg-3 col-md-12 -->
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Đồng hồ</div>
+																		</div>
+																	</a>
+																	
+															</div><!-- /.col-lg-3 col-md-12 -->
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Laptop</div>
+																		</div>
+																	</a>
+																	
+															</div><!-- /.col-lg-3 col-md-12 -->
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Thiết bị khác</div>
+																		</div>
+																	</a>
+																	
+															</div><!-- /.col-lg-3 col-md-12 -->
+														</div><!-- /.row -->
+														<div class="row">
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-01.png" alt="">
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-02.png" alt="">
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">	
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-01.png" alt="">
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-02.png" alt="">
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div><!-- /.row -->
+													</div><!-- /.submenu -->
+											</li>
+											<li class="has-mega-menu">
+													<a href="#" title=""><img src="./images/icons/baby.png" class="img-submenu-mobile" alt="">
+														<p class="menu-item">Đồ cho bé</p></a>
+													<div class="submenu">
+														<div class="row">
+															<div class="col-lg-3 col-md-12 col-6">
+																<a class="home-category-list__category-grid" href="">
+																	<div class="home-category-list__category-grid-content">
+																		<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																			<img class="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
+																		</img>
+																		</div>
+																		<div class="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
+																	</div>
+																</a>
+																
+															</div><!-- /.col-lg-3 col-md-12 -->
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Đồng hồ</div>
+																		</div>
+																	</a>
+																	
+															</div><!-- /.col-lg-3 col-md-12 -->
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Laptop</div>
+																		</div>
+																	</a>
+																	
+															</div><!-- /.col-lg-3 col-md-12 -->
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Thiết bị khác</div>
+																		</div>
+																	</a>
+																	
+															</div><!-- /.col-lg-3 col-md-12 -->
+														</div><!-- /.row -->
+														<div class="row">
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-01.png" alt=""/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-02.png" alt=""/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">	
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-01.png" alt=""/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-02.png" alt=""/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+											</li>
+											<li class="has-mega-menu">
+													<a href="#" title="">
+															<img src="./images/icons/giadung.png" class="img-submenu-mobile" alt=""/>
+															<p class="menu-item">Phụ kiện</p></a>
+													<div class="submenu">
+														<div class="row">
+															<div class="col-lg-3 col-md-12 col-6">
+																<a class="home-category-list__category-grid" href="">
+																	<div class="home-category-list__category-grid-content">
+																		<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																			<img class="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
+																		</img>
+																		</div>
+																		<div class="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
+																	</div>
+																</a>
+																
+															</div>
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Đồng hồ</div>
+																		</div>
+																	</a>
+																	
+															</div>
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Laptop</div>
+																		</div>
+																	</a>
+																	
+															</div>
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Thiết bị khác</div>
+																		</div>
+																	</a>
+																	
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-01.png" alt=""/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-02.png" alt=""/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">	
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-01.png" alt=""/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-02.png" alt=""/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+											</li>
+											<li class="has-mega-menu">
+													<a href="#" title="">
+															<img src="./images/icons/car.png" class="img-submenu-mobile" alt=""><p class="menu-item">Đồ gia dụng</p></a>
+													<div class="submenu">
+														<div class="row">
+															<div class="col-lg-3 col-md-12 col-6">
+																<a class="home-category-list__category-grid" href="">
+																	<div class="home-category-list__category-grid-content">
+																		<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																			<img class="lazy-image__image" src='./images/logos/logoSubMenuPhone.jpg'>
+																		</img>
+																		</div>
+																		<div class="home-category-list__category-grid-name">Điện Thoại &amp; Phụ Kiện</div>
+																	</div>
+																</a>
+																
+															</div>
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuDongho.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Đồng hồ</div>
+																		</div>
+																	</a>
+																	
+															</div>
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuLaptop.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Laptop</div>
+																		</div>
+																	</a>
+																	
+															</div>
+															<div class="col-lg-3 col-md-12 col-6">
+																	<a class="home-category-list__category-grid" href="">
+																		<div class="home-category-list__category-grid-content">
+																			<div class="lazy-image__container home-category-list__category-grid-thumbnail">
+																				<img class="lazy-image__image" src='./images/logos/subMenuThietbi.jpg'>
+																			</img>
+																			</div>
+																			<div class="home-category-list__category-grid-name">Thiết bị khác</div>
+																		</div>
+																	</a>
+																	
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-01.png" alt=""/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-02.png" alt=""/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">	
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-01.png" alt=""/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="banner-box">
+																	<div class="inner-box">
+																		<a href="#" title="">
+																			<img src="./images/banner_boxes/submenu-02.png" alt=""/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+											</li>
+											<li class="has-mega-menu mobile">
+													<a href="#" title="">
+															<img src="./images/icons/car.png" class="img-submenu-mobile" alt=""/><p class="menu-item">Liên hệ</p></a>
+											</li>
+											<li class="has-mega-menu mobile">
+													<a href="#" title="">
+															<img src="./images/icons/car.png" class="img-submenu-mobile" alt=""/><p class="menu-item">Hỗ trợ</p></a>
+											</li>
+											<li class="has-mega-menu mobile">
+													<a href="#" title="">
+															<img src="./images/icons/car.png" class="img-submenu-mobile" alt=""/><p class="menu-item">Kiểm tra</p></a>
+											</li>
+											<li class="has-mega-menu mobile">
+													<a href="#" title="">
+															<img src="./images/icons/car.png" class="img-submenu-mobile" alt=""/><p class="menu-item">Giao dịch</p></a>
+											</li>
+											<li class="has-mega-menu mobile">
+													<a href="#" title="">
+															<img src="./images/icons/car.png" class="img-submenu-mobile" alt=""/><p class="menu-item">Đăng nhập</p></a>
+											</li>
+                                        </ul>
                                     </div>
-                                    <div className="btn-menu">
-                                        <span></span>
-                                    </div>
+                                </div>
+                                <div class="btn-menu">
+                                    <span></span>
                                 </div>
                             </div>
                         </div>
                     </div>
+            </div>
                 </section>
             </div>
         )

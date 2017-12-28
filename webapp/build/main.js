@@ -313,7 +313,7 @@
             $(".owl-carousel-3").owlCarousel({
                 autoplay:false,
                 nav: true,
-                dots: true,
+                dots: false,
                 responsive: true,
                 margin:3,
                 loop:true,
@@ -334,13 +334,15 @@
                     },
                     768:{
                         items: 4,
-                         margin:20,
+                        dots: false,
                     },
                     991:{
-                        items: 4
+                        items: 3,
+                        dots: false
                     },
                     1200: {
-                        items: 4
+                        items: 3,
+                        dots: false
                     }
                 }
             });
