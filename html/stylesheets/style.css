@@ -3392,12 +3392,12 @@ h2.home__title.home__title--section-5 {
 	width:88.4%;
 }
 .info-detail {
-	display: inline-flex;
+	display:block;
     padding-bottom: 5px;
     padding-top: 26px;
     padding-left: 12px;
-    padding-right: 13px;
-    max-width: 32%;
+	padding-right: 13px;
+	max-width: 282px;
 }
 
 img.img-cover {
@@ -3427,7 +3427,7 @@ p.info{
 .row.info {
     padding-left: 20px;
 }
-.fill {
+.flat-breadcrumb ul.breadcrumbs li.fill {
 	display:none;
 }
 .comment-respond .form-comment form .btn-submit button {

@@ -428,6 +428,14 @@
 
 
 @media only screen and (max-width:991px) {
+	.info-detail {
+		display:inline-flex;
+		padding-bottom: 5px;
+		padding-top: 26px;
+		padding-left: 12px;
+		padding-right: 13px;
+		width: 32%;
+	}
 	section.flat-breadcrumb.category {
 		padding-top: 78px;
 	}
@@ -437,7 +445,7 @@
 	.fill-category {
 		display: none;
 	}
-	.fill {
+	.flat-breadcrumb ul.breadcrumbs li.fill{
 		float: right;
 		display: inline;
 		padding-top: 5px;
