@@ -29,9 +29,9 @@ class App extends Component {
 
 const mapStateToProps = state => {
     return {
-        suggest: state.homeReducer.suggest,
-        electric: state.homeReducer.electric,
-        electricAds: state.homeReducer.electricAds,
+        suggest: state.appReducer.suggest,
+        electric: state.appReducer.electric,
+        electricAds: state.appReducer.electricAds,
     }
 }
 

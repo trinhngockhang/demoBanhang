@@ -19,7 +19,7 @@ export default (props) => {
                                                 {
                                                     props.electric.map((item, index) => {
                                                         return (
-                                                            <div className="col-lg-3 col-md-12 col-6">
+                                                            <div className="col-lg-3 col-md-12 col-6" key={index}>
                                                                 <a className="home-category-list__category-grid" href="">
                                                                     <div className="home-category-list__category-grid-content">
                                                                         <div className="lazy-image__container home-category-list__category-grid-thumbnail">
@@ -39,7 +39,7 @@ export default (props) => {
                                                 {
                                                     props.electricAds.map((item, index) => {
                                                         return (
-                                                            <div className="col-md-6">
+                                                            <div className="col-md-6" key={index}>
                                                                 <div className="banner-box">
                                                                     <div className="inner-box">
                                                                         <a href="#" title="">
@@ -63,7 +63,7 @@ export default (props) => {
                                                 {
                                                     props.electric.map((item, index) => {
                                                         return (
-                                                            <div className="col-lg-3 col-md-12 col-6">
+                                                            <div className="col-lg-3 col-md-12 col-6" key={index}>
                                                                 <a className="home-category-list__category-grid" href="">
                                                                     <div className="home-category-list__category-grid-content">
                                                                         <div className="lazy-image__container home-category-list__category-grid-thumbnail">
@@ -83,7 +83,7 @@ export default (props) => {
                                                 {
                                                     props.electricAds.map((item, index) => {
                                                         return (
-                                                            <div className="col-md-6">
+                                                            <div className="col-md-6" key={index}>
                                                                 <div className="banner-box">
                                                                     <div className="inner-box">
                                                                         <a href="#" title="">
@@ -107,7 +107,7 @@ export default (props) => {
                                                 {
                                                     props.electric.map((item, index) => {
                                                         return (
-                                                            <div className="col-lg-3 col-md-12 col-6">
+                                                            <div className="col-lg-3 col-md-12 col-6" key={index}>
                                                                 <a className="home-category-list__category-grid" href="">
                                                                     <div className="home-category-list__category-grid-content">
                                                                         <div className="lazy-image__container home-category-list__category-grid-thumbnail">
@@ -127,7 +127,7 @@ export default (props) => {
                                                 {
                                                     props.electricAds.map((item, index) => {
                                                         return (
-                                                            <div className="col-md-6">
+                                                            <div className="col-md-6" key={index}>
                                                                 <div className="banner-box">
                                                                     <div className="inner-box">
                                                                         <a href="#" title="">
@@ -151,7 +151,7 @@ export default (props) => {
                                                 {
                                                     props.electric.map((item, index) => {
                                                         return (
-                                                            <div className="col-lg-3 col-md-12 col-6">
+                                                            <div className="col-lg-3 col-md-12 col-6" key={index}>
                                                                 <a className="home-category-list__category-grid" href="">
                                                                     <div className="home-category-list__category-grid-content">
                                                                         <div className="lazy-image__container home-category-list__category-grid-thumbnail">
@@ -171,7 +171,7 @@ export default (props) => {
                                                 {
                                                     props.electricAds.map((item, index) => {
                                                         return (
-                                                            <div className="col-md-6">
+                                                            <div className="col-md-6" key={index}>
                                                                 <div className="banner-box">
                                                                     <div className="inner-box">
                                                                         <a href="#" title="">
@@ -195,7 +195,7 @@ export default (props) => {
                                                 {
                                                     props.electric.map((item, index) => {
                                                         return (
-                                                            <div className="col-lg-3 col-md-12 col-6">
+                                                            <div className="col-lg-3 col-md-12 col-6" key={index}>
                                                                 <a className="home-category-list__category-grid" href="">
                                                                     <div className="home-category-list__category-grid-content">
                                                                         <div className="lazy-image__container home-category-list__category-grid-thumbnail">
@@ -215,7 +215,7 @@ export default (props) => {
                                                 {
                                                     props.electricAds.map((item, index) => {
                                                         return (
-                                                            <div className="col-md-6">
+                                                            <div className="col-md-6" key={index}>
                                                                 <div className="banner-box">
                                                                     <div className="inner-box">
                                                                         <a href="#" title="">
@@ -239,7 +239,7 @@ export default (props) => {
                                                 {
                                                     props.electric.map((item, index) => {
                                                         return (
-                                                            <div className="col-lg-3 col-md-12 col-6">
+                                                            <div className="col-lg-3 col-md-12 col-6" key={index}>
                                                                 <a className="home-category-list__category-grid" href="">
                                                                     <div className="home-category-list__category-grid-content">
                                                                         <div className="lazy-image__container home-category-list__category-grid-thumbnail">
@@ -259,7 +259,7 @@ export default (props) => {
                                                 {
                                                     props.electricAds.map((item, index) => {
                                                         return (
-                                                            <div className="col-md-6">
+                                                            <div className="col-md-6" key={index}>
                                                                 <div className="banner-box">
                                                                     <div className="inner-box">
                                                                         <a href="#" title="">
@@ -282,7 +282,7 @@ export default (props) => {
                                                 {
                                                     props.electric.map((item, index) => {
                                                         return (
-                                                            <div className="col-lg-3 col-md-12 col-6">
+                                                            <div className="col-lg-3 col-md-12 col-6" key={index}>
                                                                 <a className="home-category-list__category-grid" href="">
                                                                     <div className="home-category-list__category-grid-content">
                                                                         <div className="lazy-image__container home-category-list__category-grid-thumbnail">
@@ -302,7 +302,7 @@ export default (props) => {
                                                 {
                                                     props.electricAds.map((item, index) => {
                                                         return (
-                                                            <div className="col-md-6">
+                                                            <div className="col-md-6" key={index}>
                                                                 <div className="banner-box">
                                                                     <div className="inner-box">
                                                                         <a href="#" title="">

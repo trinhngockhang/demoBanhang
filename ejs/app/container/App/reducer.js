@@ -22,7 +22,7 @@ const initialState = {
     ]
 }
 
-const homeReducer = (state = initialState, action) => {
+const appReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'LOADING':
             return { ...state, }
@@ -32,4 +32,4 @@ const homeReducer = (state = initialState, action) => {
 }
 
 
-export default homeReducer;
+export default appReducer;

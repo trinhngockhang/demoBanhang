@@ -45,7 +45,7 @@ const Header = (props) => {
 							</div>
 							<div className="col-md-6 col-sm-6">
 								<div className="top-search">
-									<form action="#" method="get" className="form-search" accept-charset="utf-8">
+									<form action="#" method="get" className="form-search" acceptCharset="utf-8">
 										<div className="cat-wrap">
 											<select name="category">
 												<option hidden value="">Danh mục</option>
@@ -106,7 +106,7 @@ const Header = (props) => {
 													<ul>
 														{props.items.map((item, index) => {
 															return (
-																<li>
+																<li key={index}>
 																	<div className="image">
 																		<img src={item.src} alt="" />
 																	</div>

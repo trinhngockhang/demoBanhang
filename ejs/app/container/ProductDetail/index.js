@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductContent from '../../components/ProductDetail/ProductContent';
-import HangDaDung from '../../components/Home/HangDaDung';
+import Produce from '../../components/Home/Produce';
 import BreadCrumb from '../../components/BreadCrumb';
 
 class ProductDetail extends React.Component {
@@ -9,7 +9,7 @@ class ProductDetail extends React.Component {
             <div>
                 <BreadCrumb/>
                 <ProductContent/>
-                <HangDaDung/>
+                <Produce/>
             </div>
         )
     }
