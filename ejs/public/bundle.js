@@ -37475,10 +37475,10 @@ var Home = function (_Component) {
                     { className: 'boxed' },
                     _react2.default.createElement(
                         'div',
-                        { 'class': 'preloader' },
+                        { className: 'preloader' },
                         _react2.default.createElement(
                             'div',
-                            { 'class': 'clear-loading loading-effect-2' },
+                            { className: 'clear-loading loading-effect-2' },
                             _react2.default.createElement('span', null)
                         )
                     ),
