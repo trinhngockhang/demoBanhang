@@ -1,129 +1,73 @@
 import React from 'react';
 
-export default class Advertisement extends React.Component {
+export default class Advertisement extends React.PureComponent {
     render() {
         return (
             <div>
-                <section className="flat-row flat-banner-box">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-8">
-                                <div className="banner-box one-half">
-                                    <div className="inner-box">
-                                        <a href="#" title="">
-                                            <img src="./images/banner_boxes/home-01.jpg" alt="" />
-                                        </a>
-                                    </div>
-                                    <div className="inner-box">
-                                        <a href="#" title="">
-                                            <img src="./images/banner_boxes/home-05.jpg" alt="" />
-                                        </a>
-                                    </div>
-                                    <div className="clearfix"></div>
-                                </div>
-                                <div className="banner-box bottom">
-                                    <div className="inner-box bottom">
-                                        <a href="#" title="">
-                                            <img className="img-banner-bot" src="./images/banner_boxes/home-04.jpg" alt="" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                                <div className="banner-box">
-                                    <div className="inner-box">
-                                        <a href="#" title="">
-                                            <img src="./images/banner_boxes/home-03.jpg" alt="" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-4 bigBanner">
-                                <div className="banner-box">
-                                    <div className="inner-box">
-                                        <a href="#" title="">
-                                            <img src="./images/banner_boxes/home-03.jpg" alt="" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-8">
-                                <div className="banner-box one-half">
-                                    <div className="inner-box">
-                                        <a href="#" title="">
-                                            <img src="./images/banner_boxes/home-01.jpg" alt="" />
-                                        </a>
-                                    </div>
-                                    <div className="inner-box">
-                                        <a href="#" title="">
-                                            <img src="./images/banner_boxes/home-05.jpg" alt="" />
-                                        </a>
-                                    </div>
-                                    <div className="clearfix"></div>
-                                </div>
-                                <div className="banner-box bottom">
-                                    <div className="inner-box bottom">
-                                        <a href="#" title="">
-                                            <img className="img-banner-bot" src="./images/banner_boxes/home-04.jpg" alt="" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div className="banner-mobile">
-                    <div className="row">
-                        <div className="col-xs-6">
-                            <div className="inner-mobile left" style={{ position: 'relative' }}>
-                                <a href="/" className="home__banner" data-istrackable="true">
-                                    <img src="./images/banner_boxes/adayroi1.png" title="" alt="" style={{ marginBottom: '16px' }} />
-                                </a>
-                            </div>
-                            <div className="inner-mobile left" style={{ position: 'relative' }}>
-                                <a href="/" >
-                                    <img src="./images/banner_boxes/adayroi2.jpg" title="" alt="" style={{ marginBottom: '16px' }} />
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-xs-6">
-                            <div className="inner-mobile right" style={{ position: 'relative' }}>
-                                <a href="/am-thuc-ban-chay-lp32513#325131">
-                                    <img src="./images/banner_boxes/adayroi3.jpg" alt="" style={{ marginBottom: '16px' }} />
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div className="row second">
-                        <div className="col-xs-6">
-                            <div className="inner-mobile left" style={{ position: 'relative' }}>
-                                <a href="/" className="home__banner" data-istrackable="true">
-                                    <img src="./images/banner_boxes/adayroi4.jpg" title="" alt="" style={{ marginBottom: '16px' }} />
-                                </a>
-                            </div>
-                            <div className="inner-mobile left" style={{ position: 'relative' }}>
-                                <a href="/" >
-                                    <img src="./images/banner_boxes/adayroi5.png" title="" alt="" style={{ marginBottom: '16px' }} />
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-xs-6">
-                            <div className="inner-mobile right" style={{ position: 'relative' }}>
-                                <a href="/" className="home__banner" >
-                                    <img src="./images/banner_boxes/adayroi6.jpg" title="" alt="" style={{ marginBottom: '16px' }} />
-                                </a>
-                            </div>
-                            <div className="inner-mobile right second" style={{position: 'relative'}}>
-                                <a href="/">
-                                    <img src="./images/banner_boxes/adayroi7.jpg" title="" alt="" style={{ marginBottom: '16px' }} />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="banner-mobile">
+				    <div class="row">
+						<div class="col-12 hidden-xs">
+							<div class="col-xs-12">
+				<h2 class="home__title home__title--section-5" style="border-color: #ef5350"><a href="#">Khuyến mãi hấp dẫn<span class="adr-icon icon-arrow-next visible-xs"></span></a></h2>
+				<ul class="home__title__menu  hidden-sm hidden-xs">
+					</ul>
+			</div>
+		</div>
+						<div class="col-sm-6 col-12 banner-left-section">
+							<div class="row">
+						<div class="col-xs-6">
+								  <div class="col-xs- col-sm- col-md-"  >
+			<a href="/" class="js-gtm-track-click-banner home__banner">
+						<img src="https://media.static-adayroi.com/sys_master/images/h20/h9c/13954459959326.jpg" class="js-responsive-image  img-responsive img__simple-banner" style="margin-bottom: 16px"> </img>
+					</a>
+				</div>
+		<div class="col-xs- col-sm- col-md-"  >
+			<a href="/" class="js-gtm-track-click-banner home__banner">
+						<img src="https://media.static-adayroi.com/sys_master/images/h62/h81/13957616959518.jpg" class="js-responsive-image  img-responsive img__simple-banner" >
+                        </img>
+                    </a>
+				</div>
+		</div>
+						<div class="col-xs-6">
+							<div class="col-xs- col-sm- col-md-"  >
+			<a href="/" class="js-gtm-track-click-banner home__banner">
+						<img src="https://media.static-adayroi.com/sys_master/images/h0d/h69/13959201718302.jpg" class="js-responsive-image  img-responsive img__simple-banner"style="margin-bottom: 16px">
+                        </img>
+                	</a>
+				</div>
+		</div>
+			
+					</div>
+				
+				</div>
+						<div class="col-sm-6 col-xs-12 no-padding">
+							<div class="col-xs-6 col-sm-6 col-md-6"  >
+			<a href="/" class="js-gtm-track-click-banner home__banner" >
+						<img src="https://media.static-adayroi.com/sys_master/images/h0d/h70/13954461433886.jpg" class="js-responsive-image  img-responsive img__simple-banner" style="margin-bottom: 16px">
+                        </img>
+                    </a>
+				</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 last">
+			<a href="/" class="js-gtm-track-click-banner home__banner" >
+						<img src="https://media.static-adayroi.com/sys_master/images/h00/h40/13954462777374.jpg" class="js-responsive-image  img-responsive img__simple-banner" style="margin-bottom: 16px">
+                        </img>
+                	</a>
+				</div>
+		<div class="col-xs-6 col-sm-6 col-md-6" >
+			<a href="/" class="js-gtm-track-click-banner home__banner">
+						<img src="https://media.static-adayroi.com/sys_master/images/h74/h32/13957610864670.png" class="js-responsive-image  img-responsive img__simple-banner"style="margin-bottom: 16px">
+                        </img>
+                    </a>
+				</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 last" >
+			<a href="/" class="js-gtm-track-click-banner home__banner" >
+						<img src="https://media.static-adayroi.com/sys_master/images/h71/h64/13957611880478.jpg" class="js-responsive-image  img-responsive img__simple-banner" style="margin-bottom: 16px">
+                        </img>
+                    </a>
+				</div>
+		</div>
+					</div>
+		</div>	
             </div>
         )
     }

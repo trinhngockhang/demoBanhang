@@ -16,6 +16,7 @@ class Home extends Component {
                             <span></span>
                         </div>
                     </div>
+                   
                     <Advertisement />
                     <Produce name="Hàng gia dụng" produce={this.props.produce}/>
                     <Produce name="Hàng điện tử" produce={this.props.produce}/>
