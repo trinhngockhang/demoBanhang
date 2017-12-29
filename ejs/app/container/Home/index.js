@@ -17,13 +17,18 @@ class Home extends Component {
                         </div>
                     </div>
                     <Advertisement />
-                    <Produce name="Hàng gia dụng"/>
-                    <Produce name="Hàng điện tử"/>
+                    <Produce name="Hàng gia dụng" produce={this.props.produce}/>
+                    <Produce name="Hàng điện tử" produce={this.props.produce}/>
                 </div>
             </div>
         )
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        produce: state.homeReducer.produce,
+    }
+}
 
-export default Home;
+export default connect(mapStateToProps)(Home);
