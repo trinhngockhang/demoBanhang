@@ -1,5 +1,6 @@
 import React from 'react';
 import Menu from './Menu';
+import HeaderMobile from './HeaderMobile';
 
 const Header = (props) => {
 	return (
@@ -228,6 +229,7 @@ const Header = (props) => {
 				<Menu items={props.items} electric={props.electric} electricAds={props.electricAds}/>
 				
 			</section>
+			<HeaderMobile/>
 		</div>
 	)
 }
