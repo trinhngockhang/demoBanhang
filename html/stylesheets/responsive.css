@@ -428,6 +428,12 @@
 
 
 @media only screen and (max-width:991px) {
+	.logo.logo-ft {
+		display: none;
+	}
+	.tab-product {
+		margin-top: -62px;
+	}
 	.info-detail {
 		display:inline-flex;
 		padding-bottom: 5px;
