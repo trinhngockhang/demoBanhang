@@ -5,7 +5,7 @@ export default (props) => {
         <div className="header-bottom">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-9 col-12">
+                    <div className="col-md-12 text-center col-12">
                         <div className="nav-wrap">
                             <div id="mainnav" className="mainnav">
                                 <ul className="menu">
