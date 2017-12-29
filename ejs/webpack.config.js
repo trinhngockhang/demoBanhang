@@ -9,61 +9,43 @@ module.exports = {
     entry: ['babel-polyfill','./app/index.js'],
     output: {
         path: path.resolve(__dirname, 'public'),
-        filename: '[name].bundle.js',
-        chunkFilename: '[name].chunk.js',
+        filename: 'bundle.js',
     },
     plugins: [
        
-        new webpack.DefinePlugin({
-            'process.env': {
-              'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-            }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            minimize: true,
-            compress: false
-        }),
-        new CompressionPlugin({
-            asset: "[path].gz[query]",
-            algorithm: "gzip",
-            test: /\.js$|\.css$|\.html$/,
-            threshold: 10240,
-            minRatio: 0
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            // minChunks: (module) => /node_modules/.test(module.context)
-            
-            minChunks(module, count) {
-                var context = module.context;
-                return context && context.indexOf('node_modules') >= 0;
-            },
-        }),       
-         
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'react',  
-            minChunks(module, count) {
-                var context = module.context;
-                return context && context.indexOf('node_modules\/react') >= 0;
-            },
-        }),
+        // new webpack.DefinePlugin({
+        //     'process.env': {
+        //       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        //     }
+        // }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     minimize: true,
+        //     compress: false
+        // }),
+        // new CompressionPlugin({
+        //     asset: "[path].gz[query]",
+        //     algorithm: "gzip",
+        //     test: /\.js$|\.css$|\.html$/,
+        //     threshold: 10240,
+        //     minRatio: 0
+        // }),
 
-        new HtmlWebpackPlugin({
-            inject: true,
-            template: paths.appHtml,
-            minify: {
-              removeComments: true,
-              collapseWhitespace: true,
-              removeRedundantAttributes: true,
-              useShortDoctype: true,
-              removeEmptyAttributes: true,
-              removeStyleLinkTypeAttributes: true,
-              keepClosingSlash: true,
-              minifyJS: true,
-              minifyCSS: true,
-              minifyURLs: true,
-            }
-        })   
+        // new HtmlWebpackPlugin({
+        //     inject: true,
+        //     template: paths.appHtml,
+        //     minify: {
+        //       removeComments: true,
+        //       collapseWhitespace: true,
+        //       removeRedundantAttributes: true,
+        //       useShortDoctype: true,
+        //       removeEmptyAttributes: true,
+        //       removeStyleLinkTypeAttributes: true,
+        //       keepClosingSlash: true,
+        //       minifyJS: true,
+        //       minifyCSS: true,
+        //       minifyURLs: true,
+        //     }
+        // })   
     ],
     module: {
         loaders: [
@@ -102,11 +84,6 @@ module.exports = {
           '.jsx',
           '.react.js',
           '.css',
-        ],
-        mainFields: [
-          'browser',
-          'jsnext:main',
-          'main',
         ],
     }
 }
