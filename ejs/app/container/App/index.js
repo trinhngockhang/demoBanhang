@@ -7,7 +7,6 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Category from '../Category';
 import ProductDetail from '../ProductDetail';
-import HeaderMoblie from '../../components/HeaderMobile';
 
 class App extends React.Component {
     render() {
@@ -15,7 +14,6 @@ class App extends React.Component {
         return (
             <div>
                 <Header items={suggest} electric={electric} electricAds={electricAds}/>
-                <HeaderMoblie/>
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/category" component={Category}/>

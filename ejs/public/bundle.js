@@ -37362,10 +37362,6 @@ var _ProductDetail = __webpack_require__(183);
 
 var _ProductDetail2 = _interopRequireDefault(_ProductDetail);
 
-var _HeaderMobile = __webpack_require__(491);
-
-var _HeaderMobile2 = _interopRequireDefault(_HeaderMobile);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37395,7 +37391,6 @@ var App = function (_React$Component) {
                 'div',
                 null,
                 _react2.default.createElement(_Header2.default, { items: suggest, electric: electric, electricAds: electricAds }),
-                _react2.default.createElement(_HeaderMobile2.default, null),
                 _react2.default.createElement(
                     _reactRouterDom.Switch,
                     null,
@@ -41818,6 +41813,10 @@ var _Menu = __webpack_require__(478);
 
 var _Menu2 = _interopRequireDefault(_Menu);
 
+var _HeaderMobile = __webpack_require__(491);
+
+var _HeaderMobile2 = _interopRequireDefault(_HeaderMobile);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Header = function Header(props) {
@@ -42384,7 +42383,8 @@ var Header = function Header(props) {
 				)
 			),
 			_react2.default.createElement(_Menu2.default, { items: props.items, electric: props.electric, electricAds: props.electricAds })
-		)
+		),
+		_react2.default.createElement(_HeaderMobile2.default, null)
 	);
 };
 
@@ -43962,20 +43962,20 @@ var HeaderMobile = function HeaderMobile() {
             { id: "header-mobile" },
             _react2.default.createElement(
                 "div",
-                { "class": "row header-mobile" },
+                { className: "row header-mobile" },
                 _react2.default.createElement(
                     "div",
-                    { "class": "col-md-9 col-2" },
-                    _react2.default.createElement("div", { "class": "nav-wrap" }),
+                    { className: "col-md-9 col-2" },
+                    _react2.default.createElement("div", { className: "nav-wrap" }),
                     _react2.default.createElement(
                         "div",
-                        { "class": "btn-menu" },
+                        { className: "btn-menu" },
                         _react2.default.createElement("span", null)
                     )
                 ),
                 _react2.default.createElement(
                     "div",
-                    { "class": "col-8" },
+                    { className: "col-8" },
                     _react2.default.createElement(
                         "form",
                         { action: "" },
@@ -43984,22 +43984,22 @@ var HeaderMobile = function HeaderMobile() {
                 ),
                 _react2.default.createElement(
                     "div",
-                    { "class": "col-2 inner-box" },
+                    { className: "col-2 inner-box" },
                     _react2.default.createElement(
                         "div",
-                        { "class": "inner-box mobile" },
+                        { className: "inner-box mobile" },
                         _react2.default.createElement(
                             "a",
                             { href: "#", title: "" },
                             _react2.default.createElement(
                                 "div",
-                                { "class": "icon-cart mobile" },
+                                { className: "icon-cart mobile" },
                                 _react2.default.createElement("img", { src: "./images/icons/cart.png", alt: "" })
                             )
                         ),
                         _react2.default.createElement(
                             "div",
-                            { "class": "dropdown-box mobile" },
+                            { className: "dropdown-box mobile" },
                             _react2.default.createElement(
                                 "ul",
                                 null,
@@ -44008,22 +44008,22 @@ var HeaderMobile = function HeaderMobile() {
                                     null,
                                     _react2.default.createElement(
                                         "div",
-                                        { "class": "img-product" },
+                                        { className: "img-product" },
                                         _react2.default.createElement("img", { src: "./images/product/other/img-cart-1.jpg", alt: "" })
                                     ),
                                     _react2.default.createElement(
                                         "div",
-                                        { "class": "info-product" },
+                                        { className: "info-product" },
                                         _react2.default.createElement(
                                             "div",
-                                            { "class": "name" },
+                                            { className: "name" },
                                             "Samsung - Galaxy S6 4G LTE ",
                                             _react2.default.createElement("br", null),
                                             "with 32GB Memory Cell Phone"
                                         ),
                                         _react2.default.createElement(
                                             "div",
-                                            { "class": "price" },
+                                            { className: "price" },
                                             _react2.default.createElement(
                                                 "span",
                                                 null,
@@ -44036,10 +44036,10 @@ var HeaderMobile = function HeaderMobile() {
                                             )
                                         )
                                     ),
-                                    _react2.default.createElement("div", { "class": "clearfix" }),
+                                    _react2.default.createElement("div", { className: "clearfix" }),
                                     _react2.default.createElement(
                                         "span",
-                                        { "class": "delete" },
+                                        { className: "delete" },
                                         "x"
                                     )
                                 ),
@@ -44048,20 +44048,20 @@ var HeaderMobile = function HeaderMobile() {
                                     null,
                                     _react2.default.createElement(
                                         "div",
-                                        { "class": "img-product" },
+                                        { className: "img-product" },
                                         _react2.default.createElement("img", { src: "./images/product/other/img-cart-2.jpg", alt: "" })
                                     ),
                                     _react2.default.createElement(
                                         "div",
-                                        { "class": "info-product" },
+                                        { className: "info-product" },
                                         _react2.default.createElement(
                                             "div",
-                                            { "class": "name" },
+                                            { className: "name" },
                                             "Sennheiser - Over-the-Ear Headphone System - Black"
                                         ),
                                         _react2.default.createElement(
                                             "div",
-                                            { "class": "price" },
+                                            { className: "price" },
                                             _react2.default.createElement(
                                                 "span",
                                                 null,
@@ -44074,17 +44074,17 @@ var HeaderMobile = function HeaderMobile() {
                                             )
                                         )
                                     ),
-                                    _react2.default.createElement("div", { "class": "clearfix" }),
+                                    _react2.default.createElement("div", { className: "clearfix" }),
                                     _react2.default.createElement(
                                         "span",
-                                        { "class": "delete" },
+                                        { className: "delete" },
                                         "x"
                                     )
                                 )
                             ),
                             _react2.default.createElement(
                                 "div",
-                                { "class": "total" },
+                                { className: "total" },
                                 _react2.default.createElement(
                                     "span",
                                     null,
@@ -44092,21 +44092,21 @@ var HeaderMobile = function HeaderMobile() {
                                 ),
                                 _react2.default.createElement(
                                     "span",
-                                    { "class": "price" },
+                                    { className: "price" },
                                     "$1,999.00"
                                 )
                             ),
                             _react2.default.createElement(
                                 "div",
-                                { "class": "btn-cart" },
+                                { className: "btn-cart" },
                                 _react2.default.createElement(
                                     "a",
-                                    { href: "shop-cart.html", "class": "view-cart", title: "" },
+                                    { href: "shop-cart.html", className: "view-cart", title: "" },
                                     "View Cart"
                                 ),
                                 _react2.default.createElement(
                                     "a",
-                                    { href: "shop-checkout.html", "class": "check-out", title: "" },
+                                    { href: "shop-checkout.html", className: "check-out", title: "" },
                                     "Checkout"
                                 )
                             )
