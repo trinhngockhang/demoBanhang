@@ -9,9 +9,10 @@ const Footer = () => {
                         <div className="col-lg-3 col-md-6">
                             <div className="widget-ft widget-about">
                                 <div className="logo logo-ft">
-                                    <a href="index.html" title="">
-                                        <img src="images/logos/logo.png" alt="" />
+                                    <a href="https://mesi.vn" title="">
+                                        Mesi.vn
                                     </a>
+                                    <i>Cảm ơn quý khách !</i>
                                 </div>
                                 <ul className="social-list">
                                     <li>
@@ -165,7 +166,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row">
+                    {/* <div className="row">
                         <div className="col-md-12">
                             <div className="widget widget-apps">
                                 <div className="widget-title">
@@ -197,7 +198,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </footer>
 
@@ -205,7 +206,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <p className="copyright"> All Rights Reserved © Techno Store 2017</p>
+                            <p className="copyright"> Mesi.vn - 2018</p>
                             <p className="btn-scroll">
                                 <a href="#" title="">
                                     <img src="./images/icons/top.png" alt="" />

@@ -9,17 +9,15 @@ const Header = (props) => {
 				<div className="header-top">
 					<div className="container">
 						<div className="row">
-							<div className="col-md-12">
-								<ul className="flat-support">
+							<div className="col-md-6">
+								<ul>
 									<li>
-										<a href="faq.html" title="">Hỗ trợ</a>
-									</li>
-									<li>
-										<a href="store-location.html" title="">Liên hệ</a>
-									</li>
-									<li>
-										<a href="order-tracking.html" title="">Kiểm tra hàng</a>
-									</li>
+										<a href="faq.html" title="">Hotline: 19001583</a>
+									</li>									
+								</ul>
+							</div>
+							<div className="col-md-6 text-right">
+								<ul className="flat-support">									
 									<li>
 										<a href="order-tracking.html" title="">Đăng nhập</a>
 									</li>
@@ -37,14 +35,15 @@ const Header = (props) => {
 				<div className="header-middle">
 					<div className="container">
 						<div className="row">
-							<div className="col-md-3 col-sm-3">
+							<div className="col-md-2 col-sm-3">
 								<div id="logo" className="logo">
-									<a href="index.html" title="">
-										<img src="./images/logos/logo.png" alt="" />
+									<a href="https://mesi.vn" title="">
+										Mesi.vn
 									</a>
+									<i>Cảm ơn quý khách ! </i>
 								</div>
 							</div>
-							<div className="col-md-6 col-sm-6">
+							<div className="col-md-8 col-sm-">
 								<div className="top-search">
 									<form action="#" method="get" className="form-search" acceptCharset="utf-8">
 										<div className="cat-wrap">
@@ -95,7 +94,7 @@ const Header = (props) => {
 											</div>
 										</div>
 										<div className="box-search">
-											<input type="text" name="search" placeholder="Bạn cần tìm gì ?" />
+											<input type="text" name="search" placeholder="Tìm kiếm trên Mesi" />
 											<span className="btn-search">
 												<button type="submit" className="waves-effect"><img src="./images/icons/search.png" alt="" /></button>
 											</span>
@@ -164,7 +163,7 @@ const Header = (props) => {
 									</form>
 								</div>
 							</div>
-							<div className="col-md-3 col-sm-3">
+							<div className="col-md-2 col-sm-3">
 								<div className="box-cart">
 									<div className="inner-box">
 										<a href="#" title="">
@@ -172,9 +171,9 @@ const Header = (props) => {
 												<img src="./images/icons/cart.png" alt="" />
 												<span>4</span>
 											</div>
-											<div className="price">
+											{/* <div className="price">
 												$0.00
-										</div>
+										</div> */}
 										</a>
 										<div className="dropdown-box">
 											<ul>

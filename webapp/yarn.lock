@@ -51,6 +51,10 @@ address@1.0.3, address@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/address/-/address-1.0.3.tgz#b5f50631f8d6cec8bd20c963963afb55e06cbce9"
 
+adhere@1.x:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/adhere/-/adhere-1.0.1.tgz#e196e04a776a007749c74f4a54f5ecf74c068919"
+
 ajv-keywords@^2.0.0, ajv-keywords@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-2.1.1.tgz#617997fc5f60576894c435f940d819e135b80762"
@@ -1189,6 +1193,10 @@ bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
 
+cadence@1.x:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/cadence/-/cadence-1.0.4.tgz#9b44a4f37206e41a3ca3296af3d972acf876026d"
+
 caller-path@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/caller-path/-/caller-path-0.1.0.tgz#94085ef63581ecd3daa92444a8fe94e82577751f"
@@ -1975,6 +1983,14 @@ ecc-jsbn@~0.1.1:
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
+
+eject@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/eject/-/eject-0.0.4.tgz#bad7c33522e63fe963ccb713d0cb0ee7a975d8fb"
+  dependencies:
+    adhere "1.x"
+    cadence "1.x"
+    interrupt "1.x"
 
 electron-releases@^2.1.0:
   version "2.1.0"
@@ -3182,6 +3198,12 @@ internal-ip@1.2.0:
 interpret@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
+
+interrupt@1.x:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/interrupt/-/interrupt-1.2.0.tgz#8f8e0d0cfba190e74682e82d8f0439205a670209"
+  dependencies:
+    supersede "1.x"
 
 invariant@^2.0.0, invariant@^2.2.1, invariant@^2.2.2:
   version "2.2.2"
@@ -5978,6 +6000,10 @@ style-loader@0.19.0:
   dependencies:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
+
+supersede@1.x:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/supersede/-/supersede-1.0.4.tgz#588cbdb211c636621d3a8c31ed8806b44f1ecce6"
 
 supports-color@^2.0.0:
   version "2.0.0"
