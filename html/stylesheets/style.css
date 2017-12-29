@@ -3392,9 +3392,12 @@ h2.home__title.home__title--section-5 {
 	width:88.4%;
 }
 .info-detail {
-    display: block;
+	display: inline-flex;
     padding-bottom: 5px;
     padding-top: 26px;
+    padding-left: 12px;
+    padding-right: 13px;
+    max-width: 32%;
 }
 
 img.img-cover {
@@ -3422,7 +3425,10 @@ p.info{
 	border-radius:10px;
 }
 .row.info {
-    padding-left: 36px;
+    padding-left: 20px;
+}
+.fill {
+	display:none;
 }
 .comment-respond .form-comment form .btn-submit button {
 	background-color:#f92400;

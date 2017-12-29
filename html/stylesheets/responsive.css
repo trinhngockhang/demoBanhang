@@ -428,6 +428,21 @@
 
 
 @media only screen and (max-width:991px) {
+	section.flat-breadcrumb.category {
+		padding-top: 78px;
+	}
+	#fill-p {
+		display: inline;
+	}
+	.fill-category {
+		display: none;
+	}
+	.fill {
+		float: right;
+		display: inline;
+		padding-top: 5px;
+		font-size: 18px;
+	}
 	li.has-mega-menu.second.mobile.special {
 		height: 222px;
 	}

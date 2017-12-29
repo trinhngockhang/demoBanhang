@@ -146,6 +146,20 @@
                                 color: '#f28b00'
                             })
                         })
+
+                        $('.fill').click(function(){
+                            if($('.fill-category').css(['display']).display == 'none'){
+                                $('.fill-category').css({
+                                    display:'block'
+                                })
+                            }else{
+                                $('.fill-category').css({
+                                    display:'none'
+                                })
+                            }
+                           
+                        })
+
                         $('#header').after($mobileMenu);
                         hasChildMenu.children('ul').hide();
                         hasChildMenu.children('a').after('<span class="btn-submenu"></span>');
