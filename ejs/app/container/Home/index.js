@@ -11,11 +11,11 @@ class Home extends Component {
         return (
             <div className="header_sticky">
                 <div className="boxed">
-                    <div class="preloader">
-                        <div class="clear-loading loading-effect-2">
+                    {/* <div className="preloader">
+                        <div className="clear-loading loading-effect-2">
                             <span></span>
                         </div>
-                    </div>
+                    </div> */}
                    
                     <Advertisement />
                     <Produce name="Hàng gia dụng" produce={this.props.produce}/>

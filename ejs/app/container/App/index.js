@@ -2,11 +2,11 @@ import React from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Home from '../Home';
-import Main from '../Main';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Header from '../../components/SharedComponent/Header';
+import Footer from '../../components/SharedComponent/Footer';
 import Category from '../Category';
 import ProductDetail from '../ProductDetail';
+import Shop from '../Shop';
 
 class App extends React.Component {
     render() {
@@ -18,6 +18,7 @@ class App extends React.Component {
                     <Route exact path="/" component={Home}/>
                     <Route path="/category" component={Category}/>
                     <Route path="/productDetail" component={ProductDetail}/>
+                    <Route path="/shop" component={Shop}/>
                 </Switch>
                 <Footer/>
             </div>

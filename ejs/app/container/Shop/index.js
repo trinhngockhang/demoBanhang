@@ -4,11 +4,13 @@ import SideBar from '../../components/Category/SideBar';
 import BreadCrumb from '../../components/BreadCrumb';
 import Tablet from '../../components/Category/Tablet';
 import Produce from '../../components/Home/Produce';
+import InfoShop from '../../components/Shop/InfoShop';
 
-class Category extends React.Component {
+class Shop extends React.Component {
     render() {
         return (
             <div>
+                <InfoShop/>
                 <BreadCrumb/>
                 <main id="shop">
                     <div className="container">
@@ -32,4 +34,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps)(Category);
+export default connect(mapStateToProps)(Shop);

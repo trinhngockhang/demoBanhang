@@ -1,25 +1,39 @@
 import React from 'react';
 import Menu from './Menu';
 import HeaderMobile from './HeaderMobile';
+import HeaderSuggestion from './HeaderSuggestion';
+import IconCart from './IconCart';
 
-const Header = (props) => {
-	return (
-		<div>
+class Header extends React.Component {
+	shouldComponentUpdate(nextProps) {
+		if(this.props.items !== nextProps.items) {
+			return true;
+		}
+		if(this.props.electric !== nextProps.electric) {
+			return true;
+		}
+		if(this.props.electricAds !== nextProps.electricAds) {
+			return true;
+		}
+		return false;
+	}
+
+	render() {
+		return (
+			<div>
 			<section id="header" className="header">
 				<div className="header-top">
 					<div className="container">
 						<div className="row">
-							<div className="col-md-12">
-								<ul className="flat-support">
+							<div className="col-md-6">
+								<ul>
 									<li>
-										<a href="faq.html" title="">Hỗ trợ</a>
-									</li>
-									<li>
-										<a href="store-location.html" title="">Liên hệ</a>
-									</li>
-									<li>
-										<a href="order-tracking.html" title="">Kiểm tra hàng</a>
-									</li>
+										<a href="faq.html" title="">Hotline: 19001583</a>
+									</li>									
+								</ul>
+							</div>
+							<div className="col-md-6 text-right">
+								<ul className="flat-support">									
 									<li>
 										<a href="order-tracking.html" title="">Đăng nhập</a>
 									</li>
@@ -37,14 +51,15 @@ const Header = (props) => {
 				<div className="header-middle">
 					<div className="container">
 						<div className="row">
-							<div className="col-md-3 col-sm-3">
+							<div className="col-md-2 col-sm-3">
 								<div id="logo" className="logo">
-									<a href="index.html" title="">
-										<img src="./images/logos/logo.png" alt="" />
+									<a href="https://mesi.vn" title="">
+										Mesi.vn
 									</a>
+									<i>Cảm ơn quý khách ! </i>
 								</div>
 							</div>
-							<div className="col-md-6 col-sm-6">
+							<div className="col-md-8 col-sm-">
 								<div className="top-search">
 									<form action="#" method="get" className="form-search" acceptCharset="utf-8">
 										<div className="cat-wrap">
@@ -95,7 +110,7 @@ const Header = (props) => {
 											</div>
 										</div>
 										<div className="box-search">
-											<input type="text" name="search" placeholder="Bạn cần tìm gì ?" />
+											<input type="text" name="search" placeholder="Tìm kiếm trên Mesi" />
 											<span className="btn-search">
 												<button type="submit" className="waves-effect"><img src="./images/icons/search.png" alt="" /></button>
 											</span>
@@ -105,28 +120,7 @@ const Header = (props) => {
 														Search Suggestions
 												</div>
 													<ul>
-														{props.items.map((item, index) => {
-															return (
-																<li key={index}>
-																	<div className="image">
-																		<img src={item.src} alt="" />
-																	</div>
-																	<div className="info-product">
-																		<div className="name">
-																			<a href="#" title="">{item.name}</a>
-																		</div>
-																		<div className="price">
-																			<span className="sale">
-																				{item.sale}
-																			</span>
-																			<span className="regular">
-																				{item.price}
-																			</span>
-																		</div>
-																	</div>
-																</li>
-															)
-														})}
+														<HeaderSuggestion items={this.props.items}/>
 													</ul>
 												</div>
 												<div className="box-cat">
@@ -164,7 +158,7 @@ const Header = (props) => {
 									</form>
 								</div>
 							</div>
-							<div className="col-md-3 col-sm-3">
+							<div className="col-md-2 col-sm-3">
 								<div className="box-cart">
 									<div className="inner-box">
 										<a href="#" title="">
@@ -172,66 +166,24 @@ const Header = (props) => {
 												<img src="./images/icons/cart.png" alt="" />
 												<span>4</span>
 											</div>
-											<div className="price">
+											{/* <div className="price">
 												$0.00
-										</div>
+										</div> */}
 										</a>
-										<div className="dropdown-box">
-											<ul>
-												<li>
-													<div className="img-product">
-														<img src="./images/product/other/img-cart-1.jpg" alt="" />
-													</div>
-													<div className="info-product">
-														<div className="name">
-															Samsung - Galaxy S6 4G LTE <br />with 32GB Memory Cell Phone
-													</div>
-														<div className="price">
-															<span>1 x</span>
-															<span>$250.00</span>
-														</div>
-													</div>
-													<div className="clearfix"></div>
-													<span className="delete">x</span>
-												</li>
-												<li>
-													<div className="img-product">
-														<img src="./images/product/other/img-cart-2.jpg" alt="" />
-													</div>
-													<div className="info-product">
-														<div className="name">
-															Sennheiser - Over-the-Ear Headphone System - Black
-													</div>
-														<div className="price">
-															<span>1 x</span>
-															<span>$250.00</span>
-														</div>
-													</div>
-													<div className="clearfix"></div>
-													<span className="delete">x</span>
-												</li>
-											</ul>
-											<div className="total">
-												<span>Subtotal:</span>
-												<span className="price">$1,999.00</span>
-											</div>
-											<div className="btn-cart">
-												<a href="shop-cart.html" className="view-cart" title="">View Cart</a>
-												<a href="shop-checkout.html" className="check-out" title="">Checkout</a>
-											</div>
-										</div>
+										<IconCart/>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<Menu items={props.items} electric={props.electric} electricAds={props.electricAds}/>
+				<Menu items={this.props.items} electric={this.props.electric} electricAds={this.props.electricAds}/>
 				
 			</section>
 			<HeaderMobile/>
 		</div>
-	)
+		)
+	}
 }
 
 export default Header;

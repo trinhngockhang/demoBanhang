@@ -36,7 +36,6 @@ export default class Advertisement extends React.PureComponent {
 		</div>
 			
 					</div>
-				
 				</div>
 						<div className="col-sm-6 col-xs-12 no-padding">
 							<div className="col-xs-6 col-sm-6 col-md-6"  >

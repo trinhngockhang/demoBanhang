@@ -4,48 +4,20 @@ const CompressionPlugin = require("compression-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const paths = require('./paths');
 const path = require('path');
+const prod = process.env.NODE_ENV === 'production';
 
-module.exports = {
+const config = {
     entry: ['babel-polyfill','./app/index.js'],
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js',
     },
-    plugins: [
-       
-        // new webpack.DefinePlugin({
-        //     'process.env': {
-        //       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        //     }
-        // }),
-        // new webpack.optimize.UglifyJsPlugin({
-        //     minimize: true,
-        //     compress: false
-        // }),
-        // new CompressionPlugin({
-        //     asset: "[path].gz[query]",
-        //     algorithm: "gzip",
-        //     test: /\.js$|\.css$|\.html$/,
-        //     threshold: 10240,
-        //     minRatio: 0
-        // }),
-
-        // new HtmlWebpackPlugin({
-        //     inject: true,
-        //     template: paths.appHtml,
-        //     minify: {
-        //       removeComments: true,
-        //       collapseWhitespace: true,
-        //       removeRedundantAttributes: true,
-        //       useShortDoctype: true,
-        //       removeEmptyAttributes: true,
-        //       removeStyleLinkTypeAttributes: true,
-        //       keepClosingSlash: true,
-        //       minifyJS: true,
-        //       minifyCSS: true,
-        //       minifyURLs: true,
-        //     }
-        // })   
+    plugins: [      
+        new webpack.DefinePlugin({
+            'process.env': {
+              'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+            }
+        }),   
     ],
     module: {
         loaders: [
@@ -87,3 +59,38 @@ module.exports = {
         ],
     }
 }
+
+if(prod) {
+    config.push.plugins([
+        new webpack.optimize.UglifyJsPlugin({
+            minimize: true,
+            compress: false
+        }),  
+        new CompressionPlugin({
+            asset: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0
+        }),
+
+        // new HtmlWebpackPlugin({
+        //     inject: true,
+        //     template: paths.appHtml,
+        //     minify: {
+        //       removeComments: true,
+        //       collapseWhitespace: true,
+        //       removeRedundantAttributes: true,
+        //       useShortDoctype: true,
+        //       removeEmptyAttributes: true,
+        //       removeStyleLinkTypeAttributes: true,
+        //       keepClosingSlash: true,
+        //       minifyJS: true,
+        //       minifyCSS: true,
+        //       minifyURLs: true,
+        //     }
+        // })
+    ])
+}
+
+module.exports = config;
