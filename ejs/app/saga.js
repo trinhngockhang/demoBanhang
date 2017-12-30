@@ -4,7 +4,6 @@ import shopSaga from './container/Shop/saga';
 
 export default function* rootSaga() {
     yield [
-        fork(homeSaga),
         fork(shopSaga),
     ];
 } 

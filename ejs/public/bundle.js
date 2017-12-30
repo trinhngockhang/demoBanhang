@@ -60,18 +60,18 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 182);
+/******/ 	return __webpack_require__(__webpack_require__.s = 189);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(2);
-var core = __webpack_require__(26);
+var global = __webpack_require__(3);
+var core = __webpack_require__(27);
 var hide = __webpack_require__(15);
 var redefine = __webpack_require__(16);
-var ctx = __webpack_require__(23);
+var ctx = __webpack_require__(24);
 var PROTOTYPE = 'prototype';
 
 var $export = function (type, name, source) {
@@ -116,6 +116,20 @@ module.exports = $export;
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+if (false) {
+  module.exports = require('./cjs/react.production.min.js');
+} else {
+  module.exports = __webpack_require__(393);
+}
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var isObject = __webpack_require__(5);
 module.exports = function (it) {
   if (!isObject(it)) throw TypeError(it + ' is not an object!');
@@ -124,7 +138,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports) {
 
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -133,20 +147,6 @@ var global = module.exports = typeof window != 'undefined' && window.Math == Mat
   // eslint-disable-next-line no-new-func
   : Function('return this')();
 if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-if (false) {
-  module.exports = require('./cjs/react.production.min.js');
-} else {
-  module.exports = __webpack_require__(386);
-}
 
 
 /***/ }),
@@ -175,9 +175,9 @@ module.exports = function (it) {
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var store = __webpack_require__(61)('wks');
-var uid = __webpack_require__(38);
-var Symbol = __webpack_require__(2).Symbol;
+var store = __webpack_require__(63)('wks');
+var uid = __webpack_require__(39);
+var Symbol = __webpack_require__(3).Symbol;
 var USE_SYMBOL = typeof Symbol == 'function';
 
 var $exports = module.exports = function (name) {
@@ -202,9 +202,9 @@ module.exports = !__webpack_require__(4)(function () {
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var anObject = __webpack_require__(1);
-var IE8_DOM_DEFINE = __webpack_require__(121);
-var toPrimitive = __webpack_require__(27);
+var anObject = __webpack_require__(2);
+var IE8_DOM_DEFINE = __webpack_require__(124);
+var toPrimitive = __webpack_require__(28);
 var dP = Object.defineProperty;
 
 exports.f = __webpack_require__(7) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
@@ -225,7 +225,7 @@ exports.f = __webpack_require__(7) ? Object.defineProperty : function defineProp
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.15 ToLength
-var toInteger = __webpack_require__(29);
+var toInteger = __webpack_require__(30);
 var min = Math.min;
 module.exports = function (it) {
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
@@ -237,7 +237,7 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
-var defined = __webpack_require__(28);
+var defined = __webpack_require__(29);
 module.exports = function (it) {
   return Object(defined(it));
 };
@@ -346,7 +346,7 @@ if (true) {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(403)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(410)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
@@ -369,7 +369,7 @@ module.exports = function (it, key) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(8);
-var createDesc = __webpack_require__(37);
+var createDesc = __webpack_require__(38);
 module.exports = __webpack_require__(7) ? function (object, key, value) {
   return dP.f(object, key, createDesc(1, value));
 } : function (object, key, value) {
@@ -382,15 +382,15 @@ module.exports = __webpack_require__(7) ? function (object, key, value) {
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(2);
+var global = __webpack_require__(3);
 var hide = __webpack_require__(15);
 var has = __webpack_require__(14);
-var SRC = __webpack_require__(38)('src');
+var SRC = __webpack_require__(39)('src');
 var TO_STRING = 'toString';
 var $toString = Function[TO_STRING];
 var TPL = ('' + $toString).split(TO_STRING);
 
-__webpack_require__(26).inspectSource = function (it) {
+__webpack_require__(27).inspectSource = function (it) {
   return $toString.call(it);
 };
 
@@ -421,7 +421,7 @@ __webpack_require__(26).inspectSource = function (it) {
 
 var $export = __webpack_require__(0);
 var fails = __webpack_require__(4);
-var defined = __webpack_require__(28);
+var defined = __webpack_require__(29);
 var quot = /"/g;
 // B.2.3.2.1 CreateHTML(string, tag, attribute, value)
 var createHTML = function (string, tag, attribute, value) {
@@ -445,8 +445,8 @@ module.exports = function (NAME, exec) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(54);
-var defined = __webpack_require__(28);
+var IObject = __webpack_require__(56);
+var defined = __webpack_require__(29);
 module.exports = function (it) {
   return IObject(defined(it));
 };
@@ -456,12 +456,12 @@ module.exports = function (it) {
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pIE = __webpack_require__(55);
-var createDesc = __webpack_require__(37);
+var pIE = __webpack_require__(57);
+var createDesc = __webpack_require__(38);
 var toIObject = __webpack_require__(18);
-var toPrimitive = __webpack_require__(27);
+var toPrimitive = __webpack_require__(28);
 var has = __webpack_require__(14);
-var IE8_DOM_DEFINE = __webpack_require__(121);
+var IE8_DOM_DEFINE = __webpack_require__(124);
 var gOPD = Object.getOwnPropertyDescriptor;
 
 exports.f = __webpack_require__(7) ? gOPD : function getOwnPropertyDescriptor(O, P) {
@@ -481,7 +481,7 @@ exports.f = __webpack_require__(7) ? gOPD : function getOwnPropertyDescriptor(O,
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 var has = __webpack_require__(14);
 var toObject = __webpack_require__(10);
-var IE_PROTO = __webpack_require__(81)('IE_PROTO');
+var IE_PROTO = __webpack_require__(84)('IE_PROTO');
 var ObjectProto = Object.prototype;
 
 module.exports = Object.getPrototypeOf || function (O) {
@@ -875,6 +875,316 @@ var cloneableGenerator = function cloneableGenerator(generatorFunc) {
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+var bind = __webpack_require__(184);
+var isBuffer = __webpack_require__(503);
+
+/*global toString:true*/
+
+// utils is a library of generic helper functions non-specific to axios
+
+var toString = Object.prototype.toString;
+
+/**
+ * Determine if a value is an Array
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Array, otherwise false
+ */
+function isArray(val) {
+  return toString.call(val) === '[object Array]';
+}
+
+/**
+ * Determine if a value is an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+ */
+function isArrayBuffer(val) {
+  return toString.call(val) === '[object ArrayBuffer]';
+}
+
+/**
+ * Determine if a value is a FormData
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an FormData, otherwise false
+ */
+function isFormData(val) {
+  return (typeof FormData !== 'undefined') && (val instanceof FormData);
+}
+
+/**
+ * Determine if a value is a view on an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+ */
+function isArrayBufferView(val) {
+  var result;
+  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
+    result = ArrayBuffer.isView(val);
+  } else {
+    result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+  }
+  return result;
+}
+
+/**
+ * Determine if a value is a String
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a String, otherwise false
+ */
+function isString(val) {
+  return typeof val === 'string';
+}
+
+/**
+ * Determine if a value is a Number
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Number, otherwise false
+ */
+function isNumber(val) {
+  return typeof val === 'number';
+}
+
+/**
+ * Determine if a value is undefined
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */
+function isUndefined(val) {
+  return typeof val === 'undefined';
+}
+
+/**
+ * Determine if a value is an Object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Object, otherwise false
+ */
+function isObject(val) {
+  return val !== null && typeof val === 'object';
+}
+
+/**
+ * Determine if a value is a Date
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Date, otherwise false
+ */
+function isDate(val) {
+  return toString.call(val) === '[object Date]';
+}
+
+/**
+ * Determine if a value is a File
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a File, otherwise false
+ */
+function isFile(val) {
+  return toString.call(val) === '[object File]';
+}
+
+/**
+ * Determine if a value is a Blob
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Blob, otherwise false
+ */
+function isBlob(val) {
+  return toString.call(val) === '[object Blob]';
+}
+
+/**
+ * Determine if a value is a Function
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Function, otherwise false
+ */
+function isFunction(val) {
+  return toString.call(val) === '[object Function]';
+}
+
+/**
+ * Determine if a value is a Stream
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Stream, otherwise false
+ */
+function isStream(val) {
+  return isObject(val) && isFunction(val.pipe);
+}
+
+/**
+ * Determine if a value is a URLSearchParams object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+ */
+function isURLSearchParams(val) {
+  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+}
+
+/**
+ * Trim excess whitespace off the beginning and end of a string
+ *
+ * @param {String} str The String to trim
+ * @returns {String} The String freed of excess whitespace
+ */
+function trim(str) {
+  return str.replace(/^\s*/, '').replace(/\s*$/, '');
+}
+
+/**
+ * Determine if we're running in a standard browser environment
+ *
+ * This allows axios to run in a web worker, and react-native.
+ * Both environments support XMLHttpRequest, but not fully standard globals.
+ *
+ * web workers:
+ *  typeof window -> undefined
+ *  typeof document -> undefined
+ *
+ * react-native:
+ *  navigator.product -> 'ReactNative'
+ */
+function isStandardBrowserEnv() {
+  if (typeof navigator !== 'undefined' && navigator.product === 'ReactNative') {
+    return false;
+  }
+  return (
+    typeof window !== 'undefined' &&
+    typeof document !== 'undefined'
+  );
+}
+
+/**
+ * Iterate over an Array or an Object invoking a function for each item.
+ *
+ * If `obj` is an Array callback will be called passing
+ * the value, index, and complete array for each item.
+ *
+ * If 'obj' is an Object callback will be called passing
+ * the value, key, and complete object for each property.
+ *
+ * @param {Object|Array} obj The object to iterate
+ * @param {Function} fn The callback to invoke for each item
+ */
+function forEach(obj, fn) {
+  // Don't bother if no value provided
+  if (obj === null || typeof obj === 'undefined') {
+    return;
+  }
+
+  // Force an array if not already something iterable
+  if (typeof obj !== 'object') {
+    /*eslint no-param-reassign:0*/
+    obj = [obj];
+  }
+
+  if (isArray(obj)) {
+    // Iterate over array values
+    for (var i = 0, l = obj.length; i < l; i++) {
+      fn.call(null, obj[i], i, obj);
+    }
+  } else {
+    // Iterate over object keys
+    for (var key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        fn.call(null, obj[key], key, obj);
+      }
+    }
+  }
+}
+
+/**
+ * Accepts varargs expecting each argument to be an object, then
+ * immutably merges the properties of each object and returns result.
+ *
+ * When multiple objects contain the same key the later object in
+ * the arguments list will take precedence.
+ *
+ * Example:
+ *
+ * ```js
+ * var result = merge({foo: 123}, {foo: 456});
+ * console.log(result.foo); // outputs 456
+ * ```
+ *
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+function merge(/* obj1, obj2, obj3, ... */) {
+  var result = {};
+  function assignValue(val, key) {
+    if (typeof result[key] === 'object' && typeof val === 'object') {
+      result[key] = merge(result[key], val);
+    } else {
+      result[key] = val;
+    }
+  }
+
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+
+/**
+ * Extends object a by mutably adding to it the properties of object b.
+ *
+ * @param {Object} a The object to be extended
+ * @param {Object} b The object to copy properties from
+ * @param {Object} thisArg The object to bind function to
+ * @return {Object} The resulting value of object a
+ */
+function extend(a, b, thisArg) {
+  forEach(b, function assignValue(val, key) {
+    if (thisArg && typeof val === 'function') {
+      a[key] = bind(val, thisArg);
+    } else {
+      a[key] = val;
+    }
+  });
+  return a;
+}
+
+module.exports = {
+  isArray: isArray,
+  isArrayBuffer: isArrayBuffer,
+  isBuffer: isBuffer,
+  isFormData: isFormData,
+  isArrayBufferView: isArrayBufferView,
+  isString: isString,
+  isNumber: isNumber,
+  isObject: isObject,
+  isUndefined: isUndefined,
+  isDate: isDate,
+  isFile: isFile,
+  isBlob: isBlob,
+  isFunction: isFunction,
+  isStream: isStream,
+  isURLSearchParams: isURLSearchParams,
+  isStandardBrowserEnv: isStandardBrowserEnv,
+  forEach: forEach,
+  merge: merge,
+  extend: extend,
+  trim: trim
+};
+
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // optional / simple context binding
 var aFunction = __webpack_require__(12);
 module.exports = function (fn, that, length) {
@@ -898,7 +1208,7 @@ module.exports = function (fn, that, length) {
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -909,7 +1219,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -925,7 +1235,7 @@ module.exports = function (method, arg) {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 var core = module.exports = { version: '2.5.3' };
@@ -933,7 +1243,7 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
@@ -951,7 +1261,7 @@ module.exports = function (it, S) {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports) {
 
 // 7.2.1 RequireObjectCoercible(argument)
@@ -962,7 +1272,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 // 7.1.4 ToInteger
@@ -974,12 +1284,12 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // most Object methods by ES6 should accept primitives
 var $export = __webpack_require__(0);
-var core = __webpack_require__(26);
+var core = __webpack_require__(27);
 var fails = __webpack_require__(4);
 module.exports = function (KEY, exec) {
   var fn = (core.Object || {})[KEY] || Object[KEY];
@@ -990,7 +1300,7 @@ module.exports = function (KEY, exec) {
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 0 -> Array#forEach
@@ -1000,11 +1310,11 @@ module.exports = function (KEY, exec) {
 // 4 -> Array#every
 // 5 -> Array#find
 // 6 -> Array#findIndex
-var ctx = __webpack_require__(23);
-var IObject = __webpack_require__(54);
+var ctx = __webpack_require__(24);
+var IObject = __webpack_require__(56);
 var toObject = __webpack_require__(10);
 var toLength = __webpack_require__(9);
-var asc = __webpack_require__(98);
+var asc = __webpack_require__(101);
 module.exports = function (TYPE, $create) {
   var IS_MAP = TYPE == 1;
   var IS_FILTER = TYPE == 2;
@@ -1040,7 +1350,7 @@ module.exports = function (TYPE, $create) {
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports) {
 
 /*
@@ -1122,48 +1432,48 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 if (__webpack_require__(7)) {
-  var LIBRARY = __webpack_require__(39);
-  var global = __webpack_require__(2);
+  var LIBRARY = __webpack_require__(40);
+  var global = __webpack_require__(3);
   var fails = __webpack_require__(4);
   var $export = __webpack_require__(0);
-  var $typed = __webpack_require__(71);
-  var $buffer = __webpack_require__(104);
-  var ctx = __webpack_require__(23);
-  var anInstance = __webpack_require__(45);
-  var propertyDesc = __webpack_require__(37);
+  var $typed = __webpack_require__(73);
+  var $buffer = __webpack_require__(107);
+  var ctx = __webpack_require__(24);
+  var anInstance = __webpack_require__(46);
+  var propertyDesc = __webpack_require__(38);
   var hide = __webpack_require__(15);
-  var redefineAll = __webpack_require__(47);
-  var toInteger = __webpack_require__(29);
+  var redefineAll = __webpack_require__(48);
+  var toInteger = __webpack_require__(30);
   var toLength = __webpack_require__(9);
-  var toIndex = __webpack_require__(147);
-  var toAbsoluteIndex = __webpack_require__(41);
-  var toPrimitive = __webpack_require__(27);
+  var toIndex = __webpack_require__(150);
+  var toAbsoluteIndex = __webpack_require__(42);
+  var toPrimitive = __webpack_require__(28);
   var has = __webpack_require__(14);
-  var classof = __webpack_require__(56);
+  var classof = __webpack_require__(58);
   var isObject = __webpack_require__(5);
   var toObject = __webpack_require__(10);
-  var isArrayIter = __webpack_require__(95);
-  var create = __webpack_require__(42);
+  var isArrayIter = __webpack_require__(98);
+  var create = __webpack_require__(43);
   var getPrototypeOf = __webpack_require__(20);
-  var gOPN = __webpack_require__(43).f;
-  var getIterFn = __webpack_require__(97);
-  var uid = __webpack_require__(38);
+  var gOPN = __webpack_require__(44).f;
+  var getIterFn = __webpack_require__(100);
+  var uid = __webpack_require__(39);
   var wks = __webpack_require__(6);
-  var createArrayMethod = __webpack_require__(31);
-  var createArrayIncludes = __webpack_require__(62);
-  var speciesConstructor = __webpack_require__(69);
-  var ArrayIterators = __webpack_require__(100);
-  var Iterators = __webpack_require__(51);
-  var $iterDetect = __webpack_require__(66);
-  var setSpecies = __webpack_require__(44);
-  var arrayFill = __webpack_require__(99);
-  var arrayCopyWithin = __webpack_require__(137);
+  var createArrayMethod = __webpack_require__(32);
+  var createArrayIncludes = __webpack_require__(64);
+  var speciesConstructor = __webpack_require__(71);
+  var ArrayIterators = __webpack_require__(103);
+  var Iterators = __webpack_require__(53);
+  var $iterDetect = __webpack_require__(68);
+  var setSpecies = __webpack_require__(45);
+  var arrayFill = __webpack_require__(102);
+  var arrayCopyWithin = __webpack_require__(140);
   var $DP = __webpack_require__(8);
   var $GOPD = __webpack_require__(19);
   var dP = $DP.f;
@@ -1609,13 +1919,13 @@ if (__webpack_require__(7)) {
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Map = __webpack_require__(142);
+var Map = __webpack_require__(145);
 var $export = __webpack_require__(0);
-var shared = __webpack_require__(61)('metadata');
-var store = shared.store || (shared.store = new (__webpack_require__(145))());
+var shared = __webpack_require__(63)('metadata');
+var store = shared.store || (shared.store = new (__webpack_require__(148))());
 
 var getOrCreateMetadataMap = function (target, targetKey, create) {
   var targetMetadata = store.get(target);
@@ -1666,10 +1976,10 @@ module.exports = {
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var META = __webpack_require__(38)('meta');
+var META = __webpack_require__(39)('meta');
 var isObject = __webpack_require__(5);
 var has = __webpack_require__(14);
 var setDesc = __webpack_require__(8).f;
@@ -1725,7 +2035,7 @@ var meta = module.exports = {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 22.1.3.31 Array.prototype[@@unscopables]
@@ -1738,7 +2048,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 module.exports = function (bitmap, value) {
@@ -1752,7 +2062,7 @@ module.exports = function (bitmap, value) {
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 var id = 0;
@@ -1763,19 +2073,19 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 module.exports = false;
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys = __webpack_require__(123);
-var enumBugKeys = __webpack_require__(82);
+var $keys = __webpack_require__(126);
+var enumBugKeys = __webpack_require__(85);
 
 module.exports = Object.keys || function keys(O) {
   return $keys(O, enumBugKeys);
@@ -1783,10 +2093,10 @@ module.exports = Object.keys || function keys(O) {
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(29);
+var toInteger = __webpack_require__(30);
 var max = Math.max;
 var min = Math.min;
 module.exports = function (index, length) {
@@ -1796,27 +2106,27 @@ module.exports = function (index, length) {
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-var anObject = __webpack_require__(1);
-var dPs = __webpack_require__(124);
-var enumBugKeys = __webpack_require__(82);
-var IE_PROTO = __webpack_require__(81)('IE_PROTO');
+var anObject = __webpack_require__(2);
+var dPs = __webpack_require__(127);
+var enumBugKeys = __webpack_require__(85);
+var IE_PROTO = __webpack_require__(84)('IE_PROTO');
 var Empty = function () { /* empty */ };
 var PROTOTYPE = 'prototype';
 
 // Create object with fake `null` prototype: use iframe Object with cleared prototype
 var createDict = function () {
   // Thrash, waste and sodomy: IE GC bug
-  var iframe = __webpack_require__(79)('iframe');
+  var iframe = __webpack_require__(82)('iframe');
   var i = enumBugKeys.length;
   var lt = '<';
   var gt = '>';
   var iframeDocument;
   iframe.style.display = 'none';
-  __webpack_require__(83).appendChild(iframe);
+  __webpack_require__(86).appendChild(iframe);
   iframe.src = 'javascript:'; // eslint-disable-line no-script-url
   // createDict = iframe.contentWindow.Object;
   // html.removeChild(iframe);
@@ -1843,12 +2153,12 @@ module.exports = Object.create || function create(O, Properties) {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys = __webpack_require__(123);
-var hiddenKeys = __webpack_require__(82).concat('length', 'prototype');
+var $keys = __webpack_require__(126);
+var hiddenKeys = __webpack_require__(85).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return $keys(O, hiddenKeys);
@@ -1856,12 +2166,12 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var global = __webpack_require__(2);
+var global = __webpack_require__(3);
 var dP = __webpack_require__(8);
 var DESCRIPTORS = __webpack_require__(7);
 var SPECIES = __webpack_require__(6)('species');
@@ -1876,7 +2186,7 @@ module.exports = function (KEY) {
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 module.exports = function (it, Constructor, name, forbiddenField) {
@@ -1887,15 +2197,15 @@ module.exports = function (it, Constructor, name, forbiddenField) {
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ctx = __webpack_require__(23);
-var call = __webpack_require__(135);
-var isArrayIter = __webpack_require__(95);
-var anObject = __webpack_require__(1);
+var ctx = __webpack_require__(24);
+var call = __webpack_require__(138);
+var isArrayIter = __webpack_require__(98);
+var anObject = __webpack_require__(2);
 var toLength = __webpack_require__(9);
-var getIterFn = __webpack_require__(97);
+var getIterFn = __webpack_require__(100);
 var BREAK = {};
 var RETURN = {};
 var exports = module.exports = function (iterable, entries, fn, that, ITERATOR) {
@@ -1918,7 +2228,7 @@ exports.RETURN = RETURN;
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var redefine = __webpack_require__(16);
@@ -1929,7 +2239,26 @@ module.exports = function (target, src, safe) {
 
 
 /***/ }),
-/* 48 */
+/* 49 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(435);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(437);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
+
+
+
+
+
+
+/***/ }),
+/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1957,7 +2286,7 @@ module.exports = function (target, src, safe) {
 /* harmony export (immutable) */ __webpack_exports__["w"] = throttle;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return asEffect; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sagaHelpers__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sagaHelpers__ = __webpack_require__(183);
 
 
 
@@ -2231,7 +2560,7 @@ var asEffect = {
 };
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var def = __webpack_require__(8).f;
@@ -2244,13 +2573,13 @@ module.exports = function (it, tag, stat) {
 
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
-var defined = __webpack_require__(28);
+var defined = __webpack_require__(29);
 var fails = __webpack_require__(4);
-var spaces = __webpack_require__(85);
+var spaces = __webpack_require__(88);
 var space = '[' + spaces + ']';
 var non = '\u200b\u0085';
 var ltrim = RegExp('^' + space + space + '*');
@@ -2280,14 +2609,14 @@ module.exports = exporter;
 
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, exports) {
 
 module.exports = {};
 
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(5);
@@ -2298,7 +2627,7 @@ module.exports = function (it, TYPE) {
 
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2311,8 +2640,8 @@ module.exports = function (it, TYPE) {
 /* harmony export (immutable) */ __webpack_exports__["d"] = eventChannel;
 /* harmony export (immutable) */ __webpack_exports__["f"] = stdChannel;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__buffers__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scheduler__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__buffers__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scheduler__ = __webpack_require__(180);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -2515,11 +2844,11 @@ function stdChannel(subscribe) {
 }
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(24);
+var cof = __webpack_require__(25);
 // eslint-disable-next-line no-prototype-builtins
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
   return cof(it) == 'String' ? it.split('') : Object(it);
@@ -2527,18 +2856,18 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 
 /***/ }),
-/* 55 */
+/* 57 */
 /***/ (function(module, exports) {
 
 exports.f = {}.propertyIsEnumerable;
 
 
 /***/ }),
-/* 56 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
-var cof = __webpack_require__(24);
+var cof = __webpack_require__(25);
 var TAG = __webpack_require__(6)('toStringTag');
 // ES3 wrong here
 var ARG = cof(function () { return arguments; }()) == 'Arguments';
@@ -2563,7 +2892,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 57 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2605,7 +2934,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 58 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2672,7 +3001,7 @@ var createPath = exports.createPath = function createPath(location) {
 };
 
 /***/ }),
-/* 59 */
+/* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2743,7 +3072,7 @@ var createPath = function createPath(location) {
 };
 
 /***/ }),
-/* 60 */
+/* 62 */
 /***/ (function(module, exports) {
 
 var g;
@@ -2770,10 +3099,10 @@ module.exports = g;
 
 
 /***/ }),
-/* 61 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(2);
+var global = __webpack_require__(3);
 var SHARED = '__core-js_shared__';
 var store = global[SHARED] || (global[SHARED] = {});
 module.exports = function (key) {
@@ -2782,14 +3111,14 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 62 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // false -> Array#indexOf
 // true  -> Array#includes
 var toIObject = __webpack_require__(18);
 var toLength = __webpack_require__(9);
-var toAbsoluteIndex = __webpack_require__(41);
+var toAbsoluteIndex = __webpack_require__(42);
 module.exports = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIObject($this);
@@ -2811,30 +3140,30 @@ module.exports = function (IS_INCLUDES) {
 
 
 /***/ }),
-/* 63 */
+/* 65 */
 /***/ (function(module, exports) {
 
 exports.f = Object.getOwnPropertySymbols;
 
 
 /***/ }),
-/* 64 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(24);
+var cof = __webpack_require__(25);
 module.exports = Array.isArray || function isArray(arg) {
   return cof(arg) == 'Array';
 };
 
 
 /***/ }),
-/* 65 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.8 IsRegExp(argument)
 var isObject = __webpack_require__(5);
-var cof = __webpack_require__(24);
+var cof = __webpack_require__(25);
 var MATCH = __webpack_require__(6)('match');
 module.exports = function (it) {
   var isRegExp;
@@ -2843,7 +3172,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 66 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ITERATOR = __webpack_require__(6)('iterator');
@@ -2871,13 +3200,13 @@ module.exports = function (exec, skipClosing) {
 
 
 /***/ }),
-/* 67 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 21.2.5.3 get RegExp.prototype.flags
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 module.exports = function () {
   var that = anObject(this);
   var result = '';
@@ -2891,7 +3220,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 68 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2899,7 +3228,7 @@ module.exports = function () {
 var hide = __webpack_require__(15);
 var redefine = __webpack_require__(16);
 var fails = __webpack_require__(4);
-var defined = __webpack_require__(28);
+var defined = __webpack_require__(29);
 var wks = __webpack_require__(6);
 
 module.exports = function (KEY, length, exec) {
@@ -2926,11 +3255,11 @@ module.exports = function (KEY, length, exec) {
 
 
 /***/ }),
-/* 69 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.3.20 SpeciesConstructor(O, defaultConstructor)
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 var aFunction = __webpack_require__(12);
 var SPECIES = __webpack_require__(6)('species');
 module.exports = function (O, D) {
@@ -2941,23 +3270,23 @@ module.exports = function (O, D) {
 
 
 /***/ }),
-/* 70 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var global = __webpack_require__(2);
+var global = __webpack_require__(3);
 var $export = __webpack_require__(0);
 var redefine = __webpack_require__(16);
-var redefineAll = __webpack_require__(47);
-var meta = __webpack_require__(35);
-var forOf = __webpack_require__(46);
-var anInstance = __webpack_require__(45);
+var redefineAll = __webpack_require__(48);
+var meta = __webpack_require__(36);
+var forOf = __webpack_require__(47);
+var anInstance = __webpack_require__(46);
 var isObject = __webpack_require__(5);
 var fails = __webpack_require__(4);
-var $iterDetect = __webpack_require__(66);
-var setToStringTag = __webpack_require__(49);
-var inheritIfRequired = __webpack_require__(86);
+var $iterDetect = __webpack_require__(68);
+var setToStringTag = __webpack_require__(51);
+var inheritIfRequired = __webpack_require__(89);
 
 module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
   var Base = global[NAME];
@@ -3033,12 +3362,12 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 
 
 /***/ }),
-/* 71 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(2);
+var global = __webpack_require__(3);
 var hide = __webpack_require__(15);
-var uid = __webpack_require__(38);
+var uid = __webpack_require__(39);
 var TYPED = uid('typed_array');
 var VIEW = uid('view');
 var ABV = !!(global.ArrayBuffer && global.DataView);
@@ -3067,23 +3396,23 @@ module.exports = {
 
 
 /***/ }),
-/* 72 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // Forced replacement prototype accessors methods
-module.exports = __webpack_require__(39) || !__webpack_require__(4)(function () {
+module.exports = __webpack_require__(40) || !__webpack_require__(4)(function () {
   var K = Math.random();
   // In FF throws only define methods
   // eslint-disable-next-line no-undef, no-useless-call
   __defineSetter__.call(null, K, function () { /* empty */ });
-  delete __webpack_require__(2)[K];
+  delete __webpack_require__(3)[K];
 });
 
 
 /***/ }),
-/* 73 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3102,7 +3431,7 @@ module.exports = function (COLLECTION) {
 
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3110,8 +3439,8 @@ module.exports = function (COLLECTION) {
 // https://tc39.github.io/proposal-setmap-offrom/
 var $export = __webpack_require__(0);
 var aFunction = __webpack_require__(12);
-var ctx = __webpack_require__(23);
-var forOf = __webpack_require__(46);
+var ctx = __webpack_require__(24);
+var forOf = __webpack_require__(47);
 
 module.exports = function (COLLECTION) {
   $export($export.S, COLLECTION, { from: function from(source /* , mapFn, thisArg */) {
@@ -3137,7 +3466,7 @@ module.exports = function (COLLECTION) {
 
 
 /***/ }),
-/* 75 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3196,7 +3525,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 /***/ }),
-/* 76 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3210,7 +3539,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(57);
+var emptyFunction = __webpack_require__(59);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -3264,15 +3593,15 @@ if (true) {
 module.exports = warning;
 
 /***/ }),
-/* 77 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createLocation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return locationsAreEqual; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(61);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -3340,7 +3669,173 @@ var locationsAreEqual = function locationsAreEqual(a, b) {
 };
 
 /***/ }),
-/* 78 */
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Produce = function (_React$Component) {
+    _inherits(Produce, _React$Component);
+
+    function Produce() {
+        _classCallCheck(this, Produce);
+
+        return _possibleConstructorReturn(this, (Produce.__proto__ || Object.getPrototypeOf(Produce)).apply(this, arguments));
+    }
+
+    _createClass(Produce, [{
+        key: "shouldComponentUpdate",
+        value: function shouldComponentUpdate(nextProps) {
+            if (nextProps.produce !== this.props.produce) {
+                return true;
+            }
+            return false;
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                null,
+                _react2.default.createElement(
+                    "section",
+                    { className: "flat-imagebox style4", key: this.props.name },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "container" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-12 tittle" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "flat-row-title" },
+                                    _react2.default.createElement(
+                                        "h3",
+                                        null,
+                                        this.props.name
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-9 col-sm-12" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "owl-carousel-3" },
+                                    this.props.produce.map(function (item, index) {
+                                        return _react2.default.createElement(
+                                            "div",
+                                            { className: "imagebox style4", key: index },
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "box-image" },
+                                                _react2.default.createElement(
+                                                    "a",
+                                                    { href: "#", title: "" },
+                                                    _react2.default.createElement("img", { src: item.src, alt: "" })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "box-content" },
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "cat-name" },
+                                                    _react2.default.createElement(
+                                                        "a",
+                                                        { href: "#", title: "" },
+                                                        item.catName
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "product-name" },
+                                                    _react2.default.createElement(
+                                                        "a",
+                                                        { href: "#", title: "" },
+                                                        item.produceName,
+                                                        _react2.default.createElement("br", null),
+                                                        item.productName1
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "price" },
+                                                    _react2.default.createElement(
+                                                        "span",
+                                                        { className: "sale" },
+                                                        item.sale
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "span",
+                                                        { className: "regular" },
+                                                        item.regular
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "box-cart style2 home" },
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "btn-add-cart home" },
+                                                    _react2.default.createElement(
+                                                        "a",
+                                                        { href: "#", title: "" },
+                                                        _react2.default.createElement("img", { src: "./images/icons/add-cart.png", alt: "" }),
+                                                        "Mua"
+                                                    )
+                                                )
+                                            )
+                                        );
+                                    })
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-2 col-sm-2 imgCategory" },
+                                _react2.default.createElement("img", { src: "./images/slider/img_tittle2.jpg", className: "img_tittle", alt: "" })
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Produce;
+}(_react2.default.Component);
+
+exports.default = Produce;
+
+/***/ }),
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3451,11 +3946,11 @@ var buffers = {
 };
 
 /***/ }),
-/* 79 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(5);
-var document = __webpack_require__(2).document;
+var document = __webpack_require__(3).document;
 // typeof document.createElement is 'object' in old IE
 var is = isObject(document) && isObject(document.createElement);
 module.exports = function (it) {
@@ -3464,13 +3959,13 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 80 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(2);
-var core = __webpack_require__(26);
-var LIBRARY = __webpack_require__(39);
-var wksExt = __webpack_require__(122);
+var global = __webpack_require__(3);
+var core = __webpack_require__(27);
+var LIBRARY = __webpack_require__(40);
+var wksExt = __webpack_require__(125);
 var defineProperty = __webpack_require__(8).f;
 module.exports = function (name) {
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
@@ -3479,18 +3974,18 @@ module.exports = function (name) {
 
 
 /***/ }),
-/* 81 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var shared = __webpack_require__(61)('keys');
-var uid = __webpack_require__(38);
+var shared = __webpack_require__(63)('keys');
+var uid = __webpack_require__(39);
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
 };
 
 
 /***/ }),
-/* 82 */
+/* 85 */
 /***/ (function(module, exports) {
 
 // IE 8- don't enum bug keys
@@ -3500,21 +3995,21 @@ module.exports = (
 
 
 /***/ }),
-/* 83 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var document = __webpack_require__(2).document;
+var document = __webpack_require__(3).document;
 module.exports = document && document.documentElement;
 
 
 /***/ }),
-/* 84 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 /* eslint-disable no-proto */
 var isObject = __webpack_require__(5);
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 var check = function (O, proto) {
   anObject(O);
   if (!isObject(proto) && proto !== null) throw TypeError(proto + ": can't set as prototype!");
@@ -3523,7 +4018,7 @@ module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
     function (test, buggy, set) {
       try {
-        set = __webpack_require__(23)(Function.call, __webpack_require__(19).f(Object.prototype, '__proto__').set, 2);
+        set = __webpack_require__(24)(Function.call, __webpack_require__(19).f(Object.prototype, '__proto__').set, 2);
         set(test, []);
         buggy = !(test instanceof Array);
       } catch (e) { buggy = true; }
@@ -3539,7 +4034,7 @@ module.exports = {
 
 
 /***/ }),
-/* 85 */
+/* 88 */
 /***/ (function(module, exports) {
 
 module.exports = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003' +
@@ -3547,11 +4042,11 @@ module.exports = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u20
 
 
 /***/ }),
-/* 86 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(5);
-var setPrototypeOf = __webpack_require__(84).set;
+var setPrototypeOf = __webpack_require__(87).set;
 module.exports = function (that, target, C) {
   var S = target.constructor;
   var P;
@@ -3562,13 +4057,13 @@ module.exports = function (that, target, C) {
 
 
 /***/ }),
-/* 87 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var toInteger = __webpack_require__(29);
-var defined = __webpack_require__(28);
+var toInteger = __webpack_require__(30);
+var defined = __webpack_require__(29);
 
 module.exports = function repeat(count) {
   var str = String(defined(this));
@@ -3581,7 +4076,7 @@ module.exports = function repeat(count) {
 
 
 /***/ }),
-/* 88 */
+/* 91 */
 /***/ (function(module, exports) {
 
 // 20.2.2.28 Math.sign(x)
@@ -3592,7 +4087,7 @@ module.exports = Math.sign || function sign(x) {
 
 
 /***/ }),
-/* 89 */
+/* 92 */
 /***/ (function(module, exports) {
 
 // 20.2.2.14 Math.expm1(x)
@@ -3608,11 +4103,11 @@ module.exports = (!$expm1
 
 
 /***/ }),
-/* 90 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(29);
-var defined = __webpack_require__(28);
+var toInteger = __webpack_require__(30);
+var defined = __webpack_require__(29);
 // true  -> String#at
 // false -> String#codePointAt
 module.exports = function (TO_STRING) {
@@ -3631,19 +4126,19 @@ module.exports = function (TO_STRING) {
 
 
 /***/ }),
-/* 91 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var LIBRARY = __webpack_require__(39);
+var LIBRARY = __webpack_require__(40);
 var $export = __webpack_require__(0);
 var redefine = __webpack_require__(16);
 var hide = __webpack_require__(15);
 var has = __webpack_require__(14);
-var Iterators = __webpack_require__(51);
-var $iterCreate = __webpack_require__(92);
-var setToStringTag = __webpack_require__(49);
+var Iterators = __webpack_require__(53);
+var $iterCreate = __webpack_require__(95);
+var setToStringTag = __webpack_require__(51);
 var getPrototypeOf = __webpack_require__(20);
 var ITERATOR = __webpack_require__(6)('iterator');
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
@@ -3708,14 +4203,14 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 
 
 /***/ }),
-/* 92 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var create = __webpack_require__(42);
-var descriptor = __webpack_require__(37);
-var setToStringTag = __webpack_require__(49);
+var create = __webpack_require__(43);
+var descriptor = __webpack_require__(38);
+var setToStringTag = __webpack_require__(51);
 var IteratorPrototype = {};
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
@@ -3728,12 +4223,12 @@ module.exports = function (Constructor, NAME, next) {
 
 
 /***/ }),
-/* 93 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // helper for String#{startsWith, endsWith, includes}
-var isRegExp = __webpack_require__(65);
-var defined = __webpack_require__(28);
+var isRegExp = __webpack_require__(67);
+var defined = __webpack_require__(29);
 
 module.exports = function (that, searchString, NAME) {
   if (isRegExp(searchString)) throw TypeError('String#' + NAME + " doesn't accept regex!");
@@ -3742,7 +4237,7 @@ module.exports = function (that, searchString, NAME) {
 
 
 /***/ }),
-/* 94 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var MATCH = __webpack_require__(6)('match');
@@ -3760,11 +4255,11 @@ module.exports = function (KEY) {
 
 
 /***/ }),
-/* 95 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
-var Iterators = __webpack_require__(51);
+var Iterators = __webpack_require__(53);
 var ITERATOR = __webpack_require__(6)('iterator');
 var ArrayProto = Array.prototype;
 
@@ -3774,13 +4269,13 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 96 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $defineProperty = __webpack_require__(8);
-var createDesc = __webpack_require__(37);
+var createDesc = __webpack_require__(38);
 
 module.exports = function (object, index, value) {
   if (index in object) $defineProperty.f(object, index, createDesc(0, value));
@@ -3789,13 +4284,13 @@ module.exports = function (object, index, value) {
 
 
 /***/ }),
-/* 97 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var classof = __webpack_require__(56);
+var classof = __webpack_require__(58);
 var ITERATOR = __webpack_require__(6)('iterator');
-var Iterators = __webpack_require__(51);
-module.exports = __webpack_require__(26).getIteratorMethod = function (it) {
+var Iterators = __webpack_require__(53);
+module.exports = __webpack_require__(27).getIteratorMethod = function (it) {
   if (it != undefined) return it[ITERATOR]
     || it['@@iterator']
     || Iterators[classof(it)];
@@ -3803,11 +4298,11 @@ module.exports = __webpack_require__(26).getIteratorMethod = function (it) {
 
 
 /***/ }),
-/* 98 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 9.4.2.3 ArraySpeciesCreate(originalArray, length)
-var speciesConstructor = __webpack_require__(275);
+var speciesConstructor = __webpack_require__(282);
 
 module.exports = function (original, length) {
   return new (speciesConstructor(original))(length);
@@ -3815,14 +4310,14 @@ module.exports = function (original, length) {
 
 
 /***/ }),
-/* 99 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 // 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
 
 var toObject = __webpack_require__(10);
-var toAbsoluteIndex = __webpack_require__(41);
+var toAbsoluteIndex = __webpack_require__(42);
 var toLength = __webpack_require__(9);
 module.exports = function fill(value /* , start = 0, end = @length */) {
   var O = toObject(this);
@@ -3837,21 +4332,21 @@ module.exports = function fill(value /* , start = 0, end = @length */) {
 
 
 /***/ }),
-/* 100 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(36);
-var step = __webpack_require__(138);
-var Iterators = __webpack_require__(51);
+var addToUnscopables = __webpack_require__(37);
+var step = __webpack_require__(141);
+var Iterators = __webpack_require__(53);
 var toIObject = __webpack_require__(18);
 
 // 22.1.3.4 Array.prototype.entries()
 // 22.1.3.13 Array.prototype.keys()
 // 22.1.3.29 Array.prototype.values()
 // 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(91)(Array, 'Array', function (iterated, kind) {
+module.exports = __webpack_require__(94)(Array, 'Array', function (iterated, kind) {
   this._t = toIObject(iterated); // target
   this._i = 0;                   // next index
   this._k = kind;                // kind
@@ -3878,14 +4373,14 @@ addToUnscopables('entries');
 
 
 /***/ }),
-/* 101 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ctx = __webpack_require__(23);
-var invoke = __webpack_require__(128);
-var html = __webpack_require__(83);
-var cel = __webpack_require__(79);
-var global = __webpack_require__(2);
+var ctx = __webpack_require__(24);
+var invoke = __webpack_require__(131);
+var html = __webpack_require__(86);
+var cel = __webpack_require__(82);
+var global = __webpack_require__(3);
 var process = global.process;
 var setTask = global.setImmediate;
 var clearTask = global.clearImmediate;
@@ -3924,7 +4419,7 @@ if (!setTask || !clearTask) {
     delete queue[id];
   };
   // Node.js 0.8-
-  if (__webpack_require__(24)(process) == 'process') {
+  if (__webpack_require__(25)(process) == 'process') {
     defer = function (id) {
       process.nextTick(ctx(run, id, 1));
     };
@@ -3968,15 +4463,15 @@ module.exports = {
 
 
 /***/ }),
-/* 102 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(2);
-var macrotask = __webpack_require__(101).set;
+var global = __webpack_require__(3);
+var macrotask = __webpack_require__(104).set;
 var Observer = global.MutationObserver || global.WebKitMutationObserver;
 var process = global.process;
 var Promise = global.Promise;
-var isNode = __webpack_require__(24)(process) == 'process';
+var isNode = __webpack_require__(25)(process) == 'process';
 
 module.exports = function () {
   var head, last, notify;
@@ -4042,7 +4537,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 103 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4067,26 +4562,26 @@ module.exports.f = function (C) {
 
 
 /***/ }),
-/* 104 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var global = __webpack_require__(2);
+var global = __webpack_require__(3);
 var DESCRIPTORS = __webpack_require__(7);
-var LIBRARY = __webpack_require__(39);
-var $typed = __webpack_require__(71);
+var LIBRARY = __webpack_require__(40);
+var $typed = __webpack_require__(73);
 var hide = __webpack_require__(15);
-var redefineAll = __webpack_require__(47);
+var redefineAll = __webpack_require__(48);
 var fails = __webpack_require__(4);
-var anInstance = __webpack_require__(45);
-var toInteger = __webpack_require__(29);
+var anInstance = __webpack_require__(46);
+var toInteger = __webpack_require__(30);
 var toLength = __webpack_require__(9);
-var toIndex = __webpack_require__(147);
-var gOPN = __webpack_require__(43).f;
+var toIndex = __webpack_require__(150);
+var gOPN = __webpack_require__(44).f;
 var dP = __webpack_require__(8).f;
-var arrayFill = __webpack_require__(99);
-var setToStringTag = __webpack_require__(49);
+var arrayFill = __webpack_require__(102);
+var setToStringTag = __webpack_require__(51);
 var ARRAY_BUFFER = 'ArrayBuffer';
 var DATA_VIEW = 'DataView';
 var PROTOTYPE = 'prototype';
@@ -4350,17 +4845,17 @@ exports[DATA_VIEW] = $DataView;
 
 
 /***/ }),
-/* 105 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(2);
+var global = __webpack_require__(3);
 var navigator = global.navigator;
 
 module.exports = navigator && navigator.userAgent || '';
 
 
 /***/ }),
-/* 106 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4457,7 +4952,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 107 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4471,9 +4966,9 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 if (true) {
-  var invariant = __webpack_require__(75);
-  var warning = __webpack_require__(76);
-  var ReactPropTypesSecret = __webpack_require__(156);
+  var invariant = __webpack_require__(77);
+  var warning = __webpack_require__(78);
+  var ReactPropTypesSecret = __webpack_require__(159);
   var loggedTypeFailures = {};
 }
 
@@ -4523,36 +5018,36 @@ module.exports = checkPropTypes;
 
 
 /***/ }),
-/* 108 */
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(409);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(412);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(163);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(414);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(417);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(413);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(420);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(415);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(422);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(164);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(114);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(421);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(428);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(423);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(430);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(425);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(432);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(426);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(433);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
 
 
@@ -4582,7 +5077,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 109 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4593,15 +5088,15 @@ exports.locationsAreEqual = exports.createLocation = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _resolvePathname = __webpack_require__(157);
+var _resolvePathname = __webpack_require__(160);
 
 var _resolvePathname2 = _interopRequireDefault(_resolvePathname);
 
-var _valueEqual = __webpack_require__(158);
+var _valueEqual = __webpack_require__(161);
 
 var _valueEqual2 = _interopRequireDefault(_valueEqual);
 
-var _PathUtils = __webpack_require__(58);
+var _PathUtils = __webpack_require__(60);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4666,7 +5161,7 @@ var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a
 };
 
 /***/ }),
-/* 110 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4757,18 +5252,18 @@ var createTransitionManager = function createTransitionManager() {
 exports.default = createTransitionManager;
 
 /***/ }),
-/* 111 */
+/* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(115);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__["a" /* default */]);
 
 /***/ }),
-/* 112 */
+/* 115 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4776,7 +5271,7 @@ exports.default = createTransitionManager;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
@@ -4887,11 +5382,11 @@ Router.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Router);
 
 /***/ }),
-/* 113 */
+/* 116 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(418);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_path_to_regexp__);
 
 
@@ -4964,7 +5459,7 @@ var matchPath = function matchPath(pathname) {
 /* harmony default export */ __webpack_exports__["a"] = (matchPath);
 
 /***/ }),
-/* 114 */
+/* 117 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5049,26 +5544,7 @@ var createTransitionManager = function createTransitionManager() {
 /* harmony default export */ __webpack_exports__["a"] = (createTransitionManager);
 
 /***/ }),
-/* 115 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(428);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(430);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
-
-
-
-
-
-
-/***/ }),
-/* 116 */
+/* 118 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5096,13 +5572,13 @@ function warning(message) {
 }
 
 /***/ }),
-/* 117 */
+/* 119 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(433);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(438);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(440);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(440);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(445);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(447);
 
 
 
@@ -5168,7 +5644,7 @@ function isPlainObject(value) {
 
 
 /***/ }),
-/* 118 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5178,173 +5654,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Produce = function (_React$Component) {
-    _inherits(Produce, _React$Component);
-
-    function Produce() {
-        _classCallCheck(this, Produce);
-
-        return _possibleConstructorReturn(this, (Produce.__proto__ || Object.getPrototypeOf(Produce)).apply(this, arguments));
-    }
-
-    _createClass(Produce, [{
-        key: "shouldComponentUpdate",
-        value: function shouldComponentUpdate(nextProps) {
-            if (nextProps.produce !== this.props.produce) {
-                return true;
-            }
-            return false;
-        }
-    }, {
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                null,
-                _react2.default.createElement(
-                    "section",
-                    { className: "flat-imagebox style4", key: this.props.name },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "container" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "row" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-md-12 tittle" },
-                                _react2.default.createElement(
-                                    "div",
-                                    { className: "flat-row-title" },
-                                    _react2.default.createElement(
-                                        "h3",
-                                        null,
-                                        this.props.name
-                                    )
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "row" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-md-9 col-sm-12" },
-                                _react2.default.createElement(
-                                    "div",
-                                    { className: "owl-carousel-3" },
-                                    this.props.produce.map(function (item, index) {
-                                        return _react2.default.createElement(
-                                            "div",
-                                            { className: "imagebox style4", key: index },
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "box-image" },
-                                                _react2.default.createElement(
-                                                    "a",
-                                                    { href: "#", title: "" },
-                                                    _react2.default.createElement("img", { src: item.src, alt: "" })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "box-content" },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "cat-name" },
-                                                    _react2.default.createElement(
-                                                        "a",
-                                                        { href: "#", title: "" },
-                                                        item.catName
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "product-name" },
-                                                    _react2.default.createElement(
-                                                        "a",
-                                                        { href: "#", title: "" },
-                                                        item.produceName,
-                                                        _react2.default.createElement("br", null),
-                                                        item.productName1
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "price" },
-                                                    _react2.default.createElement(
-                                                        "span",
-                                                        { className: "sale" },
-                                                        item.sale
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        "span",
-                                                        { className: "regular" },
-                                                        item.regular
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                "div",
-                                                { className: "box-cart style2 home" },
-                                                _react2.default.createElement(
-                                                    "div",
-                                                    { className: "btn-add-cart home" },
-                                                    _react2.default.createElement(
-                                                        "a",
-                                                        { href: "#", title: "" },
-                                                        _react2.default.createElement("img", { src: "./images/icons/add-cart.png", alt: "" }),
-                                                        "Mua"
-                                                    )
-                                                )
-                                            )
-                                        );
-                                    })
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-md-2 col-sm-2 imgCategory" },
-                                _react2.default.createElement("img", { src: "./images/slider/img_tittle2.jpg", className: "img_tittle", alt: "" })
-                            )
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Produce;
-}(_react2.default.Component);
-
-exports.default = Produce;
-
-/***/ }),
-/* 119 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(3);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -5403,7 +5713,7 @@ var BreadCrumb = function BreadCrumb() {
 exports.default = BreadCrumb;
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5462,29 +5772,159 @@ function fsmIterator(fsm, q0) {
 }
 
 /***/ }),
-/* 121 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = !__webpack_require__(7) && !__webpack_require__(4)(function () {
-  return Object.defineProperty(__webpack_require__(79)('div'), 'a', { get: function () { return 7; } }).a != 7;
-});
-
-
-/***/ }),
 /* 122 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-exports.f = __webpack_require__(6);
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__internal_io__ = __webpack_require__(50);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "take", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["s"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "takem", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["v"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "put", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["n"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "all", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "race", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["o"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "call", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["e"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "apply", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["c"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "cps", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["h"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "fork", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["k"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "spawn", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["r"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "join", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["m"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "cancel", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["f"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "select", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["p"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "actionChannel", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "cancelled", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["g"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "flush", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["j"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "getContext", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["l"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "setContext", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["q"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "takeEvery", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["t"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "takeLatest", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["u"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "throttle", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["w"]; });
 
 
 /***/ }),
 /* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+var utils = __webpack_require__(23);
+var normalizeHeaderName = __webpack_require__(506);
+
+var DEFAULT_CONTENT_TYPE = {
+  'Content-Type': 'application/x-www-form-urlencoded'
+};
+
+function setContentTypeIfUnset(headers, value) {
+  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
+    headers['Content-Type'] = value;
+  }
+}
+
+function getDefaultAdapter() {
+  var adapter;
+  if (typeof XMLHttpRequest !== 'undefined') {
+    // For browsers use XHR adapter
+    adapter = __webpack_require__(185);
+  } else if (typeof process !== 'undefined') {
+    // For node use HTTP adapter
+    adapter = __webpack_require__(185);
+  }
+  return adapter;
+}
+
+var defaults = {
+  adapter: getDefaultAdapter(),
+
+  transformRequest: [function transformRequest(data, headers) {
+    normalizeHeaderName(headers, 'Content-Type');
+    if (utils.isFormData(data) ||
+      utils.isArrayBuffer(data) ||
+      utils.isBuffer(data) ||
+      utils.isStream(data) ||
+      utils.isFile(data) ||
+      utils.isBlob(data)
+    ) {
+      return data;
+    }
+    if (utils.isArrayBufferView(data)) {
+      return data.buffer;
+    }
+    if (utils.isURLSearchParams(data)) {
+      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+      return data.toString();
+    }
+    if (utils.isObject(data)) {
+      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
+      return JSON.stringify(data);
+    }
+    return data;
+  }],
+
+  transformResponse: [function transformResponse(data) {
+    /*eslint no-param-reassign:0*/
+    if (typeof data === 'string') {
+      try {
+        data = JSON.parse(data);
+      } catch (e) { /* Ignore */ }
+    }
+    return data;
+  }],
+
+  timeout: 0,
+
+  xsrfCookieName: 'XSRF-TOKEN',
+  xsrfHeaderName: 'X-XSRF-TOKEN',
+
+  maxContentLength: -1,
+
+  validateStatus: function validateStatus(status) {
+    return status >= 200 && status < 300;
+  }
+};
+
+defaults.headers = {
+  common: {
+    'Accept': 'application/json, text/plain, */*'
+  }
+};
+
+utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
+  defaults.headers[method] = {};
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+});
+
+module.exports = defaults;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(505)))
+
+/***/ }),
+/* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = !__webpack_require__(7) && !__webpack_require__(4)(function () {
+  return Object.defineProperty(__webpack_require__(82)('div'), 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports.f = __webpack_require__(6);
+
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var has = __webpack_require__(14);
 var toIObject = __webpack_require__(18);
-var arrayIndexOf = __webpack_require__(62)(false);
-var IE_PROTO = __webpack_require__(81)('IE_PROTO');
+var arrayIndexOf = __webpack_require__(64)(false);
+var IE_PROTO = __webpack_require__(84)('IE_PROTO');
 
 module.exports = function (object, names) {
   var O = toIObject(object);
@@ -5501,12 +5941,12 @@ module.exports = function (object, names) {
 
 
 /***/ }),
-/* 124 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(8);
-var anObject = __webpack_require__(1);
-var getKeys = __webpack_require__(40);
+var anObject = __webpack_require__(2);
+var getKeys = __webpack_require__(41);
 
 module.exports = __webpack_require__(7) ? Object.defineProperties : function defineProperties(O, Properties) {
   anObject(O);
@@ -5520,12 +5960,12 @@ module.exports = __webpack_require__(7) ? Object.defineProperties : function def
 
 
 /***/ }),
-/* 125 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
 var toIObject = __webpack_require__(18);
-var gOPN = __webpack_require__(43).f;
+var gOPN = __webpack_require__(44).f;
 var toString = {}.toString;
 
 var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -5545,17 +5985,17 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 126 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
-var getKeys = __webpack_require__(40);
-var gOPS = __webpack_require__(63);
-var pIE = __webpack_require__(55);
+var getKeys = __webpack_require__(41);
+var gOPS = __webpack_require__(65);
+var pIE = __webpack_require__(57);
 var toObject = __webpack_require__(10);
-var IObject = __webpack_require__(54);
+var IObject = __webpack_require__(56);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
@@ -5586,14 +6026,14 @@ module.exports = !$assign || __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 127 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var aFunction = __webpack_require__(12);
 var isObject = __webpack_require__(5);
-var invoke = __webpack_require__(128);
+var invoke = __webpack_require__(131);
 var arraySlice = [].slice;
 var factories = {};
 
@@ -5618,7 +6058,7 @@ module.exports = Function.bind || function bind(that /* , ...args */) {
 
 
 /***/ }),
-/* 128 */
+/* 131 */
 /***/ (function(module, exports) {
 
 // fast apply, http://jsperf.lnkit.com/fast-apply/5
@@ -5640,12 +6080,12 @@ module.exports = function (fn, args, that) {
 
 
 /***/ }),
-/* 129 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $parseInt = __webpack_require__(2).parseInt;
-var $trim = __webpack_require__(50).trim;
-var ws = __webpack_require__(85);
+var $parseInt = __webpack_require__(3).parseInt;
+var $trim = __webpack_require__(52).trim;
+var ws = __webpack_require__(88);
 var hex = /^[-+]?0[xX]/;
 
 module.exports = $parseInt(ws + '08') !== 8 || $parseInt(ws + '0x16') !== 22 ? function parseInt(str, radix) {
@@ -5655,13 +6095,13 @@ module.exports = $parseInt(ws + '08') !== 8 || $parseInt(ws + '0x16') !== 22 ? f
 
 
 /***/ }),
-/* 130 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $parseFloat = __webpack_require__(2).parseFloat;
-var $trim = __webpack_require__(50).trim;
+var $parseFloat = __webpack_require__(3).parseFloat;
+var $trim = __webpack_require__(52).trim;
 
-module.exports = 1 / $parseFloat(__webpack_require__(85) + '-0') !== -Infinity ? function parseFloat(str) {
+module.exports = 1 / $parseFloat(__webpack_require__(88) + '-0') !== -Infinity ? function parseFloat(str) {
   var string = $trim(String(str), 3);
   var result = $parseFloat(string);
   return result === 0 && string.charAt(0) == '-' ? -0 : result;
@@ -5669,10 +6109,10 @@ module.exports = 1 / $parseFloat(__webpack_require__(85) + '-0') !== -Infinity ?
 
 
 /***/ }),
-/* 131 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cof = __webpack_require__(24);
+var cof = __webpack_require__(25);
 module.exports = function (it, msg) {
   if (typeof it != 'number' && cof(it) != 'Number') throw TypeError(msg);
   return +it;
@@ -5680,7 +6120,7 @@ module.exports = function (it, msg) {
 
 
 /***/ }),
-/* 132 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.3 Number.isInteger(number)
@@ -5692,7 +6132,7 @@ module.exports = function isInteger(it) {
 
 
 /***/ }),
-/* 133 */
+/* 136 */
 /***/ (function(module, exports) {
 
 // 20.2.2.20 Math.log1p(x)
@@ -5702,11 +6142,11 @@ module.exports = Math.log1p || function log1p(x) {
 
 
 /***/ }),
-/* 134 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.16 Math.fround(x)
-var sign = __webpack_require__(88);
+var sign = __webpack_require__(91);
 var pow = Math.pow;
 var EPSILON = pow(2, -52);
 var EPSILON32 = pow(2, -23);
@@ -5731,11 +6171,11 @@ module.exports = Math.fround || function fround(x) {
 
 
 /***/ }),
-/* 135 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // call something on iterator step with safe closing on error
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 module.exports = function (iterator, fn, value, entries) {
   try {
     return entries ? fn(anObject(value)[0], value[1]) : fn(value);
@@ -5749,12 +6189,12 @@ module.exports = function (iterator, fn, value, entries) {
 
 
 /***/ }),
-/* 136 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var aFunction = __webpack_require__(12);
 var toObject = __webpack_require__(10);
-var IObject = __webpack_require__(54);
+var IObject = __webpack_require__(56);
 var toLength = __webpack_require__(9);
 
 module.exports = function (that, callbackfn, aLen, memo, isRight) {
@@ -5783,14 +6223,14 @@ module.exports = function (that, callbackfn, aLen, memo, isRight) {
 
 
 /***/ }),
-/* 137 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 // 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
 
 var toObject = __webpack_require__(10);
-var toAbsoluteIndex = __webpack_require__(41);
+var toAbsoluteIndex = __webpack_require__(42);
 var toLength = __webpack_require__(9);
 
 module.exports = [].copyWithin || function copyWithin(target /* = 0 */, start /* = 0, end = @length */) {
@@ -5816,7 +6256,7 @@ module.exports = [].copyWithin || function copyWithin(target /* = 0 */, start /*
 
 
 /***/ }),
-/* 138 */
+/* 141 */
 /***/ (function(module, exports) {
 
 module.exports = function (done, value) {
@@ -5825,18 +6265,18 @@ module.exports = function (done, value) {
 
 
 /***/ }),
-/* 139 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 21.2.5.3 get RegExp.prototype.flags()
 if (__webpack_require__(7) && /./g.flags != 'g') __webpack_require__(8).f(RegExp.prototype, 'flags', {
   configurable: true,
-  get: __webpack_require__(67)
+  get: __webpack_require__(69)
 });
 
 
 /***/ }),
-/* 140 */
+/* 143 */
 /***/ (function(module, exports) {
 
 module.exports = function (exec) {
@@ -5849,12 +6289,12 @@ module.exports = function (exec) {
 
 
 /***/ }),
-/* 141 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 var isObject = __webpack_require__(5);
-var newPromiseCapability = __webpack_require__(103);
+var newPromiseCapability = __webpack_require__(106);
 
 module.exports = function (C, x) {
   anObject(C);
@@ -5867,17 +6307,17 @@ module.exports = function (C, x) {
 
 
 /***/ }),
-/* 142 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var strong = __webpack_require__(143);
-var validate = __webpack_require__(52);
+var strong = __webpack_require__(146);
+var validate = __webpack_require__(54);
 var MAP = 'Map';
 
 // 23.1 Map Objects
-module.exports = __webpack_require__(70)(MAP, function (get) {
+module.exports = __webpack_require__(72)(MAP, function (get) {
   return function Map() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 }, {
   // 23.1.3.6 Map.prototype.get(key)
@@ -5893,23 +6333,23 @@ module.exports = __webpack_require__(70)(MAP, function (get) {
 
 
 /***/ }),
-/* 143 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var dP = __webpack_require__(8).f;
-var create = __webpack_require__(42);
-var redefineAll = __webpack_require__(47);
-var ctx = __webpack_require__(23);
-var anInstance = __webpack_require__(45);
-var forOf = __webpack_require__(46);
-var $iterDefine = __webpack_require__(91);
-var step = __webpack_require__(138);
-var setSpecies = __webpack_require__(44);
+var create = __webpack_require__(43);
+var redefineAll = __webpack_require__(48);
+var ctx = __webpack_require__(24);
+var anInstance = __webpack_require__(46);
+var forOf = __webpack_require__(47);
+var $iterDefine = __webpack_require__(94);
+var step = __webpack_require__(141);
+var setSpecies = __webpack_require__(45);
 var DESCRIPTORS = __webpack_require__(7);
-var fastKey = __webpack_require__(35).fastKey;
-var validate = __webpack_require__(52);
+var fastKey = __webpack_require__(36).fastKey;
+var validate = __webpack_require__(54);
 var SIZE = DESCRIPTORS ? '_s' : 'size';
 
 var getEntry = function (that, key) {
@@ -6044,17 +6484,17 @@ module.exports = {
 
 
 /***/ }),
-/* 144 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var strong = __webpack_require__(143);
-var validate = __webpack_require__(52);
+var strong = __webpack_require__(146);
+var validate = __webpack_require__(54);
 var SET = 'Set';
 
 // 23.2 Set Objects
-module.exports = __webpack_require__(70)(SET, function (get) {
+module.exports = __webpack_require__(72)(SET, function (get) {
   return function Set() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 }, {
   // 23.2.3.1 Set.prototype.add(value)
@@ -6065,19 +6505,19 @@ module.exports = __webpack_require__(70)(SET, function (get) {
 
 
 /***/ }),
-/* 145 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var each = __webpack_require__(31)(0);
+var each = __webpack_require__(32)(0);
 var redefine = __webpack_require__(16);
-var meta = __webpack_require__(35);
-var assign = __webpack_require__(126);
-var weak = __webpack_require__(146);
+var meta = __webpack_require__(36);
+var assign = __webpack_require__(129);
+var weak = __webpack_require__(149);
 var isObject = __webpack_require__(5);
 var fails = __webpack_require__(4);
-var validate = __webpack_require__(52);
+var validate = __webpack_require__(54);
 var WEAK_MAP = 'WeakMap';
 var getWeak = meta.getWeak;
 var isExtensible = Object.isExtensible;
@@ -6107,7 +6547,7 @@ var methods = {
 };
 
 // 23.3 WeakMap Objects
-var $WeakMap = module.exports = __webpack_require__(70)(WEAK_MAP, wrapper, methods, weak, true, true);
+var $WeakMap = module.exports = __webpack_require__(72)(WEAK_MAP, wrapper, methods, weak, true, true);
 
 // IE11 WeakMap frozen keys fix
 if (fails(function () { return new $WeakMap().set((Object.freeze || Object)(tmp), 7).get(tmp) != 7; })) {
@@ -6131,20 +6571,20 @@ if (fails(function () { return new $WeakMap().set((Object.freeze || Object)(tmp)
 
 
 /***/ }),
-/* 146 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var redefineAll = __webpack_require__(47);
-var getWeak = __webpack_require__(35).getWeak;
-var anObject = __webpack_require__(1);
+var redefineAll = __webpack_require__(48);
+var getWeak = __webpack_require__(36).getWeak;
+var anObject = __webpack_require__(2);
 var isObject = __webpack_require__(5);
-var anInstance = __webpack_require__(45);
-var forOf = __webpack_require__(46);
-var createArrayMethod = __webpack_require__(31);
+var anInstance = __webpack_require__(46);
+var forOf = __webpack_require__(47);
+var createArrayMethod = __webpack_require__(32);
 var $has = __webpack_require__(14);
-var validate = __webpack_require__(52);
+var validate = __webpack_require__(54);
 var arrayFind = createArrayMethod(5);
 var arrayFindIndex = createArrayMethod(6);
 var id = 0;
@@ -6223,11 +6663,11 @@ module.exports = {
 
 
 /***/ }),
-/* 147 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://tc39.github.io/ecma262/#sec-toindex
-var toInteger = __webpack_require__(29);
+var toInteger = __webpack_require__(30);
 var toLength = __webpack_require__(9);
 module.exports = function (it) {
   if (it === undefined) return 0;
@@ -6239,14 +6679,14 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 148 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all object keys, includes non-enumerable and symbols
-var gOPN = __webpack_require__(43);
-var gOPS = __webpack_require__(63);
-var anObject = __webpack_require__(1);
-var Reflect = __webpack_require__(2).Reflect;
+var gOPN = __webpack_require__(44);
+var gOPS = __webpack_require__(65);
+var anObject = __webpack_require__(2);
+var Reflect = __webpack_require__(3).Reflect;
 module.exports = Reflect && Reflect.ownKeys || function ownKeys(it) {
   var keys = gOPN.f(anObject(it));
   var getSymbols = gOPS.f;
@@ -6255,16 +6695,16 @@ module.exports = Reflect && Reflect.ownKeys || function ownKeys(it) {
 
 
 /***/ }),
-/* 149 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://tc39.github.io/proposal-flatMap/#sec-FlattenIntoArray
-var isArray = __webpack_require__(64);
+var isArray = __webpack_require__(66);
 var isObject = __webpack_require__(5);
 var toLength = __webpack_require__(9);
-var ctx = __webpack_require__(23);
+var ctx = __webpack_require__(24);
 var IS_CONCAT_SPREADABLE = __webpack_require__(6)('isConcatSpreadable');
 
 function flattenIntoArray(target, original, source, sourceLen, start, depth, mapper, thisArg) {
@@ -6301,13 +6741,13 @@ module.exports = flattenIntoArray;
 
 
 /***/ }),
-/* 150 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-string-pad-start-end
 var toLength = __webpack_require__(9);
-var repeat = __webpack_require__(87);
-var defined = __webpack_require__(28);
+var repeat = __webpack_require__(90);
+var defined = __webpack_require__(29);
 
 module.exports = function (that, maxLength, fillString, left) {
   var S = String(defined(that));
@@ -6323,12 +6763,12 @@ module.exports = function (that, maxLength, fillString, left) {
 
 
 /***/ }),
-/* 151 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getKeys = __webpack_require__(40);
+var getKeys = __webpack_require__(41);
 var toIObject = __webpack_require__(18);
-var isEnum = __webpack_require__(55).f;
+var isEnum = __webpack_require__(57).f;
 module.exports = function (isEntries) {
   return function (it) {
     var O = toIObject(it);
@@ -6345,12 +6785,12 @@ module.exports = function (isEntries) {
 
 
 /***/ }),
-/* 152 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var classof = __webpack_require__(56);
-var from = __webpack_require__(153);
+var classof = __webpack_require__(58);
+var from = __webpack_require__(156);
 module.exports = function (NAME) {
   return function toJSON() {
     if (classof(this) != NAME) throw TypeError(NAME + "#toJSON isn't generic");
@@ -6360,10 +6800,10 @@ module.exports = function (NAME) {
 
 
 /***/ }),
-/* 153 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var forOf = __webpack_require__(46);
+var forOf = __webpack_require__(47);
 
 module.exports = function (iter, ITERATOR) {
   var result = [];
@@ -6373,7 +6813,7 @@ module.exports = function (iter, ITERATOR) {
 
 
 /***/ }),
-/* 154 */
+/* 157 */
 /***/ (function(module, exports) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -6397,7 +6837,7 @@ module.exports = Math.scale || function scale(x, inLow, inHigh, outLow, outHigh)
 
 
 /***/ }),
-/* 155 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6420,7 +6860,7 @@ if (true) {
 module.exports = emptyObject;
 
 /***/ }),
-/* 156 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6439,7 +6879,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 157 */
+/* 160 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6516,7 +6956,7 @@ function resolvePathname(to) {
 /* harmony default export */ __webpack_exports__["default"] = (resolvePathname);
 
 /***/ }),
-/* 158 */
+/* 161 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6561,7 +7001,7 @@ function valueEqual(a, b) {
 /* harmony default export */ __webpack_exports__["default"] = (valueEqual);
 
 /***/ }),
-/* 159 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6622,11 +7062,11 @@ var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isE
 };
 
 /***/ }),
-/* 160 */
+/* 163 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -6732,18 +7172,18 @@ Link.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Link);
 
 /***/ }),
-/* 161 */
+/* 164 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__ = __webpack_require__(165);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__["a" /* default */]);
 
 /***/ }),
-/* 162 */
+/* 165 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6751,11 +7191,11 @@ Link.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(116);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -6892,7 +7332,7 @@ Route.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Route);
 
 /***/ }),
-/* 163 */
+/* 166 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6958,7 +7398,7 @@ var isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
 };
 
 /***/ }),
-/* 164 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7030,7 +7470,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 165 */
+/* 168 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7054,19 +7494,19 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 });
 
 /***/ }),
-/* 166 */
+/* 169 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(167);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(429);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(436);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(168);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -7358,17 +7798,17 @@ selectorFactory) {
 }
 
 /***/ }),
-/* 167 */
+/* 170 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(445);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(446);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(447);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(452);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(453);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(454);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(173);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
@@ -7394,14 +7834,14 @@ if ("development " !== 'production' && typeof isCrushed.name === 'string' && isC
 
 
 /***/ }),
-/* 168 */
+/* 171 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionTypes; });
 /* harmony export (immutable) */ __webpack_exports__["b"] = createStore;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(441);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(448);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_symbol_observable__);
 
 
@@ -7653,11 +8093,11 @@ var ActionTypes = {
 }
 
 /***/ }),
-/* 169 */
+/* 172 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(434);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(441);
 
 
 /** Built-in value references. */
@@ -7667,7 +8107,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 
 
 /***/ }),
-/* 170 */
+/* 173 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7695,7 +8135,7 @@ function warning(message) {
 }
 
 /***/ }),
-/* 171 */
+/* 174 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7734,14 +8174,14 @@ function compose() {
 }
 
 /***/ }),
-/* 172 */
+/* 175 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = wrapMapToPropsConstant;
 /* unused harmony export getDependsOnOwnProps */
 /* harmony export (immutable) */ __webpack_exports__["b"] = wrapMapToPropsFunc;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(176);
 
 
 function wrapMapToPropsConstant(getConstant) {
@@ -7811,13 +8251,13 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 }
 
 /***/ }),
-/* 173 */
+/* 176 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifyPlainObject;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(118);
 
 
 
@@ -7828,7 +8268,7 @@ function verifyPlainObject(value, displayName, methodName) {
 }
 
 /***/ }),
-/* 174 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -7884,7 +8324,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(465);
+var	fixUrls = __webpack_require__(472);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -8200,7 +8640,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 175 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8210,87 +8650,131 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(115);
-
-var _SideBar = __webpack_require__(470);
-
-var _SideBar2 = _interopRequireDefault(_SideBar);
-
-var _BreadCrumb = __webpack_require__(119);
-
-var _BreadCrumb2 = _interopRequireDefault(_BreadCrumb);
-
-var _Tablet = __webpack_require__(471);
-
-var _Tablet2 = _interopRequireDefault(_Tablet);
-
-var _Produce = __webpack_require__(118);
-
-var _Produce2 = _interopRequireDefault(_Produce);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Category = function (_React$Component) {
-    _inherits(Category, _React$Component);
-
-    function Category() {
-        _classCallCheck(this, Category);
-
-        return _possibleConstructorReturn(this, (Category.__proto__ || Object.getPrototypeOf(Category)).apply(this, arguments));
-    }
-
-    _createClass(Category, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
+exports.default = function (props) {
+    return _react2.default.createElement(
+        "div",
+        { className: "dropdown-box mobile" },
+        _react2.default.createElement(
+            "ul",
+            null,
+            _react2.default.createElement(
+                "li",
                 null,
-                _react2.default.createElement(_BreadCrumb2.default, null),
                 _react2.default.createElement(
-                    'main',
-                    { id: 'shop' },
+                    "div",
+                    { className: "img-product" },
+                    _react2.default.createElement("img", { src: "./images/product/other/img-cart-1.jpg", alt: "" })
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "info-product" },
                     _react2.default.createElement(
-                        'div',
-                        { className: 'container' },
+                        "div",
+                        { className: "name" },
+                        "Samsung - Galaxy S6 4G LTE ",
+                        _react2.default.createElement("br", null),
+                        "with 32GB Memory Cell Phone"
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "price" },
                         _react2.default.createElement(
-                            'div',
-                            { className: 'row' },
-                            _react2.default.createElement(_SideBar2.default, null),
-                            _react2.default.createElement(_Tablet2.default, null)
+                            "span",
+                            null,
+                            "1 x"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "$250.00"
                         )
                     )
                 ),
-                _react2.default.createElement(_Produce2.default, { name: 'H\xE0ng gia d\u1EE5ng', produce: this.props.produce }),
-                _react2.default.createElement(_Produce2.default, { name: 'H\xE0ng \u0111i\u1EC7n t\u1EED', produce: this.props.produce })
-            );
-        }
-    }]);
-
-    return Category;
-}(_react2.default.Component);
-
-var mapStateToProps = function mapStateToProps(state) {
-    return {
-        produce: state.homeReducer.produce
-    };
+                _react2.default.createElement("div", { className: "clearfix" }),
+                _react2.default.createElement(
+                    "span",
+                    { className: "delete" },
+                    "x"
+                )
+            ),
+            _react2.default.createElement(
+                "li",
+                null,
+                _react2.default.createElement(
+                    "div",
+                    { className: "img-product" },
+                    _react2.default.createElement("img", { src: "./images/product/other/img-cart-2.jpg", alt: "" })
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "info-product" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "name" },
+                        "Sennheiser - Over-the-Ear Headphone System - Black"
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "price" },
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "1 x"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "$250.00"
+                        )
+                    )
+                ),
+                _react2.default.createElement("div", { className: "clearfix" }),
+                _react2.default.createElement(
+                    "span",
+                    { className: "delete" },
+                    "x"
+                )
+            )
+        ),
+        _react2.default.createElement(
+            "div",
+            { className: "total" },
+            _react2.default.createElement(
+                "span",
+                null,
+                "Subtotal:"
+            ),
+            _react2.default.createElement(
+                "span",
+                { className: "price" },
+                "$1,999.00"
+            )
+        ),
+        _react2.default.createElement(
+            "div",
+            { className: "btn-cart" },
+            _react2.default.createElement(
+                "a",
+                { href: "shop-cart.html", className: "view-cart", title: "" },
+                "View Cart"
+            ),
+            _react2.default.createElement(
+                "a",
+                { href: "shop-checkout.html", className: "check-out", title: "" },
+                "Checkout"
+            )
+        )
+    );
 };
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps)(Category);
-
 /***/ }),
-/* 176 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8300,60 +8784,755 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _ProductContent = __webpack_require__(472);
-
-var _ProductContent2 = _interopRequireDefault(_ProductContent);
-
-var _Produce = __webpack_require__(118);
-
-var _Produce2 = _interopRequireDefault(_Produce);
-
-var _BreadCrumb = __webpack_require__(119);
-
-var _BreadCrumb2 = _interopRequireDefault(_BreadCrumb);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var ProductDetail = function (_React$Component) {
-    _inherits(ProductDetail, _React$Component);
-
-    function ProductDetail() {
-        _classCallCheck(this, ProductDetail);
-
-        return _possibleConstructorReturn(this, (ProductDetail.__proto__ || Object.getPrototypeOf(ProductDetail)).apply(this, arguments));
-    }
-
-    _createClass(ProductDetail, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(_BreadCrumb2.default, null),
-                _react2.default.createElement(_ProductContent2.default, null)
-            );
-        }
-    }]);
-
-    return ProductDetail;
-}(_react2.default.Component);
-
-exports.default = ProductDetail;
+exports.default = function () {
+    return _react2.default.createElement(
+        "div",
+        { className: "col-lg-2 col-md-3 fill-category" },
+        _react2.default.createElement(
+            "div",
+            { className: "sidebar " },
+            _react2.default.createElement(
+                "div",
+                { className: "widget widget-categories" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "widget-title" },
+                    _react2.default.createElement(
+                        "h3",
+                        null,
+                        "Danh m\u1EE5c",
+                        _react2.default.createElement("span", null)
+                    )
+                ),
+                _react2.default.createElement(
+                    "ul",
+                    { className: "cat-list style1 widget-content" },
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "Linh ki\u1EC7n",
+                            _react2.default.createElement(
+                                "i",
+                                null,
+                                "(03)"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { className: "cat-child" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "TV"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Monitors"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Ph\u1EA7n m\u1EC1m"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "Cameras",
+                            _react2.default.createElement(
+                                "i",
+                                null,
+                                "(19)"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { className: "cat-child" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Go Pro"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "M\xE1y quay phim"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Ph\u1EA7n m\u1EC1m"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        { className: "" },
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "M\xE1y t\xEDnh",
+                            _react2.default.createElement(
+                                "i",
+                                null,
+                                "(56)"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { className: "cat-child" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Desktop"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "M\xE0n h\xECnh"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Ph\u1EA7n m\u1EC1m"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "Laptops",
+                            _react2.default.createElement(
+                                "i",
+                                null,
+                                "(03)"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { className: "cat-child" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Desktop"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "M\xE0n h\xECnh"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Ph\u1EA7n m\u1EC1m"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "M\u1EA1ng",
+                            _react2.default.createElement(
+                                "i",
+                                null,
+                                "(03)"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { className: "cat-child" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Monitors"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Ph\u1EA7n m\u1EC1m"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "S\u1EA3n ph\u1EA9m c\u0169",
+                            _react2.default.createElement(
+                                "i",
+                                null,
+                                "(89)"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { className: "cat-child" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Monitors"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Ph\u1EA7n m\u1EC1m"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "\u0110i\u1EC7n tho\u1EA1i di \u0111\u1ED9ng",
+                            _react2.default.createElement(
+                                "i",
+                                null,
+                                "(90)"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { className: "cat-child" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Apple"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "HTC"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Sony"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Samsung"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "LG"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "Ph\u1EA7n m\u1EC1m",
+                            _react2.default.createElement(
+                                "i",
+                                null,
+                                "(23)"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { className: "cat-child" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Desktop"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Qu\u1EA3n l\xFD"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "BKAV"
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "widget widget-price" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "widget-title" },
+                    _react2.default.createElement(
+                        "h3",
+                        null,
+                        "Gi\xE1",
+                        _react2.default.createElement("span", null)
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "widget-content" },
+                    _react2.default.createElement(
+                        "p",
+                        null,
+                        "Gi\xE1"
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "price search-filter-input" },
+                        _react2.default.createElement(
+                            "div",
+                            { id: "slider-range", className: "price-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" },
+                            _react2.default.createElement("div", { className: "ui-slider-range ui-corner-all ui-widget-header" }),
+                            _react2.default.createElement("span", { tabIndex: "0", className: "ui-slider-handle ui-corner-all ui-state-default" }),
+                            _react2.default.createElement("span", { tabIndex: "0", className: "ui-slider-handle ui-corner-all ui-state-default" })
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "amount" },
+                            _react2.default.createElement("input", { type: "text", id: "amount", disabled: "" })
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "widget widget-brands" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "widget-title" },
+                    _react2.default.createElement(
+                        "h3",
+                        null,
+                        "Th\u01B0\u01A1ng hi\u1EC7u",
+                        _react2.default.createElement("span", null)
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "widget-content" },
+                    _react2.default.createElement(
+                        "form",
+                        { action: "#", method: "get", acceptCharset: "utf-8" },
+                        _react2.default.createElement("input", { type: "text", name: "brands", placeholder: "Brands Search" })
+                    ),
+                    _react2.default.createElement(
+                        "ul",
+                        { className: "box-checkbox scroll" },
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox1", name: "checkbox1" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "checkbox1" },
+                                "Apple ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(4)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox2", name: "checkbox2" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "checkbox2" },
+                                "Samsung ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(2)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox3", name: "checkbox3" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "checkbox3" },
+                                "HTC ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(2)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox4", name: "checkbox4" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "checkbox4" },
+                                "LG ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(2)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox5", name: "checkbox5" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "checkbox5" },
+                                "Dell ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(1)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox6", name: "checkbox6" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "checkbox6" },
+                                "Sony ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(3)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox7", name: "checkbox7" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "checkbox7" },
+                                "Bphone ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(4)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox8", name: "checkbox8" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "checkbox8" },
+                                "Oppo ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(4)"
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "widget widget-color" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "widget-title" },
+                    _react2.default.createElement(
+                        "h3",
+                        null,
+                        "M\xE0u",
+                        _react2.default.createElement("span", null)
+                    ),
+                    _react2.default.createElement("div", { style: { height: "2px" } })
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "widget-content" },
+                    _react2.default.createElement(
+                        "form",
+                        { action: "#", method: "get", acceptCharset: "utf-8" },
+                        _react2.default.createElement("input", { type: "text", name: "color", placeholder: "Color Search" })
+                    ),
+                    _react2.default.createElement("div", { style: { height: '5px' } }),
+                    _react2.default.createElement(
+                        "ul",
+                        { className: "box-checkbox scroll" },
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check1", name: "check1" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "check1" },
+                                "\u0110en ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(4)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check2", name: "check2" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "check2" },
+                                "V\xE0ng ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(2)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check3", name: "check3" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "check3" },
+                                "Tr\u1EAFng ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(2)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check4", name: "check4" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "check4" },
+                                "Xanh n\u01B0\u1EDBc bi\u1EC3n ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(2)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check5", name: "check5" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "check5" },
+                                "\u0110\u1ECF ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(1)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check6", name: "check6" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "check6" },
+                                "H\u1ED3ng ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(3)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check7", name: "check7" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "check7" },
+                                "Xanh l\xE1 xanh ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(4)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check8", name: "check8" }),
+                            _react2.default.createElement(
+                                "label",
+                                { htmlFor: "check8" },
+                                "V\xE0ng ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(4)"
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "widget widget-banner" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "banner-box" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "inner-box" },
+                        _react2.default.createElement(
+                            "a",
+                            { href: "#", title: "" },
+                            _react2.default.createElement("img", { src: "./images/banner_boxes/06.png", alt: "" })
+                        )
+                    )
+                )
+            )
+        )
+    );
+};
 
 /***/ }),
-/* 177 */
+/* 180 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8424,13 +9603,13 @@ function flush() {
 }
 
 /***/ }),
-/* 178 */
+/* 181 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = runSaga;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__proc__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__proc__ = __webpack_require__(182);
 
 
 
@@ -8489,7 +9668,7 @@ function runSaga(storeInterface, saga) {
 }
 
 /***/ }),
-/* 179 */
+/* 182 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8498,10 +9677,10 @@ function runSaga(storeInterface, saga) {
 /* unused harmony export TASK_CANCEL */
 /* harmony export (immutable) */ __webpack_exports__["b"] = proc;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scheduler__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__io__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__channel__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__buffers__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scheduler__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__io__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__channel__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__buffers__ = __webpack_require__(81);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -9265,16 +10444,16 @@ function proc(iterator) {
 }
 
 /***/ }),
-/* 180 */
+/* 183 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return takeEvery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return takeLatest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return throttle; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__takeEvery__ = __webpack_require__(481);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__takeLatest__ = __webpack_require__(482);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__throttle__ = __webpack_require__(483);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__takeEvery__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__takeLatest__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__throttle__ = __webpack_require__(496);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils__ = __webpack_require__(22);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__takeEvery__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__takeLatest__["a"]; });
@@ -9296,55 +10475,293 @@ var throttle = /*#__PURE__*/Object(__WEBPACK_IMPORTED_MODULE_3__utils__["n" /* d
 
 
 /***/ }),
-/* 181 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__internal_io__ = __webpack_require__(48);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "take", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["s"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "takem", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["v"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "put", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["n"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "all", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["b"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "race", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["o"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "call", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["e"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "apply", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["c"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "cps", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["h"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "fork", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["k"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "spawn", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["r"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "join", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["m"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "cancel", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["f"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "select", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["p"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "actionChannel", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "cancelled", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["g"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "flush", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["j"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "getContext", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["l"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "setContext", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["q"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "takeEvery", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["t"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "takeLatest", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["u"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "throttle", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_io__["w"]; });
-
-
-/***/ }),
-/* 182 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(183);
-module.exports = __webpack_require__(385);
+"use strict";
+
+
+module.exports = function bind(fn, thisArg) {
+  return function wrap() {
+    var args = new Array(arguments.length);
+    for (var i = 0; i < args.length; i++) {
+      args[i] = arguments[i];
+    }
+    return fn.apply(thisArg, args);
+  };
+};
 
 
 /***/ }),
-/* 183 */
+/* 185 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(23);
+var settle = __webpack_require__(507);
+var buildURL = __webpack_require__(509);
+var parseHeaders = __webpack_require__(510);
+var isURLSameOrigin = __webpack_require__(511);
+var createError = __webpack_require__(186);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(512);
+
+module.exports = function xhrAdapter(config) {
+  return new Promise(function dispatchXhrRequest(resolve, reject) {
+    var requestData = config.data;
+    var requestHeaders = config.headers;
+
+    if (utils.isFormData(requestData)) {
+      delete requestHeaders['Content-Type']; // Let the browser set it
+    }
+
+    var request = new XMLHttpRequest();
+    var loadEvent = 'onreadystatechange';
+    var xDomain = false;
+
+    // For IE 8/9 CORS support
+    // Only supports POST and GET calls and doesn't returns the response headers.
+    // DON'T do this for testing b/c XMLHttpRequest is mocked, not XDomainRequest.
+    if ("development " !== 'test' &&
+        typeof window !== 'undefined' &&
+        window.XDomainRequest && !('withCredentials' in request) &&
+        !isURLSameOrigin(config.url)) {
+      request = new window.XDomainRequest();
+      loadEvent = 'onload';
+      xDomain = true;
+      request.onprogress = function handleProgress() {};
+      request.ontimeout = function handleTimeout() {};
+    }
+
+    // HTTP basic authentication
+    if (config.auth) {
+      var username = config.auth.username || '';
+      var password = config.auth.password || '';
+      requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+    }
+
+    request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
+
+    // Set the request timeout in MS
+    request.timeout = config.timeout;
+
+    // Listen for ready state
+    request[loadEvent] = function handleLoad() {
+      if (!request || (request.readyState !== 4 && !xDomain)) {
+        return;
+      }
+
+      // The request errored out and we didn't get a response, this will be
+      // handled by onerror instead
+      // With one exception: request that using file: protocol, most browsers
+      // will return status as 0 even though it's a successful request
+      if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+        return;
+      }
+
+      // Prepare the response
+      var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
+      var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
+      var response = {
+        data: responseData,
+        // IE sends 1223 instead of 204 (https://github.com/axios/axios/issues/201)
+        status: request.status === 1223 ? 204 : request.status,
+        statusText: request.status === 1223 ? 'No Content' : request.statusText,
+        headers: responseHeaders,
+        config: config,
+        request: request
+      };
+
+      settle(resolve, reject, response);
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle low level network errors
+    request.onerror = function handleError() {
+      // Real errors are hidden from us by the browser
+      // onerror should only fire if it's a network error
+      reject(createError('Network Error', config, null, request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle timeout
+    request.ontimeout = function handleTimeout() {
+      reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED',
+        request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Add xsrf header
+    // This is only done if running in a standard browser environment.
+    // Specifically not if we're in a web worker, or react-native.
+    if (utils.isStandardBrowserEnv()) {
+      var cookies = __webpack_require__(513);
+
+      // Add xsrf header
+      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
+          cookies.read(config.xsrfCookieName) :
+          undefined;
+
+      if (xsrfValue) {
+        requestHeaders[config.xsrfHeaderName] = xsrfValue;
+      }
+    }
+
+    // Add headers to the request
+    if ('setRequestHeader' in request) {
+      utils.forEach(requestHeaders, function setRequestHeader(val, key) {
+        if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
+          // Remove Content-Type if data is undefined
+          delete requestHeaders[key];
+        } else {
+          // Otherwise add header to the request
+          request.setRequestHeader(key, val);
+        }
+      });
+    }
+
+    // Add withCredentials to request if needed
+    if (config.withCredentials) {
+      request.withCredentials = true;
+    }
+
+    // Add responseType to request if needed
+    if (config.responseType) {
+      try {
+        request.responseType = config.responseType;
+      } catch (e) {
+        // Expected DOMException thrown by browsers not compatible XMLHttpRequest Level 2.
+        // But, this can be suppressed for 'json' type as it can be parsed by default 'transformResponse' function.
+        if (config.responseType !== 'json') {
+          throw e;
+        }
+      }
+    }
+
+    // Handle progress if needed
+    if (typeof config.onDownloadProgress === 'function') {
+      request.addEventListener('progress', config.onDownloadProgress);
+    }
+
+    // Not all browsers support upload events
+    if (typeof config.onUploadProgress === 'function' && request.upload) {
+      request.upload.addEventListener('progress', config.onUploadProgress);
+    }
+
+    if (config.cancelToken) {
+      // Handle cancellation
+      config.cancelToken.promise.then(function onCanceled(cancel) {
+        if (!request) {
+          return;
+        }
+
+        request.abort();
+        reject(cancel);
+        // Clean up request
+        request = null;
+      });
+    }
+
+    if (requestData === undefined) {
+      requestData = null;
+    }
+
+    // Send the request
+    request.send(requestData);
+  });
+};
+
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var enhanceError = __webpack_require__(508);
+
+/**
+ * Create an Error with the specified message, config, error code, request and response.
+ *
+ * @param {string} message The error message.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The created error.
+ */
+module.exports = function createError(message, config, code, request, response) {
+  var error = new Error(message);
+  return enhanceError(error, config, code, request, response);
+};
+
+
+/***/ }),
+/* 187 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function isCancel(value) {
+  return !!(value && value.__CANCEL__);
+};
+
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * A `Cancel` is an object that is thrown when an operation is canceled.
+ *
+ * @class
+ * @param {string=} message The message.
+ */
+function Cancel(message) {
+  this.message = message;
+}
+
+Cancel.prototype.toString = function toString() {
+  return 'Cancel' + (this.message ? ': ' + this.message : '');
+};
+
+Cancel.prototype.__CANCEL__ = true;
+
+module.exports = Cancel;
+
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(190);
+module.exports = __webpack_require__(392);
+
+
+/***/ }),
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
-__webpack_require__(184);
+__webpack_require__(191);
 
-__webpack_require__(381);
+__webpack_require__(388);
 
-__webpack_require__(382);
+__webpack_require__(389);
 
 if (global._babelPolyfill) {
   throw new Error("only one instance of babel-polyfill is allowed");
@@ -9366,20 +10783,13 @@ define(String.prototype, "padRight", "".padEnd);
 "pop,reverse,shift,keys,values,entries,indexOf,every,some,forEach,map,filter,find,findIndex,includes,join,slice,concat,push,splice,unshift,sort,lastIndexOf,reduce,reduceRight,copyWithin,fill".split(",").forEach(function (key) {
   [][key] && define(Array, key, Function.call.bind([][key]));
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(62)))
 
 /***/ }),
-/* 184 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(185);
-__webpack_require__(187);
-__webpack_require__(188);
-__webpack_require__(189);
-__webpack_require__(190);
-__webpack_require__(191);
 __webpack_require__(192);
-__webpack_require__(193);
 __webpack_require__(194);
 __webpack_require__(195);
 __webpack_require__(196);
@@ -9388,13 +10798,13 @@ __webpack_require__(198);
 __webpack_require__(199);
 __webpack_require__(200);
 __webpack_require__(201);
+__webpack_require__(202);
 __webpack_require__(203);
 __webpack_require__(204);
 __webpack_require__(205);
 __webpack_require__(206);
 __webpack_require__(207);
 __webpack_require__(208);
-__webpack_require__(209);
 __webpack_require__(210);
 __webpack_require__(211);
 __webpack_require__(212);
@@ -9449,47 +10859,47 @@ __webpack_require__(260);
 __webpack_require__(261);
 __webpack_require__(262);
 __webpack_require__(263);
+__webpack_require__(264);
 __webpack_require__(265);
 __webpack_require__(266);
+__webpack_require__(267);
 __webpack_require__(268);
 __webpack_require__(269);
 __webpack_require__(270);
-__webpack_require__(271);
 __webpack_require__(272);
 __webpack_require__(273);
-__webpack_require__(274);
+__webpack_require__(275);
 __webpack_require__(276);
 __webpack_require__(277);
 __webpack_require__(278);
 __webpack_require__(279);
 __webpack_require__(280);
 __webpack_require__(281);
-__webpack_require__(282);
 __webpack_require__(283);
 __webpack_require__(284);
 __webpack_require__(285);
 __webpack_require__(286);
 __webpack_require__(287);
 __webpack_require__(288);
-__webpack_require__(100);
 __webpack_require__(289);
 __webpack_require__(290);
-__webpack_require__(139);
 __webpack_require__(291);
 __webpack_require__(292);
 __webpack_require__(293);
 __webpack_require__(294);
 __webpack_require__(295);
-__webpack_require__(142);
-__webpack_require__(144);
-__webpack_require__(145);
+__webpack_require__(103);
 __webpack_require__(296);
 __webpack_require__(297);
+__webpack_require__(142);
 __webpack_require__(298);
 __webpack_require__(299);
 __webpack_require__(300);
 __webpack_require__(301);
 __webpack_require__(302);
+__webpack_require__(145);
+__webpack_require__(147);
+__webpack_require__(148);
 __webpack_require__(303);
 __webpack_require__(304);
 __webpack_require__(305);
@@ -9568,41 +10978,48 @@ __webpack_require__(377);
 __webpack_require__(378);
 __webpack_require__(379);
 __webpack_require__(380);
-module.exports = __webpack_require__(26);
+__webpack_require__(381);
+__webpack_require__(382);
+__webpack_require__(383);
+__webpack_require__(384);
+__webpack_require__(385);
+__webpack_require__(386);
+__webpack_require__(387);
+module.exports = __webpack_require__(27);
 
 
 /***/ }),
-/* 185 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // ECMAScript 6 symbols shim
-var global = __webpack_require__(2);
+var global = __webpack_require__(3);
 var has = __webpack_require__(14);
 var DESCRIPTORS = __webpack_require__(7);
 var $export = __webpack_require__(0);
 var redefine = __webpack_require__(16);
-var META = __webpack_require__(35).KEY;
+var META = __webpack_require__(36).KEY;
 var $fails = __webpack_require__(4);
-var shared = __webpack_require__(61);
-var setToStringTag = __webpack_require__(49);
-var uid = __webpack_require__(38);
+var shared = __webpack_require__(63);
+var setToStringTag = __webpack_require__(51);
+var uid = __webpack_require__(39);
 var wks = __webpack_require__(6);
-var wksExt = __webpack_require__(122);
-var wksDefine = __webpack_require__(80);
-var enumKeys = __webpack_require__(186);
-var isArray = __webpack_require__(64);
-var anObject = __webpack_require__(1);
+var wksExt = __webpack_require__(125);
+var wksDefine = __webpack_require__(83);
+var enumKeys = __webpack_require__(193);
+var isArray = __webpack_require__(66);
+var anObject = __webpack_require__(2);
 var isObject = __webpack_require__(5);
 var toIObject = __webpack_require__(18);
-var toPrimitive = __webpack_require__(27);
-var createDesc = __webpack_require__(37);
-var _create = __webpack_require__(42);
-var gOPNExt = __webpack_require__(125);
+var toPrimitive = __webpack_require__(28);
+var createDesc = __webpack_require__(38);
+var _create = __webpack_require__(43);
+var gOPNExt = __webpack_require__(128);
 var $GOPD = __webpack_require__(19);
 var $DP = __webpack_require__(8);
-var $keys = __webpack_require__(40);
+var $keys = __webpack_require__(41);
 var gOPD = $GOPD.f;
 var dP = $DP.f;
 var gOPN = gOPNExt.f;
@@ -9725,11 +11142,11 @@ if (!USE_NATIVE) {
 
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f = $defineProperty;
-  __webpack_require__(43).f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__(55).f = $propertyIsEnumerable;
-  __webpack_require__(63).f = $getOwnPropertySymbols;
+  __webpack_require__(44).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(57).f = $propertyIsEnumerable;
+  __webpack_require__(65).f = $getOwnPropertySymbols;
 
-  if (DESCRIPTORS && !__webpack_require__(39)) {
+  if (DESCRIPTORS && !__webpack_require__(40)) {
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
   }
 
@@ -9813,13 +11230,13 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 186 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
-var getKeys = __webpack_require__(40);
-var gOPS = __webpack_require__(63);
-var pIE = __webpack_require__(55);
+var getKeys = __webpack_require__(41);
+var gOPS = __webpack_require__(65);
+var pIE = __webpack_require__(57);
 module.exports = function (it) {
   var result = getKeys(it);
   var getSymbols = gOPS.f;
@@ -9834,16 +11251,16 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 187 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-$export($export.S, 'Object', { create: __webpack_require__(42) });
+$export($export.S, 'Object', { create: __webpack_require__(43) });
 
 
 /***/ }),
-/* 188 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -9852,124 +11269,25 @@ $export($export.S + $export.F * !__webpack_require__(7), 'Object', { definePrope
 
 
 /***/ }),
-/* 189 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
 // 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
-$export($export.S + $export.F * !__webpack_require__(7), 'Object', { defineProperties: __webpack_require__(124) });
-
-
-/***/ }),
-/* 190 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-var toIObject = __webpack_require__(18);
-var $getOwnPropertyDescriptor = __webpack_require__(19).f;
-
-__webpack_require__(30)('getOwnPropertyDescriptor', function () {
-  return function getOwnPropertyDescriptor(it, key) {
-    return $getOwnPropertyDescriptor(toIObject(it), key);
-  };
-});
-
-
-/***/ }),
-/* 191 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.9 Object.getPrototypeOf(O)
-var toObject = __webpack_require__(10);
-var $getPrototypeOf = __webpack_require__(20);
-
-__webpack_require__(30)('getPrototypeOf', function () {
-  return function getPrototypeOf(it) {
-    return $getPrototypeOf(toObject(it));
-  };
-});
-
-
-/***/ }),
-/* 192 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.14 Object.keys(O)
-var toObject = __webpack_require__(10);
-var $keys = __webpack_require__(40);
-
-__webpack_require__(30)('keys', function () {
-  return function keys(it) {
-    return $keys(toObject(it));
-  };
-});
-
-
-/***/ }),
-/* 193 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.7 Object.getOwnPropertyNames(O)
-__webpack_require__(30)('getOwnPropertyNames', function () {
-  return __webpack_require__(125).f;
-});
-
-
-/***/ }),
-/* 194 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.5 Object.freeze(O)
-var isObject = __webpack_require__(5);
-var meta = __webpack_require__(35).onFreeze;
-
-__webpack_require__(30)('freeze', function ($freeze) {
-  return function freeze(it) {
-    return $freeze && isObject(it) ? $freeze(meta(it)) : it;
-  };
-});
-
-
-/***/ }),
-/* 195 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.17 Object.seal(O)
-var isObject = __webpack_require__(5);
-var meta = __webpack_require__(35).onFreeze;
-
-__webpack_require__(30)('seal', function ($seal) {
-  return function seal(it) {
-    return $seal && isObject(it) ? $seal(meta(it)) : it;
-  };
-});
-
-
-/***/ }),
-/* 196 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.15 Object.preventExtensions(O)
-var isObject = __webpack_require__(5);
-var meta = __webpack_require__(35).onFreeze;
-
-__webpack_require__(30)('preventExtensions', function ($preventExtensions) {
-  return function preventExtensions(it) {
-    return $preventExtensions && isObject(it) ? $preventExtensions(meta(it)) : it;
-  };
-});
+$export($export.S + $export.F * !__webpack_require__(7), 'Object', { defineProperties: __webpack_require__(127) });
 
 
 /***/ }),
 /* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// 19.1.2.12 Object.isFrozen(O)
-var isObject = __webpack_require__(5);
+// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+var toIObject = __webpack_require__(18);
+var $getOwnPropertyDescriptor = __webpack_require__(19).f;
 
-__webpack_require__(30)('isFrozen', function ($isFrozen) {
-  return function isFrozen(it) {
-    return isObject(it) ? $isFrozen ? $isFrozen(it) : false : true;
+__webpack_require__(31)('getOwnPropertyDescriptor', function () {
+  return function getOwnPropertyDescriptor(it, key) {
+    return $getOwnPropertyDescriptor(toIObject(it), key);
   };
 });
 
@@ -9978,12 +11296,13 @@ __webpack_require__(30)('isFrozen', function ($isFrozen) {
 /* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// 19.1.2.13 Object.isSealed(O)
-var isObject = __webpack_require__(5);
+// 19.1.2.9 Object.getPrototypeOf(O)
+var toObject = __webpack_require__(10);
+var $getPrototypeOf = __webpack_require__(20);
 
-__webpack_require__(30)('isSealed', function ($isSealed) {
-  return function isSealed(it) {
-    return isObject(it) ? $isSealed ? $isSealed(it) : false : true;
+__webpack_require__(31)('getPrototypeOf', function () {
+  return function getPrototypeOf(it) {
+    return $getPrototypeOf(toObject(it));
   };
 });
 
@@ -9992,12 +11311,13 @@ __webpack_require__(30)('isSealed', function ($isSealed) {
 /* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// 19.1.2.11 Object.isExtensible(O)
-var isObject = __webpack_require__(5);
+// 19.1.2.14 Object.keys(O)
+var toObject = __webpack_require__(10);
+var $keys = __webpack_require__(41);
 
-__webpack_require__(30)('isExtensible', function ($isExtensible) {
-  return function isExtensible(it) {
-    return isObject(it) ? $isExtensible ? $isExtensible(it) : true : false;
+__webpack_require__(31)('keys', function () {
+  return function keys(it) {
+    return $keys(toObject(it));
   };
 });
 
@@ -10006,23 +11326,120 @@ __webpack_require__(30)('isExtensible', function ($isExtensible) {
 /* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// 19.1.3.1 Object.assign(target, source)
-var $export = __webpack_require__(0);
-
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(126) });
+// 19.1.2.7 Object.getOwnPropertyNames(O)
+__webpack_require__(31)('getOwnPropertyNames', function () {
+  return __webpack_require__(128).f;
+});
 
 
 /***/ }),
 /* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// 19.1.3.10 Object.is(value1, value2)
-var $export = __webpack_require__(0);
-$export($export.S, 'Object', { is: __webpack_require__(202) });
+// 19.1.2.5 Object.freeze(O)
+var isObject = __webpack_require__(5);
+var meta = __webpack_require__(36).onFreeze;
+
+__webpack_require__(31)('freeze', function ($freeze) {
+  return function freeze(it) {
+    return $freeze && isObject(it) ? $freeze(meta(it)) : it;
+  };
+});
 
 
 /***/ }),
 /* 202 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.17 Object.seal(O)
+var isObject = __webpack_require__(5);
+var meta = __webpack_require__(36).onFreeze;
+
+__webpack_require__(31)('seal', function ($seal) {
+  return function seal(it) {
+    return $seal && isObject(it) ? $seal(meta(it)) : it;
+  };
+});
+
+
+/***/ }),
+/* 203 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.15 Object.preventExtensions(O)
+var isObject = __webpack_require__(5);
+var meta = __webpack_require__(36).onFreeze;
+
+__webpack_require__(31)('preventExtensions', function ($preventExtensions) {
+  return function preventExtensions(it) {
+    return $preventExtensions && isObject(it) ? $preventExtensions(meta(it)) : it;
+  };
+});
+
+
+/***/ }),
+/* 204 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.12 Object.isFrozen(O)
+var isObject = __webpack_require__(5);
+
+__webpack_require__(31)('isFrozen', function ($isFrozen) {
+  return function isFrozen(it) {
+    return isObject(it) ? $isFrozen ? $isFrozen(it) : false : true;
+  };
+});
+
+
+/***/ }),
+/* 205 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.13 Object.isSealed(O)
+var isObject = __webpack_require__(5);
+
+__webpack_require__(31)('isSealed', function ($isSealed) {
+  return function isSealed(it) {
+    return isObject(it) ? $isSealed ? $isSealed(it) : false : true;
+  };
+});
+
+
+/***/ }),
+/* 206 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.11 Object.isExtensible(O)
+var isObject = __webpack_require__(5);
+
+__webpack_require__(31)('isExtensible', function ($isExtensible) {
+  return function isExtensible(it) {
+    return isObject(it) ? $isExtensible ? $isExtensible(it) : true : false;
+  };
+});
+
+
+/***/ }),
+/* 207 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.3.1 Object.assign(target, source)
+var $export = __webpack_require__(0);
+
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(129) });
+
+
+/***/ }),
+/* 208 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.3.10 Object.is(value1, value2)
+var $export = __webpack_require__(0);
+$export($export.S, 'Object', { is: __webpack_require__(209) });
+
+
+/***/ }),
+/* 209 */
 /***/ (function(module, exports) {
 
 // 7.2.9 SameValue(x, y)
@@ -10033,22 +11450,22 @@ module.exports = Object.is || function is(x, y) {
 
 
 /***/ }),
-/* 203 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
 var $export = __webpack_require__(0);
-$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(84).set });
+$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(87).set });
 
 
 /***/ }),
-/* 204 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 19.1.3.6 Object.prototype.toString()
-var classof = __webpack_require__(56);
+var classof = __webpack_require__(58);
 var test = {};
 test[__webpack_require__(6)('toStringTag')] = 'z';
 if (test + '' != '[object z]') {
@@ -10059,17 +11476,17 @@ if (test + '' != '[object z]') {
 
 
 /***/ }),
-/* 205 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.2.3.2 / 15.3.4.5 Function.prototype.bind(thisArg, args...)
 var $export = __webpack_require__(0);
 
-$export($export.P, 'Function', { bind: __webpack_require__(127) });
+$export($export.P, 'Function', { bind: __webpack_require__(130) });
 
 
 /***/ }),
-/* 206 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(8).f;
@@ -10091,7 +11508,7 @@ NAME in FProto || __webpack_require__(7) && dP(FProto, NAME, {
 
 
 /***/ }),
-/* 207 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10111,47 +11528,47 @@ if (!(HAS_INSTANCE in FunctionProto)) __webpack_require__(8).f(FunctionProto, HA
 
 
 /***/ }),
-/* 208 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
-var $parseInt = __webpack_require__(129);
+var $parseInt = __webpack_require__(132);
 // 18.2.5 parseInt(string, radix)
 $export($export.G + $export.F * (parseInt != $parseInt), { parseInt: $parseInt });
 
 
 /***/ }),
-/* 209 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
-var $parseFloat = __webpack_require__(130);
+var $parseFloat = __webpack_require__(133);
 // 18.2.4 parseFloat(string)
 $export($export.G + $export.F * (parseFloat != $parseFloat), { parseFloat: $parseFloat });
 
 
 /***/ }),
-/* 210 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var global = __webpack_require__(2);
+var global = __webpack_require__(3);
 var has = __webpack_require__(14);
-var cof = __webpack_require__(24);
-var inheritIfRequired = __webpack_require__(86);
-var toPrimitive = __webpack_require__(27);
+var cof = __webpack_require__(25);
+var inheritIfRequired = __webpack_require__(89);
+var toPrimitive = __webpack_require__(28);
 var fails = __webpack_require__(4);
-var gOPN = __webpack_require__(43).f;
+var gOPN = __webpack_require__(44).f;
 var gOPD = __webpack_require__(19).f;
 var dP = __webpack_require__(8).f;
-var $trim = __webpack_require__(50).trim;
+var $trim = __webpack_require__(52).trim;
 var NUMBER = 'Number';
 var $Number = global[NUMBER];
 var Base = $Number;
 var proto = $Number.prototype;
 // Opera ~12 has broken Object#toString
-var BROKEN_COF = cof(__webpack_require__(42)(proto)) == NUMBER;
+var BROKEN_COF = cof(__webpack_require__(43)(proto)) == NUMBER;
 var TRIM = 'trim' in String.prototype;
 
 // 7.1.3 ToNumber(argument)
@@ -10207,15 +11624,15 @@ if (!$Number(' 0o1') || !$Number('0b1') || $Number('+0x1')) {
 
 
 /***/ }),
-/* 211 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var toInteger = __webpack_require__(29);
-var aNumberValue = __webpack_require__(131);
-var repeat = __webpack_require__(87);
+var toInteger = __webpack_require__(30);
+var aNumberValue = __webpack_require__(134);
+var repeat = __webpack_require__(90);
 var $toFixed = 1.0.toFixed;
 var floor = Math.floor;
 var data = [0, 0, 0, 0, 0, 0];
@@ -10328,14 +11745,14 @@ $export($export.P + $export.F * (!!$toFixed && (
 
 
 /***/ }),
-/* 212 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
 var $fails = __webpack_require__(4);
-var aNumberValue = __webpack_require__(131);
+var aNumberValue = __webpack_require__(134);
 var $toPrecision = 1.0.toPrecision;
 
 $export($export.P + $export.F * ($fails(function () {
@@ -10353,7 +11770,7 @@ $export($export.P + $export.F * ($fails(function () {
 
 
 /***/ }),
-/* 213 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.1 Number.EPSILON
@@ -10363,12 +11780,12 @@ $export($export.S, 'Number', { EPSILON: Math.pow(2, -52) });
 
 
 /***/ }),
-/* 214 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.2 Number.isFinite(number)
 var $export = __webpack_require__(0);
-var _isFinite = __webpack_require__(2).isFinite;
+var _isFinite = __webpack_require__(3).isFinite;
 
 $export($export.S, 'Number', {
   isFinite: function isFinite(it) {
@@ -10378,17 +11795,17 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 215 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.3 Number.isInteger(number)
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Number', { isInteger: __webpack_require__(132) });
+$export($export.S, 'Number', { isInteger: __webpack_require__(135) });
 
 
 /***/ }),
-/* 216 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.4 Number.isNaN(number)
@@ -10403,12 +11820,12 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 217 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.5 Number.isSafeInteger(number)
 var $export = __webpack_require__(0);
-var isInteger = __webpack_require__(132);
+var isInteger = __webpack_require__(135);
 var abs = Math.abs;
 
 $export($export.S, 'Number', {
@@ -10419,7 +11836,7 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 218 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.6 Number.MAX_SAFE_INTEGER
@@ -10429,7 +11846,7 @@ $export($export.S, 'Number', { MAX_SAFE_INTEGER: 0x1fffffffffffff });
 
 
 /***/ }),
-/* 219 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.10 Number.MIN_SAFE_INTEGER
@@ -10439,32 +11856,32 @@ $export($export.S, 'Number', { MIN_SAFE_INTEGER: -0x1fffffffffffff });
 
 
 /***/ }),
-/* 220 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
-var $parseFloat = __webpack_require__(130);
+var $parseFloat = __webpack_require__(133);
 // 20.1.2.12 Number.parseFloat(string)
 $export($export.S + $export.F * (Number.parseFloat != $parseFloat), 'Number', { parseFloat: $parseFloat });
 
 
 /***/ }),
-/* 221 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
-var $parseInt = __webpack_require__(129);
+var $parseInt = __webpack_require__(132);
 // 20.1.2.13 Number.parseInt(string, radix)
 $export($export.S + $export.F * (Number.parseInt != $parseInt), 'Number', { parseInt: $parseInt });
 
 
 /***/ }),
-/* 222 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.3 Math.acosh(x)
 var $export = __webpack_require__(0);
-var log1p = __webpack_require__(133);
+var log1p = __webpack_require__(136);
 var sqrt = Math.sqrt;
 var $acosh = Math.acosh;
 
@@ -10483,7 +11900,7 @@ $export($export.S + $export.F * !($acosh
 
 
 /***/ }),
-/* 223 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.5 Math.asinh(x)
@@ -10499,7 +11916,7 @@ $export($export.S + $export.F * !($asinh && 1 / $asinh(0) > 0), 'Math', { asinh:
 
 
 /***/ }),
-/* 224 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.7 Math.atanh(x)
@@ -10515,12 +11932,12 @@ $export($export.S + $export.F * !($atanh && 1 / $atanh(-0) < 0), 'Math', {
 
 
 /***/ }),
-/* 225 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.9 Math.cbrt(x)
 var $export = __webpack_require__(0);
-var sign = __webpack_require__(88);
+var sign = __webpack_require__(91);
 
 $export($export.S, 'Math', {
   cbrt: function cbrt(x) {
@@ -10530,7 +11947,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 226 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.11 Math.clz32(x)
@@ -10544,7 +11961,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 227 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.12 Math.cosh(x)
@@ -10559,28 +11976,28 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 228 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.14 Math.expm1(x)
 var $export = __webpack_require__(0);
-var $expm1 = __webpack_require__(89);
+var $expm1 = __webpack_require__(92);
 
 $export($export.S + $export.F * ($expm1 != Math.expm1), 'Math', { expm1: $expm1 });
 
 
 /***/ }),
-/* 229 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.16 Math.fround(x)
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Math', { fround: __webpack_require__(134) });
+$export($export.S, 'Math', { fround: __webpack_require__(137) });
 
 
 /***/ }),
-/* 230 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.17 Math.hypot([value1[, value2[, … ]]])
@@ -10611,7 +12028,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 231 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.18 Math.imul(x, y)
@@ -10634,7 +12051,7 @@ $export($export.S + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 232 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.21 Math.log10(x)
@@ -10648,17 +12065,17 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 233 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.20 Math.log1p(x)
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Math', { log1p: __webpack_require__(133) });
+$export($export.S, 'Math', { log1p: __webpack_require__(136) });
 
 
 /***/ }),
-/* 234 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.22 Math.log2(x)
@@ -10672,22 +12089,22 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 235 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.28 Math.sign(x)
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Math', { sign: __webpack_require__(88) });
+$export($export.S, 'Math', { sign: __webpack_require__(91) });
 
 
 /***/ }),
-/* 236 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.30 Math.sinh(x)
 var $export = __webpack_require__(0);
-var expm1 = __webpack_require__(89);
+var expm1 = __webpack_require__(92);
 var exp = Math.exp;
 
 // V8 near Chromium 38 has a problem with very small numbers
@@ -10703,12 +12120,12 @@ $export($export.S + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 237 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.33 Math.tanh(x)
 var $export = __webpack_require__(0);
-var expm1 = __webpack_require__(89);
+var expm1 = __webpack_require__(92);
 var exp = Math.exp;
 
 $export($export.S, 'Math', {
@@ -10721,7 +12138,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 238 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.34 Math.trunc(x)
@@ -10735,11 +12152,11 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 239 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
-var toAbsoluteIndex = __webpack_require__(41);
+var toAbsoluteIndex = __webpack_require__(42);
 var fromCharCode = String.fromCharCode;
 var $fromCodePoint = String.fromCodePoint;
 
@@ -10764,7 +12181,7 @@ $export($export.S + $export.F * (!!$fromCodePoint && $fromCodePoint.length != 1)
 
 
 /***/ }),
-/* 240 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -10788,13 +12205,13 @@ $export($export.S, 'String', {
 
 
 /***/ }),
-/* 241 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 21.1.3.25 String.prototype.trim()
-__webpack_require__(50)('trim', function ($trim) {
+__webpack_require__(52)('trim', function ($trim) {
   return function trim() {
     return $trim(this, 3);
   };
@@ -10802,15 +12219,15 @@ __webpack_require__(50)('trim', function ($trim) {
 
 
 /***/ }),
-/* 242 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var $at = __webpack_require__(90)(true);
+var $at = __webpack_require__(93)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(91)(String, 'String', function (iterated) {
+__webpack_require__(94)(String, 'String', function (iterated) {
   this._t = String(iterated); // target
   this._i = 0;                // next index
 // 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -10826,13 +12243,13 @@ __webpack_require__(91)(String, 'String', function (iterated) {
 
 
 /***/ }),
-/* 243 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $at = __webpack_require__(90)(false);
+var $at = __webpack_require__(93)(false);
 $export($export.P, 'String', {
   // 21.1.3.3 String.prototype.codePointAt(pos)
   codePointAt: function codePointAt(pos) {
@@ -10842,7 +12259,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 244 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10850,11 +12267,11 @@ $export($export.P, 'String', {
 
 var $export = __webpack_require__(0);
 var toLength = __webpack_require__(9);
-var context = __webpack_require__(93);
+var context = __webpack_require__(96);
 var ENDS_WITH = 'endsWith';
 var $endsWith = ''[ENDS_WITH];
 
-$export($export.P + $export.F * __webpack_require__(94)(ENDS_WITH), 'String', {
+$export($export.P + $export.F * __webpack_require__(97)(ENDS_WITH), 'String', {
   endsWith: function endsWith(searchString /* , endPosition = @length */) {
     var that = context(this, searchString, ENDS_WITH);
     var endPosition = arguments.length > 1 ? arguments[1] : undefined;
@@ -10869,17 +12286,17 @@ $export($export.P + $export.F * __webpack_require__(94)(ENDS_WITH), 'String', {
 
 
 /***/ }),
-/* 245 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 // 21.1.3.7 String.prototype.includes(searchString, position = 0)
 
 var $export = __webpack_require__(0);
-var context = __webpack_require__(93);
+var context = __webpack_require__(96);
 var INCLUDES = 'includes';
 
-$export($export.P + $export.F * __webpack_require__(94)(INCLUDES), 'String', {
+$export($export.P + $export.F * __webpack_require__(97)(INCLUDES), 'String', {
   includes: function includes(searchString /* , position = 0 */) {
     return !!~context(this, searchString, INCLUDES)
       .indexOf(searchString, arguments.length > 1 ? arguments[1] : undefined);
@@ -10888,19 +12305,19 @@ $export($export.P + $export.F * __webpack_require__(94)(INCLUDES), 'String', {
 
 
 /***/ }),
-/* 246 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
 
 $export($export.P, 'String', {
   // 21.1.3.13 String.prototype.repeat(count)
-  repeat: __webpack_require__(87)
+  repeat: __webpack_require__(90)
 });
 
 
 /***/ }),
-/* 247 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10908,11 +12325,11 @@ $export($export.P, 'String', {
 
 var $export = __webpack_require__(0);
 var toLength = __webpack_require__(9);
-var context = __webpack_require__(93);
+var context = __webpack_require__(96);
 var STARTS_WITH = 'startsWith';
 var $startsWith = ''[STARTS_WITH];
 
-$export($export.P + $export.F * __webpack_require__(94)(STARTS_WITH), 'String', {
+$export($export.P + $export.F * __webpack_require__(97)(STARTS_WITH), 'String', {
   startsWith: function startsWith(searchString /* , position = 0 */) {
     var that = context(this, searchString, STARTS_WITH);
     var index = toLength(Math.min(arguments.length > 1 ? arguments[1] : undefined, that.length));
@@ -10925,7 +12342,7 @@ $export($export.P + $export.F * __webpack_require__(94)(STARTS_WITH), 'String', 
 
 
 /***/ }),
-/* 248 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10939,7 +12356,7 @@ __webpack_require__(17)('anchor', function (createHTML) {
 
 
 /***/ }),
-/* 249 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10953,7 +12370,7 @@ __webpack_require__(17)('big', function (createHTML) {
 
 
 /***/ }),
-/* 250 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10967,7 +12384,7 @@ __webpack_require__(17)('blink', function (createHTML) {
 
 
 /***/ }),
-/* 251 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10981,7 +12398,7 @@ __webpack_require__(17)('bold', function (createHTML) {
 
 
 /***/ }),
-/* 252 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10995,7 +12412,7 @@ __webpack_require__(17)('fixed', function (createHTML) {
 
 
 /***/ }),
-/* 253 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11009,7 +12426,7 @@ __webpack_require__(17)('fontcolor', function (createHTML) {
 
 
 /***/ }),
-/* 254 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11023,7 +12440,7 @@ __webpack_require__(17)('fontsize', function (createHTML) {
 
 
 /***/ }),
-/* 255 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11037,7 +12454,7 @@ __webpack_require__(17)('italics', function (createHTML) {
 
 
 /***/ }),
-/* 256 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11051,7 +12468,7 @@ __webpack_require__(17)('link', function (createHTML) {
 
 
 /***/ }),
-/* 257 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11065,7 +12482,7 @@ __webpack_require__(17)('small', function (createHTML) {
 
 
 /***/ }),
-/* 258 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11079,7 +12496,7 @@ __webpack_require__(17)('strike', function (createHTML) {
 
 
 /***/ }),
-/* 259 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11093,7 +12510,7 @@ __webpack_require__(17)('sub', function (createHTML) {
 
 
 /***/ }),
-/* 260 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11107,7 +12524,7 @@ __webpack_require__(17)('sup', function (createHTML) {
 
 
 /***/ }),
-/* 261 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.3.3.1 / 15.9.4.4 Date.now()
@@ -11117,14 +12534,14 @@ $export($export.S, 'Date', { now: function () { return new Date().getTime(); } }
 
 
 /***/ }),
-/* 262 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
 var toObject = __webpack_require__(10);
-var toPrimitive = __webpack_require__(27);
+var toPrimitive = __webpack_require__(28);
 
 $export($export.P + $export.F * __webpack_require__(4)(function () {
   return new Date(NaN).toJSON() !== null
@@ -11140,12 +12557,12 @@ $export($export.P + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 263 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.3.4.36 / 15.9.5.43 Date.prototype.toISOString()
 var $export = __webpack_require__(0);
-var toISOString = __webpack_require__(264);
+var toISOString = __webpack_require__(271);
 
 // PhantomJS / old WebKit has a broken implementations
 $export($export.P + $export.F * (Date.prototype.toISOString !== toISOString), 'Date', {
@@ -11154,7 +12571,7 @@ $export($export.P + $export.F * (Date.prototype.toISOString !== toISOString), 'D
 
 
 /***/ }),
-/* 264 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11187,7 +12604,7 @@ module.exports = (fails(function () {
 
 
 /***/ }),
-/* 265 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var DateProto = Date.prototype;
@@ -11205,23 +12622,23 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 
 
 /***/ }),
-/* 266 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var TO_PRIMITIVE = __webpack_require__(6)('toPrimitive');
 var proto = Date.prototype;
 
-if (!(TO_PRIMITIVE in proto)) __webpack_require__(15)(proto, TO_PRIMITIVE, __webpack_require__(267));
+if (!(TO_PRIMITIVE in proto)) __webpack_require__(15)(proto, TO_PRIMITIVE, __webpack_require__(274));
 
 
 /***/ }),
-/* 267 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var anObject = __webpack_require__(1);
-var toPrimitive = __webpack_require__(27);
+var anObject = __webpack_require__(2);
+var toPrimitive = __webpack_require__(28);
 var NUMBER = 'number';
 
 module.exports = function (hint) {
@@ -11231,31 +12648,31 @@ module.exports = function (hint) {
 
 
 /***/ }),
-/* 268 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Array', { isArray: __webpack_require__(64) });
+$export($export.S, 'Array', { isArray: __webpack_require__(66) });
 
 
 /***/ }),
-/* 269 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ctx = __webpack_require__(23);
+var ctx = __webpack_require__(24);
 var $export = __webpack_require__(0);
 var toObject = __webpack_require__(10);
-var call = __webpack_require__(135);
-var isArrayIter = __webpack_require__(95);
+var call = __webpack_require__(138);
+var isArrayIter = __webpack_require__(98);
 var toLength = __webpack_require__(9);
-var createProperty = __webpack_require__(96);
-var getIterFn = __webpack_require__(97);
+var createProperty = __webpack_require__(99);
+var getIterFn = __webpack_require__(100);
 
-$export($export.S + $export.F * !__webpack_require__(66)(function (iter) { Array.from(iter); }), 'Array', {
+$export($export.S + $export.F * !__webpack_require__(68)(function (iter) { Array.from(iter); }), 'Array', {
   // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
   from: function from(arrayLike /* , mapfn = undefined, thisArg = undefined */) {
     var O = toObject(arrayLike);
@@ -11285,13 +12702,13 @@ $export($export.S + $export.F * !__webpack_require__(66)(function (iter) { Array
 
 
 /***/ }),
-/* 270 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var createProperty = __webpack_require__(96);
+var createProperty = __webpack_require__(99);
 
 // WebKit Array.of isn't generic
 $export($export.S + $export.F * __webpack_require__(4)(function () {
@@ -11311,7 +12728,7 @@ $export($export.S + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 271 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11322,7 +12739,7 @@ var toIObject = __webpack_require__(18);
 var arrayJoin = [].join;
 
 // fallback for not array-like strings
-$export($export.P + $export.F * (__webpack_require__(54) != Object || !__webpack_require__(25)(arrayJoin)), 'Array', {
+$export($export.P + $export.F * (__webpack_require__(56) != Object || !__webpack_require__(26)(arrayJoin)), 'Array', {
   join: function join(separator) {
     return arrayJoin.call(toIObject(this), separator === undefined ? ',' : separator);
   }
@@ -11330,15 +12747,15 @@ $export($export.P + $export.F * (__webpack_require__(54) != Object || !__webpack
 
 
 /***/ }),
-/* 272 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var html = __webpack_require__(83);
-var cof = __webpack_require__(24);
-var toAbsoluteIndex = __webpack_require__(41);
+var html = __webpack_require__(86);
+var cof = __webpack_require__(25);
+var toAbsoluteIndex = __webpack_require__(42);
 var toLength = __webpack_require__(9);
 var arraySlice = [].slice;
 
@@ -11365,7 +12782,7 @@ $export($export.P + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 273 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11384,7 +12801,7 @@ $export($export.P + $export.F * (fails(function () {
   // V8 bug
   test.sort(null);
   // Old WebKit
-}) || !__webpack_require__(25)($sort)), 'Array', {
+}) || !__webpack_require__(26)($sort)), 'Array', {
   // 22.1.3.25 Array.prototype.sort(comparefn)
   sort: function sort(comparefn) {
     return comparefn === undefined
@@ -11395,14 +12812,14 @@ $export($export.P + $export.F * (fails(function () {
 
 
 /***/ }),
-/* 274 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $forEach = __webpack_require__(31)(0);
-var STRICT = __webpack_require__(25)([].forEach, true);
+var $forEach = __webpack_require__(32)(0);
+var STRICT = __webpack_require__(26)([].forEach, true);
 
 $export($export.P + $export.F * !STRICT, 'Array', {
   // 22.1.3.10 / 15.4.4.18 Array.prototype.forEach(callbackfn [, thisArg])
@@ -11413,11 +12830,11 @@ $export($export.P + $export.F * !STRICT, 'Array', {
 
 
 /***/ }),
-/* 275 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(5);
-var isArray = __webpack_require__(64);
+var isArray = __webpack_require__(66);
 var SPECIES = __webpack_require__(6)('species');
 
 module.exports = function (original) {
@@ -11435,15 +12852,15 @@ module.exports = function (original) {
 
 
 /***/ }),
-/* 276 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $map = __webpack_require__(31)(1);
+var $map = __webpack_require__(32)(1);
 
-$export($export.P + $export.F * !__webpack_require__(25)([].map, true), 'Array', {
+$export($export.P + $export.F * !__webpack_require__(26)([].map, true), 'Array', {
   // 22.1.3.15 / 15.4.4.19 Array.prototype.map(callbackfn [, thisArg])
   map: function map(callbackfn /* , thisArg */) {
     return $map(this, callbackfn, arguments[1]);
@@ -11452,15 +12869,15 @@ $export($export.P + $export.F * !__webpack_require__(25)([].map, true), 'Array',
 
 
 /***/ }),
-/* 277 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $filter = __webpack_require__(31)(2);
+var $filter = __webpack_require__(32)(2);
 
-$export($export.P + $export.F * !__webpack_require__(25)([].filter, true), 'Array', {
+$export($export.P + $export.F * !__webpack_require__(26)([].filter, true), 'Array', {
   // 22.1.3.7 / 15.4.4.20 Array.prototype.filter(callbackfn [, thisArg])
   filter: function filter(callbackfn /* , thisArg */) {
     return $filter(this, callbackfn, arguments[1]);
@@ -11469,15 +12886,15 @@ $export($export.P + $export.F * !__webpack_require__(25)([].filter, true), 'Arra
 
 
 /***/ }),
-/* 278 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $some = __webpack_require__(31)(3);
+var $some = __webpack_require__(32)(3);
 
-$export($export.P + $export.F * !__webpack_require__(25)([].some, true), 'Array', {
+$export($export.P + $export.F * !__webpack_require__(26)([].some, true), 'Array', {
   // 22.1.3.23 / 15.4.4.17 Array.prototype.some(callbackfn [, thisArg])
   some: function some(callbackfn /* , thisArg */) {
     return $some(this, callbackfn, arguments[1]);
@@ -11486,15 +12903,15 @@ $export($export.P + $export.F * !__webpack_require__(25)([].some, true), 'Array'
 
 
 /***/ }),
-/* 279 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $every = __webpack_require__(31)(4);
+var $every = __webpack_require__(32)(4);
 
-$export($export.P + $export.F * !__webpack_require__(25)([].every, true), 'Array', {
+$export($export.P + $export.F * !__webpack_require__(26)([].every, true), 'Array', {
   // 22.1.3.5 / 15.4.4.16 Array.prototype.every(callbackfn [, thisArg])
   every: function every(callbackfn /* , thisArg */) {
     return $every(this, callbackfn, arguments[1]);
@@ -11503,15 +12920,15 @@ $export($export.P + $export.F * !__webpack_require__(25)([].every, true), 'Array
 
 
 /***/ }),
-/* 280 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $reduce = __webpack_require__(136);
+var $reduce = __webpack_require__(139);
 
-$export($export.P + $export.F * !__webpack_require__(25)([].reduce, true), 'Array', {
+$export($export.P + $export.F * !__webpack_require__(26)([].reduce, true), 'Array', {
   // 22.1.3.18 / 15.4.4.21 Array.prototype.reduce(callbackfn [, initialValue])
   reduce: function reduce(callbackfn /* , initialValue */) {
     return $reduce(this, callbackfn, arguments.length, arguments[1], false);
@@ -11520,15 +12937,15 @@ $export($export.P + $export.F * !__webpack_require__(25)([].reduce, true), 'Arra
 
 
 /***/ }),
-/* 281 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $reduce = __webpack_require__(136);
+var $reduce = __webpack_require__(139);
 
-$export($export.P + $export.F * !__webpack_require__(25)([].reduceRight, true), 'Array', {
+$export($export.P + $export.F * !__webpack_require__(26)([].reduceRight, true), 'Array', {
   // 22.1.3.19 / 15.4.4.22 Array.prototype.reduceRight(callbackfn [, initialValue])
   reduceRight: function reduceRight(callbackfn /* , initialValue */) {
     return $reduce(this, callbackfn, arguments.length, arguments[1], true);
@@ -11537,17 +12954,17 @@ $export($export.P + $export.F * !__webpack_require__(25)([].reduceRight, true), 
 
 
 /***/ }),
-/* 282 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $indexOf = __webpack_require__(62)(false);
+var $indexOf = __webpack_require__(64)(false);
 var $native = [].indexOf;
 var NEGATIVE_ZERO = !!$native && 1 / [1].indexOf(1, -0) < 0;
 
-$export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(25)($native)), 'Array', {
+$export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(26)($native)), 'Array', {
   // 22.1.3.11 / 15.4.4.14 Array.prototype.indexOf(searchElement [, fromIndex])
   indexOf: function indexOf(searchElement /* , fromIndex = 0 */) {
     return NEGATIVE_ZERO
@@ -11559,19 +12976,19 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(25)($nati
 
 
 /***/ }),
-/* 283 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
 var toIObject = __webpack_require__(18);
-var toInteger = __webpack_require__(29);
+var toInteger = __webpack_require__(30);
 var toLength = __webpack_require__(9);
 var $native = [].lastIndexOf;
 var NEGATIVE_ZERO = !!$native && 1 / [1].lastIndexOf(1, -0) < 0;
 
-$export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(25)($native)), 'Array', {
+$export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(26)($native)), 'Array', {
   // 22.1.3.14 / 15.4.4.15 Array.prototype.lastIndexOf(searchElement [, fromIndex])
   lastIndexOf: function lastIndexOf(searchElement /* , fromIndex = @[*-1] */) {
     // convert -0 to +0
@@ -11588,38 +13005,38 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(25)($nati
 
 
 /***/ }),
-/* 284 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
 var $export = __webpack_require__(0);
 
-$export($export.P, 'Array', { copyWithin: __webpack_require__(137) });
+$export($export.P, 'Array', { copyWithin: __webpack_require__(140) });
 
-__webpack_require__(36)('copyWithin');
+__webpack_require__(37)('copyWithin');
 
 
 /***/ }),
-/* 285 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
 var $export = __webpack_require__(0);
 
-$export($export.P, 'Array', { fill: __webpack_require__(99) });
+$export($export.P, 'Array', { fill: __webpack_require__(102) });
 
-__webpack_require__(36)('fill');
+__webpack_require__(37)('fill');
 
 
 /***/ }),
-/* 286 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 22.1.3.8 Array.prototype.find(predicate, thisArg = undefined)
 var $export = __webpack_require__(0);
-var $find = __webpack_require__(31)(5);
+var $find = __webpack_require__(32)(5);
 var KEY = 'find';
 var forced = true;
 // Shouldn't skip holes
@@ -11629,18 +13046,18 @@ $export($export.P + $export.F * forced, 'Array', {
     return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
   }
 });
-__webpack_require__(36)(KEY);
+__webpack_require__(37)(KEY);
 
 
 /***/ }),
-/* 287 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 22.1.3.9 Array.prototype.findIndex(predicate, thisArg = undefined)
 var $export = __webpack_require__(0);
-var $find = __webpack_require__(31)(6);
+var $find = __webpack_require__(32)(6);
 var KEY = 'findIndex';
 var forced = true;
 // Shouldn't skip holes
@@ -11650,26 +13067,26 @@ $export($export.P + $export.F * forced, 'Array', {
     return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
   }
 });
-__webpack_require__(36)(KEY);
+__webpack_require__(37)(KEY);
 
 
 /***/ }),
-/* 288 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(44)('Array');
+__webpack_require__(45)('Array');
 
 
 /***/ }),
-/* 289 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(2);
-var inheritIfRequired = __webpack_require__(86);
+var global = __webpack_require__(3);
+var inheritIfRequired = __webpack_require__(89);
 var dP = __webpack_require__(8).f;
-var gOPN = __webpack_require__(43).f;
-var isRegExp = __webpack_require__(65);
-var $flags = __webpack_require__(67);
+var gOPN = __webpack_require__(44).f;
+var isRegExp = __webpack_require__(67);
+var $flags = __webpack_require__(69);
 var $RegExp = global.RegExp;
 var Base = $RegExp;
 var proto = $RegExp.prototype;
@@ -11706,18 +13123,18 @@ if (__webpack_require__(7) && (!CORRECT_NEW || __webpack_require__(4)(function (
   __webpack_require__(16)(global, 'RegExp', $RegExp);
 }
 
-__webpack_require__(44)('RegExp');
+__webpack_require__(45)('RegExp');
 
 
 /***/ }),
-/* 290 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-__webpack_require__(139);
-var anObject = __webpack_require__(1);
-var $flags = __webpack_require__(67);
+__webpack_require__(142);
+var anObject = __webpack_require__(2);
+var $flags = __webpack_require__(69);
 var DESCRIPTORS = __webpack_require__(7);
 var TO_STRING = 'toString';
 var $toString = /./[TO_STRING];
@@ -11742,11 +13159,11 @@ if (__webpack_require__(4)(function () { return $toString.call({ source: 'a', fl
 
 
 /***/ }),
-/* 291 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // @@match logic
-__webpack_require__(68)('match', 1, function (defined, MATCH, $match) {
+__webpack_require__(70)('match', 1, function (defined, MATCH, $match) {
   // 21.1.3.11 String.prototype.match(regexp)
   return [function match(regexp) {
     'use strict';
@@ -11758,11 +13175,11 @@ __webpack_require__(68)('match', 1, function (defined, MATCH, $match) {
 
 
 /***/ }),
-/* 292 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // @@replace logic
-__webpack_require__(68)('replace', 2, function (defined, REPLACE, $replace) {
+__webpack_require__(70)('replace', 2, function (defined, REPLACE, $replace) {
   // 21.1.3.14 String.prototype.replace(searchValue, replaceValue)
   return [function replace(searchValue, replaceValue) {
     'use strict';
@@ -11776,11 +13193,11 @@ __webpack_require__(68)('replace', 2, function (defined, REPLACE, $replace) {
 
 
 /***/ }),
-/* 293 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // @@search logic
-__webpack_require__(68)('search', 1, function (defined, SEARCH, $search) {
+__webpack_require__(70)('search', 1, function (defined, SEARCH, $search) {
   // 21.1.3.15 String.prototype.search(regexp)
   return [function search(regexp) {
     'use strict';
@@ -11792,13 +13209,13 @@ __webpack_require__(68)('search', 1, function (defined, SEARCH, $search) {
 
 
 /***/ }),
-/* 294 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // @@split logic
-__webpack_require__(68)('split', 2, function (defined, SPLIT, $split) {
+__webpack_require__(70)('split', 2, function (defined, SPLIT, $split) {
   'use strict';
-  var isRegExp = __webpack_require__(65);
+  var isRegExp = __webpack_require__(67);
   var _split = $split;
   var $push = [].push;
   var $SPLIT = 'split';
@@ -11869,26 +13286,26 @@ __webpack_require__(68)('split', 2, function (defined, SPLIT, $split) {
 
 
 /***/ }),
-/* 295 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var LIBRARY = __webpack_require__(39);
-var global = __webpack_require__(2);
-var ctx = __webpack_require__(23);
-var classof = __webpack_require__(56);
+var LIBRARY = __webpack_require__(40);
+var global = __webpack_require__(3);
+var ctx = __webpack_require__(24);
+var classof = __webpack_require__(58);
 var $export = __webpack_require__(0);
 var isObject = __webpack_require__(5);
 var aFunction = __webpack_require__(12);
-var anInstance = __webpack_require__(45);
-var forOf = __webpack_require__(46);
-var speciesConstructor = __webpack_require__(69);
-var task = __webpack_require__(101).set;
-var microtask = __webpack_require__(102)();
-var newPromiseCapabilityModule = __webpack_require__(103);
-var perform = __webpack_require__(140);
-var promiseResolve = __webpack_require__(141);
+var anInstance = __webpack_require__(46);
+var forOf = __webpack_require__(47);
+var speciesConstructor = __webpack_require__(71);
+var task = __webpack_require__(104).set;
+var microtask = __webpack_require__(105)();
+var newPromiseCapabilityModule = __webpack_require__(106);
+var perform = __webpack_require__(143);
+var promiseResolve = __webpack_require__(144);
 var PROMISE = 'Promise';
 var TypeError = global.TypeError;
 var process = global.process;
@@ -12051,7 +13468,7 @@ if (!USE_NATIVE) {
     this._h = 0;              // <- rejection state, 0 - default, 1 - handled, 2 - unhandled
     this._n = false;          // <- notify
   };
-  Internal.prototype = __webpack_require__(47)($Promise.prototype, {
+  Internal.prototype = __webpack_require__(48)($Promise.prototype, {
     // 25.4.5.3 Promise.prototype.then(onFulfilled, onRejected)
     then: function then(onFulfilled, onRejected) {
       var reaction = newPromiseCapability(speciesConstructor(this, $Promise));
@@ -12082,9 +13499,9 @@ if (!USE_NATIVE) {
 }
 
 $export($export.G + $export.W + $export.F * !USE_NATIVE, { Promise: $Promise });
-__webpack_require__(49)($Promise, PROMISE);
-__webpack_require__(44)(PROMISE);
-Wrapper = __webpack_require__(26)[PROMISE];
+__webpack_require__(51)($Promise, PROMISE);
+__webpack_require__(45)(PROMISE);
+Wrapper = __webpack_require__(27)[PROMISE];
 
 // statics
 $export($export.S + $export.F * !USE_NATIVE, PROMISE, {
@@ -12102,7 +13519,7 @@ $export($export.S + $export.F * (LIBRARY || !USE_NATIVE), PROMISE, {
     return promiseResolve(LIBRARY && this === Wrapper ? $Promise : this, x);
   }
 });
-$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(66)(function (iter) {
+$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(68)(function (iter) {
   $Promise.all(iter)['catch'](empty);
 })), PROMISE, {
   // 25.4.4.1 Promise.all(iterable)
@@ -12149,17 +13566,17 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(66)(function
 
 
 /***/ }),
-/* 296 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var weak = __webpack_require__(146);
-var validate = __webpack_require__(52);
+var weak = __webpack_require__(149);
+var validate = __webpack_require__(54);
 var WEAK_SET = 'WeakSet';
 
 // 23.4 WeakSet Objects
-__webpack_require__(70)(WEAK_SET, function (get) {
+__webpack_require__(72)(WEAK_SET, function (get) {
   return function WeakSet() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 }, {
   // 23.4.3.1 WeakSet.prototype.add(value)
@@ -12170,20 +13587,20 @@ __webpack_require__(70)(WEAK_SET, function (get) {
 
 
 /***/ }),
-/* 297 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $typed = __webpack_require__(71);
-var buffer = __webpack_require__(104);
-var anObject = __webpack_require__(1);
-var toAbsoluteIndex = __webpack_require__(41);
+var $typed = __webpack_require__(73);
+var buffer = __webpack_require__(107);
+var anObject = __webpack_require__(2);
+var toAbsoluteIndex = __webpack_require__(42);
 var toLength = __webpack_require__(9);
 var isObject = __webpack_require__(5);
-var ArrayBuffer = __webpack_require__(2).ArrayBuffer;
-var speciesConstructor = __webpack_require__(69);
+var ArrayBuffer = __webpack_require__(3).ArrayBuffer;
+var speciesConstructor = __webpack_require__(71);
 var $ArrayBuffer = buffer.ArrayBuffer;
 var $DataView = buffer.DataView;
 var $isView = $typed.ABV && ArrayBuffer.isView;
@@ -12219,93 +13636,16 @@ $export($export.P + $export.U + $export.F * __webpack_require__(4)(function () {
   }
 });
 
-__webpack_require__(44)(ARRAY_BUFFER);
-
-
-/***/ }),
-/* 298 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $export = __webpack_require__(0);
-$export($export.G + $export.W + $export.F * !__webpack_require__(71).ABV, {
-  DataView: __webpack_require__(104).DataView
-});
-
-
-/***/ }),
-/* 299 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(33)('Int8', 1, function (init) {
-  return function Int8Array(data, byteOffset, length) {
-    return init(this, data, byteOffset, length);
-  };
-});
-
-
-/***/ }),
-/* 300 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(33)('Uint8', 1, function (init) {
-  return function Uint8Array(data, byteOffset, length) {
-    return init(this, data, byteOffset, length);
-  };
-});
-
-
-/***/ }),
-/* 301 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(33)('Uint8', 1, function (init) {
-  return function Uint8ClampedArray(data, byteOffset, length) {
-    return init(this, data, byteOffset, length);
-  };
-}, true);
-
-
-/***/ }),
-/* 302 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(33)('Int16', 2, function (init) {
-  return function Int16Array(data, byteOffset, length) {
-    return init(this, data, byteOffset, length);
-  };
-});
-
-
-/***/ }),
-/* 303 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(33)('Uint16', 2, function (init) {
-  return function Uint16Array(data, byteOffset, length) {
-    return init(this, data, byteOffset, length);
-  };
-});
-
-
-/***/ }),
-/* 304 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(33)('Int32', 4, function (init) {
-  return function Int32Array(data, byteOffset, length) {
-    return init(this, data, byteOffset, length);
-  };
-});
+__webpack_require__(45)(ARRAY_BUFFER);
 
 
 /***/ }),
 /* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(33)('Uint32', 4, function (init) {
-  return function Uint32Array(data, byteOffset, length) {
-    return init(this, data, byteOffset, length);
-  };
+var $export = __webpack_require__(0);
+$export($export.G + $export.W + $export.F * !__webpack_require__(73).ABV, {
+  DataView: __webpack_require__(107).DataView
 });
 
 
@@ -12313,8 +13653,8 @@ __webpack_require__(33)('Uint32', 4, function (init) {
 /* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(33)('Float32', 4, function (init) {
-  return function Float32Array(data, byteOffset, length) {
+__webpack_require__(34)('Int8', 1, function (init) {
+  return function Int8Array(data, byteOffset, length) {
     return init(this, data, byteOffset, length);
   };
 });
@@ -12324,8 +13664,8 @@ __webpack_require__(33)('Float32', 4, function (init) {
 /* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(33)('Float64', 8, function (init) {
-  return function Float64Array(data, byteOffset, length) {
+__webpack_require__(34)('Uint8', 1, function (init) {
+  return function Uint8Array(data, byteOffset, length) {
     return init(this, data, byteOffset, length);
   };
 });
@@ -12335,11 +13675,88 @@ __webpack_require__(33)('Float64', 8, function (init) {
 /* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(34)('Uint8', 1, function (init) {
+  return function Uint8ClampedArray(data, byteOffset, length) {
+    return init(this, data, byteOffset, length);
+  };
+}, true);
+
+
+/***/ }),
+/* 309 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(34)('Int16', 2, function (init) {
+  return function Int16Array(data, byteOffset, length) {
+    return init(this, data, byteOffset, length);
+  };
+});
+
+
+/***/ }),
+/* 310 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(34)('Uint16', 2, function (init) {
+  return function Uint16Array(data, byteOffset, length) {
+    return init(this, data, byteOffset, length);
+  };
+});
+
+
+/***/ }),
+/* 311 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(34)('Int32', 4, function (init) {
+  return function Int32Array(data, byteOffset, length) {
+    return init(this, data, byteOffset, length);
+  };
+});
+
+
+/***/ }),
+/* 312 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(34)('Uint32', 4, function (init) {
+  return function Uint32Array(data, byteOffset, length) {
+    return init(this, data, byteOffset, length);
+  };
+});
+
+
+/***/ }),
+/* 313 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(34)('Float32', 4, function (init) {
+  return function Float32Array(data, byteOffset, length) {
+    return init(this, data, byteOffset, length);
+  };
+});
+
+
+/***/ }),
+/* 314 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(34)('Float64', 8, function (init) {
+  return function Float64Array(data, byteOffset, length) {
+    return init(this, data, byteOffset, length);
+  };
+});
+
+
+/***/ }),
+/* 315 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // 26.1.1 Reflect.apply(target, thisArgument, argumentsList)
 var $export = __webpack_require__(0);
 var aFunction = __webpack_require__(12);
-var anObject = __webpack_require__(1);
-var rApply = (__webpack_require__(2).Reflect || {}).apply;
+var anObject = __webpack_require__(2);
+var rApply = (__webpack_require__(3).Reflect || {}).apply;
 var fApply = Function.apply;
 // MS Edge argumentsList argument is optional
 $export($export.S + $export.F * !__webpack_require__(4)(function () {
@@ -12354,18 +13771,18 @@ $export($export.S + $export.F * !__webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 309 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
 var $export = __webpack_require__(0);
-var create = __webpack_require__(42);
+var create = __webpack_require__(43);
 var aFunction = __webpack_require__(12);
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 var isObject = __webpack_require__(5);
 var fails = __webpack_require__(4);
-var bind = __webpack_require__(127);
-var rConstruct = (__webpack_require__(2).Reflect || {}).construct;
+var bind = __webpack_require__(130);
+var rConstruct = (__webpack_require__(3).Reflect || {}).construct;
 
 // MS Edge supports only 2 arguments and argumentsList argument is optional
 // FF Nightly sets third argument as `new.target`, but does not create `this` from it
@@ -12407,14 +13824,14 @@ $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
 
 
 /***/ }),
-/* 310 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.3 Reflect.defineProperty(target, propertyKey, attributes)
 var dP = __webpack_require__(8);
 var $export = __webpack_require__(0);
-var anObject = __webpack_require__(1);
-var toPrimitive = __webpack_require__(27);
+var anObject = __webpack_require__(2);
+var toPrimitive = __webpack_require__(28);
 
 // MS Edge has broken Reflect.defineProperty - throwing instead of returning false
 $export($export.S + $export.F * __webpack_require__(4)(function () {
@@ -12436,13 +13853,13 @@ $export($export.S + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 311 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.4 Reflect.deleteProperty(target, propertyKey)
 var $export = __webpack_require__(0);
 var gOPD = __webpack_require__(19).f;
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 
 $export($export.S, 'Reflect', {
   deleteProperty: function deleteProperty(target, propertyKey) {
@@ -12453,14 +13870,14 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 312 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 26.1.5 Reflect.enumerate(target)
 var $export = __webpack_require__(0);
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 var Enumerate = function (iterated) {
   this._t = anObject(iterated); // target
   this._i = 0;                  // next index
@@ -12468,7 +13885,7 @@ var Enumerate = function (iterated) {
   var key;
   for (key in iterated) keys.push(key);
 };
-__webpack_require__(92)(Enumerate, 'Object', function () {
+__webpack_require__(95)(Enumerate, 'Object', function () {
   var that = this;
   var keys = that._k;
   var key;
@@ -12486,7 +13903,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 313 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.6 Reflect.get(target, propertyKey [, receiver])
@@ -12495,7 +13912,7 @@ var getPrototypeOf = __webpack_require__(20);
 var has = __webpack_require__(14);
 var $export = __webpack_require__(0);
 var isObject = __webpack_require__(5);
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 
 function get(target, propertyKey /* , receiver */) {
   var receiver = arguments.length < 3 ? target : arguments[2];
@@ -12513,13 +13930,13 @@ $export($export.S, 'Reflect', { get: get });
 
 
 /***/ }),
-/* 314 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.7 Reflect.getOwnPropertyDescriptor(target, propertyKey)
 var gOPD = __webpack_require__(19);
 var $export = __webpack_require__(0);
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 
 $export($export.S, 'Reflect', {
   getOwnPropertyDescriptor: function getOwnPropertyDescriptor(target, propertyKey) {
@@ -12529,13 +13946,13 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 315 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.8 Reflect.getPrototypeOf(target)
 var $export = __webpack_require__(0);
 var getProto = __webpack_require__(20);
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 
 $export($export.S, 'Reflect', {
   getPrototypeOf: function getPrototypeOf(target) {
@@ -12545,7 +13962,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 316 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.9 Reflect.has(target, propertyKey)
@@ -12559,12 +13976,12 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 317 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.10 Reflect.isExtensible(target)
 var $export = __webpack_require__(0);
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 var $isExtensible = Object.isExtensible;
 
 $export($export.S, 'Reflect', {
@@ -12576,22 +13993,22 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 318 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.11 Reflect.ownKeys(target)
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Reflect', { ownKeys: __webpack_require__(148) });
+$export($export.S, 'Reflect', { ownKeys: __webpack_require__(151) });
 
 
 /***/ }),
-/* 319 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.12 Reflect.preventExtensions(target)
 var $export = __webpack_require__(0);
-var anObject = __webpack_require__(1);
+var anObject = __webpack_require__(2);
 var $preventExtensions = Object.preventExtensions;
 
 $export($export.S, 'Reflect', {
@@ -12608,7 +14025,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 320 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.13 Reflect.set(target, propertyKey, V [, receiver])
@@ -12617,8 +14034,8 @@ var gOPD = __webpack_require__(19);
 var getPrototypeOf = __webpack_require__(20);
 var has = __webpack_require__(14);
 var $export = __webpack_require__(0);
-var createDesc = __webpack_require__(37);
-var anObject = __webpack_require__(1);
+var createDesc = __webpack_require__(38);
+var anObject = __webpack_require__(2);
 var isObject = __webpack_require__(5);
 
 function set(target, propertyKey, V /* , receiver */) {
@@ -12645,12 +14062,12 @@ $export($export.S, 'Reflect', { set: set });
 
 
 /***/ }),
-/* 321 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.14 Reflect.setPrototypeOf(target, proto)
 var $export = __webpack_require__(0);
-var setProto = __webpack_require__(84);
+var setProto = __webpack_require__(87);
 
 if (setProto) $export($export.S, 'Reflect', {
   setPrototypeOf: function setPrototypeOf(target, proto) {
@@ -12666,14 +14083,14 @@ if (setProto) $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 322 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://github.com/tc39/Array.prototype.includes
 var $export = __webpack_require__(0);
-var $includes = __webpack_require__(62)(true);
+var $includes = __webpack_require__(64)(true);
 
 $export($export.P, 'Array', {
   includes: function includes(el /* , fromIndex = 0 */) {
@@ -12681,22 +14098,22 @@ $export($export.P, 'Array', {
   }
 });
 
-__webpack_require__(36)('includes');
+__webpack_require__(37)('includes');
 
 
 /***/ }),
-/* 323 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap
 var $export = __webpack_require__(0);
-var flattenIntoArray = __webpack_require__(149);
+var flattenIntoArray = __webpack_require__(152);
 var toObject = __webpack_require__(10);
 var toLength = __webpack_require__(9);
 var aFunction = __webpack_require__(12);
-var arraySpeciesCreate = __webpack_require__(98);
+var arraySpeciesCreate = __webpack_require__(101);
 
 $export($export.P, 'Array', {
   flatMap: function flatMap(callbackfn /* , thisArg */) {
@@ -12710,22 +14127,22 @@ $export($export.P, 'Array', {
   }
 });
 
-__webpack_require__(36)('flatMap');
+__webpack_require__(37)('flatMap');
 
 
 /***/ }),
-/* 324 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatten
 var $export = __webpack_require__(0);
-var flattenIntoArray = __webpack_require__(149);
+var flattenIntoArray = __webpack_require__(152);
 var toObject = __webpack_require__(10);
 var toLength = __webpack_require__(9);
-var toInteger = __webpack_require__(29);
-var arraySpeciesCreate = __webpack_require__(98);
+var toInteger = __webpack_require__(30);
+var arraySpeciesCreate = __webpack_require__(101);
 
 $export($export.P, 'Array', {
   flatten: function flatten(/* depthArg = 1 */) {
@@ -12738,18 +14155,18 @@ $export($export.P, 'Array', {
   }
 });
 
-__webpack_require__(36)('flatten');
+__webpack_require__(37)('flatten');
 
 
 /***/ }),
-/* 325 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://github.com/mathiasbynens/String.prototype.at
 var $export = __webpack_require__(0);
-var $at = __webpack_require__(90)(true);
+var $at = __webpack_require__(93)(true);
 
 $export($export.P, 'String', {
   at: function at(pos) {
@@ -12759,15 +14176,15 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 326 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://github.com/tc39/proposal-string-pad-start-end
 var $export = __webpack_require__(0);
-var $pad = __webpack_require__(150);
-var userAgent = __webpack_require__(105);
+var $pad = __webpack_require__(153);
+var userAgent = __webpack_require__(108);
 
 // https://github.com/zloirock/core-js/issues/280
 $export($export.P + $export.F * /Version\/10\.\d+(\.\d+)? Safari\//.test(userAgent), 'String', {
@@ -12778,15 +14195,15 @@ $export($export.P + $export.F * /Version\/10\.\d+(\.\d+)? Safari\//.test(userAge
 
 
 /***/ }),
-/* 327 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://github.com/tc39/proposal-string-pad-start-end
 var $export = __webpack_require__(0);
-var $pad = __webpack_require__(150);
-var userAgent = __webpack_require__(105);
+var $pad = __webpack_require__(153);
+var userAgent = __webpack_require__(108);
 
 // https://github.com/zloirock/core-js/issues/280
 $export($export.P + $export.F * /Version\/10\.\d+(\.\d+)? Safari\//.test(userAgent), 'String', {
@@ -12797,13 +14214,13 @@ $export($export.P + $export.F * /Version\/10\.\d+(\.\d+)? Safari\//.test(userAge
 
 
 /***/ }),
-/* 328 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://github.com/sebmarkbage/ecmascript-string-left-right-trim
-__webpack_require__(50)('trimLeft', function ($trim) {
+__webpack_require__(52)('trimLeft', function ($trim) {
   return function trimLeft() {
     return $trim(this, 1);
   };
@@ -12811,13 +14228,13 @@ __webpack_require__(50)('trimLeft', function ($trim) {
 
 
 /***/ }),
-/* 329 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://github.com/sebmarkbage/ecmascript-string-left-right-trim
-__webpack_require__(50)('trimRight', function ($trim) {
+__webpack_require__(52)('trimRight', function ($trim) {
   return function trimRight() {
     return $trim(this, 2);
   };
@@ -12825,17 +14242,17 @@ __webpack_require__(50)('trimRight', function ($trim) {
 
 
 /***/ }),
-/* 330 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://tc39.github.io/String.prototype.matchAll/
 var $export = __webpack_require__(0);
-var defined = __webpack_require__(28);
+var defined = __webpack_require__(29);
 var toLength = __webpack_require__(9);
-var isRegExp = __webpack_require__(65);
-var getFlags = __webpack_require__(67);
+var isRegExp = __webpack_require__(67);
+var getFlags = __webpack_require__(69);
 var RegExpProto = RegExp.prototype;
 
 var $RegExpStringIterator = function (regexp, string) {
@@ -12843,7 +14260,7 @@ var $RegExpStringIterator = function (regexp, string) {
   this._s = string;
 };
 
-__webpack_require__(92)($RegExpStringIterator, 'RegExp String', function next() {
+__webpack_require__(95)($RegExpStringIterator, 'RegExp String', function next() {
   var match = this._r.exec(this._s);
   return { value: match, done: match === null };
 });
@@ -12862,29 +14279,29 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 331 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(80)('asyncIterator');
+__webpack_require__(83)('asyncIterator');
 
 
 /***/ }),
-/* 332 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(80)('observable');
+__webpack_require__(83)('observable');
 
 
 /***/ }),
-/* 333 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-object-getownpropertydescriptors
 var $export = __webpack_require__(0);
-var ownKeys = __webpack_require__(148);
+var ownKeys = __webpack_require__(151);
 var toIObject = __webpack_require__(18);
 var gOPD = __webpack_require__(19);
-var createProperty = __webpack_require__(96);
+var createProperty = __webpack_require__(99);
 
 $export($export.S, 'Object', {
   getOwnPropertyDescriptors: function getOwnPropertyDescriptors(object) {
@@ -12904,12 +14321,12 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 334 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-object-values-entries
 var $export = __webpack_require__(0);
-var $values = __webpack_require__(151)(false);
+var $values = __webpack_require__(154)(false);
 
 $export($export.S, 'Object', {
   values: function values(it) {
@@ -12919,12 +14336,12 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 335 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-object-values-entries
 var $export = __webpack_require__(0);
-var $entries = __webpack_require__(151)(true);
+var $entries = __webpack_require__(154)(true);
 
 $export($export.S, 'Object', {
   entries: function entries(it) {
@@ -12934,7 +14351,7 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 336 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12945,7 +14362,7 @@ var aFunction = __webpack_require__(12);
 var $defineProperty = __webpack_require__(8);
 
 // B.2.2.2 Object.prototype.__defineGetter__(P, getter)
-__webpack_require__(7) && $export($export.P + __webpack_require__(72), 'Object', {
+__webpack_require__(7) && $export($export.P + __webpack_require__(74), 'Object', {
   __defineGetter__: function __defineGetter__(P, getter) {
     $defineProperty.f(toObject(this), P, { get: aFunction(getter), enumerable: true, configurable: true });
   }
@@ -12953,7 +14370,7 @@ __webpack_require__(7) && $export($export.P + __webpack_require__(72), 'Object',
 
 
 /***/ }),
-/* 337 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12964,7 +14381,7 @@ var aFunction = __webpack_require__(12);
 var $defineProperty = __webpack_require__(8);
 
 // B.2.2.3 Object.prototype.__defineSetter__(P, setter)
-__webpack_require__(7) && $export($export.P + __webpack_require__(72), 'Object', {
+__webpack_require__(7) && $export($export.P + __webpack_require__(74), 'Object', {
   __defineSetter__: function __defineSetter__(P, setter) {
     $defineProperty.f(toObject(this), P, { set: aFunction(setter), enumerable: true, configurable: true });
   }
@@ -12972,19 +14389,19 @@ __webpack_require__(7) && $export($export.P + __webpack_require__(72), 'Object',
 
 
 /***/ }),
-/* 338 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
 var toObject = __webpack_require__(10);
-var toPrimitive = __webpack_require__(27);
+var toPrimitive = __webpack_require__(28);
 var getPrototypeOf = __webpack_require__(20);
 var getOwnPropertyDescriptor = __webpack_require__(19).f;
 
 // B.2.2.4 Object.prototype.__lookupGetter__(P)
-__webpack_require__(7) && $export($export.P + __webpack_require__(72), 'Object', {
+__webpack_require__(7) && $export($export.P + __webpack_require__(74), 'Object', {
   __lookupGetter__: function __lookupGetter__(P) {
     var O = toObject(this);
     var K = toPrimitive(P, true);
@@ -12997,19 +14414,19 @@ __webpack_require__(7) && $export($export.P + __webpack_require__(72), 'Object',
 
 
 /***/ }),
-/* 339 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
 var toObject = __webpack_require__(10);
-var toPrimitive = __webpack_require__(27);
+var toPrimitive = __webpack_require__(28);
 var getPrototypeOf = __webpack_require__(20);
 var getOwnPropertyDescriptor = __webpack_require__(19).f;
 
 // B.2.2.5 Object.prototype.__lookupSetter__(P)
-__webpack_require__(7) && $export($export.P + __webpack_require__(72), 'Object', {
+__webpack_require__(7) && $export($export.P + __webpack_require__(74), 'Object', {
   __lookupSetter__: function __lookupSetter__(P) {
     var O = toObject(this);
     var K = toPrimitive(P, true);
@@ -13022,116 +14439,116 @@ __webpack_require__(7) && $export($export.P + __webpack_require__(72), 'Object',
 
 
 /***/ }),
-/* 340 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var $export = __webpack_require__(0);
-
-$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(152)('Map') });
-
-
-/***/ }),
-/* 341 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var $export = __webpack_require__(0);
-
-$export($export.P + $export.R, 'Set', { toJSON: __webpack_require__(152)('Set') });
-
-
-/***/ }),
-/* 342 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
-__webpack_require__(73)('Map');
-
-
-/***/ }),
-/* 343 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-set.of
-__webpack_require__(73)('Set');
-
-
-/***/ }),
-/* 344 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-weakmap.of
-__webpack_require__(73)('WeakMap');
-
-
-/***/ }),
-/* 345 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-weakset.of
-__webpack_require__(73)('WeakSet');
-
-
-/***/ }),
-/* 346 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
-__webpack_require__(74)('Map');
-
-
-/***/ }),
 /* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://tc39.github.io/proposal-setmap-offrom/#sec-set.from
-__webpack_require__(74)('Set');
+// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+var $export = __webpack_require__(0);
+
+$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(155)('Map') });
 
 
 /***/ }),
 /* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://tc39.github.io/proposal-setmap-offrom/#sec-weakmap.from
-__webpack_require__(74)('WeakMap');
+// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+var $export = __webpack_require__(0);
+
+$export($export.P + $export.R, 'Set', { toJSON: __webpack_require__(155)('Set') });
 
 
 /***/ }),
 /* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://tc39.github.io/proposal-setmap-offrom/#sec-weakset.from
-__webpack_require__(74)('WeakSet');
+// https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
+__webpack_require__(75)('Map');
 
 
 /***/ }),
 /* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://github.com/tc39/proposal-global
-var $export = __webpack_require__(0);
-
-$export($export.G, { global: __webpack_require__(2) });
+// https://tc39.github.io/proposal-setmap-offrom/#sec-set.of
+__webpack_require__(75)('Set');
 
 
 /***/ }),
 /* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://github.com/tc39/proposal-global
-var $export = __webpack_require__(0);
-
-$export($export.S, 'System', { global: __webpack_require__(2) });
+// https://tc39.github.io/proposal-setmap-offrom/#sec-weakmap.of
+__webpack_require__(75)('WeakMap');
 
 
 /***/ }),
 /* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
+// https://tc39.github.io/proposal-setmap-offrom/#sec-weakset.of
+__webpack_require__(75)('WeakSet');
+
+
+/***/ }),
+/* 353 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
+__webpack_require__(76)('Map');
+
+
+/***/ }),
+/* 354 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-set.from
+__webpack_require__(76)('Set');
+
+
+/***/ }),
+/* 355 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-weakmap.from
+__webpack_require__(76)('WeakMap');
+
+
+/***/ }),
+/* 356 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-weakset.from
+__webpack_require__(76)('WeakSet');
+
+
+/***/ }),
+/* 357 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://github.com/tc39/proposal-global
+var $export = __webpack_require__(0);
+
+$export($export.G, { global: __webpack_require__(3) });
+
+
+/***/ }),
+/* 358 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://github.com/tc39/proposal-global
+var $export = __webpack_require__(0);
+
+$export($export.S, 'System', { global: __webpack_require__(3) });
+
+
+/***/ }),
+/* 359 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // https://github.com/ljharb/proposal-is-error
 var $export = __webpack_require__(0);
-var cof = __webpack_require__(24);
+var cof = __webpack_require__(25);
 
 $export($export.S, 'Error', {
   isError: function isError(it) {
@@ -13141,7 +14558,7 @@ $export($export.S, 'Error', {
 
 
 /***/ }),
-/* 353 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -13155,7 +14572,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 354 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -13165,7 +14582,7 @@ $export($export.S, 'Math', { DEG_PER_RAD: Math.PI / 180 });
 
 
 /***/ }),
-/* 355 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -13180,13 +14597,13 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 356 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
 var $export = __webpack_require__(0);
-var scale = __webpack_require__(154);
-var fround = __webpack_require__(134);
+var scale = __webpack_require__(157);
+var fround = __webpack_require__(137);
 
 $export($export.S, 'Math', {
   fscale: function fscale(x, inLow, inHigh, outLow, outHigh) {
@@ -13196,7 +14613,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 357 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -13213,7 +14630,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 358 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -13230,7 +14647,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 359 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -13252,7 +14669,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 360 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -13262,7 +14679,7 @@ $export($export.S, 'Math', { RAD_PER_DEG: 180 / Math.PI });
 
 
 /***/ }),
-/* 361 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -13277,17 +14694,17 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 362 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Math', { scale: __webpack_require__(154) });
+$export($export.S, 'Math', { scale: __webpack_require__(157) });
 
 
 /***/ }),
-/* 363 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -13309,7 +14726,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 364 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // http://jfbastien.github.io/papers/Math.signbit.html
@@ -13322,17 +14739,17 @@ $export($export.S, 'Math', { signbit: function signbit(x) {
 
 
 /***/ }),
-/* 365 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 // https://github.com/tc39/proposal-promise-finally
 
 var $export = __webpack_require__(0);
-var core = __webpack_require__(26);
-var global = __webpack_require__(2);
-var speciesConstructor = __webpack_require__(69);
-var promiseResolve = __webpack_require__(141);
+var core = __webpack_require__(27);
+var global = __webpack_require__(3);
+var speciesConstructor = __webpack_require__(71);
+var promiseResolve = __webpack_require__(144);
 
 $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
   var C = speciesConstructor(this, core.Promise || global.Promise);
@@ -13349,15 +14766,15 @@ $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
 
 
 /***/ }),
-/* 366 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://github.com/tc39/proposal-promise-try
 var $export = __webpack_require__(0);
-var newPromiseCapability = __webpack_require__(103);
-var perform = __webpack_require__(140);
+var newPromiseCapability = __webpack_require__(106);
+var perform = __webpack_require__(143);
 
 $export($export.S, 'Promise', { 'try': function (callbackfn) {
   var promiseCapability = newPromiseCapability.f(this);
@@ -13368,11 +14785,11 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
 
 
 /***/ }),
-/* 367 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var metadata = __webpack_require__(34);
-var anObject = __webpack_require__(1);
+var metadata = __webpack_require__(35);
+var anObject = __webpack_require__(2);
 var toMetaKey = metadata.key;
 var ordinaryDefineOwnMetadata = metadata.set;
 
@@ -13382,11 +14799,11 @@ metadata.exp({ defineMetadata: function defineMetadata(metadataKey, metadataValu
 
 
 /***/ }),
-/* 368 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var metadata = __webpack_require__(34);
-var anObject = __webpack_require__(1);
+var metadata = __webpack_require__(35);
+var anObject = __webpack_require__(2);
 var toMetaKey = metadata.key;
 var getOrCreateMetadataMap = metadata.map;
 var store = metadata.store;
@@ -13403,11 +14820,11 @@ metadata.exp({ deleteMetadata: function deleteMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 369 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var metadata = __webpack_require__(34);
-var anObject = __webpack_require__(1);
+var metadata = __webpack_require__(35);
+var anObject = __webpack_require__(2);
 var getPrototypeOf = __webpack_require__(20);
 var ordinaryHasOwnMetadata = metadata.has;
 var ordinaryGetOwnMetadata = metadata.get;
@@ -13426,13 +14843,13 @@ metadata.exp({ getMetadata: function getMetadata(metadataKey, target /* , target
 
 
 /***/ }),
-/* 370 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Set = __webpack_require__(144);
-var from = __webpack_require__(153);
-var metadata = __webpack_require__(34);
-var anObject = __webpack_require__(1);
+var Set = __webpack_require__(147);
+var from = __webpack_require__(156);
+var metadata = __webpack_require__(35);
+var anObject = __webpack_require__(2);
 var getPrototypeOf = __webpack_require__(20);
 var ordinaryOwnMetadataKeys = metadata.keys;
 var toMetaKey = metadata.key;
@@ -13451,11 +14868,11 @@ metadata.exp({ getMetadataKeys: function getMetadataKeys(target /* , targetKey *
 
 
 /***/ }),
-/* 371 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var metadata = __webpack_require__(34);
-var anObject = __webpack_require__(1);
+var metadata = __webpack_require__(35);
+var anObject = __webpack_require__(2);
 var ordinaryGetOwnMetadata = metadata.get;
 var toMetaKey = metadata.key;
 
@@ -13466,11 +14883,11 @@ metadata.exp({ getOwnMetadata: function getOwnMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 372 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var metadata = __webpack_require__(34);
-var anObject = __webpack_require__(1);
+var metadata = __webpack_require__(35);
+var anObject = __webpack_require__(2);
 var ordinaryOwnMetadataKeys = metadata.keys;
 var toMetaKey = metadata.key;
 
@@ -13480,11 +14897,11 @@ metadata.exp({ getOwnMetadataKeys: function getOwnMetadataKeys(target /* , targe
 
 
 /***/ }),
-/* 373 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var metadata = __webpack_require__(34);
-var anObject = __webpack_require__(1);
+var metadata = __webpack_require__(35);
+var anObject = __webpack_require__(2);
 var getPrototypeOf = __webpack_require__(20);
 var ordinaryHasOwnMetadata = metadata.has;
 var toMetaKey = metadata.key;
@@ -13502,11 +14919,11 @@ metadata.exp({ hasMetadata: function hasMetadata(metadataKey, target /* , target
 
 
 /***/ }),
-/* 374 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var metadata = __webpack_require__(34);
-var anObject = __webpack_require__(1);
+var metadata = __webpack_require__(35);
+var anObject = __webpack_require__(2);
 var ordinaryHasOwnMetadata = metadata.has;
 var toMetaKey = metadata.key;
 
@@ -13517,11 +14934,11 @@ metadata.exp({ hasOwnMetadata: function hasOwnMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 375 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $metadata = __webpack_require__(34);
-var anObject = __webpack_require__(1);
+var $metadata = __webpack_require__(35);
+var anObject = __webpack_require__(2);
 var aFunction = __webpack_require__(12);
 var toMetaKey = $metadata.key;
 var ordinaryDefineOwnMetadata = $metadata.set;
@@ -13538,14 +14955,14 @@ $metadata.exp({ metadata: function metadata(metadataKey, metadataValue) {
 
 
 /***/ }),
-/* 376 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask
 var $export = __webpack_require__(0);
-var microtask = __webpack_require__(102)();
-var process = __webpack_require__(2).process;
-var isNode = __webpack_require__(24)(process) == 'process';
+var microtask = __webpack_require__(105)();
+var process = __webpack_require__(3).process;
+var isNode = __webpack_require__(25)(process) == 'process';
 
 $export($export.G, {
   asap: function asap(fn) {
@@ -13556,23 +14973,23 @@ $export($export.G, {
 
 
 /***/ }),
-/* 377 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://github.com/zenparsing/es-observable
 var $export = __webpack_require__(0);
-var global = __webpack_require__(2);
-var core = __webpack_require__(26);
-var microtask = __webpack_require__(102)();
+var global = __webpack_require__(3);
+var core = __webpack_require__(27);
+var microtask = __webpack_require__(105)();
 var OBSERVABLE = __webpack_require__(6)('observable');
 var aFunction = __webpack_require__(12);
-var anObject = __webpack_require__(1);
-var anInstance = __webpack_require__(45);
-var redefineAll = __webpack_require__(47);
+var anObject = __webpack_require__(2);
+var anInstance = __webpack_require__(46);
+var redefineAll = __webpack_require__(48);
 var hide = __webpack_require__(15);
-var forOf = __webpack_require__(46);
+var forOf = __webpack_require__(47);
 var RETURN = forOf.RETURN;
 
 var getMethod = function (fn) {
@@ -13758,17 +15175,17 @@ hide($Observable.prototype, OBSERVABLE, function () { return this; });
 
 $export($export.G, { Observable: $Observable });
 
-__webpack_require__(44)('Observable');
+__webpack_require__(45)('Observable');
 
 
 /***/ }),
-/* 378 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // ie9- setTimeout & setInterval additional parameters fix
-var global = __webpack_require__(2);
+var global = __webpack_require__(3);
 var $export = __webpack_require__(0);
-var userAgent = __webpack_require__(105);
+var userAgent = __webpack_require__(108);
 var slice = [].slice;
 var MSIE = /MSIE .\./.test(userAgent); // <- dirty ie9- check
 var wrap = function (set) {
@@ -13788,11 +15205,11 @@ $export($export.G + $export.B + $export.F * MSIE, {
 
 
 /***/ }),
-/* 379 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
-var $task = __webpack_require__(101);
+var $task = __webpack_require__(104);
 $export($export.G + $export.B, {
   setImmediate: $task.set,
   clearImmediate: $task.clear
@@ -13800,15 +15217,15 @@ $export($export.G + $export.B, {
 
 
 /***/ }),
-/* 380 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $iterators = __webpack_require__(100);
-var getKeys = __webpack_require__(40);
+var $iterators = __webpack_require__(103);
+var getKeys = __webpack_require__(41);
 var redefine = __webpack_require__(16);
-var global = __webpack_require__(2);
+var global = __webpack_require__(3);
 var hide = __webpack_require__(15);
-var Iterators = __webpack_require__(51);
+var Iterators = __webpack_require__(53);
 var wks = __webpack_require__(6);
 var ITERATOR = wks('iterator');
 var TO_STRING_TAG = wks('toStringTag');
@@ -13864,7 +15281,7 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 
 
 /***/ }),
-/* 381 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -14604,29 +16021,29 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
   typeof self === "object" ? self : this
 );
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(62)))
 
 /***/ }),
-/* 382 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(383);
-module.exports = __webpack_require__(26).RegExp.escape;
+__webpack_require__(390);
+module.exports = __webpack_require__(27).RegExp.escape;
 
 
 /***/ }),
-/* 383 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/benjamingr/RexExp.escape
 var $export = __webpack_require__(0);
-var $re = __webpack_require__(384)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
+var $re = __webpack_require__(391)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
 
 $export($export.S, 'RegExp', { escape: function escape(it) { return $re(it); } });
 
 
 /***/ }),
-/* 384 */
+/* 391 */
 /***/ (function(module, exports) {
 
 module.exports = function (regExp, replace) {
@@ -14640,33 +16057,33 @@ module.exports = function (regExp, replace) {
 
 
 /***/ }),
-/* 385 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _react = __webpack_require__(3);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(387);
+var _reactDom = __webpack_require__(394);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _registerServiceWorker = __webpack_require__(401);
+var _registerServiceWorker = __webpack_require__(408);
 
 var _registerServiceWorker2 = _interopRequireDefault(_registerServiceWorker);
 
-var _reactRouterDom = __webpack_require__(108);
+var _reactRouterDom = __webpack_require__(111);
 
-var _reactRedux = __webpack_require__(115);
+var _reactRedux = __webpack_require__(49);
 
-var _App = __webpack_require__(452);
+var _App = __webpack_require__(459);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _reducer = __webpack_require__(478);
+var _reducer = __webpack_require__(491);
 
 var _reducer2 = _interopRequireDefault(_reducer);
 
@@ -14686,7 +16103,7 @@ _reactDom2.default.render(_react2.default.createElement(
 (0, _registerServiceWorker2.default)();
 
 /***/ }),
-/* 386 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14707,12 +16124,12 @@ if (true) {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(106);
-var emptyObject = __webpack_require__(155);
-var invariant = __webpack_require__(75);
-var warning = __webpack_require__(76);
-var emptyFunction = __webpack_require__(57);
-var checkPropTypes = __webpack_require__(107);
+var _assign = __webpack_require__(109);
+var emptyObject = __webpack_require__(158);
+var invariant = __webpack_require__(77);
+var warning = __webpack_require__(78);
+var emptyFunction = __webpack_require__(59);
+var checkPropTypes = __webpack_require__(110);
 
 // TODO: this is special because it gets imported during build.
 
@@ -16050,7 +17467,7 @@ module.exports = react;
 
 
 /***/ }),
-/* 387 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16090,12 +17507,12 @@ if (false) {
   checkDCE();
   module.exports = require('./cjs/react-dom.production.min.js');
 } else {
-  module.exports = __webpack_require__(388);
+  module.exports = __webpack_require__(395);
 }
 
 
 /***/ }),
-/* 388 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16116,21 +17533,21 @@ if (true) {
   (function() {
 'use strict';
 
-var React = __webpack_require__(3);
-var invariant = __webpack_require__(75);
-var warning = __webpack_require__(76);
-var ExecutionEnvironment = __webpack_require__(389);
-var _assign = __webpack_require__(106);
-var emptyFunction = __webpack_require__(57);
-var EventListener = __webpack_require__(390);
-var getActiveElement = __webpack_require__(391);
-var shallowEqual = __webpack_require__(392);
-var containsNode = __webpack_require__(393);
-var focusNode = __webpack_require__(396);
-var emptyObject = __webpack_require__(155);
-var checkPropTypes = __webpack_require__(107);
-var hyphenateStyleName = __webpack_require__(397);
-var camelizeStyleName = __webpack_require__(399);
+var React = __webpack_require__(1);
+var invariant = __webpack_require__(77);
+var warning = __webpack_require__(78);
+var ExecutionEnvironment = __webpack_require__(396);
+var _assign = __webpack_require__(109);
+var emptyFunction = __webpack_require__(59);
+var EventListener = __webpack_require__(397);
+var getActiveElement = __webpack_require__(398);
+var shallowEqual = __webpack_require__(399);
+var containsNode = __webpack_require__(400);
+var focusNode = __webpack_require__(403);
+var emptyObject = __webpack_require__(158);
+var checkPropTypes = __webpack_require__(110);
+var hyphenateStyleName = __webpack_require__(404);
+var camelizeStyleName = __webpack_require__(406);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -31496,7 +32913,7 @@ module.exports = reactDom;
 
 
 /***/ }),
-/* 389 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31535,7 +32952,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 390 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31550,7 +32967,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(57);
+var emptyFunction = __webpack_require__(59);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -31615,7 +33032,7 @@ var EventListener = {
 module.exports = EventListener;
 
 /***/ }),
-/* 391 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31657,7 +33074,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 392 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31728,7 +33145,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 393 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31743,7 +33160,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(394);
+var isTextNode = __webpack_require__(401);
 
 /*eslint-disable no-bitwise */
 
@@ -31771,7 +33188,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 394 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31786,7 +33203,7 @@ module.exports = containsNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(395);
+var isNode = __webpack_require__(402);
 
 /**
  * @param {*} object The object to check.
@@ -31799,7 +33216,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 395 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31827,7 +33244,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 396 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31857,7 +33274,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 397 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31872,7 +33289,7 @@ module.exports = focusNode;
 
 
 
-var hyphenate = __webpack_require__(398);
+var hyphenate = __webpack_require__(405);
 
 var msPattern = /^ms-/;
 
@@ -31899,7 +33316,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 398 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31935,7 +33352,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 399 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31950,7 +33367,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(400);
+var camelize = __webpack_require__(407);
 
 var msPattern = /^-ms-/;
 
@@ -31978,7 +33395,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 400 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32013,7 +33430,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 401 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32120,19 +33537,19 @@ function unregister() {
 }
 
 /***/ }),
-/* 402 */
+/* 409 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__ = __webpack_require__(411);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(114);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -32187,7 +33604,7 @@ BrowserRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
 
 /***/ }),
-/* 403 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32200,13 +33617,13 @@ BrowserRouter.propTypes = {
 
 
 
-var emptyFunction = __webpack_require__(57);
-var invariant = __webpack_require__(75);
-var warning = __webpack_require__(76);
-var assign = __webpack_require__(106);
+var emptyFunction = __webpack_require__(59);
+var invariant = __webpack_require__(77);
+var warning = __webpack_require__(78);
+var assign = __webpack_require__(109);
 
-var ReactPropTypesSecret = __webpack_require__(156);
-var checkPropTypes = __webpack_require__(107);
+var ReactPropTypesSecret = __webpack_require__(159);
+var checkPropTypes = __webpack_require__(110);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -32736,7 +34153,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 /***/ }),
-/* 404 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32756,15 +34173,15 @@ var _invariant = __webpack_require__(21);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _LocationUtils = __webpack_require__(109);
+var _LocationUtils = __webpack_require__(112);
 
-var _PathUtils = __webpack_require__(58);
+var _PathUtils = __webpack_require__(60);
 
-var _createTransitionManager = __webpack_require__(110);
+var _createTransitionManager = __webpack_require__(113);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-var _DOMUtils = __webpack_require__(159);
+var _DOMUtils = __webpack_require__(162);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33049,19 +34466,19 @@ var createBrowserHistory = function createBrowserHistory() {
 exports.default = createBrowserHistory;
 
 /***/ }),
-/* 405 */
+/* 412 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__ = __webpack_require__(413);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(114);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -33115,7 +34532,7 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (HashRouter);
 
 /***/ }),
-/* 406 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33133,15 +34550,15 @@ var _invariant = __webpack_require__(21);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _LocationUtils = __webpack_require__(109);
+var _LocationUtils = __webpack_require__(112);
 
-var _PathUtils = __webpack_require__(58);
+var _PathUtils = __webpack_require__(60);
 
-var _createTransitionManager = __webpack_require__(110);
+var _createTransitionManager = __webpack_require__(113);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-var _DOMUtils = __webpack_require__(159);
+var _DOMUtils = __webpack_require__(162);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33445,30 +34862,30 @@ var createHashHistory = function createHashHistory() {
 exports.default = createHashHistory;
 
 /***/ }),
-/* 407 */
+/* 414 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(415);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__["a" /* default */]);
 
 /***/ }),
-/* 408 */
+/* 415 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(416);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(115);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -33523,7 +34940,7 @@ MemoryRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
 
 /***/ }),
-/* 409 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33539,11 +34956,11 @@ var _warning = __webpack_require__(11);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _PathUtils = __webpack_require__(58);
+var _PathUtils = __webpack_require__(60);
 
-var _LocationUtils = __webpack_require__(109);
+var _LocationUtils = __webpack_require__(112);
 
-var _createTransitionManager = __webpack_require__(110);
+var _createTransitionManager = __webpack_require__(113);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -33699,16 +35116,16 @@ var createMemoryHistory = function createMemoryHistory() {
 exports.default = createMemoryHistory;
 
 /***/ }),
-/* 410 */
+/* 417 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Route__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Route__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(163);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -33780,10 +35197,10 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (NavLink);
 
 /***/ }),
-/* 411 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(412)
+var isarray = __webpack_require__(419)
 
 /**
  * Expose `pathToRegexp`.
@@ -34212,7 +35629,7 @@ function pathToRegexp (path, keys, options) {
 
 
 /***/ }),
-/* 412 */
+/* 419 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -34221,22 +35638,22 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 413 */
+/* 420 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(414);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(421);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__["a" /* default */]);
 
 /***/ }),
-/* 414 */
+/* 421 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -34323,22 +35740,22 @@ Prompt.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Prompt);
 
 /***/ }),
-/* 415 */
+/* 422 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(416);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(423);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__["a" /* default */]);
 
 /***/ }),
-/* 416 */
+/* 423 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -34346,7 +35763,7 @@ Prompt.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(417);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(424);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -34442,20 +35859,20 @@ Redirect.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Redirect);
 
 /***/ }),
-/* 417 */
+/* 424 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(418);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(425);
 /* unused harmony reexport createBrowserHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(419);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(426);
 /* unused harmony reexport createHashHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(420);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(427);
 /* unused harmony reexport createMemoryHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(79);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(61);
 /* unused harmony reexport parsePath */
 /* unused harmony reexport createPath */
 
@@ -34469,7 +35886,7 @@ Redirect.contextTypes = {
 
 
 /***/ }),
-/* 418 */
+/* 425 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34477,10 +35894,10 @@ Redirect.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(166);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -34773,7 +36190,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createBrowserHistory);
 
 /***/ }),
-/* 419 */
+/* 426 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34781,10 +36198,10 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(166);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -35094,15 +36511,15 @@ var createHashHistory = function createHashHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createHashHistory);
 
 /***/ }),
-/* 420 */
+/* 427 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(117);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -35262,18 +36679,18 @@ var createMemoryHistory = function createMemoryHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createMemoryHistory);
 
 /***/ }),
-/* 421 */
+/* 428 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(422);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(429);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__["a" /* default */]);
 
 /***/ }),
-/* 422 */
+/* 429 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35281,13 +36698,13 @@ var createMemoryHistory = function createMemoryHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(115);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -35456,22 +36873,22 @@ StaticRouter.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
 
 /***/ }),
-/* 423 */
+/* 430 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(424);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(431);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
 
 /***/ }),
-/* 424 */
+/* 431 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -35479,7 +36896,7 @@ StaticRouter.childContextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(116);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -35561,39 +36978,39 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Switch);
 
 /***/ }),
-/* 425 */
+/* 432 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(116);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__["a" /* default */]);
 
 /***/ }),
-/* 426 */
+/* 433 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(427);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(434);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__["a" /* default */]);
 
 /***/ }),
-/* 427 */
+/* 434 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(167);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(165);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -35628,17 +37045,17 @@ var withRouter = function withRouter(Component) {
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
 
 /***/ }),
-/* 428 */
+/* 435 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = createProvider;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(118);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -35713,7 +37130,7 @@ function createProvider() {
 /* harmony default export */ __webpack_exports__["b"] = (createProvider());
 
 /***/ }),
-/* 429 */
+/* 436 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35812,17 +37229,17 @@ var Subscription = function () {
 
 
 /***/ }),
-/* 430 */
+/* 437 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export createConnect */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(431);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(432);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(448);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(449);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(450);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(438);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(439);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(455);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(456);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(457);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -35928,7 +37345,7 @@ function createConnect() {
 /* harmony default export */ __webpack_exports__["a"] = (createConnect());
 
 /***/ }),
-/* 431 */
+/* 438 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35965,15 +37382,15 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ }),
-/* 432 */
+/* 439 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export whenMapDispatchToPropsIsFunction */
 /* unused harmony export whenMapDispatchToPropsIsMissing */
 /* unused harmony export whenMapDispatchToPropsIsObject */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(175);
 
 
 
@@ -35996,13 +37413,13 @@ function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
 
 /***/ }),
-/* 433 */
+/* 440 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(436);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(437);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(443);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(444);
 
 
 
@@ -36034,11 +37451,11 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 434 */
+/* 441 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(435);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(442);
 
 
 /** Detect free variable `self`. */
@@ -36051,7 +37468,7 @@ var root = __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__["a" /* default */] || fr
 
 
 /***/ }),
-/* 435 */
+/* 442 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36060,14 +37477,14 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(60)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(62)))
 
 /***/ }),
-/* 436 */
+/* 443 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(172);
 
 
 /** Used for built-in method references. */
@@ -36117,7 +37534,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 437 */
+/* 444 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36146,11 +37563,11 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 438 */
+/* 445 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(439);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(446);
 
 
 /** Built-in value references. */
@@ -36160,7 +37577,7 @@ var getPrototype = Object(__WEBPACK_IMPORTED_MODULE_0__overArg_js__["a" /* defau
 
 
 /***/ }),
-/* 439 */
+/* 446 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36182,7 +37599,7 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 440 */
+/* 447 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36218,14 +37635,14 @@ function isObjectLike(value) {
 
 
 /***/ }),
-/* 441 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(442);
+module.exports = __webpack_require__(449);
 
 
 /***/ }),
-/* 442 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36235,7 +37652,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _ponyfill = __webpack_require__(444);
+var _ponyfill = __webpack_require__(451);
 
 var _ponyfill2 = _interopRequireDefault(_ponyfill);
 
@@ -36258,10 +37675,10 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(60), __webpack_require__(443)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(62), __webpack_require__(450)(module)))
 
 /***/ }),
-/* 443 */
+/* 450 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -36289,7 +37706,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 444 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36318,14 +37735,14 @@ function symbolObservablePonyfill(root) {
 };
 
 /***/ }),
-/* 445 */
+/* 452 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = combineReducers;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(173);
 
 
 
@@ -36458,7 +37875,7 @@ function combineReducers(reducers) {
 }
 
 /***/ }),
-/* 446 */
+/* 453 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36512,12 +37929,12 @@ function bindActionCreators(actionCreators, dispatch) {
 }
 
 /***/ }),
-/* 447 */
+/* 454 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = applyMiddleware;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compose__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compose__ = __webpack_require__(174);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -36568,13 +37985,13 @@ function applyMiddleware() {
 }
 
 /***/ }),
-/* 448 */
+/* 455 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export whenMapStateToPropsIsFunction */
 /* unused harmony export whenMapStateToPropsIsMissing */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(175);
 
 
 function whenMapStateToPropsIsFunction(mapStateToProps) {
@@ -36590,7 +38007,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
 
 /***/ }),
-/* 449 */
+/* 456 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36598,7 +38015,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* unused harmony export wrapMergePropsFunc */
 /* unused harmony export whenMergePropsIsFunction */
 /* unused harmony export whenMergePropsIsOmitted */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(176);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -36646,14 +38063,14 @@ function whenMergePropsIsOmitted(mergeProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMergePropsIsFunction, whenMergePropsIsOmitted]);
 
 /***/ }),
-/* 450 */
+/* 457 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export impureFinalPropsSelectorFactory */
 /* unused harmony export pureFinalPropsSelectorFactory */
 /* harmony export (immutable) */ __webpack_exports__["a"] = finalPropsSelectorFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(451);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(458);
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 
@@ -36758,12 +38175,12 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 }
 
 /***/ }),
-/* 451 */
+/* 458 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifySubselectors;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(118);
 
 
 function verify(selector, methodName, displayName) {
@@ -36783,7 +38200,7 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 }
 
 /***/ }),
-/* 452 */
+/* 459 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36795,35 +38212,35 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(3);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(108);
+var _reactRouterDom = __webpack_require__(111);
 
-var _reactRedux = __webpack_require__(115);
+var _reactRedux = __webpack_require__(49);
 
-var _Home = __webpack_require__(453);
+var _Home = __webpack_require__(460);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Header = __webpack_require__(489);
+var _Header = __webpack_require__(476);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Footer = __webpack_require__(493);
+var _Footer = __webpack_require__(482);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _Category = __webpack_require__(175);
+var _Category = __webpack_require__(483);
 
 var _Category2 = _interopRequireDefault(_Category);
 
-var _ProductDetail = __webpack_require__(176);
+var _ProductDetail = __webpack_require__(485);
 
 var _ProductDetail2 = _interopRequireDefault(_ProductDetail);
 
-var _Shop = __webpack_require__(496);
+var _Shop = __webpack_require__(487);
 
 var _Shop2 = _interopRequireDefault(_Shop);
 
@@ -36857,12 +38274,17 @@ var App = function (_React$Component) {
                 null,
                 _react2.default.createElement(_Header2.default, { items: suggest, electric: electric, electricAds: electricAds }),
                 _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: '/shop/111004729614967' },
+                    'CLick'
+                ),
+                _react2.default.createElement(
                     _reactRouterDom.Switch,
                     null,
                     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
                     _react2.default.createElement(_reactRouterDom.Route, { path: '/category', component: _Category2.default }),
                     _react2.default.createElement(_reactRouterDom.Route, { path: '/productDetail', component: _ProductDetail2.default }),
-                    _react2.default.createElement(_reactRouterDom.Route, { path: '/shop', component: _Shop2.default })
+                    _react2.default.createElement(_reactRouterDom.Route, { path: '/shop/:pageid', component: _Shop2.default })
                 ),
                 _react2.default.createElement(_Footer2.default, null)
             );
@@ -36883,7 +38305,7 @@ var mapStateToProps = function mapStateToProps(state) {
 exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(mapStateToProps)(App));
 
 /***/ }),
-/* 453 */
+/* 460 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36895,21 +38317,23 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(3);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(115);
+var _reactRedux = __webpack_require__(49);
 
-__webpack_require__(454);
+var _reactRouterDom = __webpack_require__(111);
 
-__webpack_require__(466);
+__webpack_require__(461);
 
-var _Advertisement = __webpack_require__(468);
+__webpack_require__(473);
+
+var _Advertisement = __webpack_require__(475);
 
 var _Advertisement2 = _interopRequireDefault(_Advertisement);
 
-var _Produce = __webpack_require__(118);
+var _Produce = __webpack_require__(80);
 
 var _Produce2 = _interopRequireDefault(_Produce);
 
@@ -36959,13 +38383,13 @@ var mapStateToProps = function mapStateToProps(state) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(Home);
 
 /***/ }),
-/* 454 */
+/* 461 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(455);
+var content = __webpack_require__(462);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -36973,7 +38397,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(174)(content, options);
+var update = __webpack_require__(177)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -36990,19 +38414,19 @@ if(false) {
 }
 
 /***/ }),
-/* 455 */
+/* 462 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(32)(undefined);
+exports = module.exports = __webpack_require__(33)(undefined);
 // imports
-exports.i(__webpack_require__(456), "");
-exports.i(__webpack_require__(458), "");
-exports.i(__webpack_require__(459), "");
-exports.i(__webpack_require__(460), "");
-exports.i(__webpack_require__(461), "");
-exports.i(__webpack_require__(462), "");
 exports.i(__webpack_require__(463), "");
-exports.i(__webpack_require__(464), "");
+exports.i(__webpack_require__(465), "");
+exports.i(__webpack_require__(466), "");
+exports.i(__webpack_require__(467), "");
+exports.i(__webpack_require__(468), "");
+exports.i(__webpack_require__(469), "");
+exports.i(__webpack_require__(470), "");
+exports.i(__webpack_require__(471), "");
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Pacifico);", ""]);
 
 // module
@@ -37012,30 +38436,30 @@ exports.push([module.i, "/**\r\n  *\tReset\r\n  *\tRepeatable Patterns\r\n  * Bo
 
 
 /***/ }),
-/* 456 */
+/* 463 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(32)(undefined);
+exports = module.exports = __webpack_require__(33)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "/*!\r\n *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome\r\n *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)\r\n */\r\n/* FONT PATH\r\n * -------------------------- */\r\n@font-face {\r\n  font-family: 'FontAwesome';\r\n  src: url(" + __webpack_require__(457) + ");\r\n  font-weight: normal;\r\n  font-style: normal;\r\n}\r\n.fa {\r\n  padding-top: 5px;\r\n  display: inline-block;\r\n  font: normal normal normal 14px/1 FontAwesome;\r\n  font-size: inherit;\r\n  text-rendering: auto;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n}\r\n/* makes the font 33% larger relative to the icon container */\r\n.fa-lg {\r\n  font-size: 1.33333333em;\r\n  line-height: 0.75em;\r\n  vertical-align: -15%;\r\n}\r\n.fa-2x {\r\n  font-size: 2em;\r\n}\r\n.fa-3x {\r\n  font-size: 3em;\r\n}\r\n.fa-4x {\r\n  font-size: 4em;\r\n}\r\n.fa-5x {\r\n  font-size: 5em;\r\n}\r\n.fa-fw {\r\n  width: 1.28571429em;\r\n  text-align: center;\r\n}\r\n.fa-ul {\r\n  padding-left: 0;\r\n  margin-left: 2.14285714em;\r\n  list-style-type: none;\r\n}\r\n.fa-ul > li {\r\n  position: relative;\r\n}\r\n.fa-li {\r\n  position: absolute;\r\n  left: -2.14285714em;\r\n  width: 2.14285714em;\r\n  top: 0.14285714em;\r\n  text-align: center;\r\n}\r\n.fa-li.fa-lg {\r\n  left: -1.85714286em;\r\n}\r\n.fa-border {\r\n  padding: .2em .25em .15em;\r\n  border: solid 0.08em #eeeeee;\r\n  border-radius: .1em;\r\n}\r\n.fa-pull-left {\r\n  float: left;\r\n}\r\n.fa-pull-right {\r\n  float: right;\r\n}\r\n.fa.fa-pull-left {\r\n  margin-right: .3em;\r\n}\r\n.fa.fa-pull-right {\r\n  margin-left: .3em;\r\n}\r\n/* Deprecated as of 4.4.0 */\r\n.pull-right {\r\n  float: right;\r\n}\r\n.pull-left {\r\n  float: left;\r\n}\r\n.fa.pull-left {\r\n  margin-right: .3em;\r\n}\r\n.fa.pull-right {\r\n  margin-left: .3em;\r\n}\r\n.fa-spin {\r\n  -webkit-animation: fa-spin 2s infinite linear;\r\n  animation: fa-spin 2s infinite linear;\r\n}\r\n.fa-pulse {\r\n  -webkit-animation: fa-spin 1s infinite steps(8);\r\n  animation: fa-spin 1s infinite steps(8);\r\n}\r\n@-webkit-keyframes fa-spin {\r\n  0% {\r\n    -webkit-transform: rotate(0deg);\r\n    transform: rotate(0deg);\r\n  }\r\n  100% {\r\n    -webkit-transform: rotate(359deg);\r\n    transform: rotate(359deg);\r\n  }\r\n}\r\n@keyframes fa-spin {\r\n  0% {\r\n    -webkit-transform: rotate(0deg);\r\n    transform: rotate(0deg);\r\n  }\r\n  100% {\r\n    -webkit-transform: rotate(359deg);\r\n    transform: rotate(359deg);\r\n  }\r\n}\r\n.fa-rotate-90 {\r\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)\";\r\n  -webkit-transform: rotate(90deg);\r\n  -ms-transform: rotate(90deg);\r\n  transform: rotate(90deg);\r\n}\r\n.fa-rotate-180 {\r\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)\";\r\n  -webkit-transform: rotate(180deg);\r\n  -ms-transform: rotate(180deg);\r\n  transform: rotate(180deg);\r\n}\r\n.fa-rotate-270 {\r\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)\";\r\n  -webkit-transform: rotate(270deg);\r\n  -ms-transform: rotate(270deg);\r\n  transform: rotate(270deg);\r\n}\r\n.fa-flip-horizontal {\r\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)\";\r\n  -webkit-transform: scale(-1, 1);\r\n  -ms-transform: scale(-1, 1);\r\n  transform: scale(-1, 1);\r\n}\r\n.fa-flip-vertical {\r\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";\r\n  -webkit-transform: scale(1, -1);\r\n  -ms-transform: scale(1, -1);\r\n  transform: scale(1, -1);\r\n}\r\n:root .fa-rotate-90,\r\n:root .fa-rotate-180,\r\n:root .fa-rotate-270,\r\n:root .fa-flip-horizontal,\r\n:root .fa-flip-vertical {\r\n  filter: none;\r\n}\r\n.fa-stack {\r\n  position: relative;\r\n  display: inline-block;\r\n  width: 2em;\r\n  height: 2em;\r\n  line-height: 2em;\r\n  vertical-align: middle;\r\n}\r\n.fa-stack-1x,\r\n.fa-stack-2x {\r\n  position: absolute;\r\n  left: 0;\r\n  width: 100%;\r\n  text-align: center;\r\n}\r\n.fa-stack-1x {\r\n  line-height: inherit;\r\n}\r\n.fa-stack-2x {\r\n  font-size: 2em;\r\n}\r\n.fa-inverse {\r\n  color: #ffffff;\r\n}\r\n/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen\r\n   readers do not read off random characters that represent icons */\r\n.fa-glass:before {\r\n  content: \"\\F000\";\r\n}\r\n.fa-music:before {\r\n  content: \"\\F001\";\r\n}\r\n.fa-search:before {\r\n  content: \"\\F002\";\r\n}\r\n.fa-envelope-o:before {\r\n  content: \"\\F003\";\r\n}\r\n.fa-heart:before {\r\n  content: \"\\F004\";\r\n}\r\n.fa-star:before {\r\n  content: \"\\F005\";\r\n}\r\n.fa-star-o:before {\r\n  content: \"\\F006\";\r\n}\r\n.fa-user:before {\r\n  content: \"\\F007\";\r\n}\r\n.fa-film:before {\r\n  content: \"\\F008\";\r\n}\r\n.fa-th-large:before {\r\n  content: \"\\F009\";\r\n}\r\n.fa-th:before {\r\n  content: \"\\F00A\";\r\n}\r\n.fa-th-list:before {\r\n  content: \"\\F00B\";\r\n}\r\n.fa-check:before {\r\n  content: \"\\F00C\";\r\n}\r\n.fa-remove:before,\r\n.fa-close:before,\r\n.fa-times:before {\r\n  content: \"\\F00D\";\r\n}\r\n.fa-search-plus:before {\r\n  content: \"\\F00E\";\r\n}\r\n.fa-search-minus:before {\r\n  content: \"\\F010\";\r\n}\r\n.fa-power-off:before {\r\n  content: \"\\F011\";\r\n}\r\n.fa-signal:before {\r\n  content: \"\\F012\";\r\n}\r\n.fa-gear:before,\r\n.fa-cog:before {\r\n  content: \"\\F013\";\r\n}\r\n.fa-trash-o:before {\r\n  content: \"\\F014\";\r\n}\r\n.fa-home:before {\r\n  content: \"\\F015\";\r\n}\r\n.fa-file-o:before {\r\n  content: \"\\F016\";\r\n}\r\n.fa-clock-o:before {\r\n  content: \"\\F017\";\r\n}\r\n.fa-road:before {\r\n  content: \"\\F018\";\r\n}\r\n.fa-download:before {\r\n  content: \"\\F019\";\r\n}\r\n.fa-arrow-circle-o-down:before {\r\n  content: \"\\F01A\";\r\n}\r\n.fa-arrow-circle-o-up:before {\r\n  content: \"\\F01B\";\r\n}\r\n.fa-inbox:before {\r\n  content: \"\\F01C\";\r\n}\r\n.fa-play-circle-o:before {\r\n  content: \"\\F01D\";\r\n}\r\n.fa-rotate-right:before,\r\n.fa-repeat:before {\r\n  content: \"\\F01E\";\r\n}\r\n.fa-refresh:before {\r\n  content: \"\\F021\";\r\n}\r\n.fa-list-alt:before {\r\n  content: \"\\F022\";\r\n}\r\n.fa-lock:before {\r\n  content: \"\\F023\";\r\n}\r\n.fa-flag:before {\r\n  content: \"\\F024\";\r\n}\r\n.fa-headphones:before {\r\n  content: \"\\F025\";\r\n}\r\n.fa-volume-off:before {\r\n  content: \"\\F026\";\r\n}\r\n.fa-volume-down:before {\r\n  content: \"\\F027\";\r\n}\r\n.fa-volume-up:before {\r\n  content: \"\\F028\";\r\n}\r\n.fa-qrcode:before {\r\n  content: \"\\F029\";\r\n}\r\n.fa-barcode:before {\r\n  content: \"\\F02A\";\r\n}\r\n.fa-tag:before {\r\n  content: \"\\F02B\";\r\n}\r\n.fa-tags:before {\r\n  content: \"\\F02C\";\r\n}\r\n.fa-book:before {\r\n  content: \"\\F02D\";\r\n}\r\n.fa-bookmark:before {\r\n  content: \"\\F02E\";\r\n}\r\n.fa-print:before {\r\n  content: \"\\F02F\";\r\n}\r\n.fa-camera:before {\r\n  content: \"\\F030\";\r\n}\r\n.fa-font:before {\r\n  content: \"\\F031\";\r\n}\r\n.fa-bold:before {\r\n  content: \"\\F032\";\r\n}\r\n.fa-italic:before {\r\n  content: \"\\F033\";\r\n}\r\n.fa-text-height:before {\r\n  content: \"\\F034\";\r\n}\r\n.fa-text-width:before {\r\n  content: \"\\F035\";\r\n}\r\n.fa-align-left:before {\r\n  content: \"\\F036\";\r\n}\r\n.fa-align-center:before {\r\n  content: \"\\F037\";\r\n}\r\n.fa-align-right:before {\r\n  content: \"\\F038\";\r\n}\r\n.fa-align-justify:before {\r\n  content: \"\\F039\";\r\n}\r\n.fa-list:before {\r\n  content: \"\\F03A\";\r\n}\r\n.fa-dedent:before,\r\n.fa-outdent:before {\r\n  content: \"\\F03B\";\r\n}\r\n.fa-indent:before {\r\n  content: \"\\F03C\";\r\n}\r\n.fa-video-camera:before {\r\n  content: \"\\F03D\";\r\n}\r\n.fa-photo:before,\r\n.fa-image:before,\r\n.fa-picture-o:before {\r\n  content: \"\\F03E\";\r\n}\r\n.fa-pencil:before {\r\n  content: \"\\F040\";\r\n}\r\n.fa-map-marker:before {\r\n  content: \"\\F041\";\r\n}\r\n.fa-adjust:before {\r\n  content: \"\\F042\";\r\n}\r\n.fa-tint:before {\r\n  content: \"\\F043\";\r\n}\r\n.fa-edit:before,\r\n.fa-pencil-square-o:before {\r\n  content: \"\\F044\";\r\n}\r\n.fa-share-square-o:before {\r\n  content: \"\\F045\";\r\n}\r\n.fa-check-square-o:before {\r\n  content: \"\\F046\";\r\n}\r\n.fa-arrows:before {\r\n  content: \"\\F047\";\r\n}\r\n.fa-step-backward:before {\r\n  content: \"\\F048\";\r\n}\r\n.fa-fast-backward:before {\r\n  content: \"\\F049\";\r\n}\r\n.fa-backward:before {\r\n  content: \"\\F04A\";\r\n}\r\n.fa-play:before {\r\n  content: \"\\F04B\";\r\n}\r\n.fa-pause:before {\r\n  content: \"\\F04C\";\r\n}\r\n.fa-stop:before {\r\n  content: \"\\F04D\";\r\n}\r\n.fa-forward:before {\r\n  content: \"\\F04E\";\r\n}\r\n.fa-fast-forward:before {\r\n  content: \"\\F050\";\r\n}\r\n.fa-step-forward:before {\r\n  content: \"\\F051\";\r\n}\r\n.fa-eject:before {\r\n  content: \"\\F052\";\r\n}\r\n.fa-chevron-left:before {\r\n  content: \"\\F053\";\r\n}\r\n.fa-chevron-right:before {\r\n  content: \"\\F054\";\r\n}\r\n.fa-plus-circle:before {\r\n  content: \"\\F055\";\r\n}\r\n.fa-minus-circle:before {\r\n  content: \"\\F056\";\r\n}\r\n.fa-times-circle:before {\r\n  content: \"\\F057\";\r\n}\r\n.fa-check-circle:before {\r\n  content: \"\\F058\";\r\n}\r\n.fa-question-circle:before {\r\n  content: \"\\F059\";\r\n}\r\n.fa-info-circle:before {\r\n  content: \"\\F05A\";\r\n}\r\n.fa-crosshairs:before {\r\n  content: \"\\F05B\";\r\n}\r\n.fa-times-circle-o:before {\r\n  content: \"\\F05C\";\r\n}\r\n.fa-check-circle-o:before {\r\n  content: \"\\F05D\";\r\n}\r\n.fa-ban:before {\r\n  content: \"\\F05E\";\r\n}\r\n.fa-arrow-left:before {\r\n  content: \"\\F060\";\r\n}\r\n.fa-arrow-right:before {\r\n  content: \"\\F061\";\r\n}\r\n.fa-arrow-up:before {\r\n  content: \"\\F062\";\r\n}\r\n.fa-arrow-down:before {\r\n  content: \"\\F063\";\r\n}\r\n.fa-mail-forward:before,\r\n.fa-share:before {\r\n  content: \"\\F064\";\r\n}\r\n.fa-expand:before {\r\n  content: \"\\F065\";\r\n}\r\n.fa-compress:before {\r\n  content: \"\\F066\";\r\n}\r\n.fa-plus:before {\r\n  content: \"\\F067\";\r\n}\r\n.fa-minus:before {\r\n  content: \"\\F068\";\r\n}\r\n.fa-asterisk:before {\r\n  content: \"\\F069\";\r\n}\r\n.fa-exclamation-circle:before {\r\n  content: \"\\F06A\";\r\n}\r\n.fa-gift:before {\r\n  content: \"\\F06B\";\r\n}\r\n.fa-leaf:before {\r\n  content: \"\\F06C\";\r\n}\r\n.fa-fire:before {\r\n  content: \"\\F06D\";\r\n}\r\n.fa-eye:before {\r\n  content: \"\\F06E\";\r\n}\r\n.fa-eye-slash:before {\r\n  content: \"\\F070\";\r\n}\r\n.fa-warning:before,\r\n.fa-exclamation-triangle:before {\r\n  content: \"\\F071\";\r\n}\r\n.fa-plane:before {\r\n  content: \"\\F072\";\r\n}\r\n.fa-calendar:before {\r\n  content: \"\\F073\";\r\n}\r\n.fa-random:before {\r\n  content: \"\\F074\";\r\n}\r\n.fa-comment:before {\r\n  content: \"\\F075\";\r\n}\r\n.fa-magnet:before {\r\n  content: \"\\F076\";\r\n}\r\n.fa-chevron-up:before {\r\n  content: \"\\F077\";\r\n}\r\n.fa-chevron-down:before {\r\n  content: \"\\F078\";\r\n}\r\n.fa-retweet:before {\r\n  content: \"\\F079\";\r\n}\r\n.fa-shopping-cart:before {\r\n  content: \"\\F07A\";\r\n}\r\n.fa-folder:before {\r\n  content: \"\\F07B\";\r\n}\r\n.fa-folder-open:before {\r\n  content: \"\\F07C\";\r\n}\r\n.fa-arrows-v:before {\r\n  content: \"\\F07D\";\r\n}\r\n.fa-arrows-h:before {\r\n  content: \"\\F07E\";\r\n}\r\n.fa-bar-chart-o:before,\r\n.fa-bar-chart:before {\r\n  content: \"\\F080\";\r\n}\r\n.fa-twitter-square:before {\r\n  content: \"\\F081\";\r\n}\r\n.fa-facebook-square:before {\r\n  content: \"\\F082\";\r\n}\r\n.fa-camera-retro:before {\r\n  content: \"\\F083\";\r\n}\r\n.fa-key:before {\r\n  content: \"\\F084\";\r\n}\r\n.fa-gears:before,\r\n.fa-cogs:before {\r\n  content: \"\\F085\";\r\n}\r\n.fa-comments:before {\r\n  content: \"\\F086\";\r\n}\r\n.fa-thumbs-o-up:before {\r\n  content: \"\\F087\";\r\n}\r\n.fa-thumbs-o-down:before {\r\n  content: \"\\F088\";\r\n}\r\n.fa-star-half:before {\r\n  content: \"\\F089\";\r\n}\r\n.fa-heart-o:before {\r\n  content: \"\\F08A\";\r\n}\r\n.fa-sign-out:before {\r\n  content: \"\\F08B\";\r\n}\r\n.fa-linkedin-square:before {\r\n  content: \"\\F08C\";\r\n}\r\n.fa-thumb-tack:before {\r\n  content: \"\\F08D\";\r\n}\r\n.fa-external-link:before {\r\n  content: \"\\F08E\";\r\n}\r\n.fa-sign-in:before {\r\n  content: \"\\F090\";\r\n}\r\n.fa-trophy:before {\r\n  content: \"\\F091\";\r\n}\r\n.fa-github-square:before {\r\n  content: \"\\F092\";\r\n}\r\n.fa-upload:before {\r\n  content: \"\\F093\";\r\n}\r\n.fa-lemon-o:before {\r\n  content: \"\\F094\";\r\n}\r\n.fa-phone:before {\r\n  content: \"\\F095\";\r\n}\r\n.fa-square-o:before {\r\n  content: \"\\F096\";\r\n}\r\n.fa-bookmark-o:before {\r\n  content: \"\\F097\";\r\n}\r\n.fa-phone-square:before {\r\n  content: \"\\F098\";\r\n}\r\n.fa-twitter:before {\r\n  content: \"\\F099\";\r\n}\r\n.fa-facebook-f:before,\r\n.fa-facebook:before {\r\n  content: \"\\F09A\";\r\n}\r\n.fa-github:before {\r\n  content: \"\\F09B\";\r\n}\r\n.fa-unlock:before {\r\n  content: \"\\F09C\";\r\n}\r\n.fa-credit-card:before {\r\n  content: \"\\F09D\";\r\n}\r\n.fa-feed:before,\r\n.fa-rss:before {\r\n  content: \"\\F09E\";\r\n}\r\n.fa-hdd-o:before {\r\n  content: \"\\F0A0\";\r\n}\r\n.fa-bullhorn:before {\r\n  content: \"\\F0A1\";\r\n}\r\n.fa-bell:before {\r\n  content: \"\\F0F3\";\r\n}\r\n.fa-certificate:before {\r\n  content: \"\\F0A3\";\r\n}\r\n.fa-hand-o-right:before {\r\n  content: \"\\F0A4\";\r\n}\r\n.fa-hand-o-left:before {\r\n  content: \"\\F0A5\";\r\n}\r\n.fa-hand-o-up:before {\r\n  content: \"\\F0A6\";\r\n}\r\n.fa-hand-o-down:before {\r\n  content: \"\\F0A7\";\r\n}\r\n.fa-arrow-circle-left:before {\r\n  content: \"\\F0A8\";\r\n}\r\n.fa-arrow-circle-right:before {\r\n  content: \"\\F0A9\";\r\n}\r\n.fa-arrow-circle-up:before {\r\n  content: \"\\F0AA\";\r\n}\r\n.fa-arrow-circle-down:before {\r\n  content: \"\\F0AB\";\r\n}\r\n.fa-globe:before {\r\n  content: \"\\F0AC\";\r\n}\r\n.fa-wrench:before {\r\n  content: \"\\F0AD\";\r\n}\r\n.fa-tasks:before {\r\n  content: \"\\F0AE\";\r\n}\r\n.fa-filter:before {\r\n  content: \"\\F0B0\";\r\n}\r\n.fa-briefcase:before {\r\n  content: \"\\F0B1\";\r\n}\r\n.fa-arrows-alt:before {\r\n  content: \"\\F0B2\";\r\n}\r\n.fa-group:before,\r\n.fa-users:before {\r\n  content: \"\\F0C0\";\r\n}\r\n.fa-chain:before,\r\n.fa-link:before {\r\n  content: \"\\F0C1\";\r\n}\r\n.fa-cloud:before {\r\n  content: \"\\F0C2\";\r\n}\r\n.fa-flask:before {\r\n  content: \"\\F0C3\";\r\n}\r\n.fa-cut:before,\r\n.fa-scissors:before {\r\n  content: \"\\F0C4\";\r\n}\r\n.fa-copy:before,\r\n.fa-files-o:before {\r\n  content: \"\\F0C5\";\r\n}\r\n.fa-paperclip:before {\r\n  content: \"\\F0C6\";\r\n}\r\n.fa-save:before,\r\n.fa-floppy-o:before {\r\n  content: \"\\F0C7\";\r\n}\r\n.fa-square:before {\r\n  content: \"\\F0C8\";\r\n}\r\n.fa-navicon:before,\r\n.fa-reorder:before,\r\n.fa-bars:before {\r\n  content: \"\\F0C9\";\r\n}\r\n.fa-list-ul:before {\r\n  content: \"\\F0CA\";\r\n}\r\n.fa-list-ol:before {\r\n  content: \"\\F0CB\";\r\n}\r\n.fa-strikethrough:before {\r\n  content: \"\\F0CC\";\r\n}\r\n.fa-underline:before {\r\n  content: \"\\F0CD\";\r\n}\r\n.fa-table:before {\r\n  content: \"\\F0CE\";\r\n}\r\n.fa-magic:before {\r\n  content: \"\\F0D0\";\r\n}\r\n.fa-truck:before {\r\n  content: \"\\F0D1\";\r\n}\r\n.fa-pinterest:before {\r\n  content: \"\\F0D2\";\r\n}\r\n.fa-pinterest-square:before {\r\n  content: \"\\F0D3\";\r\n}\r\n.fa-google-plus-square:before {\r\n  content: \"\\F0D4\";\r\n}\r\n.fa-google-plus:before {\r\n  content: \"\\F0D5\";\r\n}\r\n.fa-money:before {\r\n  content: \"\\F0D6\";\r\n}\r\n.fa-caret-down:before {\r\n  content: \"\\F0D7\";\r\n}\r\n.fa-caret-up:before {\r\n  content: \"\\F0D8\";\r\n}\r\n.fa-caret-left:before {\r\n  content: \"\\F0D9\";\r\n}\r\n.fa-caret-right:before {\r\n  content: \"\\F0DA\";\r\n}\r\n.fa-columns:before {\r\n  content: \"\\F0DB\";\r\n}\r\n.fa-unsorted:before,\r\n.fa-sort:before {\r\n  content: \"\\F0DC\";\r\n}\r\n.fa-sort-down:before,\r\n.fa-sort-desc:before {\r\n  content: \"\\F0DD\";\r\n}\r\n.fa-sort-up:before,\r\n.fa-sort-asc:before {\r\n  content: \"\\F0DE\";\r\n}\r\n.fa-envelope:before {\r\n  content: \"\\F0E0\";\r\n}\r\n.fa-linkedin:before {\r\n  content: \"\\F0E1\";\r\n}\r\n.fa-rotate-left:before,\r\n.fa-undo:before {\r\n  content: \"\\F0E2\";\r\n}\r\n.fa-legal:before,\r\n.fa-gavel:before {\r\n  content: \"\\F0E3\";\r\n}\r\n.fa-dashboard:before,\r\n.fa-tachometer:before {\r\n  content: \"\\F0E4\";\r\n}\r\n.fa-comment-o:before {\r\n  content: \"\\F0E5\";\r\n}\r\n.fa-comments-o:before {\r\n  content: \"\\F0E6\";\r\n}\r\n.fa-flash:before,\r\n.fa-bolt:before {\r\n  content: \"\\F0E7\";\r\n}\r\n.fa-sitemap:before {\r\n  content: \"\\F0E8\";\r\n}\r\n.fa-umbrella:before {\r\n  content: \"\\F0E9\";\r\n}\r\n.fa-paste:before,\r\n.fa-clipboard:before {\r\n  content: \"\\F0EA\";\r\n}\r\n.fa-lightbulb-o:before {\r\n  content: \"\\F0EB\";\r\n}\r\n.fa-exchange:before {\r\n  content: \"\\F0EC\";\r\n}\r\n.fa-cloud-download:before {\r\n  content: \"\\F0ED\";\r\n}\r\n.fa-cloud-upload:before {\r\n  content: \"\\F0EE\";\r\n}\r\n.fa-user-md:before {\r\n  content: \"\\F0F0\";\r\n}\r\n.fa-stethoscope:before {\r\n  content: \"\\F0F1\";\r\n}\r\n.fa-suitcase:before {\r\n  content: \"\\F0F2\";\r\n}\r\n.fa-bell-o:before {\r\n  content: \"\\F0A2\";\r\n}\r\n.fa-coffee:before {\r\n  content: \"\\F0F4\";\r\n}\r\n.fa-cutlery:before {\r\n  content: \"\\F0F5\";\r\n}\r\n.fa-file-text-o:before {\r\n  content: \"\\F0F6\";\r\n}\r\n.fa-building-o:before {\r\n  content: \"\\F0F7\";\r\n}\r\n.fa-hospital-o:before {\r\n  content: \"\\F0F8\";\r\n}\r\n.fa-ambulance:before {\r\n  content: \"\\F0F9\";\r\n}\r\n.fa-medkit:before {\r\n  content: \"\\F0FA\";\r\n}\r\n.fa-fighter-jet:before {\r\n  content: \"\\F0FB\";\r\n}\r\n.fa-beer:before {\r\n  content: \"\\F0FC\";\r\n}\r\n.fa-h-square:before {\r\n  content: \"\\F0FD\";\r\n}\r\n.fa-plus-square:before {\r\n  content: \"\\F0FE\";\r\n}\r\n.fa-angle-double-left:before {\r\n  content: \"\\F100\";\r\n}\r\n.fa-angle-double-right:before {\r\n  content: \"\\F101\";\r\n}\r\n.fa-angle-double-up:before {\r\n  content: \"\\F102\";\r\n}\r\n.fa-angle-double-down:before {\r\n  content: \"\\F103\";\r\n}\r\n.fa-angle-left:before {\r\n  content: \"\\F104\";\r\n}\r\n.fa-angle-right:before {\r\n  content: \"\\F105\";\r\n}\r\n.fa-angle-up:before {\r\n  content: \"\\F106\";\r\n}\r\n.fa-angle-down:before {\r\n  content: \"\\F107\";\r\n}\r\n.fa-desktop:before {\r\n  content: \"\\F108\";\r\n}\r\n.fa-laptop:before {\r\n  content: \"\\F109\";\r\n}\r\n.fa-tablet:before {\r\n  content: \"\\F10A\";\r\n}\r\n.fa-mobile-phone:before,\r\n.fa-mobile:before {\r\n  content: \"\\F10B\";\r\n}\r\n.fa-circle-o:before {\r\n  content: \"\\F10C\";\r\n}\r\n.fa-quote-left:before {\r\n  content: \"\\F10D\";\r\n}\r\n.fa-quote-right:before {\r\n  content: \"\\F10E\";\r\n}\r\n.fa-spinner:before {\r\n  content: \"\\F110\";\r\n}\r\n.fa-circle:before {\r\n  content: \"\\F111\";\r\n}\r\n.fa-mail-reply:before,\r\n.fa-reply:before {\r\n  content: \"\\F112\";\r\n}\r\n.fa-github-alt:before {\r\n  content: \"\\F113\";\r\n}\r\n.fa-folder-o:before {\r\n  content: \"\\F114\";\r\n}\r\n.fa-folder-open-o:before {\r\n  content: \"\\F115\";\r\n}\r\n.fa-smile-o:before {\r\n  content: \"\\F118\";\r\n}\r\n.fa-frown-o:before {\r\n  content: \"\\F119\";\r\n}\r\n.fa-meh-o:before {\r\n  content: \"\\F11A\";\r\n}\r\n.fa-gamepad:before {\r\n  content: \"\\F11B\";\r\n}\r\n.fa-keyboard-o:before {\r\n  content: \"\\F11C\";\r\n}\r\n.fa-flag-o:before {\r\n  content: \"\\F11D\";\r\n}\r\n.fa-flag-checkered:before {\r\n  content: \"\\F11E\";\r\n}\r\n.fa-terminal:before {\r\n  content: \"\\F120\";\r\n}\r\n.fa-code:before {\r\n  content: \"\\F121\";\r\n}\r\n.fa-mail-reply-all:before,\r\n.fa-reply-all:before {\r\n  content: \"\\F122\";\r\n}\r\n.fa-star-half-empty:before,\r\n.fa-star-half-full:before,\r\n.fa-star-half-o:before {\r\n  content: \"\\F123\";\r\n}\r\n.fa-location-arrow:before {\r\n  content: \"\\F124\";\r\n}\r\n.fa-crop:before {\r\n  content: \"\\F125\";\r\n}\r\n.fa-code-fork:before {\r\n  content: \"\\F126\";\r\n}\r\n.fa-unlink:before,\r\n.fa-chain-broken:before {\r\n  content: \"\\F127\";\r\n}\r\n.fa-question:before {\r\n  content: \"\\F128\";\r\n}\r\n.fa-info:before {\r\n  content: \"\\F129\";\r\n}\r\n.fa-exclamation:before {\r\n  content: \"\\F12A\";\r\n}\r\n.fa-superscript:before {\r\n  content: \"\\F12B\";\r\n}\r\n.fa-subscript:before {\r\n  content: \"\\F12C\";\r\n}\r\n.fa-eraser:before {\r\n  content: \"\\F12D\";\r\n}\r\n.fa-puzzle-piece:before {\r\n  content: \"\\F12E\";\r\n}\r\n.fa-microphone:before {\r\n  content: \"\\F130\";\r\n}\r\n.fa-microphone-slash:before {\r\n  content: \"\\F131\";\r\n}\r\n.fa-shield:before {\r\n  content: \"\\F132\";\r\n}\r\n.fa-calendar-o:before {\r\n  content: \"\\F133\";\r\n}\r\n.fa-fire-extinguisher:before {\r\n  content: \"\\F134\";\r\n}\r\n.fa-rocket:before {\r\n  content: \"\\F135\";\r\n}\r\n.fa-maxcdn:before {\r\n  content: \"\\F136\";\r\n}\r\n.fa-chevron-circle-left:before {\r\n  content: \"\\F137\";\r\n}\r\n.fa-chevron-circle-right:before {\r\n  content: \"\\F138\";\r\n}\r\n.fa-chevron-circle-up:before {\r\n  content: \"\\F139\";\r\n}\r\n.fa-chevron-circle-down:before {\r\n  content: \"\\F13A\";\r\n}\r\n.fa-html5:before {\r\n  content: \"\\F13B\";\r\n}\r\n.fa-css3:before {\r\n  content: \"\\F13C\";\r\n}\r\n.fa-anchor:before {\r\n  content: \"\\F13D\";\r\n}\r\n.fa-unlock-alt:before {\r\n  content: \"\\F13E\";\r\n}\r\n.fa-bullseye:before {\r\n  content: \"\\F140\";\r\n}\r\n.fa-ellipsis-h:before {\r\n  content: \"\\F141\";\r\n}\r\n.fa-ellipsis-v:before {\r\n  content: \"\\F142\";\r\n}\r\n.fa-rss-square:before {\r\n  content: \"\\F143\";\r\n}\r\n.fa-play-circle:before {\r\n  content: \"\\F144\";\r\n}\r\n.fa-ticket:before {\r\n  content: \"\\F145\";\r\n}\r\n.fa-minus-square:before {\r\n  content: \"\\F146\";\r\n}\r\n.fa-minus-square-o:before {\r\n  content: \"\\F147\";\r\n}\r\n.fa-level-up:before {\r\n  content: \"\\F148\";\r\n}\r\n.fa-level-down:before {\r\n  content: \"\\F149\";\r\n}\r\n.fa-check-square:before {\r\n  content: \"\\F14A\";\r\n}\r\n.fa-pencil-square:before {\r\n  content: \"\\F14B\";\r\n}\r\n.fa-external-link-square:before {\r\n  content: \"\\F14C\";\r\n}\r\n.fa-share-square:before {\r\n  content: \"\\F14D\";\r\n}\r\n.fa-compass:before {\r\n  content: \"\\F14E\";\r\n}\r\n.fa-toggle-down:before,\r\n.fa-caret-square-o-down:before {\r\n  content: \"\\F150\";\r\n}\r\n.fa-toggle-up:before,\r\n.fa-caret-square-o-up:before {\r\n  content: \"\\F151\";\r\n}\r\n.fa-toggle-right:before,\r\n.fa-caret-square-o-right:before {\r\n  content: \"\\F152\";\r\n}\r\n.fa-euro:before,\r\n.fa-eur:before {\r\n  content: \"\\F153\";\r\n}\r\n.fa-gbp:before {\r\n  content: \"\\F154\";\r\n}\r\n.fa-dollar:before,\r\n.fa-usd:before {\r\n  content: \"\\F155\";\r\n}\r\n.fa-rupee:before,\r\n.fa-inr:before {\r\n  content: \"\\F156\";\r\n}\r\n.fa-cny:before,\r\n.fa-rmb:before,\r\n.fa-yen:before,\r\n.fa-jpy:before {\r\n  content: \"\\F157\";\r\n}\r\n.fa-ruble:before,\r\n.fa-rouble:before,\r\n.fa-rub:before {\r\n  content: \"\\F158\";\r\n}\r\n.fa-won:before,\r\n.fa-krw:before {\r\n  content: \"\\F159\";\r\n}\r\n.fa-bitcoin:before,\r\n.fa-btc:before {\r\n  content: \"\\F15A\";\r\n}\r\n.fa-file:before {\r\n  content: \"\\F15B\";\r\n}\r\n.fa-file-text:before {\r\n  content: \"\\F15C\";\r\n}\r\n.fa-sort-alpha-asc:before {\r\n  content: \"\\F15D\";\r\n}\r\n.fa-sort-alpha-desc:before {\r\n  content: \"\\F15E\";\r\n}\r\n.fa-sort-amount-asc:before {\r\n  content: \"\\F160\";\r\n}\r\n.fa-sort-amount-desc:before {\r\n  content: \"\\F161\";\r\n}\r\n.fa-sort-numeric-asc:before {\r\n  content: \"\\F162\";\r\n}\r\n.fa-sort-numeric-desc:before {\r\n  content: \"\\F163\";\r\n}\r\n.fa-thumbs-up:before {\r\n  content: \"\\F164\";\r\n}\r\n.fa-thumbs-down:before {\r\n  content: \"\\F165\";\r\n}\r\n.fa-youtube-square:before {\r\n  content: \"\\F166\";\r\n}\r\n.fa-youtube:before {\r\n  content: \"\\F167\";\r\n}\r\n.fa-xing:before {\r\n  content: \"\\F168\";\r\n}\r\n.fa-xing-square:before {\r\n  content: \"\\F169\";\r\n}\r\n.fa-youtube-play:before {\r\n  content: \"\\F16A\";\r\n}\r\n.fa-dropbox:before {\r\n  content: \"\\F16B\";\r\n}\r\n.fa-stack-overflow:before {\r\n  content: \"\\F16C\";\r\n}\r\n.fa-instagram:before {\r\n  content: \"\\F16D\";\r\n}\r\n.fa-flickr:before {\r\n  content: \"\\F16E\";\r\n}\r\n.fa-adn:before {\r\n  content: \"\\F170\";\r\n}\r\n.fa-bitbucket:before {\r\n  content: \"\\F171\";\r\n}\r\n.fa-bitbucket-square:before {\r\n  content: \"\\F172\";\r\n}\r\n.fa-tumblr:before {\r\n  content: \"\\F173\";\r\n}\r\n.fa-tumblr-square:before {\r\n  content: \"\\F174\";\r\n}\r\n.fa-long-arrow-down:before {\r\n  content: \"\\F175\";\r\n}\r\n.fa-long-arrow-up:before {\r\n  content: \"\\F176\";\r\n}\r\n.fa-long-arrow-left:before {\r\n  content: \"\\F177\";\r\n}\r\n.fa-long-arrow-right:before {\r\n  content: \"\\F178\";\r\n}\r\n.fa-apple:before {\r\n  content: \"\\F179\";\r\n}\r\n.fa-windows:before {\r\n  content: \"\\F17A\";\r\n}\r\n.fa-android:before {\r\n  content: \"\\F17B\";\r\n}\r\n.fa-linux:before {\r\n  content: \"\\F17C\";\r\n}\r\n.fa-dribbble:before {\r\n  content: \"\\F17D\";\r\n}\r\n.fa-skype:before {\r\n  content: \"\\F17E\";\r\n}\r\n.fa-foursquare:before {\r\n  content: \"\\F180\";\r\n}\r\n.fa-trello:before {\r\n  content: \"\\F181\";\r\n}\r\n.fa-female:before {\r\n  content: \"\\F182\";\r\n}\r\n.fa-male:before {\r\n  content: \"\\F183\";\r\n}\r\n.fa-gittip:before,\r\n.fa-gratipay:before {\r\n  content: \"\\F184\";\r\n}\r\n.fa-sun-o:before {\r\n  content: \"\\F185\";\r\n}\r\n.fa-moon-o:before {\r\n  content: \"\\F186\";\r\n}\r\n.fa-archive:before {\r\n  content: \"\\F187\";\r\n}\r\n.fa-bug:before {\r\n  content: \"\\F188\";\r\n}\r\n.fa-vk:before {\r\n  content: \"\\F189\";\r\n}\r\n.fa-weibo:before {\r\n  content: \"\\F18A\";\r\n}\r\n.fa-renren:before {\r\n  content: \"\\F18B\";\r\n}\r\n.fa-pagelines:before {\r\n  content: \"\\F18C\";\r\n}\r\n.fa-stack-exchange:before {\r\n  content: \"\\F18D\";\r\n}\r\n.fa-arrow-circle-o-right:before {\r\n  content: \"\\F18E\";\r\n}\r\n.fa-arrow-circle-o-left:before {\r\n  content: \"\\F190\";\r\n}\r\n.fa-toggle-left:before,\r\n.fa-caret-square-o-left:before {\r\n  content: \"\\F191\";\r\n}\r\n.fa-dot-circle-o:before {\r\n  content: \"\\F192\";\r\n}\r\n.fa-wheelchair:before {\r\n  content: \"\\F193\";\r\n}\r\n.fa-vimeo-square:before {\r\n  content: \"\\F194\";\r\n}\r\n.fa-turkish-lira:before,\r\n.fa-try:before {\r\n  content: \"\\F195\";\r\n}\r\n.fa-plus-square-o:before {\r\n  content: \"\\F196\";\r\n}\r\n.fa-space-shuttle:before {\r\n  content: \"\\F197\";\r\n}\r\n.fa-slack:before {\r\n  content: \"\\F198\";\r\n}\r\n.fa-envelope-square:before {\r\n  content: \"\\F199\";\r\n}\r\n.fa-wordpress:before {\r\n  content: \"\\F19A\";\r\n}\r\n.fa-openid:before {\r\n  content: \"\\F19B\";\r\n}\r\n.fa-institution:before,\r\n.fa-bank:before,\r\n.fa-university:before {\r\n  content: \"\\F19C\";\r\n}\r\n.fa-mortar-board:before,\r\n.fa-graduation-cap:before {\r\n  content: \"\\F19D\";\r\n}\r\n.fa-yahoo:before {\r\n  content: \"\\F19E\";\r\n}\r\n.fa-google:before {\r\n  content: \"\\F1A0\";\r\n}\r\n.fa-reddit:before {\r\n  content: \"\\F1A1\";\r\n}\r\n.fa-reddit-square:before {\r\n  content: \"\\F1A2\";\r\n}\r\n.fa-stumbleupon-circle:before {\r\n  content: \"\\F1A3\";\r\n}\r\n.fa-stumbleupon:before {\r\n  content: \"\\F1A4\";\r\n}\r\n.fa-delicious:before {\r\n  content: \"\\F1A5\";\r\n}\r\n.fa-digg:before {\r\n  content: \"\\F1A6\";\r\n}\r\n.fa-pied-piper-pp:before {\r\n  content: \"\\F1A7\";\r\n}\r\n.fa-pied-piper-alt:before {\r\n  content: \"\\F1A8\";\r\n}\r\n.fa-drupal:before {\r\n  content: \"\\F1A9\";\r\n}\r\n.fa-joomla:before {\r\n  content: \"\\F1AA\";\r\n}\r\n.fa-language:before {\r\n  content: \"\\F1AB\";\r\n}\r\n.fa-fax:before {\r\n  content: \"\\F1AC\";\r\n}\r\n.fa-building:before {\r\n  content: \"\\F1AD\";\r\n}\r\n.fa-child:before {\r\n  content: \"\\F1AE\";\r\n}\r\n.fa-paw:before {\r\n  content: \"\\F1B0\";\r\n}\r\n.fa-spoon:before {\r\n  content: \"\\F1B1\";\r\n}\r\n.fa-cube:before {\r\n  content: \"\\F1B2\";\r\n}\r\n.fa-cubes:before {\r\n  content: \"\\F1B3\";\r\n}\r\n.fa-behance:before {\r\n  content: \"\\F1B4\";\r\n}\r\n.fa-behance-square:before {\r\n  content: \"\\F1B5\";\r\n}\r\n.fa-steam:before {\r\n  content: \"\\F1B6\";\r\n}\r\n.fa-steam-square:before {\r\n  content: \"\\F1B7\";\r\n}\r\n.fa-recycle:before {\r\n  content: \"\\F1B8\";\r\n}\r\n.fa-automobile:before,\r\n.fa-car:before {\r\n  content: \"\\F1B9\";\r\n}\r\n.fa-cab:before,\r\n.fa-taxi:before {\r\n  content: \"\\F1BA\";\r\n}\r\n.fa-tree:before {\r\n  content: \"\\F1BB\";\r\n}\r\n.fa-spotify:before {\r\n  content: \"\\F1BC\";\r\n}\r\n.fa-deviantart:before {\r\n  content: \"\\F1BD\";\r\n}\r\n.fa-soundcloud:before {\r\n  content: \"\\F1BE\";\r\n}\r\n.fa-database:before {\r\n  content: \"\\F1C0\";\r\n}\r\n.fa-file-pdf-o:before {\r\n  content: \"\\F1C1\";\r\n}\r\n.fa-file-word-o:before {\r\n  content: \"\\F1C2\";\r\n}\r\n.fa-file-excel-o:before {\r\n  content: \"\\F1C3\";\r\n}\r\n.fa-file-powerpoint-o:before {\r\n  content: \"\\F1C4\";\r\n}\r\n.fa-file-photo-o:before,\r\n.fa-file-picture-o:before,\r\n.fa-file-image-o:before {\r\n  content: \"\\F1C5\";\r\n}\r\n.fa-file-zip-o:before,\r\n.fa-file-archive-o:before {\r\n  content: \"\\F1C6\";\r\n}\r\n.fa-file-sound-o:before,\r\n.fa-file-audio-o:before {\r\n  content: \"\\F1C7\";\r\n}\r\n.fa-file-movie-o:before,\r\n.fa-file-video-o:before {\r\n  content: \"\\F1C8\";\r\n}\r\n.fa-file-code-o:before {\r\n  content: \"\\F1C9\";\r\n}\r\n.fa-vine:before {\r\n  content: \"\\F1CA\";\r\n}\r\n.fa-codepen:before {\r\n  content: \"\\F1CB\";\r\n}\r\n.fa-jsfiddle:before {\r\n  content: \"\\F1CC\";\r\n}\r\n.fa-life-bouy:before,\r\n.fa-life-buoy:before,\r\n.fa-life-saver:before,\r\n.fa-support:before,\r\n.fa-life-ring:before {\r\n  content: \"\\F1CD\";\r\n}\r\n.fa-circle-o-notch:before {\r\n  content: \"\\F1CE\";\r\n}\r\n.fa-ra:before,\r\n.fa-resistance:before,\r\n.fa-rebel:before {\r\n  content: \"\\F1D0\";\r\n}\r\n.fa-ge:before,\r\n.fa-empire:before {\r\n  content: \"\\F1D1\";\r\n}\r\n.fa-git-square:before {\r\n  content: \"\\F1D2\";\r\n}\r\n.fa-git:before {\r\n  content: \"\\F1D3\";\r\n}\r\n.fa-y-combinator-square:before,\r\n.fa-yc-square:before,\r\n.fa-hacker-news:before {\r\n  content: \"\\F1D4\";\r\n}\r\n.fa-tencent-weibo:before {\r\n  content: \"\\F1D5\";\r\n}\r\n.fa-qq:before {\r\n  content: \"\\F1D6\";\r\n}\r\n.fa-wechat:before,\r\n.fa-weixin:before {\r\n  content: \"\\F1D7\";\r\n}\r\n.fa-send:before,\r\n.fa-paper-plane:before {\r\n  content: \"\\F1D8\";\r\n}\r\n.fa-send-o:before,\r\n.fa-paper-plane-o:before {\r\n  content: \"\\F1D9\";\r\n}\r\n.fa-history:before {\r\n  content: \"\\F1DA\";\r\n}\r\n.fa-circle-thin:before {\r\n  content: \"\\F1DB\";\r\n}\r\n.fa-header:before {\r\n  content: \"\\F1DC\";\r\n}\r\n.fa-paragraph:before {\r\n  content: \"\\F1DD\";\r\n}\r\n.fa-sliders:before {\r\n  content: \"\\F1DE\";\r\n}\r\n.fa-share-alt:before {\r\n  content: \"\\F1E0\";\r\n}\r\n.fa-share-alt-square:before {\r\n  content: \"\\F1E1\";\r\n}\r\n.fa-bomb:before {\r\n  content: \"\\F1E2\";\r\n}\r\n.fa-soccer-ball-o:before,\r\n.fa-futbol-o:before {\r\n  content: \"\\F1E3\";\r\n}\r\n.fa-tty:before {\r\n  content: \"\\F1E4\";\r\n}\r\n.fa-binoculars:before {\r\n  content: \"\\F1E5\";\r\n}\r\n.fa-plug:before {\r\n  content: \"\\F1E6\";\r\n}\r\n.fa-slideshare:before {\r\n  content: \"\\F1E7\";\r\n}\r\n.fa-twitch:before {\r\n  content: \"\\F1E8\";\r\n}\r\n.fa-yelp:before {\r\n  content: \"\\F1E9\";\r\n}\r\n.fa-newspaper-o:before {\r\n  content: \"\\F1EA\";\r\n}\r\n.fa-wifi:before {\r\n  content: \"\\F1EB\";\r\n}\r\n.fa-calculator:before {\r\n  content: \"\\F1EC\";\r\n}\r\n.fa-paypal:before {\r\n  content: \"\\F1ED\";\r\n}\r\n.fa-google-wallet:before {\r\n  content: \"\\F1EE\";\r\n}\r\n.fa-cc-visa:before {\r\n  content: \"\\F1F0\";\r\n}\r\n.fa-cc-mastercard:before {\r\n  content: \"\\F1F1\";\r\n}\r\n.fa-cc-discover:before {\r\n  content: \"\\F1F2\";\r\n}\r\n.fa-cc-amex:before {\r\n  content: \"\\F1F3\";\r\n}\r\n.fa-cc-paypal:before {\r\n  content: \"\\F1F4\";\r\n}\r\n.fa-cc-stripe:before {\r\n  content: \"\\F1F5\";\r\n}\r\n.fa-bell-slash:before {\r\n  content: \"\\F1F6\";\r\n}\r\n.fa-bell-slash-o:before {\r\n  content: \"\\F1F7\";\r\n}\r\n.fa-trash:before {\r\n  content: \"\\F1F8\";\r\n}\r\n.fa-copyright:before {\r\n  content: \"\\F1F9\";\r\n}\r\n.fa-at:before {\r\n  content: \"\\F1FA\";\r\n}\r\n.fa-eyedropper:before {\r\n  content: \"\\F1FB\";\r\n}\r\n.fa-paint-brush:before {\r\n  content: \"\\F1FC\";\r\n}\r\n.fa-birthday-cake:before {\r\n  content: \"\\F1FD\";\r\n}\r\n.fa-area-chart:before {\r\n  content: \"\\F1FE\";\r\n}\r\n.fa-pie-chart:before {\r\n  content: \"\\F200\";\r\n}\r\n.fa-line-chart:before {\r\n  content: \"\\F201\";\r\n}\r\n.fa-lastfm:before {\r\n  content: \"\\F202\";\r\n}\r\n.fa-lastfm-square:before {\r\n  content: \"\\F203\";\r\n}\r\n.fa-toggle-off:before {\r\n  content: \"\\F204\";\r\n}\r\n.fa-toggle-on:before {\r\n  content: \"\\F205\";\r\n}\r\n.fa-bicycle:before {\r\n  content: \"\\F206\";\r\n}\r\n.fa-bus:before {\r\n  content: \"\\F207\";\r\n}\r\n.fa-ioxhost:before {\r\n  content: \"\\F208\";\r\n}\r\n.fa-angellist:before {\r\n  content: \"\\F209\";\r\n}\r\n.fa-cc:before {\r\n  content: \"\\F20A\";\r\n}\r\n.fa-shekel:before,\r\n.fa-sheqel:before,\r\n.fa-ils:before {\r\n  content: \"\\F20B\";\r\n}\r\n.fa-meanpath:before {\r\n  content: \"\\F20C\";\r\n}\r\n.fa-buysellads:before {\r\n  content: \"\\F20D\";\r\n}\r\n.fa-connectdevelop:before {\r\n  content: \"\\F20E\";\r\n}\r\n.fa-dashcube:before {\r\n  content: \"\\F210\";\r\n}\r\n.fa-forumbee:before {\r\n  content: \"\\F211\";\r\n}\r\n.fa-leanpub:before {\r\n  content: \"\\F212\";\r\n}\r\n.fa-sellsy:before {\r\n  content: \"\\F213\";\r\n}\r\n.fa-shirtsinbulk:before {\r\n  content: \"\\F214\";\r\n}\r\n.fa-simplybuilt:before {\r\n  content: \"\\F215\";\r\n}\r\n.fa-skyatlas:before {\r\n  content: \"\\F216\";\r\n}\r\n.fa-cart-plus:before {\r\n  content: \"\\F217\";\r\n}\r\n.fa-cart-arrow-down:before {\r\n  content: \"\\F218\";\r\n}\r\n.fa-diamond:before {\r\n  content: \"\\F219\";\r\n}\r\n.fa-ship:before {\r\n  content: \"\\F21A\";\r\n}\r\n.fa-user-secret:before {\r\n  content: \"\\F21B\";\r\n}\r\n.fa-motorcycle:before {\r\n  content: \"\\F21C\";\r\n}\r\n.fa-street-view:before {\r\n  content: \"\\F21D\";\r\n}\r\n.fa-heartbeat:before {\r\n  content: \"\\F21E\";\r\n}\r\n.fa-venus:before {\r\n  content: \"\\F221\";\r\n}\r\n.fa-mars:before {\r\n  content: \"\\F222\";\r\n}\r\n.fa-mercury:before {\r\n  content: \"\\F223\";\r\n}\r\n.fa-intersex:before,\r\n.fa-transgender:before {\r\n  content: \"\\F224\";\r\n}\r\n.fa-transgender-alt:before {\r\n  content: \"\\F225\";\r\n}\r\n.fa-venus-double:before {\r\n  content: \"\\F226\";\r\n}\r\n.fa-mars-double:before {\r\n  content: \"\\F227\";\r\n}\r\n.fa-venus-mars:before {\r\n  content: \"\\F228\";\r\n}\r\n.fa-mars-stroke:before {\r\n  content: \"\\F229\";\r\n}\r\n.fa-mars-stroke-v:before {\r\n  content: \"\\F22A\";\r\n}\r\n.fa-mars-stroke-h:before {\r\n  content: \"\\F22B\";\r\n}\r\n.fa-neuter:before {\r\n  content: \"\\F22C\";\r\n}\r\n.fa-genderless:before {\r\n  content: \"\\F22D\";\r\n}\r\n.fa-facebook-official:before {\r\n  content: \"\\F230\";\r\n}\r\n.fa-pinterest-p:before {\r\n  content: \"\\F231\";\r\n}\r\n.fa-whatsapp:before {\r\n  content: \"\\F232\";\r\n}\r\n.fa-server:before {\r\n  content: \"\\F233\";\r\n}\r\n.fa-user-plus:before {\r\n  content: \"\\F234\";\r\n}\r\n.fa-user-times:before {\r\n  content: \"\\F235\";\r\n}\r\n.fa-hotel:before,\r\n.fa-bed:before {\r\n  content: \"\\F236\";\r\n}\r\n.fa-viacoin:before {\r\n  content: \"\\F237\";\r\n}\r\n.fa-train:before {\r\n  content: \"\\F238\";\r\n}\r\n.fa-subway:before {\r\n  content: \"\\F239\";\r\n}\r\n.fa-medium:before {\r\n  content: \"\\F23A\";\r\n}\r\n.fa-yc:before,\r\n.fa-y-combinator:before {\r\n  content: \"\\F23B\";\r\n}\r\n.fa-optin-monster:before {\r\n  content: \"\\F23C\";\r\n}\r\n.fa-opencart:before {\r\n  content: \"\\F23D\";\r\n}\r\n.fa-expeditedssl:before {\r\n  content: \"\\F23E\";\r\n}\r\n.fa-battery-4:before,\r\n.fa-battery:before,\r\n.fa-battery-full:before {\r\n  content: \"\\F240\";\r\n}\r\n.fa-battery-3:before,\r\n.fa-battery-three-quarters:before {\r\n  content: \"\\F241\";\r\n}\r\n.fa-battery-2:before,\r\n.fa-battery-half:before {\r\n  content: \"\\F242\";\r\n}\r\n.fa-battery-1:before,\r\n.fa-battery-quarter:before {\r\n  content: \"\\F243\";\r\n}\r\n.fa-battery-0:before,\r\n.fa-battery-empty:before {\r\n  content: \"\\F244\";\r\n}\r\n.fa-mouse-pointer:before {\r\n  content: \"\\F245\";\r\n}\r\n.fa-i-cursor:before {\r\n  content: \"\\F246\";\r\n}\r\n.fa-object-group:before {\r\n  content: \"\\F247\";\r\n}\r\n.fa-object-ungroup:before {\r\n  content: \"\\F248\";\r\n}\r\n.fa-sticky-note:before {\r\n  content: \"\\F249\";\r\n}\r\n.fa-sticky-note-o:before {\r\n  content: \"\\F24A\";\r\n}\r\n.fa-cc-jcb:before {\r\n  content: \"\\F24B\";\r\n}\r\n.fa-cc-diners-club:before {\r\n  content: \"\\F24C\";\r\n}\r\n.fa-clone:before {\r\n  content: \"\\F24D\";\r\n}\r\n.fa-balance-scale:before {\r\n  content: \"\\F24E\";\r\n}\r\n.fa-hourglass-o:before {\r\n  content: \"\\F250\";\r\n}\r\n.fa-hourglass-1:before,\r\n.fa-hourglass-start:before {\r\n  content: \"\\F251\";\r\n}\r\n.fa-hourglass-2:before,\r\n.fa-hourglass-half:before {\r\n  content: \"\\F252\";\r\n}\r\n.fa-hourglass-3:before,\r\n.fa-hourglass-end:before {\r\n  content: \"\\F253\";\r\n}\r\n.fa-hourglass:before {\r\n  content: \"\\F254\";\r\n}\r\n.fa-hand-grab-o:before,\r\n.fa-hand-rock-o:before {\r\n  content: \"\\F255\";\r\n}\r\n.fa-hand-stop-o:before,\r\n.fa-hand-paper-o:before {\r\n  content: \"\\F256\";\r\n}\r\n.fa-hand-scissors-o:before {\r\n  content: \"\\F257\";\r\n}\r\n.fa-hand-lizard-o:before {\r\n  content: \"\\F258\";\r\n}\r\n.fa-hand-spock-o:before {\r\n  content: \"\\F259\";\r\n}\r\n.fa-hand-pointer-o:before {\r\n  content: \"\\F25A\";\r\n}\r\n.fa-hand-peace-o:before {\r\n  content: \"\\F25B\";\r\n}\r\n.fa-trademark:before {\r\n  content: \"\\F25C\";\r\n}\r\n.fa-registered:before {\r\n  content: \"\\F25D\";\r\n}\r\n.fa-creative-commons:before {\r\n  content: \"\\F25E\";\r\n}\r\n.fa-gg:before {\r\n  content: \"\\F260\";\r\n}\r\n.fa-gg-circle:before {\r\n  content: \"\\F261\";\r\n}\r\n.fa-tripadvisor:before {\r\n  content: \"\\F262\";\r\n}\r\n.fa-odnoklassniki:before {\r\n  content: \"\\F263\";\r\n}\r\n.fa-odnoklassniki-square:before {\r\n  content: \"\\F264\";\r\n}\r\n.fa-get-pocket:before {\r\n  content: \"\\F265\";\r\n}\r\n.fa-wikipedia-w:before {\r\n  content: \"\\F266\";\r\n}\r\n.fa-safari:before {\r\n  content: \"\\F267\";\r\n}\r\n.fa-chrome:before {\r\n  content: \"\\F268\";\r\n}\r\n.fa-firefox:before {\r\n  content: \"\\F269\";\r\n}\r\n.fa-opera:before {\r\n  content: \"\\F26A\";\r\n}\r\n.fa-internet-explorer:before {\r\n  content: \"\\F26B\";\r\n}\r\n.fa-tv:before,\r\n.fa-television:before {\r\n  content: \"\\F26C\";\r\n}\r\n.fa-contao:before {\r\n  content: \"\\F26D\";\r\n}\r\n.fa-500px:before {\r\n  content: \"\\F26E\";\r\n}\r\n.fa-amazon:before {\r\n  content: \"\\F270\";\r\n}\r\n.fa-calendar-plus-o:before {\r\n  content: \"\\F271\";\r\n}\r\n.fa-calendar-minus-o:before {\r\n  content: \"\\F272\";\r\n}\r\n.fa-calendar-times-o:before {\r\n  content: \"\\F273\";\r\n}\r\n.fa-calendar-check-o:before {\r\n  content: \"\\F274\";\r\n}\r\n.fa-industry:before {\r\n  content: \"\\F275\";\r\n}\r\n.fa-map-pin:before {\r\n  content: \"\\F276\";\r\n}\r\n.fa-map-signs:before {\r\n  content: \"\\F277\";\r\n}\r\n.fa-map-o:before {\r\n  content: \"\\F278\";\r\n}\r\n.fa-map:before {\r\n  content: \"\\F279\";\r\n}\r\n.fa-commenting:before {\r\n  content: \"\\F27A\";\r\n}\r\n.fa-commenting-o:before {\r\n  content: \"\\F27B\";\r\n}\r\n.fa-houzz:before {\r\n  content: \"\\F27C\";\r\n}\r\n.fa-vimeo:before {\r\n  content: \"\\F27D\";\r\n}\r\n.fa-black-tie:before {\r\n  content: \"\\F27E\";\r\n}\r\n.fa-fonticons:before {\r\n  content: \"\\F280\";\r\n}\r\n.fa-reddit-alien:before {\r\n  content: \"\\F281\";\r\n}\r\n.fa-edge:before {\r\n  content: \"\\F282\";\r\n}\r\n.fa-credit-card-alt:before {\r\n  content: \"\\F283\";\r\n}\r\n.fa-codiepie:before {\r\n  content: \"\\F284\";\r\n}\r\n.fa-modx:before {\r\n  content: \"\\F285\";\r\n}\r\n.fa-fort-awesome:before {\r\n  content: \"\\F286\";\r\n}\r\n.fa-usb:before {\r\n  content: \"\\F287\";\r\n}\r\n.fa-product-hunt:before {\r\n  content: \"\\F288\";\r\n}\r\n.fa-mixcloud:before {\r\n  content: \"\\F289\";\r\n}\r\n.fa-scribd:before {\r\n  content: \"\\F28A\";\r\n}\r\n.fa-pause-circle:before {\r\n  content: \"\\F28B\";\r\n}\r\n.fa-pause-circle-o:before {\r\n  content: \"\\F28C\";\r\n}\r\n.fa-stop-circle:before {\r\n  content: \"\\F28D\";\r\n}\r\n.fa-stop-circle-o:before {\r\n  content: \"\\F28E\";\r\n}\r\n.fa-shopping-bag:before {\r\n  content: \"\\F290\";\r\n}\r\n.fa-shopping-basket:before {\r\n  content: \"\\F291\";\r\n}\r\n.fa-hashtag:before {\r\n  content: \"\\F292\";\r\n}\r\n.fa-bluetooth:before {\r\n  content: \"\\F293\";\r\n}\r\n.fa-bluetooth-b:before {\r\n  content: \"\\F294\";\r\n}\r\n.fa-percent:before {\r\n  content: \"\\F295\";\r\n}\r\n.fa-gitlab:before {\r\n  content: \"\\F296\";\r\n}\r\n.fa-wpbeginner:before {\r\n  content: \"\\F297\";\r\n}\r\n.fa-wpforms:before {\r\n  content: \"\\F298\";\r\n}\r\n.fa-envira:before {\r\n  content: \"\\F299\";\r\n}\r\n.fa-universal-access:before {\r\n  content: \"\\F29A\";\r\n}\r\n.fa-wheelchair-alt:before {\r\n  content: \"\\F29B\";\r\n}\r\n.fa-question-circle-o:before {\r\n  content: \"\\F29C\";\r\n}\r\n.fa-blind:before {\r\n  content: \"\\F29D\";\r\n}\r\n.fa-audio-description:before {\r\n  content: \"\\F29E\";\r\n}\r\n.fa-volume-control-phone:before {\r\n  content: \"\\F2A0\";\r\n}\r\n.fa-braille:before {\r\n  content: \"\\F2A1\";\r\n}\r\n.fa-assistive-listening-systems:before {\r\n  content: \"\\F2A2\";\r\n}\r\n.fa-asl-interpreting:before,\r\n.fa-american-sign-language-interpreting:before {\r\n  content: \"\\F2A3\";\r\n}\r\n.fa-deafness:before,\r\n.fa-hard-of-hearing:before,\r\n.fa-deaf:before {\r\n  content: \"\\F2A4\";\r\n}\r\n.fa-glide:before {\r\n  content: \"\\F2A5\";\r\n}\r\n.fa-glide-g:before {\r\n  content: \"\\F2A6\";\r\n}\r\n.fa-signing:before,\r\n.fa-sign-language:before {\r\n  content: \"\\F2A7\";\r\n}\r\n.fa-low-vision:before {\r\n  content: \"\\F2A8\";\r\n}\r\n.fa-viadeo:before {\r\n  content: \"\\F2A9\";\r\n}\r\n.fa-viadeo-square:before {\r\n  content: \"\\F2AA\";\r\n}\r\n.fa-snapchat:before {\r\n  content: \"\\F2AB\";\r\n}\r\n.fa-snapchat-ghost:before {\r\n  content: \"\\F2AC\";\r\n}\r\n.fa-snapchat-square:before {\r\n  content: \"\\F2AD\";\r\n}\r\n.fa-pied-piper:before {\r\n  content: \"\\F2AE\";\r\n}\r\n.fa-first-order:before {\r\n  content: \"\\F2B0\";\r\n}\r\n.fa-yoast:before {\r\n  content: \"\\F2B1\";\r\n}\r\n.fa-themeisle:before {\r\n  content: \"\\F2B2\";\r\n}\r\n.fa-google-plus-circle:before,\r\n.fa-google-plus-official:before {\r\n  content: \"\\F2B3\";\r\n}\r\n.fa-fa:before,\r\n.fa-font-awesome:before {\r\n  content: \"\\F2B4\";\r\n}\r\n.fa-handshake-o:before {\r\n  content: \"\\F2B5\";\r\n}\r\n.fa-envelope-open:before {\r\n  content: \"\\F2B6\";\r\n}\r\n.fa-envelope-open-o:before {\r\n  content: \"\\F2B7\";\r\n}\r\n.fa-linode:before {\r\n  content: \"\\F2B8\";\r\n}\r\n.fa-address-book:before {\r\n  content: \"\\F2B9\";\r\n}\r\n.fa-address-book-o:before {\r\n  content: \"\\F2BA\";\r\n}\r\n.fa-vcard:before,\r\n.fa-address-card:before {\r\n  content: \"\\F2BB\";\r\n}\r\n.fa-vcard-o:before,\r\n.fa-address-card-o:before {\r\n  content: \"\\F2BC\";\r\n}\r\n.fa-user-circle:before {\r\n  content: \"\\F2BD\";\r\n}\r\n.fa-user-circle-o:before {\r\n  content: \"\\F2BE\";\r\n}\r\n.fa-user-o:before {\r\n  content: \"\\F2C0\";\r\n}\r\n.fa-id-badge:before {\r\n  content: \"\\F2C1\";\r\n}\r\n.fa-drivers-license:before,\r\n.fa-id-card:before {\r\n  content: \"\\F2C2\";\r\n}\r\n.fa-drivers-license-o:before,\r\n.fa-id-card-o:before {\r\n  content: \"\\F2C3\";\r\n}\r\n.fa-quora:before {\r\n  content: \"\\F2C4\";\r\n}\r\n.fa-free-code-camp:before {\r\n  content: \"\\F2C5\";\r\n}\r\n.fa-telegram:before {\r\n  content: \"\\F2C6\";\r\n}\r\n.fa-thermometer-4:before,\r\n.fa-thermometer:before,\r\n.fa-thermometer-full:before {\r\n  content: \"\\F2C7\";\r\n}\r\n.fa-thermometer-3:before,\r\n.fa-thermometer-three-quarters:before {\r\n  content: \"\\F2C8\";\r\n}\r\n.fa-thermometer-2:before,\r\n.fa-thermometer-half:before {\r\n  content: \"\\F2C9\";\r\n}\r\n.fa-thermometer-1:before,\r\n.fa-thermometer-quarter:before {\r\n  content: \"\\F2CA\";\r\n}\r\n.fa-thermometer-0:before,\r\n.fa-thermometer-empty:before {\r\n  content: \"\\F2CB\";\r\n}\r\n.fa-shower:before {\r\n  content: \"\\F2CC\";\r\n}\r\n.fa-bathtub:before,\r\n.fa-s15:before,\r\n.fa-bath:before {\r\n  content: \"\\F2CD\";\r\n}\r\n.fa-podcast:before {\r\n  content: \"\\F2CE\";\r\n}\r\n.fa-window-maximize:before {\r\n  content: \"\\F2D0\";\r\n}\r\n.fa-window-minimize:before {\r\n  content: \"\\F2D1\";\r\n}\r\n.fa-window-restore:before {\r\n  content: \"\\F2D2\";\r\n}\r\n.fa-times-rectangle:before,\r\n.fa-window-close:before {\r\n  content: \"\\F2D3\";\r\n}\r\n.fa-times-rectangle-o:before,\r\n.fa-window-close-o:before {\r\n  content: \"\\F2D4\";\r\n}\r\n.fa-bandcamp:before {\r\n  content: \"\\F2D5\";\r\n}\r\n.fa-grav:before {\r\n  content: \"\\F2D6\";\r\n}\r\n.fa-etsy:before {\r\n  content: \"\\F2D7\";\r\n}\r\n.fa-imdb:before {\r\n  content: \"\\F2D8\";\r\n}\r\n.fa-ravelry:before {\r\n  content: \"\\F2D9\";\r\n}\r\n.fa-eercast:before {\r\n  content: \"\\F2DA\";\r\n}\r\n.fa-microchip:before {\r\n  content: \"\\F2DB\";\r\n}\r\n.fa-snowflake-o:before {\r\n  content: \"\\F2DC\";\r\n}\r\n.fa-superpowers:before {\r\n  content: \"\\F2DD\";\r\n}\r\n.fa-wpexplorer:before {\r\n  content: \"\\F2DE\";\r\n}\r\n.fa-meetup:before {\r\n  content: \"\\F2E0\";\r\n}\r\n.sr-only {\r\n  position: absolute;\r\n  width: 1px;\r\n  height: 1px;\r\n  padding: 0;\r\n  margin: -1px;\r\n  overflow: hidden;\r\n  clip: rect(0, 0, 0, 0);\r\n  border: 0;\r\n}\r\n.sr-only-focusable:active,\r\n.sr-only-focusable:focus {\r\n  position: static;\r\n  width: auto;\r\n  height: auto;\r\n  margin: 0;\r\n  overflow: visible;\r\n  clip: auto;\r\n}\r\n", ""]);
+exports.push([module.i, "/*!\r\n *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome\r\n *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)\r\n */\r\n/* FONT PATH\r\n * -------------------------- */\r\n@font-face {\r\n  font-family: 'FontAwesome';\r\n  src: url(" + __webpack_require__(464) + ");\r\n  font-weight: normal;\r\n  font-style: normal;\r\n}\r\n.fa {\r\n  padding-top: 5px;\r\n  display: inline-block;\r\n  font: normal normal normal 14px/1 FontAwesome;\r\n  font-size: inherit;\r\n  text-rendering: auto;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n}\r\n/* makes the font 33% larger relative to the icon container */\r\n.fa-lg {\r\n  font-size: 1.33333333em;\r\n  line-height: 0.75em;\r\n  vertical-align: -15%;\r\n}\r\n.fa-2x {\r\n  font-size: 2em;\r\n}\r\n.fa-3x {\r\n  font-size: 3em;\r\n}\r\n.fa-4x {\r\n  font-size: 4em;\r\n}\r\n.fa-5x {\r\n  font-size: 5em;\r\n}\r\n.fa-fw {\r\n  width: 1.28571429em;\r\n  text-align: center;\r\n}\r\n.fa-ul {\r\n  padding-left: 0;\r\n  margin-left: 2.14285714em;\r\n  list-style-type: none;\r\n}\r\n.fa-ul > li {\r\n  position: relative;\r\n}\r\n.fa-li {\r\n  position: absolute;\r\n  left: -2.14285714em;\r\n  width: 2.14285714em;\r\n  top: 0.14285714em;\r\n  text-align: center;\r\n}\r\n.fa-li.fa-lg {\r\n  left: -1.85714286em;\r\n}\r\n.fa-border {\r\n  padding: .2em .25em .15em;\r\n  border: solid 0.08em #eeeeee;\r\n  border-radius: .1em;\r\n}\r\n.fa-pull-left {\r\n  float: left;\r\n}\r\n.fa-pull-right {\r\n  float: right;\r\n}\r\n.fa.fa-pull-left {\r\n  margin-right: .3em;\r\n}\r\n.fa.fa-pull-right {\r\n  margin-left: .3em;\r\n}\r\n/* Deprecated as of 4.4.0 */\r\n.pull-right {\r\n  float: right;\r\n}\r\n.pull-left {\r\n  float: left;\r\n}\r\n.fa.pull-left {\r\n  margin-right: .3em;\r\n}\r\n.fa.pull-right {\r\n  margin-left: .3em;\r\n}\r\n.fa-spin {\r\n  -webkit-animation: fa-spin 2s infinite linear;\r\n  animation: fa-spin 2s infinite linear;\r\n}\r\n.fa-pulse {\r\n  -webkit-animation: fa-spin 1s infinite steps(8);\r\n  animation: fa-spin 1s infinite steps(8);\r\n}\r\n@-webkit-keyframes fa-spin {\r\n  0% {\r\n    -webkit-transform: rotate(0deg);\r\n    transform: rotate(0deg);\r\n  }\r\n  100% {\r\n    -webkit-transform: rotate(359deg);\r\n    transform: rotate(359deg);\r\n  }\r\n}\r\n@keyframes fa-spin {\r\n  0% {\r\n    -webkit-transform: rotate(0deg);\r\n    transform: rotate(0deg);\r\n  }\r\n  100% {\r\n    -webkit-transform: rotate(359deg);\r\n    transform: rotate(359deg);\r\n  }\r\n}\r\n.fa-rotate-90 {\r\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)\";\r\n  -webkit-transform: rotate(90deg);\r\n  -ms-transform: rotate(90deg);\r\n  transform: rotate(90deg);\r\n}\r\n.fa-rotate-180 {\r\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)\";\r\n  -webkit-transform: rotate(180deg);\r\n  -ms-transform: rotate(180deg);\r\n  transform: rotate(180deg);\r\n}\r\n.fa-rotate-270 {\r\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)\";\r\n  -webkit-transform: rotate(270deg);\r\n  -ms-transform: rotate(270deg);\r\n  transform: rotate(270deg);\r\n}\r\n.fa-flip-horizontal {\r\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)\";\r\n  -webkit-transform: scale(-1, 1);\r\n  -ms-transform: scale(-1, 1);\r\n  transform: scale(-1, 1);\r\n}\r\n.fa-flip-vertical {\r\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";\r\n  -webkit-transform: scale(1, -1);\r\n  -ms-transform: scale(1, -1);\r\n  transform: scale(1, -1);\r\n}\r\n:root .fa-rotate-90,\r\n:root .fa-rotate-180,\r\n:root .fa-rotate-270,\r\n:root .fa-flip-horizontal,\r\n:root .fa-flip-vertical {\r\n  filter: none;\r\n}\r\n.fa-stack {\r\n  position: relative;\r\n  display: inline-block;\r\n  width: 2em;\r\n  height: 2em;\r\n  line-height: 2em;\r\n  vertical-align: middle;\r\n}\r\n.fa-stack-1x,\r\n.fa-stack-2x {\r\n  position: absolute;\r\n  left: 0;\r\n  width: 100%;\r\n  text-align: center;\r\n}\r\n.fa-stack-1x {\r\n  line-height: inherit;\r\n}\r\n.fa-stack-2x {\r\n  font-size: 2em;\r\n}\r\n.fa-inverse {\r\n  color: #ffffff;\r\n}\r\n/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen\r\n   readers do not read off random characters that represent icons */\r\n.fa-glass:before {\r\n  content: \"\\F000\";\r\n}\r\n.fa-music:before {\r\n  content: \"\\F001\";\r\n}\r\n.fa-search:before {\r\n  content: \"\\F002\";\r\n}\r\n.fa-envelope-o:before {\r\n  content: \"\\F003\";\r\n}\r\n.fa-heart:before {\r\n  content: \"\\F004\";\r\n}\r\n.fa-star:before {\r\n  content: \"\\F005\";\r\n}\r\n.fa-star-o:before {\r\n  content: \"\\F006\";\r\n}\r\n.fa-user:before {\r\n  content: \"\\F007\";\r\n}\r\n.fa-film:before {\r\n  content: \"\\F008\";\r\n}\r\n.fa-th-large:before {\r\n  content: \"\\F009\";\r\n}\r\n.fa-th:before {\r\n  content: \"\\F00A\";\r\n}\r\n.fa-th-list:before {\r\n  content: \"\\F00B\";\r\n}\r\n.fa-check:before {\r\n  content: \"\\F00C\";\r\n}\r\n.fa-remove:before,\r\n.fa-close:before,\r\n.fa-times:before {\r\n  content: \"\\F00D\";\r\n}\r\n.fa-search-plus:before {\r\n  content: \"\\F00E\";\r\n}\r\n.fa-search-minus:before {\r\n  content: \"\\F010\";\r\n}\r\n.fa-power-off:before {\r\n  content: \"\\F011\";\r\n}\r\n.fa-signal:before {\r\n  content: \"\\F012\";\r\n}\r\n.fa-gear:before,\r\n.fa-cog:before {\r\n  content: \"\\F013\";\r\n}\r\n.fa-trash-o:before {\r\n  content: \"\\F014\";\r\n}\r\n.fa-home:before {\r\n  content: \"\\F015\";\r\n}\r\n.fa-file-o:before {\r\n  content: \"\\F016\";\r\n}\r\n.fa-clock-o:before {\r\n  content: \"\\F017\";\r\n}\r\n.fa-road:before {\r\n  content: \"\\F018\";\r\n}\r\n.fa-download:before {\r\n  content: \"\\F019\";\r\n}\r\n.fa-arrow-circle-o-down:before {\r\n  content: \"\\F01A\";\r\n}\r\n.fa-arrow-circle-o-up:before {\r\n  content: \"\\F01B\";\r\n}\r\n.fa-inbox:before {\r\n  content: \"\\F01C\";\r\n}\r\n.fa-play-circle-o:before {\r\n  content: \"\\F01D\";\r\n}\r\n.fa-rotate-right:before,\r\n.fa-repeat:before {\r\n  content: \"\\F01E\";\r\n}\r\n.fa-refresh:before {\r\n  content: \"\\F021\";\r\n}\r\n.fa-list-alt:before {\r\n  content: \"\\F022\";\r\n}\r\n.fa-lock:before {\r\n  content: \"\\F023\";\r\n}\r\n.fa-flag:before {\r\n  content: \"\\F024\";\r\n}\r\n.fa-headphones:before {\r\n  content: \"\\F025\";\r\n}\r\n.fa-volume-off:before {\r\n  content: \"\\F026\";\r\n}\r\n.fa-volume-down:before {\r\n  content: \"\\F027\";\r\n}\r\n.fa-volume-up:before {\r\n  content: \"\\F028\";\r\n}\r\n.fa-qrcode:before {\r\n  content: \"\\F029\";\r\n}\r\n.fa-barcode:before {\r\n  content: \"\\F02A\";\r\n}\r\n.fa-tag:before {\r\n  content: \"\\F02B\";\r\n}\r\n.fa-tags:before {\r\n  content: \"\\F02C\";\r\n}\r\n.fa-book:before {\r\n  content: \"\\F02D\";\r\n}\r\n.fa-bookmark:before {\r\n  content: \"\\F02E\";\r\n}\r\n.fa-print:before {\r\n  content: \"\\F02F\";\r\n}\r\n.fa-camera:before {\r\n  content: \"\\F030\";\r\n}\r\n.fa-font:before {\r\n  content: \"\\F031\";\r\n}\r\n.fa-bold:before {\r\n  content: \"\\F032\";\r\n}\r\n.fa-italic:before {\r\n  content: \"\\F033\";\r\n}\r\n.fa-text-height:before {\r\n  content: \"\\F034\";\r\n}\r\n.fa-text-width:before {\r\n  content: \"\\F035\";\r\n}\r\n.fa-align-left:before {\r\n  content: \"\\F036\";\r\n}\r\n.fa-align-center:before {\r\n  content: \"\\F037\";\r\n}\r\n.fa-align-right:before {\r\n  content: \"\\F038\";\r\n}\r\n.fa-align-justify:before {\r\n  content: \"\\F039\";\r\n}\r\n.fa-list:before {\r\n  content: \"\\F03A\";\r\n}\r\n.fa-dedent:before,\r\n.fa-outdent:before {\r\n  content: \"\\F03B\";\r\n}\r\n.fa-indent:before {\r\n  content: \"\\F03C\";\r\n}\r\n.fa-video-camera:before {\r\n  content: \"\\F03D\";\r\n}\r\n.fa-photo:before,\r\n.fa-image:before,\r\n.fa-picture-o:before {\r\n  content: \"\\F03E\";\r\n}\r\n.fa-pencil:before {\r\n  content: \"\\F040\";\r\n}\r\n.fa-map-marker:before {\r\n  content: \"\\F041\";\r\n}\r\n.fa-adjust:before {\r\n  content: \"\\F042\";\r\n}\r\n.fa-tint:before {\r\n  content: \"\\F043\";\r\n}\r\n.fa-edit:before,\r\n.fa-pencil-square-o:before {\r\n  content: \"\\F044\";\r\n}\r\n.fa-share-square-o:before {\r\n  content: \"\\F045\";\r\n}\r\n.fa-check-square-o:before {\r\n  content: \"\\F046\";\r\n}\r\n.fa-arrows:before {\r\n  content: \"\\F047\";\r\n}\r\n.fa-step-backward:before {\r\n  content: \"\\F048\";\r\n}\r\n.fa-fast-backward:before {\r\n  content: \"\\F049\";\r\n}\r\n.fa-backward:before {\r\n  content: \"\\F04A\";\r\n}\r\n.fa-play:before {\r\n  content: \"\\F04B\";\r\n}\r\n.fa-pause:before {\r\n  content: \"\\F04C\";\r\n}\r\n.fa-stop:before {\r\n  content: \"\\F04D\";\r\n}\r\n.fa-forward:before {\r\n  content: \"\\F04E\";\r\n}\r\n.fa-fast-forward:before {\r\n  content: \"\\F050\";\r\n}\r\n.fa-step-forward:before {\r\n  content: \"\\F051\";\r\n}\r\n.fa-eject:before {\r\n  content: \"\\F052\";\r\n}\r\n.fa-chevron-left:before {\r\n  content: \"\\F053\";\r\n}\r\n.fa-chevron-right:before {\r\n  content: \"\\F054\";\r\n}\r\n.fa-plus-circle:before {\r\n  content: \"\\F055\";\r\n}\r\n.fa-minus-circle:before {\r\n  content: \"\\F056\";\r\n}\r\n.fa-times-circle:before {\r\n  content: \"\\F057\";\r\n}\r\n.fa-check-circle:before {\r\n  content: \"\\F058\";\r\n}\r\n.fa-question-circle:before {\r\n  content: \"\\F059\";\r\n}\r\n.fa-info-circle:before {\r\n  content: \"\\F05A\";\r\n}\r\n.fa-crosshairs:before {\r\n  content: \"\\F05B\";\r\n}\r\n.fa-times-circle-o:before {\r\n  content: \"\\F05C\";\r\n}\r\n.fa-check-circle-o:before {\r\n  content: \"\\F05D\";\r\n}\r\n.fa-ban:before {\r\n  content: \"\\F05E\";\r\n}\r\n.fa-arrow-left:before {\r\n  content: \"\\F060\";\r\n}\r\n.fa-arrow-right:before {\r\n  content: \"\\F061\";\r\n}\r\n.fa-arrow-up:before {\r\n  content: \"\\F062\";\r\n}\r\n.fa-arrow-down:before {\r\n  content: \"\\F063\";\r\n}\r\n.fa-mail-forward:before,\r\n.fa-share:before {\r\n  content: \"\\F064\";\r\n}\r\n.fa-expand:before {\r\n  content: \"\\F065\";\r\n}\r\n.fa-compress:before {\r\n  content: \"\\F066\";\r\n}\r\n.fa-plus:before {\r\n  content: \"\\F067\";\r\n}\r\n.fa-minus:before {\r\n  content: \"\\F068\";\r\n}\r\n.fa-asterisk:before {\r\n  content: \"\\F069\";\r\n}\r\n.fa-exclamation-circle:before {\r\n  content: \"\\F06A\";\r\n}\r\n.fa-gift:before {\r\n  content: \"\\F06B\";\r\n}\r\n.fa-leaf:before {\r\n  content: \"\\F06C\";\r\n}\r\n.fa-fire:before {\r\n  content: \"\\F06D\";\r\n}\r\n.fa-eye:before {\r\n  content: \"\\F06E\";\r\n}\r\n.fa-eye-slash:before {\r\n  content: \"\\F070\";\r\n}\r\n.fa-warning:before,\r\n.fa-exclamation-triangle:before {\r\n  content: \"\\F071\";\r\n}\r\n.fa-plane:before {\r\n  content: \"\\F072\";\r\n}\r\n.fa-calendar:before {\r\n  content: \"\\F073\";\r\n}\r\n.fa-random:before {\r\n  content: \"\\F074\";\r\n}\r\n.fa-comment:before {\r\n  content: \"\\F075\";\r\n}\r\n.fa-magnet:before {\r\n  content: \"\\F076\";\r\n}\r\n.fa-chevron-up:before {\r\n  content: \"\\F077\";\r\n}\r\n.fa-chevron-down:before {\r\n  content: \"\\F078\";\r\n}\r\n.fa-retweet:before {\r\n  content: \"\\F079\";\r\n}\r\n.fa-shopping-cart:before {\r\n  content: \"\\F07A\";\r\n}\r\n.fa-folder:before {\r\n  content: \"\\F07B\";\r\n}\r\n.fa-folder-open:before {\r\n  content: \"\\F07C\";\r\n}\r\n.fa-arrows-v:before {\r\n  content: \"\\F07D\";\r\n}\r\n.fa-arrows-h:before {\r\n  content: \"\\F07E\";\r\n}\r\n.fa-bar-chart-o:before,\r\n.fa-bar-chart:before {\r\n  content: \"\\F080\";\r\n}\r\n.fa-twitter-square:before {\r\n  content: \"\\F081\";\r\n}\r\n.fa-facebook-square:before {\r\n  content: \"\\F082\";\r\n}\r\n.fa-camera-retro:before {\r\n  content: \"\\F083\";\r\n}\r\n.fa-key:before {\r\n  content: \"\\F084\";\r\n}\r\n.fa-gears:before,\r\n.fa-cogs:before {\r\n  content: \"\\F085\";\r\n}\r\n.fa-comments:before {\r\n  content: \"\\F086\";\r\n}\r\n.fa-thumbs-o-up:before {\r\n  content: \"\\F087\";\r\n}\r\n.fa-thumbs-o-down:before {\r\n  content: \"\\F088\";\r\n}\r\n.fa-star-half:before {\r\n  content: \"\\F089\";\r\n}\r\n.fa-heart-o:before {\r\n  content: \"\\F08A\";\r\n}\r\n.fa-sign-out:before {\r\n  content: \"\\F08B\";\r\n}\r\n.fa-linkedin-square:before {\r\n  content: \"\\F08C\";\r\n}\r\n.fa-thumb-tack:before {\r\n  content: \"\\F08D\";\r\n}\r\n.fa-external-link:before {\r\n  content: \"\\F08E\";\r\n}\r\n.fa-sign-in:before {\r\n  content: \"\\F090\";\r\n}\r\n.fa-trophy:before {\r\n  content: \"\\F091\";\r\n}\r\n.fa-github-square:before {\r\n  content: \"\\F092\";\r\n}\r\n.fa-upload:before {\r\n  content: \"\\F093\";\r\n}\r\n.fa-lemon-o:before {\r\n  content: \"\\F094\";\r\n}\r\n.fa-phone:before {\r\n  content: \"\\F095\";\r\n}\r\n.fa-square-o:before {\r\n  content: \"\\F096\";\r\n}\r\n.fa-bookmark-o:before {\r\n  content: \"\\F097\";\r\n}\r\n.fa-phone-square:before {\r\n  content: \"\\F098\";\r\n}\r\n.fa-twitter:before {\r\n  content: \"\\F099\";\r\n}\r\n.fa-facebook-f:before,\r\n.fa-facebook:before {\r\n  content: \"\\F09A\";\r\n}\r\n.fa-github:before {\r\n  content: \"\\F09B\";\r\n}\r\n.fa-unlock:before {\r\n  content: \"\\F09C\";\r\n}\r\n.fa-credit-card:before {\r\n  content: \"\\F09D\";\r\n}\r\n.fa-feed:before,\r\n.fa-rss:before {\r\n  content: \"\\F09E\";\r\n}\r\n.fa-hdd-o:before {\r\n  content: \"\\F0A0\";\r\n}\r\n.fa-bullhorn:before {\r\n  content: \"\\F0A1\";\r\n}\r\n.fa-bell:before {\r\n  content: \"\\F0F3\";\r\n}\r\n.fa-certificate:before {\r\n  content: \"\\F0A3\";\r\n}\r\n.fa-hand-o-right:before {\r\n  content: \"\\F0A4\";\r\n}\r\n.fa-hand-o-left:before {\r\n  content: \"\\F0A5\";\r\n}\r\n.fa-hand-o-up:before {\r\n  content: \"\\F0A6\";\r\n}\r\n.fa-hand-o-down:before {\r\n  content: \"\\F0A7\";\r\n}\r\n.fa-arrow-circle-left:before {\r\n  content: \"\\F0A8\";\r\n}\r\n.fa-arrow-circle-right:before {\r\n  content: \"\\F0A9\";\r\n}\r\n.fa-arrow-circle-up:before {\r\n  content: \"\\F0AA\";\r\n}\r\n.fa-arrow-circle-down:before {\r\n  content: \"\\F0AB\";\r\n}\r\n.fa-globe:before {\r\n  content: \"\\F0AC\";\r\n}\r\n.fa-wrench:before {\r\n  content: \"\\F0AD\";\r\n}\r\n.fa-tasks:before {\r\n  content: \"\\F0AE\";\r\n}\r\n.fa-filter:before {\r\n  content: \"\\F0B0\";\r\n}\r\n.fa-briefcase:before {\r\n  content: \"\\F0B1\";\r\n}\r\n.fa-arrows-alt:before {\r\n  content: \"\\F0B2\";\r\n}\r\n.fa-group:before,\r\n.fa-users:before {\r\n  content: \"\\F0C0\";\r\n}\r\n.fa-chain:before,\r\n.fa-link:before {\r\n  content: \"\\F0C1\";\r\n}\r\n.fa-cloud:before {\r\n  content: \"\\F0C2\";\r\n}\r\n.fa-flask:before {\r\n  content: \"\\F0C3\";\r\n}\r\n.fa-cut:before,\r\n.fa-scissors:before {\r\n  content: \"\\F0C4\";\r\n}\r\n.fa-copy:before,\r\n.fa-files-o:before {\r\n  content: \"\\F0C5\";\r\n}\r\n.fa-paperclip:before {\r\n  content: \"\\F0C6\";\r\n}\r\n.fa-save:before,\r\n.fa-floppy-o:before {\r\n  content: \"\\F0C7\";\r\n}\r\n.fa-square:before {\r\n  content: \"\\F0C8\";\r\n}\r\n.fa-navicon:before,\r\n.fa-reorder:before,\r\n.fa-bars:before {\r\n  content: \"\\F0C9\";\r\n}\r\n.fa-list-ul:before {\r\n  content: \"\\F0CA\";\r\n}\r\n.fa-list-ol:before {\r\n  content: \"\\F0CB\";\r\n}\r\n.fa-strikethrough:before {\r\n  content: \"\\F0CC\";\r\n}\r\n.fa-underline:before {\r\n  content: \"\\F0CD\";\r\n}\r\n.fa-table:before {\r\n  content: \"\\F0CE\";\r\n}\r\n.fa-magic:before {\r\n  content: \"\\F0D0\";\r\n}\r\n.fa-truck:before {\r\n  content: \"\\F0D1\";\r\n}\r\n.fa-pinterest:before {\r\n  content: \"\\F0D2\";\r\n}\r\n.fa-pinterest-square:before {\r\n  content: \"\\F0D3\";\r\n}\r\n.fa-google-plus-square:before {\r\n  content: \"\\F0D4\";\r\n}\r\n.fa-google-plus:before {\r\n  content: \"\\F0D5\";\r\n}\r\n.fa-money:before {\r\n  content: \"\\F0D6\";\r\n}\r\n.fa-caret-down:before {\r\n  content: \"\\F0D7\";\r\n}\r\n.fa-caret-up:before {\r\n  content: \"\\F0D8\";\r\n}\r\n.fa-caret-left:before {\r\n  content: \"\\F0D9\";\r\n}\r\n.fa-caret-right:before {\r\n  content: \"\\F0DA\";\r\n}\r\n.fa-columns:before {\r\n  content: \"\\F0DB\";\r\n}\r\n.fa-unsorted:before,\r\n.fa-sort:before {\r\n  content: \"\\F0DC\";\r\n}\r\n.fa-sort-down:before,\r\n.fa-sort-desc:before {\r\n  content: \"\\F0DD\";\r\n}\r\n.fa-sort-up:before,\r\n.fa-sort-asc:before {\r\n  content: \"\\F0DE\";\r\n}\r\n.fa-envelope:before {\r\n  content: \"\\F0E0\";\r\n}\r\n.fa-linkedin:before {\r\n  content: \"\\F0E1\";\r\n}\r\n.fa-rotate-left:before,\r\n.fa-undo:before {\r\n  content: \"\\F0E2\";\r\n}\r\n.fa-legal:before,\r\n.fa-gavel:before {\r\n  content: \"\\F0E3\";\r\n}\r\n.fa-dashboard:before,\r\n.fa-tachometer:before {\r\n  content: \"\\F0E4\";\r\n}\r\n.fa-comment-o:before {\r\n  content: \"\\F0E5\";\r\n}\r\n.fa-comments-o:before {\r\n  content: \"\\F0E6\";\r\n}\r\n.fa-flash:before,\r\n.fa-bolt:before {\r\n  content: \"\\F0E7\";\r\n}\r\n.fa-sitemap:before {\r\n  content: \"\\F0E8\";\r\n}\r\n.fa-umbrella:before {\r\n  content: \"\\F0E9\";\r\n}\r\n.fa-paste:before,\r\n.fa-clipboard:before {\r\n  content: \"\\F0EA\";\r\n}\r\n.fa-lightbulb-o:before {\r\n  content: \"\\F0EB\";\r\n}\r\n.fa-exchange:before {\r\n  content: \"\\F0EC\";\r\n}\r\n.fa-cloud-download:before {\r\n  content: \"\\F0ED\";\r\n}\r\n.fa-cloud-upload:before {\r\n  content: \"\\F0EE\";\r\n}\r\n.fa-user-md:before {\r\n  content: \"\\F0F0\";\r\n}\r\n.fa-stethoscope:before {\r\n  content: \"\\F0F1\";\r\n}\r\n.fa-suitcase:before {\r\n  content: \"\\F0F2\";\r\n}\r\n.fa-bell-o:before {\r\n  content: \"\\F0A2\";\r\n}\r\n.fa-coffee:before {\r\n  content: \"\\F0F4\";\r\n}\r\n.fa-cutlery:before {\r\n  content: \"\\F0F5\";\r\n}\r\n.fa-file-text-o:before {\r\n  content: \"\\F0F6\";\r\n}\r\n.fa-building-o:before {\r\n  content: \"\\F0F7\";\r\n}\r\n.fa-hospital-o:before {\r\n  content: \"\\F0F8\";\r\n}\r\n.fa-ambulance:before {\r\n  content: \"\\F0F9\";\r\n}\r\n.fa-medkit:before {\r\n  content: \"\\F0FA\";\r\n}\r\n.fa-fighter-jet:before {\r\n  content: \"\\F0FB\";\r\n}\r\n.fa-beer:before {\r\n  content: \"\\F0FC\";\r\n}\r\n.fa-h-square:before {\r\n  content: \"\\F0FD\";\r\n}\r\n.fa-plus-square:before {\r\n  content: \"\\F0FE\";\r\n}\r\n.fa-angle-double-left:before {\r\n  content: \"\\F100\";\r\n}\r\n.fa-angle-double-right:before {\r\n  content: \"\\F101\";\r\n}\r\n.fa-angle-double-up:before {\r\n  content: \"\\F102\";\r\n}\r\n.fa-angle-double-down:before {\r\n  content: \"\\F103\";\r\n}\r\n.fa-angle-left:before {\r\n  content: \"\\F104\";\r\n}\r\n.fa-angle-right:before {\r\n  content: \"\\F105\";\r\n}\r\n.fa-angle-up:before {\r\n  content: \"\\F106\";\r\n}\r\n.fa-angle-down:before {\r\n  content: \"\\F107\";\r\n}\r\n.fa-desktop:before {\r\n  content: \"\\F108\";\r\n}\r\n.fa-laptop:before {\r\n  content: \"\\F109\";\r\n}\r\n.fa-tablet:before {\r\n  content: \"\\F10A\";\r\n}\r\n.fa-mobile-phone:before,\r\n.fa-mobile:before {\r\n  content: \"\\F10B\";\r\n}\r\n.fa-circle-o:before {\r\n  content: \"\\F10C\";\r\n}\r\n.fa-quote-left:before {\r\n  content: \"\\F10D\";\r\n}\r\n.fa-quote-right:before {\r\n  content: \"\\F10E\";\r\n}\r\n.fa-spinner:before {\r\n  content: \"\\F110\";\r\n}\r\n.fa-circle:before {\r\n  content: \"\\F111\";\r\n}\r\n.fa-mail-reply:before,\r\n.fa-reply:before {\r\n  content: \"\\F112\";\r\n}\r\n.fa-github-alt:before {\r\n  content: \"\\F113\";\r\n}\r\n.fa-folder-o:before {\r\n  content: \"\\F114\";\r\n}\r\n.fa-folder-open-o:before {\r\n  content: \"\\F115\";\r\n}\r\n.fa-smile-o:before {\r\n  content: \"\\F118\";\r\n}\r\n.fa-frown-o:before {\r\n  content: \"\\F119\";\r\n}\r\n.fa-meh-o:before {\r\n  content: \"\\F11A\";\r\n}\r\n.fa-gamepad:before {\r\n  content: \"\\F11B\";\r\n}\r\n.fa-keyboard-o:before {\r\n  content: \"\\F11C\";\r\n}\r\n.fa-flag-o:before {\r\n  content: \"\\F11D\";\r\n}\r\n.fa-flag-checkered:before {\r\n  content: \"\\F11E\";\r\n}\r\n.fa-terminal:before {\r\n  content: \"\\F120\";\r\n}\r\n.fa-code:before {\r\n  content: \"\\F121\";\r\n}\r\n.fa-mail-reply-all:before,\r\n.fa-reply-all:before {\r\n  content: \"\\F122\";\r\n}\r\n.fa-star-half-empty:before,\r\n.fa-star-half-full:before,\r\n.fa-star-half-o:before {\r\n  content: \"\\F123\";\r\n}\r\n.fa-location-arrow:before {\r\n  content: \"\\F124\";\r\n}\r\n.fa-crop:before {\r\n  content: \"\\F125\";\r\n}\r\n.fa-code-fork:before {\r\n  content: \"\\F126\";\r\n}\r\n.fa-unlink:before,\r\n.fa-chain-broken:before {\r\n  content: \"\\F127\";\r\n}\r\n.fa-question:before {\r\n  content: \"\\F128\";\r\n}\r\n.fa-info:before {\r\n  content: \"\\F129\";\r\n}\r\n.fa-exclamation:before {\r\n  content: \"\\F12A\";\r\n}\r\n.fa-superscript:before {\r\n  content: \"\\F12B\";\r\n}\r\n.fa-subscript:before {\r\n  content: \"\\F12C\";\r\n}\r\n.fa-eraser:before {\r\n  content: \"\\F12D\";\r\n}\r\n.fa-puzzle-piece:before {\r\n  content: \"\\F12E\";\r\n}\r\n.fa-microphone:before {\r\n  content: \"\\F130\";\r\n}\r\n.fa-microphone-slash:before {\r\n  content: \"\\F131\";\r\n}\r\n.fa-shield:before {\r\n  content: \"\\F132\";\r\n}\r\n.fa-calendar-o:before {\r\n  content: \"\\F133\";\r\n}\r\n.fa-fire-extinguisher:before {\r\n  content: \"\\F134\";\r\n}\r\n.fa-rocket:before {\r\n  content: \"\\F135\";\r\n}\r\n.fa-maxcdn:before {\r\n  content: \"\\F136\";\r\n}\r\n.fa-chevron-circle-left:before {\r\n  content: \"\\F137\";\r\n}\r\n.fa-chevron-circle-right:before {\r\n  content: \"\\F138\";\r\n}\r\n.fa-chevron-circle-up:before {\r\n  content: \"\\F139\";\r\n}\r\n.fa-chevron-circle-down:before {\r\n  content: \"\\F13A\";\r\n}\r\n.fa-html5:before {\r\n  content: \"\\F13B\";\r\n}\r\n.fa-css3:before {\r\n  content: \"\\F13C\";\r\n}\r\n.fa-anchor:before {\r\n  content: \"\\F13D\";\r\n}\r\n.fa-unlock-alt:before {\r\n  content: \"\\F13E\";\r\n}\r\n.fa-bullseye:before {\r\n  content: \"\\F140\";\r\n}\r\n.fa-ellipsis-h:before {\r\n  content: \"\\F141\";\r\n}\r\n.fa-ellipsis-v:before {\r\n  content: \"\\F142\";\r\n}\r\n.fa-rss-square:before {\r\n  content: \"\\F143\";\r\n}\r\n.fa-play-circle:before {\r\n  content: \"\\F144\";\r\n}\r\n.fa-ticket:before {\r\n  content: \"\\F145\";\r\n}\r\n.fa-minus-square:before {\r\n  content: \"\\F146\";\r\n}\r\n.fa-minus-square-o:before {\r\n  content: \"\\F147\";\r\n}\r\n.fa-level-up:before {\r\n  content: \"\\F148\";\r\n}\r\n.fa-level-down:before {\r\n  content: \"\\F149\";\r\n}\r\n.fa-check-square:before {\r\n  content: \"\\F14A\";\r\n}\r\n.fa-pencil-square:before {\r\n  content: \"\\F14B\";\r\n}\r\n.fa-external-link-square:before {\r\n  content: \"\\F14C\";\r\n}\r\n.fa-share-square:before {\r\n  content: \"\\F14D\";\r\n}\r\n.fa-compass:before {\r\n  content: \"\\F14E\";\r\n}\r\n.fa-toggle-down:before,\r\n.fa-caret-square-o-down:before {\r\n  content: \"\\F150\";\r\n}\r\n.fa-toggle-up:before,\r\n.fa-caret-square-o-up:before {\r\n  content: \"\\F151\";\r\n}\r\n.fa-toggle-right:before,\r\n.fa-caret-square-o-right:before {\r\n  content: \"\\F152\";\r\n}\r\n.fa-euro:before,\r\n.fa-eur:before {\r\n  content: \"\\F153\";\r\n}\r\n.fa-gbp:before {\r\n  content: \"\\F154\";\r\n}\r\n.fa-dollar:before,\r\n.fa-usd:before {\r\n  content: \"\\F155\";\r\n}\r\n.fa-rupee:before,\r\n.fa-inr:before {\r\n  content: \"\\F156\";\r\n}\r\n.fa-cny:before,\r\n.fa-rmb:before,\r\n.fa-yen:before,\r\n.fa-jpy:before {\r\n  content: \"\\F157\";\r\n}\r\n.fa-ruble:before,\r\n.fa-rouble:before,\r\n.fa-rub:before {\r\n  content: \"\\F158\";\r\n}\r\n.fa-won:before,\r\n.fa-krw:before {\r\n  content: \"\\F159\";\r\n}\r\n.fa-bitcoin:before,\r\n.fa-btc:before {\r\n  content: \"\\F15A\";\r\n}\r\n.fa-file:before {\r\n  content: \"\\F15B\";\r\n}\r\n.fa-file-text:before {\r\n  content: \"\\F15C\";\r\n}\r\n.fa-sort-alpha-asc:before {\r\n  content: \"\\F15D\";\r\n}\r\n.fa-sort-alpha-desc:before {\r\n  content: \"\\F15E\";\r\n}\r\n.fa-sort-amount-asc:before {\r\n  content: \"\\F160\";\r\n}\r\n.fa-sort-amount-desc:before {\r\n  content: \"\\F161\";\r\n}\r\n.fa-sort-numeric-asc:before {\r\n  content: \"\\F162\";\r\n}\r\n.fa-sort-numeric-desc:before {\r\n  content: \"\\F163\";\r\n}\r\n.fa-thumbs-up:before {\r\n  content: \"\\F164\";\r\n}\r\n.fa-thumbs-down:before {\r\n  content: \"\\F165\";\r\n}\r\n.fa-youtube-square:before {\r\n  content: \"\\F166\";\r\n}\r\n.fa-youtube:before {\r\n  content: \"\\F167\";\r\n}\r\n.fa-xing:before {\r\n  content: \"\\F168\";\r\n}\r\n.fa-xing-square:before {\r\n  content: \"\\F169\";\r\n}\r\n.fa-youtube-play:before {\r\n  content: \"\\F16A\";\r\n}\r\n.fa-dropbox:before {\r\n  content: \"\\F16B\";\r\n}\r\n.fa-stack-overflow:before {\r\n  content: \"\\F16C\";\r\n}\r\n.fa-instagram:before {\r\n  content: \"\\F16D\";\r\n}\r\n.fa-flickr:before {\r\n  content: \"\\F16E\";\r\n}\r\n.fa-adn:before {\r\n  content: \"\\F170\";\r\n}\r\n.fa-bitbucket:before {\r\n  content: \"\\F171\";\r\n}\r\n.fa-bitbucket-square:before {\r\n  content: \"\\F172\";\r\n}\r\n.fa-tumblr:before {\r\n  content: \"\\F173\";\r\n}\r\n.fa-tumblr-square:before {\r\n  content: \"\\F174\";\r\n}\r\n.fa-long-arrow-down:before {\r\n  content: \"\\F175\";\r\n}\r\n.fa-long-arrow-up:before {\r\n  content: \"\\F176\";\r\n}\r\n.fa-long-arrow-left:before {\r\n  content: \"\\F177\";\r\n}\r\n.fa-long-arrow-right:before {\r\n  content: \"\\F178\";\r\n}\r\n.fa-apple:before {\r\n  content: \"\\F179\";\r\n}\r\n.fa-windows:before {\r\n  content: \"\\F17A\";\r\n}\r\n.fa-android:before {\r\n  content: \"\\F17B\";\r\n}\r\n.fa-linux:before {\r\n  content: \"\\F17C\";\r\n}\r\n.fa-dribbble:before {\r\n  content: \"\\F17D\";\r\n}\r\n.fa-skype:before {\r\n  content: \"\\F17E\";\r\n}\r\n.fa-foursquare:before {\r\n  content: \"\\F180\";\r\n}\r\n.fa-trello:before {\r\n  content: \"\\F181\";\r\n}\r\n.fa-female:before {\r\n  content: \"\\F182\";\r\n}\r\n.fa-male:before {\r\n  content: \"\\F183\";\r\n}\r\n.fa-gittip:before,\r\n.fa-gratipay:before {\r\n  content: \"\\F184\";\r\n}\r\n.fa-sun-o:before {\r\n  content: \"\\F185\";\r\n}\r\n.fa-moon-o:before {\r\n  content: \"\\F186\";\r\n}\r\n.fa-archive:before {\r\n  content: \"\\F187\";\r\n}\r\n.fa-bug:before {\r\n  content: \"\\F188\";\r\n}\r\n.fa-vk:before {\r\n  content: \"\\F189\";\r\n}\r\n.fa-weibo:before {\r\n  content: \"\\F18A\";\r\n}\r\n.fa-renren:before {\r\n  content: \"\\F18B\";\r\n}\r\n.fa-pagelines:before {\r\n  content: \"\\F18C\";\r\n}\r\n.fa-stack-exchange:before {\r\n  content: \"\\F18D\";\r\n}\r\n.fa-arrow-circle-o-right:before {\r\n  content: \"\\F18E\";\r\n}\r\n.fa-arrow-circle-o-left:before {\r\n  content: \"\\F190\";\r\n}\r\n.fa-toggle-left:before,\r\n.fa-caret-square-o-left:before {\r\n  content: \"\\F191\";\r\n}\r\n.fa-dot-circle-o:before {\r\n  content: \"\\F192\";\r\n}\r\n.fa-wheelchair:before {\r\n  content: \"\\F193\";\r\n}\r\n.fa-vimeo-square:before {\r\n  content: \"\\F194\";\r\n}\r\n.fa-turkish-lira:before,\r\n.fa-try:before {\r\n  content: \"\\F195\";\r\n}\r\n.fa-plus-square-o:before {\r\n  content: \"\\F196\";\r\n}\r\n.fa-space-shuttle:before {\r\n  content: \"\\F197\";\r\n}\r\n.fa-slack:before {\r\n  content: \"\\F198\";\r\n}\r\n.fa-envelope-square:before {\r\n  content: \"\\F199\";\r\n}\r\n.fa-wordpress:before {\r\n  content: \"\\F19A\";\r\n}\r\n.fa-openid:before {\r\n  content: \"\\F19B\";\r\n}\r\n.fa-institution:before,\r\n.fa-bank:before,\r\n.fa-university:before {\r\n  content: \"\\F19C\";\r\n}\r\n.fa-mortar-board:before,\r\n.fa-graduation-cap:before {\r\n  content: \"\\F19D\";\r\n}\r\n.fa-yahoo:before {\r\n  content: \"\\F19E\";\r\n}\r\n.fa-google:before {\r\n  content: \"\\F1A0\";\r\n}\r\n.fa-reddit:before {\r\n  content: \"\\F1A1\";\r\n}\r\n.fa-reddit-square:before {\r\n  content: \"\\F1A2\";\r\n}\r\n.fa-stumbleupon-circle:before {\r\n  content: \"\\F1A3\";\r\n}\r\n.fa-stumbleupon:before {\r\n  content: \"\\F1A4\";\r\n}\r\n.fa-delicious:before {\r\n  content: \"\\F1A5\";\r\n}\r\n.fa-digg:before {\r\n  content: \"\\F1A6\";\r\n}\r\n.fa-pied-piper-pp:before {\r\n  content: \"\\F1A7\";\r\n}\r\n.fa-pied-piper-alt:before {\r\n  content: \"\\F1A8\";\r\n}\r\n.fa-drupal:before {\r\n  content: \"\\F1A9\";\r\n}\r\n.fa-joomla:before {\r\n  content: \"\\F1AA\";\r\n}\r\n.fa-language:before {\r\n  content: \"\\F1AB\";\r\n}\r\n.fa-fax:before {\r\n  content: \"\\F1AC\";\r\n}\r\n.fa-building:before {\r\n  content: \"\\F1AD\";\r\n}\r\n.fa-child:before {\r\n  content: \"\\F1AE\";\r\n}\r\n.fa-paw:before {\r\n  content: \"\\F1B0\";\r\n}\r\n.fa-spoon:before {\r\n  content: \"\\F1B1\";\r\n}\r\n.fa-cube:before {\r\n  content: \"\\F1B2\";\r\n}\r\n.fa-cubes:before {\r\n  content: \"\\F1B3\";\r\n}\r\n.fa-behance:before {\r\n  content: \"\\F1B4\";\r\n}\r\n.fa-behance-square:before {\r\n  content: \"\\F1B5\";\r\n}\r\n.fa-steam:before {\r\n  content: \"\\F1B6\";\r\n}\r\n.fa-steam-square:before {\r\n  content: \"\\F1B7\";\r\n}\r\n.fa-recycle:before {\r\n  content: \"\\F1B8\";\r\n}\r\n.fa-automobile:before,\r\n.fa-car:before {\r\n  content: \"\\F1B9\";\r\n}\r\n.fa-cab:before,\r\n.fa-taxi:before {\r\n  content: \"\\F1BA\";\r\n}\r\n.fa-tree:before {\r\n  content: \"\\F1BB\";\r\n}\r\n.fa-spotify:before {\r\n  content: \"\\F1BC\";\r\n}\r\n.fa-deviantart:before {\r\n  content: \"\\F1BD\";\r\n}\r\n.fa-soundcloud:before {\r\n  content: \"\\F1BE\";\r\n}\r\n.fa-database:before {\r\n  content: \"\\F1C0\";\r\n}\r\n.fa-file-pdf-o:before {\r\n  content: \"\\F1C1\";\r\n}\r\n.fa-file-word-o:before {\r\n  content: \"\\F1C2\";\r\n}\r\n.fa-file-excel-o:before {\r\n  content: \"\\F1C3\";\r\n}\r\n.fa-file-powerpoint-o:before {\r\n  content: \"\\F1C4\";\r\n}\r\n.fa-file-photo-o:before,\r\n.fa-file-picture-o:before,\r\n.fa-file-image-o:before {\r\n  content: \"\\F1C5\";\r\n}\r\n.fa-file-zip-o:before,\r\n.fa-file-archive-o:before {\r\n  content: \"\\F1C6\";\r\n}\r\n.fa-file-sound-o:before,\r\n.fa-file-audio-o:before {\r\n  content: \"\\F1C7\";\r\n}\r\n.fa-file-movie-o:before,\r\n.fa-file-video-o:before {\r\n  content: \"\\F1C8\";\r\n}\r\n.fa-file-code-o:before {\r\n  content: \"\\F1C9\";\r\n}\r\n.fa-vine:before {\r\n  content: \"\\F1CA\";\r\n}\r\n.fa-codepen:before {\r\n  content: \"\\F1CB\";\r\n}\r\n.fa-jsfiddle:before {\r\n  content: \"\\F1CC\";\r\n}\r\n.fa-life-bouy:before,\r\n.fa-life-buoy:before,\r\n.fa-life-saver:before,\r\n.fa-support:before,\r\n.fa-life-ring:before {\r\n  content: \"\\F1CD\";\r\n}\r\n.fa-circle-o-notch:before {\r\n  content: \"\\F1CE\";\r\n}\r\n.fa-ra:before,\r\n.fa-resistance:before,\r\n.fa-rebel:before {\r\n  content: \"\\F1D0\";\r\n}\r\n.fa-ge:before,\r\n.fa-empire:before {\r\n  content: \"\\F1D1\";\r\n}\r\n.fa-git-square:before {\r\n  content: \"\\F1D2\";\r\n}\r\n.fa-git:before {\r\n  content: \"\\F1D3\";\r\n}\r\n.fa-y-combinator-square:before,\r\n.fa-yc-square:before,\r\n.fa-hacker-news:before {\r\n  content: \"\\F1D4\";\r\n}\r\n.fa-tencent-weibo:before {\r\n  content: \"\\F1D5\";\r\n}\r\n.fa-qq:before {\r\n  content: \"\\F1D6\";\r\n}\r\n.fa-wechat:before,\r\n.fa-weixin:before {\r\n  content: \"\\F1D7\";\r\n}\r\n.fa-send:before,\r\n.fa-paper-plane:before {\r\n  content: \"\\F1D8\";\r\n}\r\n.fa-send-o:before,\r\n.fa-paper-plane-o:before {\r\n  content: \"\\F1D9\";\r\n}\r\n.fa-history:before {\r\n  content: \"\\F1DA\";\r\n}\r\n.fa-circle-thin:before {\r\n  content: \"\\F1DB\";\r\n}\r\n.fa-header:before {\r\n  content: \"\\F1DC\";\r\n}\r\n.fa-paragraph:before {\r\n  content: \"\\F1DD\";\r\n}\r\n.fa-sliders:before {\r\n  content: \"\\F1DE\";\r\n}\r\n.fa-share-alt:before {\r\n  content: \"\\F1E0\";\r\n}\r\n.fa-share-alt-square:before {\r\n  content: \"\\F1E1\";\r\n}\r\n.fa-bomb:before {\r\n  content: \"\\F1E2\";\r\n}\r\n.fa-soccer-ball-o:before,\r\n.fa-futbol-o:before {\r\n  content: \"\\F1E3\";\r\n}\r\n.fa-tty:before {\r\n  content: \"\\F1E4\";\r\n}\r\n.fa-binoculars:before {\r\n  content: \"\\F1E5\";\r\n}\r\n.fa-plug:before {\r\n  content: \"\\F1E6\";\r\n}\r\n.fa-slideshare:before {\r\n  content: \"\\F1E7\";\r\n}\r\n.fa-twitch:before {\r\n  content: \"\\F1E8\";\r\n}\r\n.fa-yelp:before {\r\n  content: \"\\F1E9\";\r\n}\r\n.fa-newspaper-o:before {\r\n  content: \"\\F1EA\";\r\n}\r\n.fa-wifi:before {\r\n  content: \"\\F1EB\";\r\n}\r\n.fa-calculator:before {\r\n  content: \"\\F1EC\";\r\n}\r\n.fa-paypal:before {\r\n  content: \"\\F1ED\";\r\n}\r\n.fa-google-wallet:before {\r\n  content: \"\\F1EE\";\r\n}\r\n.fa-cc-visa:before {\r\n  content: \"\\F1F0\";\r\n}\r\n.fa-cc-mastercard:before {\r\n  content: \"\\F1F1\";\r\n}\r\n.fa-cc-discover:before {\r\n  content: \"\\F1F2\";\r\n}\r\n.fa-cc-amex:before {\r\n  content: \"\\F1F3\";\r\n}\r\n.fa-cc-paypal:before {\r\n  content: \"\\F1F4\";\r\n}\r\n.fa-cc-stripe:before {\r\n  content: \"\\F1F5\";\r\n}\r\n.fa-bell-slash:before {\r\n  content: \"\\F1F6\";\r\n}\r\n.fa-bell-slash-o:before {\r\n  content: \"\\F1F7\";\r\n}\r\n.fa-trash:before {\r\n  content: \"\\F1F8\";\r\n}\r\n.fa-copyright:before {\r\n  content: \"\\F1F9\";\r\n}\r\n.fa-at:before {\r\n  content: \"\\F1FA\";\r\n}\r\n.fa-eyedropper:before {\r\n  content: \"\\F1FB\";\r\n}\r\n.fa-paint-brush:before {\r\n  content: \"\\F1FC\";\r\n}\r\n.fa-birthday-cake:before {\r\n  content: \"\\F1FD\";\r\n}\r\n.fa-area-chart:before {\r\n  content: \"\\F1FE\";\r\n}\r\n.fa-pie-chart:before {\r\n  content: \"\\F200\";\r\n}\r\n.fa-line-chart:before {\r\n  content: \"\\F201\";\r\n}\r\n.fa-lastfm:before {\r\n  content: \"\\F202\";\r\n}\r\n.fa-lastfm-square:before {\r\n  content: \"\\F203\";\r\n}\r\n.fa-toggle-off:before {\r\n  content: \"\\F204\";\r\n}\r\n.fa-toggle-on:before {\r\n  content: \"\\F205\";\r\n}\r\n.fa-bicycle:before {\r\n  content: \"\\F206\";\r\n}\r\n.fa-bus:before {\r\n  content: \"\\F207\";\r\n}\r\n.fa-ioxhost:before {\r\n  content: \"\\F208\";\r\n}\r\n.fa-angellist:before {\r\n  content: \"\\F209\";\r\n}\r\n.fa-cc:before {\r\n  content: \"\\F20A\";\r\n}\r\n.fa-shekel:before,\r\n.fa-sheqel:before,\r\n.fa-ils:before {\r\n  content: \"\\F20B\";\r\n}\r\n.fa-meanpath:before {\r\n  content: \"\\F20C\";\r\n}\r\n.fa-buysellads:before {\r\n  content: \"\\F20D\";\r\n}\r\n.fa-connectdevelop:before {\r\n  content: \"\\F20E\";\r\n}\r\n.fa-dashcube:before {\r\n  content: \"\\F210\";\r\n}\r\n.fa-forumbee:before {\r\n  content: \"\\F211\";\r\n}\r\n.fa-leanpub:before {\r\n  content: \"\\F212\";\r\n}\r\n.fa-sellsy:before {\r\n  content: \"\\F213\";\r\n}\r\n.fa-shirtsinbulk:before {\r\n  content: \"\\F214\";\r\n}\r\n.fa-simplybuilt:before {\r\n  content: \"\\F215\";\r\n}\r\n.fa-skyatlas:before {\r\n  content: \"\\F216\";\r\n}\r\n.fa-cart-plus:before {\r\n  content: \"\\F217\";\r\n}\r\n.fa-cart-arrow-down:before {\r\n  content: \"\\F218\";\r\n}\r\n.fa-diamond:before {\r\n  content: \"\\F219\";\r\n}\r\n.fa-ship:before {\r\n  content: \"\\F21A\";\r\n}\r\n.fa-user-secret:before {\r\n  content: \"\\F21B\";\r\n}\r\n.fa-motorcycle:before {\r\n  content: \"\\F21C\";\r\n}\r\n.fa-street-view:before {\r\n  content: \"\\F21D\";\r\n}\r\n.fa-heartbeat:before {\r\n  content: \"\\F21E\";\r\n}\r\n.fa-venus:before {\r\n  content: \"\\F221\";\r\n}\r\n.fa-mars:before {\r\n  content: \"\\F222\";\r\n}\r\n.fa-mercury:before {\r\n  content: \"\\F223\";\r\n}\r\n.fa-intersex:before,\r\n.fa-transgender:before {\r\n  content: \"\\F224\";\r\n}\r\n.fa-transgender-alt:before {\r\n  content: \"\\F225\";\r\n}\r\n.fa-venus-double:before {\r\n  content: \"\\F226\";\r\n}\r\n.fa-mars-double:before {\r\n  content: \"\\F227\";\r\n}\r\n.fa-venus-mars:before {\r\n  content: \"\\F228\";\r\n}\r\n.fa-mars-stroke:before {\r\n  content: \"\\F229\";\r\n}\r\n.fa-mars-stroke-v:before {\r\n  content: \"\\F22A\";\r\n}\r\n.fa-mars-stroke-h:before {\r\n  content: \"\\F22B\";\r\n}\r\n.fa-neuter:before {\r\n  content: \"\\F22C\";\r\n}\r\n.fa-genderless:before {\r\n  content: \"\\F22D\";\r\n}\r\n.fa-facebook-official:before {\r\n  content: \"\\F230\";\r\n}\r\n.fa-pinterest-p:before {\r\n  content: \"\\F231\";\r\n}\r\n.fa-whatsapp:before {\r\n  content: \"\\F232\";\r\n}\r\n.fa-server:before {\r\n  content: \"\\F233\";\r\n}\r\n.fa-user-plus:before {\r\n  content: \"\\F234\";\r\n}\r\n.fa-user-times:before {\r\n  content: \"\\F235\";\r\n}\r\n.fa-hotel:before,\r\n.fa-bed:before {\r\n  content: \"\\F236\";\r\n}\r\n.fa-viacoin:before {\r\n  content: \"\\F237\";\r\n}\r\n.fa-train:before {\r\n  content: \"\\F238\";\r\n}\r\n.fa-subway:before {\r\n  content: \"\\F239\";\r\n}\r\n.fa-medium:before {\r\n  content: \"\\F23A\";\r\n}\r\n.fa-yc:before,\r\n.fa-y-combinator:before {\r\n  content: \"\\F23B\";\r\n}\r\n.fa-optin-monster:before {\r\n  content: \"\\F23C\";\r\n}\r\n.fa-opencart:before {\r\n  content: \"\\F23D\";\r\n}\r\n.fa-expeditedssl:before {\r\n  content: \"\\F23E\";\r\n}\r\n.fa-battery-4:before,\r\n.fa-battery:before,\r\n.fa-battery-full:before {\r\n  content: \"\\F240\";\r\n}\r\n.fa-battery-3:before,\r\n.fa-battery-three-quarters:before {\r\n  content: \"\\F241\";\r\n}\r\n.fa-battery-2:before,\r\n.fa-battery-half:before {\r\n  content: \"\\F242\";\r\n}\r\n.fa-battery-1:before,\r\n.fa-battery-quarter:before {\r\n  content: \"\\F243\";\r\n}\r\n.fa-battery-0:before,\r\n.fa-battery-empty:before {\r\n  content: \"\\F244\";\r\n}\r\n.fa-mouse-pointer:before {\r\n  content: \"\\F245\";\r\n}\r\n.fa-i-cursor:before {\r\n  content: \"\\F246\";\r\n}\r\n.fa-object-group:before {\r\n  content: \"\\F247\";\r\n}\r\n.fa-object-ungroup:before {\r\n  content: \"\\F248\";\r\n}\r\n.fa-sticky-note:before {\r\n  content: \"\\F249\";\r\n}\r\n.fa-sticky-note-o:before {\r\n  content: \"\\F24A\";\r\n}\r\n.fa-cc-jcb:before {\r\n  content: \"\\F24B\";\r\n}\r\n.fa-cc-diners-club:before {\r\n  content: \"\\F24C\";\r\n}\r\n.fa-clone:before {\r\n  content: \"\\F24D\";\r\n}\r\n.fa-balance-scale:before {\r\n  content: \"\\F24E\";\r\n}\r\n.fa-hourglass-o:before {\r\n  content: \"\\F250\";\r\n}\r\n.fa-hourglass-1:before,\r\n.fa-hourglass-start:before {\r\n  content: \"\\F251\";\r\n}\r\n.fa-hourglass-2:before,\r\n.fa-hourglass-half:before {\r\n  content: \"\\F252\";\r\n}\r\n.fa-hourglass-3:before,\r\n.fa-hourglass-end:before {\r\n  content: \"\\F253\";\r\n}\r\n.fa-hourglass:before {\r\n  content: \"\\F254\";\r\n}\r\n.fa-hand-grab-o:before,\r\n.fa-hand-rock-o:before {\r\n  content: \"\\F255\";\r\n}\r\n.fa-hand-stop-o:before,\r\n.fa-hand-paper-o:before {\r\n  content: \"\\F256\";\r\n}\r\n.fa-hand-scissors-o:before {\r\n  content: \"\\F257\";\r\n}\r\n.fa-hand-lizard-o:before {\r\n  content: \"\\F258\";\r\n}\r\n.fa-hand-spock-o:before {\r\n  content: \"\\F259\";\r\n}\r\n.fa-hand-pointer-o:before {\r\n  content: \"\\F25A\";\r\n}\r\n.fa-hand-peace-o:before {\r\n  content: \"\\F25B\";\r\n}\r\n.fa-trademark:before {\r\n  content: \"\\F25C\";\r\n}\r\n.fa-registered:before {\r\n  content: \"\\F25D\";\r\n}\r\n.fa-creative-commons:before {\r\n  content: \"\\F25E\";\r\n}\r\n.fa-gg:before {\r\n  content: \"\\F260\";\r\n}\r\n.fa-gg-circle:before {\r\n  content: \"\\F261\";\r\n}\r\n.fa-tripadvisor:before {\r\n  content: \"\\F262\";\r\n}\r\n.fa-odnoklassniki:before {\r\n  content: \"\\F263\";\r\n}\r\n.fa-odnoklassniki-square:before {\r\n  content: \"\\F264\";\r\n}\r\n.fa-get-pocket:before {\r\n  content: \"\\F265\";\r\n}\r\n.fa-wikipedia-w:before {\r\n  content: \"\\F266\";\r\n}\r\n.fa-safari:before {\r\n  content: \"\\F267\";\r\n}\r\n.fa-chrome:before {\r\n  content: \"\\F268\";\r\n}\r\n.fa-firefox:before {\r\n  content: \"\\F269\";\r\n}\r\n.fa-opera:before {\r\n  content: \"\\F26A\";\r\n}\r\n.fa-internet-explorer:before {\r\n  content: \"\\F26B\";\r\n}\r\n.fa-tv:before,\r\n.fa-television:before {\r\n  content: \"\\F26C\";\r\n}\r\n.fa-contao:before {\r\n  content: \"\\F26D\";\r\n}\r\n.fa-500px:before {\r\n  content: \"\\F26E\";\r\n}\r\n.fa-amazon:before {\r\n  content: \"\\F270\";\r\n}\r\n.fa-calendar-plus-o:before {\r\n  content: \"\\F271\";\r\n}\r\n.fa-calendar-minus-o:before {\r\n  content: \"\\F272\";\r\n}\r\n.fa-calendar-times-o:before {\r\n  content: \"\\F273\";\r\n}\r\n.fa-calendar-check-o:before {\r\n  content: \"\\F274\";\r\n}\r\n.fa-industry:before {\r\n  content: \"\\F275\";\r\n}\r\n.fa-map-pin:before {\r\n  content: \"\\F276\";\r\n}\r\n.fa-map-signs:before {\r\n  content: \"\\F277\";\r\n}\r\n.fa-map-o:before {\r\n  content: \"\\F278\";\r\n}\r\n.fa-map:before {\r\n  content: \"\\F279\";\r\n}\r\n.fa-commenting:before {\r\n  content: \"\\F27A\";\r\n}\r\n.fa-commenting-o:before {\r\n  content: \"\\F27B\";\r\n}\r\n.fa-houzz:before {\r\n  content: \"\\F27C\";\r\n}\r\n.fa-vimeo:before {\r\n  content: \"\\F27D\";\r\n}\r\n.fa-black-tie:before {\r\n  content: \"\\F27E\";\r\n}\r\n.fa-fonticons:before {\r\n  content: \"\\F280\";\r\n}\r\n.fa-reddit-alien:before {\r\n  content: \"\\F281\";\r\n}\r\n.fa-edge:before {\r\n  content: \"\\F282\";\r\n}\r\n.fa-credit-card-alt:before {\r\n  content: \"\\F283\";\r\n}\r\n.fa-codiepie:before {\r\n  content: \"\\F284\";\r\n}\r\n.fa-modx:before {\r\n  content: \"\\F285\";\r\n}\r\n.fa-fort-awesome:before {\r\n  content: \"\\F286\";\r\n}\r\n.fa-usb:before {\r\n  content: \"\\F287\";\r\n}\r\n.fa-product-hunt:before {\r\n  content: \"\\F288\";\r\n}\r\n.fa-mixcloud:before {\r\n  content: \"\\F289\";\r\n}\r\n.fa-scribd:before {\r\n  content: \"\\F28A\";\r\n}\r\n.fa-pause-circle:before {\r\n  content: \"\\F28B\";\r\n}\r\n.fa-pause-circle-o:before {\r\n  content: \"\\F28C\";\r\n}\r\n.fa-stop-circle:before {\r\n  content: \"\\F28D\";\r\n}\r\n.fa-stop-circle-o:before {\r\n  content: \"\\F28E\";\r\n}\r\n.fa-shopping-bag:before {\r\n  content: \"\\F290\";\r\n}\r\n.fa-shopping-basket:before {\r\n  content: \"\\F291\";\r\n}\r\n.fa-hashtag:before {\r\n  content: \"\\F292\";\r\n}\r\n.fa-bluetooth:before {\r\n  content: \"\\F293\";\r\n}\r\n.fa-bluetooth-b:before {\r\n  content: \"\\F294\";\r\n}\r\n.fa-percent:before {\r\n  content: \"\\F295\";\r\n}\r\n.fa-gitlab:before {\r\n  content: \"\\F296\";\r\n}\r\n.fa-wpbeginner:before {\r\n  content: \"\\F297\";\r\n}\r\n.fa-wpforms:before {\r\n  content: \"\\F298\";\r\n}\r\n.fa-envira:before {\r\n  content: \"\\F299\";\r\n}\r\n.fa-universal-access:before {\r\n  content: \"\\F29A\";\r\n}\r\n.fa-wheelchair-alt:before {\r\n  content: \"\\F29B\";\r\n}\r\n.fa-question-circle-o:before {\r\n  content: \"\\F29C\";\r\n}\r\n.fa-blind:before {\r\n  content: \"\\F29D\";\r\n}\r\n.fa-audio-description:before {\r\n  content: \"\\F29E\";\r\n}\r\n.fa-volume-control-phone:before {\r\n  content: \"\\F2A0\";\r\n}\r\n.fa-braille:before {\r\n  content: \"\\F2A1\";\r\n}\r\n.fa-assistive-listening-systems:before {\r\n  content: \"\\F2A2\";\r\n}\r\n.fa-asl-interpreting:before,\r\n.fa-american-sign-language-interpreting:before {\r\n  content: \"\\F2A3\";\r\n}\r\n.fa-deafness:before,\r\n.fa-hard-of-hearing:before,\r\n.fa-deaf:before {\r\n  content: \"\\F2A4\";\r\n}\r\n.fa-glide:before {\r\n  content: \"\\F2A5\";\r\n}\r\n.fa-glide-g:before {\r\n  content: \"\\F2A6\";\r\n}\r\n.fa-signing:before,\r\n.fa-sign-language:before {\r\n  content: \"\\F2A7\";\r\n}\r\n.fa-low-vision:before {\r\n  content: \"\\F2A8\";\r\n}\r\n.fa-viadeo:before {\r\n  content: \"\\F2A9\";\r\n}\r\n.fa-viadeo-square:before {\r\n  content: \"\\F2AA\";\r\n}\r\n.fa-snapchat:before {\r\n  content: \"\\F2AB\";\r\n}\r\n.fa-snapchat-ghost:before {\r\n  content: \"\\F2AC\";\r\n}\r\n.fa-snapchat-square:before {\r\n  content: \"\\F2AD\";\r\n}\r\n.fa-pied-piper:before {\r\n  content: \"\\F2AE\";\r\n}\r\n.fa-first-order:before {\r\n  content: \"\\F2B0\";\r\n}\r\n.fa-yoast:before {\r\n  content: \"\\F2B1\";\r\n}\r\n.fa-themeisle:before {\r\n  content: \"\\F2B2\";\r\n}\r\n.fa-google-plus-circle:before,\r\n.fa-google-plus-official:before {\r\n  content: \"\\F2B3\";\r\n}\r\n.fa-fa:before,\r\n.fa-font-awesome:before {\r\n  content: \"\\F2B4\";\r\n}\r\n.fa-handshake-o:before {\r\n  content: \"\\F2B5\";\r\n}\r\n.fa-envelope-open:before {\r\n  content: \"\\F2B6\";\r\n}\r\n.fa-envelope-open-o:before {\r\n  content: \"\\F2B7\";\r\n}\r\n.fa-linode:before {\r\n  content: \"\\F2B8\";\r\n}\r\n.fa-address-book:before {\r\n  content: \"\\F2B9\";\r\n}\r\n.fa-address-book-o:before {\r\n  content: \"\\F2BA\";\r\n}\r\n.fa-vcard:before,\r\n.fa-address-card:before {\r\n  content: \"\\F2BB\";\r\n}\r\n.fa-vcard-o:before,\r\n.fa-address-card-o:before {\r\n  content: \"\\F2BC\";\r\n}\r\n.fa-user-circle:before {\r\n  content: \"\\F2BD\";\r\n}\r\n.fa-user-circle-o:before {\r\n  content: \"\\F2BE\";\r\n}\r\n.fa-user-o:before {\r\n  content: \"\\F2C0\";\r\n}\r\n.fa-id-badge:before {\r\n  content: \"\\F2C1\";\r\n}\r\n.fa-drivers-license:before,\r\n.fa-id-card:before {\r\n  content: \"\\F2C2\";\r\n}\r\n.fa-drivers-license-o:before,\r\n.fa-id-card-o:before {\r\n  content: \"\\F2C3\";\r\n}\r\n.fa-quora:before {\r\n  content: \"\\F2C4\";\r\n}\r\n.fa-free-code-camp:before {\r\n  content: \"\\F2C5\";\r\n}\r\n.fa-telegram:before {\r\n  content: \"\\F2C6\";\r\n}\r\n.fa-thermometer-4:before,\r\n.fa-thermometer:before,\r\n.fa-thermometer-full:before {\r\n  content: \"\\F2C7\";\r\n}\r\n.fa-thermometer-3:before,\r\n.fa-thermometer-three-quarters:before {\r\n  content: \"\\F2C8\";\r\n}\r\n.fa-thermometer-2:before,\r\n.fa-thermometer-half:before {\r\n  content: \"\\F2C9\";\r\n}\r\n.fa-thermometer-1:before,\r\n.fa-thermometer-quarter:before {\r\n  content: \"\\F2CA\";\r\n}\r\n.fa-thermometer-0:before,\r\n.fa-thermometer-empty:before {\r\n  content: \"\\F2CB\";\r\n}\r\n.fa-shower:before {\r\n  content: \"\\F2CC\";\r\n}\r\n.fa-bathtub:before,\r\n.fa-s15:before,\r\n.fa-bath:before {\r\n  content: \"\\F2CD\";\r\n}\r\n.fa-podcast:before {\r\n  content: \"\\F2CE\";\r\n}\r\n.fa-window-maximize:before {\r\n  content: \"\\F2D0\";\r\n}\r\n.fa-window-minimize:before {\r\n  content: \"\\F2D1\";\r\n}\r\n.fa-window-restore:before {\r\n  content: \"\\F2D2\";\r\n}\r\n.fa-times-rectangle:before,\r\n.fa-window-close:before {\r\n  content: \"\\F2D3\";\r\n}\r\n.fa-times-rectangle-o:before,\r\n.fa-window-close-o:before {\r\n  content: \"\\F2D4\";\r\n}\r\n.fa-bandcamp:before {\r\n  content: \"\\F2D5\";\r\n}\r\n.fa-grav:before {\r\n  content: \"\\F2D6\";\r\n}\r\n.fa-etsy:before {\r\n  content: \"\\F2D7\";\r\n}\r\n.fa-imdb:before {\r\n  content: \"\\F2D8\";\r\n}\r\n.fa-ravelry:before {\r\n  content: \"\\F2D9\";\r\n}\r\n.fa-eercast:before {\r\n  content: \"\\F2DA\";\r\n}\r\n.fa-microchip:before {\r\n  content: \"\\F2DB\";\r\n}\r\n.fa-snowflake-o:before {\r\n  content: \"\\F2DC\";\r\n}\r\n.fa-superpowers:before {\r\n  content: \"\\F2DD\";\r\n}\r\n.fa-wpexplorer:before {\r\n  content: \"\\F2DE\";\r\n}\r\n.fa-meetup:before {\r\n  content: \"\\F2E0\";\r\n}\r\n.sr-only {\r\n  position: absolute;\r\n  width: 1px;\r\n  height: 1px;\r\n  padding: 0;\r\n  margin: -1px;\r\n  overflow: hidden;\r\n  clip: rect(0, 0, 0, 0);\r\n  border: 0;\r\n}\r\n.sr-only-focusable:active,\r\n.sr-only-focusable:focus {\r\n  position: static;\r\n  width: auto;\r\n  height: auto;\r\n  margin: 0;\r\n  overflow: visible;\r\n  clip: auto;\r\n}\r\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 457 */
+/* 464 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "af7ae505a9eed503f8b8e6982036873e.woff2";
 
 /***/ }),
-/* 458 */
+/* 465 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(32)(undefined);
+exports = module.exports = __webpack_require__(33)(undefined);
 // imports
 
 
@@ -37046,10 +38470,10 @@ exports.push([module.i, "@font-face{font-family:'flexslider-icon';font-weight:no
 
 
 /***/ }),
-/* 459 */
+/* 466 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(32)(undefined);
+exports = module.exports = __webpack_require__(33)(undefined);
 // imports
 
 
@@ -37060,10 +38484,10 @@ exports.push([module.i, ".owl-carousel .animated{-webkit-animation-duration:1000
 
 
 /***/ }),
-/* 460 */
+/* 467 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(32)(undefined);
+exports = module.exports = __webpack_require__(33)(undefined);
 // imports
 
 
@@ -37074,10 +38498,10 @@ exports.push([module.i, "/**\r\n  * Flat Slider\r\n  * Flat Banner Box\r\n  * Fl
 
 
 /***/ }),
-/* 461 */
+/* 468 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(32)(undefined);
+exports = module.exports = __webpack_require__(33)(undefined);
 // imports
 
 
@@ -37088,10 +38512,10 @@ exports.push([module.i, ".ui-draggable-handle{-ms-touch-action:none;touch-action
 
 
 /***/ }),
-/* 462 */
+/* 469 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(32)(undefined);
+exports = module.exports = __webpack_require__(33)(undefined);
 // imports
 
 
@@ -37102,10 +38526,10 @@ exports.push([module.i, ".waves-effect{position:relative;cursor:pointer;display:
 
 
 /***/ }),
-/* 463 */
+/* 470 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(32)(undefined);
+exports = module.exports = __webpack_require__(33)(undefined);
 // imports
 
 
@@ -37116,10 +38540,10 @@ exports.push([module.i, ".mCustomScrollbar{-ms-touch-action:pinch-zoom;touch-act
 
 
 /***/ }),
-/* 464 */
+/* 471 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(32)(undefined);
+exports = module.exports = __webpack_require__(33)(undefined);
 // imports
 
 
@@ -37130,7 +38554,7 @@ exports.push([module.i, "/* Webfont: BloggerSans */@font-face {\r\n    font-fami
 
 
 /***/ }),
-/* 465 */
+/* 472 */
 /***/ (function(module, exports) {
 
 
@@ -37225,13 +38649,13 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 466 */
+/* 473 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(467);
+var content = __webpack_require__(474);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -37239,7 +38663,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(174)(content, options);
+var update = __webpack_require__(177)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -37256,10 +38680,10 @@ if(false) {
 }
 
 /***/ }),
-/* 467 */
+/* 474 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(32)(undefined);
+exports = module.exports = __webpack_require__(33)(undefined);
 // imports
 
 
@@ -37270,7 +38694,7 @@ exports.push([module.i, "@media only screen and (max-width:1900px) {\r\n\t\r\n\t
 
 
 /***/ }),
-/* 468 */
+/* 475 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37282,7 +38706,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(3);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -37410,766 +38834,488 @@ var Advertisement = function (_React$PureComponent) {
 exports.default = Advertisement;
 
 /***/ }),
-/* 469 */,
-/* 470 */
+/* 476 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+	value: true
 });
 
-var _react = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Menu = __webpack_require__(477);
+
+var _Menu2 = _interopRequireDefault(_Menu);
+
+var _HeaderMobile = __webpack_require__(480);
+
+var _HeaderMobile2 = _interopRequireDefault(_HeaderMobile);
+
+var _HeaderSuggestion = __webpack_require__(481);
+
+var _HeaderSuggestion2 = _interopRequireDefault(_HeaderSuggestion);
+
+var _IconCart = __webpack_require__(178);
+
+var _IconCart2 = _interopRequireDefault(_IconCart);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function () {
-    return _react2.default.createElement(
-        "div",
-        { className: "col-lg-2 col-md-3 fill-category" },
-        _react2.default.createElement(
-            "div",
-            { className: "sidebar " },
-            _react2.default.createElement(
-                "div",
-                { className: "widget widget-categories" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "widget-title" },
-                    _react2.default.createElement(
-                        "h3",
-                        null,
-                        "Danh m\u1EE5c",
-                        _react2.default.createElement("span", null)
-                    )
-                ),
-                _react2.default.createElement(
-                    "ul",
-                    { className: "cat-list style1 widget-content" },
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                            "span",
-                            null,
-                            "Linh ki\u1EC7n",
-                            _react2.default.createElement(
-                                "i",
-                                null,
-                                "(03)"
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "ul",
-                            { className: "cat-child" },
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "TV"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Monitors"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Ph\u1EA7n m\u1EC1m"
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                            "span",
-                            null,
-                            "Cameras",
-                            _react2.default.createElement(
-                                "i",
-                                null,
-                                "(19)"
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "ul",
-                            { className: "cat-child" },
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Go Pro"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "M\xE1y quay phim"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Ph\u1EA7n m\u1EC1m"
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        { className: "" },
-                        _react2.default.createElement(
-                            "span",
-                            null,
-                            "M\xE1y t\xEDnh",
-                            _react2.default.createElement(
-                                "i",
-                                null,
-                                "(56)"
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "ul",
-                            { className: "cat-child" },
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Desktop"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "M\xE0n h\xECnh"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Ph\u1EA7n m\u1EC1m"
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                            "span",
-                            null,
-                            "Laptops",
-                            _react2.default.createElement(
-                                "i",
-                                null,
-                                "(03)"
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "ul",
-                            { className: "cat-child" },
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Desktop"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "M\xE0n h\xECnh"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Ph\u1EA7n m\u1EC1m"
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                            "span",
-                            null,
-                            "M\u1EA1ng",
-                            _react2.default.createElement(
-                                "i",
-                                null,
-                                "(03)"
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "ul",
-                            { className: "cat-child" },
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Monitors"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Ph\u1EA7n m\u1EC1m"
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                            "span",
-                            null,
-                            "S\u1EA3n ph\u1EA9m c\u0169",
-                            _react2.default.createElement(
-                                "i",
-                                null,
-                                "(89)"
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "ul",
-                            { className: "cat-child" },
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Monitors"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Ph\u1EA7n m\u1EC1m"
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                            "span",
-                            null,
-                            "\u0110i\u1EC7n tho\u1EA1i di \u0111\u1ED9ng",
-                            _react2.default.createElement(
-                                "i",
-                                null,
-                                "(90)"
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "ul",
-                            { className: "cat-child" },
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Apple"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "HTC"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Sony"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Samsung"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "LG"
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                            "span",
-                            null,
-                            "Ph\u1EA7n m\u1EC1m",
-                            _react2.default.createElement(
-                                "i",
-                                null,
-                                "(23)"
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "ul",
-                            { className: "cat-child" },
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Desktop"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "Qu\u1EA3n l\xFD"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    "BKAV"
-                                )
-                            )
-                        )
-                    )
-                )
-            ),
-            _react2.default.createElement(
-                "div",
-                { className: "widget widget-price" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "widget-title" },
-                    _react2.default.createElement(
-                        "h3",
-                        null,
-                        "Gi\xE1",
-                        _react2.default.createElement("span", null)
-                    )
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "widget-content" },
-                    _react2.default.createElement(
-                        "p",
-                        null,
-                        "Gi\xE1"
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "price search-filter-input" },
-                        _react2.default.createElement(
-                            "div",
-                            { id: "slider-range", className: "price-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" },
-                            _react2.default.createElement("div", { className: "ui-slider-range ui-corner-all ui-widget-header" }),
-                            _react2.default.createElement("span", { tabIndex: "0", className: "ui-slider-handle ui-corner-all ui-state-default" }),
-                            _react2.default.createElement("span", { tabIndex: "0", className: "ui-slider-handle ui-corner-all ui-state-default" })
-                        ),
-                        _react2.default.createElement(
-                            "p",
-                            { className: "amount" },
-                            _react2.default.createElement("input", { type: "text", id: "amount", disabled: "" })
-                        )
-                    )
-                )
-            ),
-            _react2.default.createElement(
-                "div",
-                { className: "widget widget-brands" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "widget-title" },
-                    _react2.default.createElement(
-                        "h3",
-                        null,
-                        "Th\u01B0\u01A1ng hi\u1EC7u",
-                        _react2.default.createElement("span", null)
-                    )
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "widget-content" },
-                    _react2.default.createElement(
-                        "form",
-                        { action: "#", method: "get", acceptCharset: "utf-8" },
-                        _react2.default.createElement("input", { type: "text", name: "brands", placeholder: "Brands Search" })
-                    ),
-                    _react2.default.createElement(
-                        "ul",
-                        { className: "box-checkbox scroll" },
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox1", name: "checkbox1" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "checkbox1" },
-                                "Apple ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(4)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox2", name: "checkbox2" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "checkbox2" },
-                                "Samsung ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(2)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox3", name: "checkbox3" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "checkbox3" },
-                                "HTC ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(2)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox4", name: "checkbox4" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "checkbox4" },
-                                "LG ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(2)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox5", name: "checkbox5" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "checkbox5" },
-                                "Dell ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(1)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox6", name: "checkbox6" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "checkbox6" },
-                                "Sony ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(3)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox7", name: "checkbox7" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "checkbox7" },
-                                "Bphone ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(4)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox8", name: "checkbox8" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "checkbox8" },
-                                "Oppo ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(4)"
-                                )
-                            )
-                        )
-                    )
-                )
-            ),
-            _react2.default.createElement(
-                "div",
-                { className: "widget widget-color" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "widget-title" },
-                    _react2.default.createElement(
-                        "h3",
-                        null,
-                        "M\xE0u",
-                        _react2.default.createElement("span", null)
-                    ),
-                    _react2.default.createElement("div", { style: { height: "2px" } })
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "widget-content" },
-                    _react2.default.createElement(
-                        "form",
-                        { action: "#", method: "get", acceptCharset: "utf-8" },
-                        _react2.default.createElement("input", { type: "text", name: "color", placeholder: "Color Search" })
-                    ),
-                    _react2.default.createElement("div", { style: { height: '5px' } }),
-                    _react2.default.createElement(
-                        "ul",
-                        { className: "box-checkbox scroll" },
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "check1", name: "check1" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "check1" },
-                                "\u0110en ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(4)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "check2", name: "check2" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "check2" },
-                                "V\xE0ng ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(2)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "check3", name: "check3" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "check3" },
-                                "Tr\u1EAFng ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(2)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "check4", name: "check4" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "check4" },
-                                "Xanh n\u01B0\u1EDBc bi\u1EC3n ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(2)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "check5", name: "check5" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "check5" },
-                                "\u0110\u1ECF ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(1)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "check6", name: "check6" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "check6" },
-                                "H\u1ED3ng ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(3)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "check7", name: "check7" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "check7" },
-                                "Xanh l\xE1 xanh ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(4)"
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "li",
-                            { className: "check-box" },
-                            _react2.default.createElement("input", { type: "checkbox", id: "check8", name: "check8" }),
-                            _react2.default.createElement(
-                                "label",
-                                { htmlFor: "check8" },
-                                "V\xE0ng ",
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "(4)"
-                                )
-                            )
-                        )
-                    )
-                )
-            ),
-            _react2.default.createElement(
-                "div",
-                { className: "widget widget-banner" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "banner-box" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "inner-box" },
-                        _react2.default.createElement(
-                            "a",
-                            { href: "#", title: "" },
-                            _react2.default.createElement("img", { src: "./images/banner_boxes/06.png", alt: "" })
-                        )
-                    )
-                )
-            )
-        )
-    );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Header = function (_React$Component) {
+	_inherits(Header, _React$Component);
+
+	function Header() {
+		_classCallCheck(this, Header);
+
+		return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+	}
+
+	_createClass(Header, [{
+		key: 'shouldComponentUpdate',
+		value: function shouldComponentUpdate(nextProps) {
+			if (this.props.items !== nextProps.items) {
+				return true;
+			}
+			if (this.props.electric !== nextProps.electric) {
+				return true;
+			}
+			if (this.props.electricAds !== nextProps.electricAds) {
+				return true;
+			}
+			return false;
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				null,
+				_react2.default.createElement(
+					'section',
+					{ id: 'header', className: 'header' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'header-top' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'container' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'row' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'col-md-6' },
+									_react2.default.createElement(
+										'ul',
+										null,
+										_react2.default.createElement(
+											'li',
+											null,
+											_react2.default.createElement(
+												'a',
+												{ href: 'faq.html', title: '' },
+												'Hotline: 19001583'
+											)
+										)
+									)
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'col-md-6 text-right' },
+									_react2.default.createElement(
+										'ul',
+										{ className: 'flat-support' },
+										_react2.default.createElement(
+											'li',
+											null,
+											_react2.default.createElement(
+												'a',
+												{ href: 'order-tracking.html', title: '' },
+												'\u0110\u0103ng nh\u1EADp'
+											)
+										),
+										_react2.default.createElement(
+											'li',
+											null,
+											_react2.default.createElement(
+												'a',
+												{ href: 'order-tracking.html', title: '' },
+												'B\xE1n h\xE0ng'
+											)
+										),
+										_react2.default.createElement(
+											'li',
+											{ id: 'li-top' },
+											_react2.default.createElement(
+												'a',
+												{ href: 'order-tracking.html', title: '' },
+												'Ch\u0103m s\xF3c kh\xE1ch h\xE0ng'
+											)
+										)
+									)
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'header-middle' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'container' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'row' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'col-md-2 col-sm-3' },
+									_react2.default.createElement(
+										'div',
+										{ id: 'logo', className: 'logo' },
+										_react2.default.createElement(
+											'a',
+											{ href: 'https://mesi.vn', title: '' },
+											'Mesi.vn'
+										),
+										_react2.default.createElement(
+											'i',
+											null,
+											'C\u1EA3m \u01A1n qu\xFD kh\xE1ch ! '
+										)
+									)
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'col-md-8 col-sm-' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'top-search' },
+										_react2.default.createElement(
+											'form',
+											{ action: '#', method: 'get', className: 'form-search', acceptCharset: 'utf-8' },
+											_react2.default.createElement(
+												'div',
+												{ className: 'cat-wrap' },
+												_react2.default.createElement(
+													'select',
+													{ name: 'category' },
+													_react2.default.createElement(
+														'option',
+														{ hidden: true, value: '' },
+														'Danh m\u1EE5c'
+													),
+													_react2.default.createElement(
+														'option',
+														{ hidden: true, value: '' },
+														'\u0110i\u1EC7n tho\u1EA1i'
+													),
+													_react2.default.createElement(
+														'option',
+														{ hidden: true, value: '' },
+														'M\xE1y t\xEDnh'
+													),
+													_react2.default.createElement(
+														'option',
+														{ hidden: true, value: '' },
+														'Laptops'
+													)
+												),
+												_react2.default.createElement(
+													'span',
+													null,
+													_react2.default.createElement('i', { className: 'fa fa-angle-down', 'aria-hidden': 'true' })
+												),
+												_react2.default.createElement(
+													'div',
+													{ className: 'all-categories' },
+													_react2.default.createElement(
+														'div',
+														{ className: 'cat-list-search' },
+														_react2.default.createElement(
+															'div',
+															{ className: 'title' },
+															'Electronics'
+														),
+														_react2.default.createElement(
+															'ul',
+															null,
+															_react2.default.createElement(
+																'li',
+																null,
+																'Components'
+															),
+															_react2.default.createElement(
+																'li',
+																null,
+																'Laptop'
+															),
+															_react2.default.createElement(
+																'li',
+																null,
+																'Monitor'
+															),
+															_react2.default.createElement(
+																'li',
+																null,
+																'Mp3 player'
+															),
+															_react2.default.createElement(
+																'li',
+																null,
+																'Scanners'
+															)
+														)
+													),
+													_react2.default.createElement(
+														'div',
+														{ className: 'cat-list-search' },
+														_react2.default.createElement(
+															'div',
+															{ className: 'title' },
+															'Furniture'
+														),
+														_react2.default.createElement(
+															'ul',
+															null,
+															_react2.default.createElement(
+																'li',
+																null,
+																'Bookcases'
+															),
+															_react2.default.createElement(
+																'li',
+																null,
+																'Barstools'
+															),
+															_react2.default.createElement(
+																'li',
+																null,
+																'TV stands'
+															),
+															_react2.default.createElement(
+																'li',
+																null,
+																'Desks'
+															),
+															_react2.default.createElement(
+																'li',
+																null,
+																'Accent chairs'
+															)
+														)
+													),
+													_react2.default.createElement(
+														'div',
+														{ className: 'cat-list-search' },
+														_react2.default.createElement(
+															'div',
+															{ className: 'title' },
+															'Accessories'
+														),
+														_react2.default.createElement(
+															'ul',
+															null,
+															_react2.default.createElement(
+																'li',
+																null,
+																'Software'
+															),
+															_react2.default.createElement(
+																'li',
+																null,
+																'Mobile'
+															),
+															_react2.default.createElement(
+																'li',
+																null,
+																'TV stands'
+															),
+															_react2.default.createElement(
+																'li',
+																null,
+																'Printers'
+															),
+															_react2.default.createElement(
+																'li',
+																null,
+																'Media'
+															)
+														)
+													)
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'box-search' },
+												_react2.default.createElement('input', { type: 'text', name: 'search', placeholder: 'T\xECm ki\u1EBFm tr\xEAn Mesi' }),
+												_react2.default.createElement(
+													'span',
+													{ className: 'btn-search' },
+													_react2.default.createElement(
+														'button',
+														{ type: 'submit', className: 'waves-effect' },
+														_react2.default.createElement('img', { src: './images/icons/search.png', alt: '' })
+													)
+												),
+												_react2.default.createElement(
+													'div',
+													{ className: 'search-suggestions' },
+													_react2.default.createElement(
+														'div',
+														{ className: 'box-suggestions' },
+														_react2.default.createElement(
+															'div',
+															{ className: 'title' },
+															'Search Suggestions'
+														),
+														_react2.default.createElement(
+															'ul',
+															null,
+															_react2.default.createElement(_HeaderSuggestion2.default, { items: this.props.items })
+														)
+													),
+													_react2.default.createElement(
+														'div',
+														{ className: 'box-cat' },
+														_react2.default.createElement(
+															'div',
+															{ className: 'cat-list-search' },
+															_react2.default.createElement(
+																'div',
+																{ className: 'title' },
+																'Categories'
+															),
+															_react2.default.createElement(
+																'ul',
+																null,
+																_react2.default.createElement(
+																	'li',
+																	null,
+																	_react2.default.createElement(
+																		'a',
+																		{ href: '#' },
+																		'Networking  Internet Devices'
+																	)
+																),
+																_react2.default.createElement(
+																	'li',
+																	null,
+																	_react2.default.createElement(
+																		'a',
+																		{ href: '#' },
+																		'Laptops, Desktops  Monitors'
+																	)
+																),
+																_react2.default.createElement(
+																	'li',
+																	null,
+																	_react2.default.createElement(
+																		'a',
+																		{ href: '#' },
+																		'Hard Drives  Memory Cards'
+																	)
+																),
+																_react2.default.createElement(
+																	'li',
+																	null,
+																	_react2.default.createElement(
+																		'a',
+																		{ href: '#' },
+																		'Printers  Ink'
+																	)
+																),
+																_react2.default.createElement(
+																	'li',
+																	null,
+																	_react2.default.createElement(
+																		'a',
+																		{ href: '#' },
+																		'Networking  Internet Devices'
+																	)
+																),
+																_react2.default.createElement(
+																	'li',
+																	null,
+																	_react2.default.createElement(
+																		'a',
+																		{ href: '#' },
+																		'Computer Accessories'
+																	)
+																),
+																_react2.default.createElement(
+																	'li',
+																	null,
+																	_react2.default.createElement(
+																		'a',
+																		{ href: '#' },
+																		'Software'
+																	)
+																)
+															)
+														)
+													)
+												)
+											)
+										)
+									)
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'col-md-2 col-sm-3' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'box-cart' },
+										_react2.default.createElement(
+											'div',
+											{ className: 'inner-box' },
+											_react2.default.createElement(
+												'a',
+												{ href: '#', title: '' },
+												_react2.default.createElement(
+													'div',
+													{ className: 'icon-cart' },
+													_react2.default.createElement('img', { src: './images/icons/cart.png', alt: '' }),
+													_react2.default.createElement(
+														'span',
+														null,
+														'4'
+													)
+												)
+											),
+											_react2.default.createElement(_IconCart2.default, null)
+										)
+									)
+								)
+							)
+						)
+					),
+					_react2.default.createElement(_Menu2.default, { items: this.props.items, electric: this.props.electric, electricAds: this.props.electricAds })
+				),
+				_react2.default.createElement(_HeaderMobile2.default, null)
+			);
+		}
+	}]);
+
+	return Header;
+}(_react2.default.Component);
+
+exports.default = Header;
 
 /***/ }),
-/* 471 */
+/* 477 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38181,7 +39327,1140 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(3);
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _MenuProduce = __webpack_require__(478);
+
+var _MenuProduce2 = _interopRequireDefault(_MenuProduce);
+
+var _MenuAds = __webpack_require__(479);
+
+var _MenuAds2 = _interopRequireDefault(_MenuAds);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Menu = function (_React$PureComponent) {
+    _inherits(Menu, _React$PureComponent);
+
+    function Menu() {
+        _classCallCheck(this, Menu);
+
+        return _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).apply(this, arguments));
+    }
+
+    _createClass(Menu, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'header-bottom' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'container' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'row' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-12 text-center col-12' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'nav-wrap' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { id: 'mainnav', className: 'mainnav' },
+                                    _react2.default.createElement(
+                                        'ul',
+                                        { className: 'menu' },
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu first', id: 'focusmeplease' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('i', { className: 'fa fa-television img-submenu-mobile', 'aria-hidden': 'true' }),
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    { className: 'menu-item' },
+                                                    '\u0110i\u1EC7n t\u1EED'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'submenu first', id: 'menu-first' },
+                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
+                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu second' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('i', { className: 'fa fa-female img-submenu-mobile', 'aria-hidden': 'true' }),
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    { className: 'menu-item' },
+                                                    'Th\u1EDDi trang'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'submenu' },
+                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
+                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu second' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('i', { className: 'fa fa-bath img-submenu-mobile', 'aria-hidden': 'true' }),
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    { className: 'menu-item' },
+                                                    '\u0110\u1ED3 gia d\u1EE5ng'
+                                                ),
+                                                ' '
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'submenu' },
+                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
+                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu second' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('i', { className: 'fa fa-futbol-o img-submenu-mobile', 'aria-hidden': 'true' }),
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    { className: 'menu-item' },
+                                                    'Th\u1EC3 thao'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'submenu' },
+                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
+                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu second' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('i', { className: 'fa fa-lemon-o img-submenu-mobile', 'aria-hidden': 'true' }),
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    { className: 'menu-item' },
+                                                    '\u0110\u1ED3 cho b\xE9'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'submenu' },
+                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
+                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu second' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('i', { className: 'fa fa-microchip img-submenu-mobile', 'aria-hidden': 'true' }),
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    { className: 'menu-item' },
+                                                    'Ph\u1EE5 ki\u1EC7n'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'submenu' },
+                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
+                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu second' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('i', { className: 'fa fa-print img-submenu-mobile', 'aria-hidden': 'true' }),
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    { className: 'menu-item' },
+                                                    '\u0110\u1ED3 gia d\u1EE5ng'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'submenu' },
+                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
+                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu second mobile' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('i', { className: 'fa fa-print img-submenu-mobile', 'aria-hidden': 'true' }),
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    { className: 'menu-item' },
+                                                    'Li\xEAn h\u1EC7'
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu second mobile' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('i', { className: 'fa fa-print img-submenu-mobile', 'aria-hidden': 'true' }),
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    { className: 'menu-item' },
+                                                    'H\u1ED7 tr\u1EE3'
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu second mobile' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('i', { className: 'fa fa-print img-submenu-mobile', 'aria-hidden': 'true' }),
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    { className: 'menu-item' },
+                                                    'Ki\u1EC3m tra'
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu second mobile' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('i', { className: 'fa fa-print img-submenu-mobile', 'aria-hidden': 'true' }),
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    { className: 'menu-item' },
+                                                    'Giao d\u1ECBch'
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu second mobile' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('i', { className: 'fa fa-print img-submenu-mobile', 'aria-hidden': 'true' }),
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    { className: 'menu-item' },
+                                                    '\u0110\u0103ng nh\u1EADp'
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            { className: 'has-mega-menu second mobile' },
+                                            _react2.default.createElement('a', { href: '#', title: '' })
+                                        )
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'btn-menu' },
+                                _react2.default.createElement('span', null)
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Menu;
+}(_react2.default.PureComponent);
+
+exports.default = Menu;
+
+/***/ }),
+/* 478 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MenuProduce = function (_React$Component) {
+    _inherits(MenuProduce, _React$Component);
+
+    function MenuProduce() {
+        _classCallCheck(this, MenuProduce);
+
+        return _possibleConstructorReturn(this, (MenuProduce.__proto__ || Object.getPrototypeOf(MenuProduce)).apply(this, arguments));
+    }
+
+    _createClass(MenuProduce, [{
+        key: "shouldComponentUpdate",
+        value: function shouldComponentUpdate(nextProps) {
+            if (nextProps.electric !== this.props.electric) {
+                return true;
+            }
+            return false;
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "row" },
+                this.props.electric.map(function (item, index) {
+                    return _react2.default.createElement(
+                        "div",
+                        { className: "col-lg-3 col-md-12 col-6", key: index },
+                        _react2.default.createElement(
+                            "a",
+                            { className: "home-category-list__category-grid", href: "" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "home-category-list__category-grid-content" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "lazy-image__container home-category-list__category-grid-thumbnail" },
+                                    _react2.default.createElement("img", { className: "lazy-image__image", src: item.src })
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "home-category-list__category-grid-name" },
+                                    item.name
+                                )
+                            )
+                        )
+                    );
+                })
+            );
+        }
+    }]);
+
+    return MenuProduce;
+}(_react2.default.Component);
+
+exports.default = MenuProduce;
+
+/***/ }),
+/* 479 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MenuAds = function (_React$PureComponent) {
+    _inherits(MenuAds, _React$PureComponent);
+
+    function MenuAds() {
+        _classCallCheck(this, MenuAds);
+
+        return _possibleConstructorReturn(this, (MenuAds.__proto__ || Object.getPrototypeOf(MenuAds)).apply(this, arguments));
+    }
+
+    _createClass(MenuAds, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "row" },
+                this.props.electricAds.map(function (item, index) {
+                    return _react2.default.createElement(
+                        "div",
+                        { className: "col-md-6", key: index },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "banner-box" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "inner-box" },
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    _react2.default.createElement("img", { src: item.src, alt: "" })
+                                )
+                            )
+                        )
+                    );
+                })
+            );
+        }
+    }]);
+
+    return MenuAds;
+}(_react2.default.PureComponent);
+
+exports.default = MenuAds;
+
+/***/ }),
+/* 480 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _IconCart = __webpack_require__(178);
+
+var _IconCart2 = _interopRequireDefault(_IconCart);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var HeaderMobile = function (_React$Component) {
+    _inherits(HeaderMobile, _React$Component);
+
+    function HeaderMobile() {
+        _classCallCheck(this, HeaderMobile);
+
+        return _possibleConstructorReturn(this, (HeaderMobile.__proto__ || Object.getPrototypeOf(HeaderMobile)).apply(this, arguments));
+    }
+
+    _createClass(HeaderMobile, [{
+        key: 'render',
+
+        // shouldComponentUpdate(){
+        //     return true;
+        // }
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'section',
+                    { id: 'header-mobile' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'row header-mobile' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-9 col-2' },
+                            _react2.default.createElement('div', { className: 'nav-wrap' }),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'btn-menu' },
+                                _react2.default.createElement('span', null)
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-8' },
+                            _react2.default.createElement(
+                                'form',
+                                { action: '' },
+                                _react2.default.createElement('input', { type: 'text', id: 'input-mobile', placeholder: 'B\u1EA1n c\u1EA7n t\xECm g\xEC?' })
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-2 inner-box' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'inner-box mobile' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: '#', title: '' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'icon-cart mobile' },
+                                        _react2.default.createElement('img', { src: './images/icons/cart.png', alt: '' })
+                                    )
+                                ),
+                                _react2.default.createElement(_IconCart2.default, null)
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return HeaderMobile;
+}(_react2.default.Component);
+
+exports.default = HeaderMobile;
+
+/***/ }),
+/* 481 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var HeaderSuggestion = function (_React$PureComponent) {
+    _inherits(HeaderSuggestion, _React$PureComponent);
+
+    function HeaderSuggestion() {
+        _classCallCheck(this, HeaderSuggestion);
+
+        return _possibleConstructorReturn(this, (HeaderSuggestion.__proto__ || Object.getPrototypeOf(HeaderSuggestion)).apply(this, arguments));
+    }
+
+    _createClass(HeaderSuggestion, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                null,
+                this.props.items.map(function (item, index) {
+                    return _react2.default.createElement(
+                        "li",
+                        { key: index },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "image" },
+                            _react2.default.createElement("img", { src: item.src, alt: "" })
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "info-product" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "name" },
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    item.name
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "price" },
+                                _react2.default.createElement(
+                                    "span",
+                                    { className: "sale" },
+                                    item.sale
+                                ),
+                                _react2.default.createElement(
+                                    "span",
+                                    { className: "regular" },
+                                    item.price
+                                )
+                            )
+                        )
+                    );
+                })
+            );
+        }
+    }]);
+
+    return HeaderSuggestion;
+}(_react2.default.PureComponent);
+
+exports.default = HeaderSuggestion;
+
+/***/ }),
+/* 482 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "footer",
+            null,
+            _react2.default.createElement(
+                "div",
+                { className: "container" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "row" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-lg-3 col-md-6" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "widget-ft widget-about" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "logo logo-ft" },
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "https://mesi.vn", title: "" },
+                                    "Mesi.vn"
+                                ),
+                                _react2.default.createElement(
+                                    "i",
+                                    null,
+                                    "C\u1EA3m \u01A1n qu\xFD kh\xE1ch !"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "ul",
+                                { className: "social-list" },
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        _react2.default.createElement("i", { className: "fa fa-facebook", "aria-hidden": "true" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        _react2.default.createElement("i", { className: "fa fa-twitter", "aria-hidden": "true" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        _react2.default.createElement("i", { className: "fa fa-instagram", "aria-hidden": "true" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        _react2.default.createElement("i", { className: "fa fa-pinterest", "aria-hidden": "true" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        _react2.default.createElement("i", { className: "fa fa-dribbble", "aria-hidden": "true" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        _react2.default.createElement("i", { className: "fa fa-google", "aria-hidden": "true" })
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-lg-3 col-md-6" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "widget-ft widget-categories-ft" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "widget-title" },
+                                _react2.default.createElement(
+                                    "h3",
+                                    null,
+                                    "Danh m\u1EE5c"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "ul",
+                                { className: "cat-list-ft" },
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "M\xE1y t\xEDnh b\xE0n"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "Laptops & Notebooks"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "Thi\u1EBFt b\u1ECB \u0111i\u1EC7n t\u1EED"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "M\xE1y t\xEDnh b\u1EA3ng"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "Ph\u1EA7n m\u1EC1m"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "Phones & PDAs"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "Cameras"
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-lg-2 col-md-6" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "widget-ft widget-menu" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "widget-title" },
+                                _react2.default.createElement(
+                                    "h3",
+                                    null,
+                                    "Ch\u0103m s\xF3c kh\xE1ch h\xE0ng"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "ul",
+                                null,
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "Li\xEAn h\u1EC7"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "\u0110\u1ECBa ch\u1EC9"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "T\xE0i kho\u1EA3n"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "H\xE0ng h\xF3a y\xEAu th\xEDch"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "Th\xF4ng tin giao h\xE0ng"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "Ch\xEDch s\xE1ch b\u1EA3o m\u1EADt"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        "\u0110i\u1EC1u kho\u1EA3n & Ch\xEDnh s\xE1ch"
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-lg-4 col-md-6" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "widget-ft widget-newsletter" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "widget-title" },
+                                _react2.default.createElement(
+                                    "h3",
+                                    null,
+                                    "\u0110\u0103ng k\xED nh\u1EADn th\u01B0 m\u1EDDi"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "p",
+                                null,
+                                "H\xE3y ch\u1EAFc ch\u1EAFn r\u1EB1ng b\u1EA1n kh\xF4ng bao gi\u1EDD b\u1ECF l\u1EE1 l\u1EDDi m\u1EDDi h\u1EA5p d\u1EABn ",
+                                _react2.default.createElement("br", null),
+                                "b\u1EB1ng c\xE1ch tham gia c\xE1c ch\u01B0\u01A1ng tr\xECnh tin t\u1EE9c c\u1EE7a c\xF4ng ty"
+                            ),
+                            _react2.default.createElement(
+                                "form",
+                                { action: "#", className: "subscribe-form", method: "get", acceptCharset: "utf-8" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "subscribe-content" },
+                                    _react2.default.createElement("input", { type: "text", name: "email", className: "subscribe-email", placeholder: "E-Mail c\u1EE7a b\u1EA1n" }),
+                                    _react2.default.createElement(
+                                        "button",
+                                        { type: "submit" },
+                                        _react2.default.createElement("img", { src: "./images/icons/right-2.png", alt: "" })
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "ul",
+                                { className: "pay-list" },
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        _react2.default.createElement("img", { src: "./images/logos/ft-01.png", alt: "" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        _react2.default.createElement("img", { src: "./images/logos/ft-02.png", alt: "" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        _react2.default.createElement("img", { src: "./images/logos/ft-03.png", alt: "" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        _react2.default.createElement("img", { src: "./images/logos/ft-04.png", alt: "" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "#", title: "" },
+                                        _react2.default.createElement("img", { src: "./images/logos/ft-05.png", alt: "" })
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        ),
+        _react2.default.createElement(
+            "section",
+            { className: "footer-bottom" },
+            _react2.default.createElement(
+                "div",
+                { className: "container" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "row" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-md-12" },
+                        _react2.default.createElement(
+                            "p",
+                            { className: "copyright" },
+                            " Mesi.vn - 2018"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "btn-scroll" },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#", title: "" },
+                                _react2.default.createElement("img", { src: "./images/icons/top.png", alt: "" })
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    );
+};
+
+exports.default = Footer;
+
+/***/ }),
+/* 483 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(49);
+
+var _SideBar = __webpack_require__(179);
+
+var _SideBar2 = _interopRequireDefault(_SideBar);
+
+var _BreadCrumb = __webpack_require__(120);
+
+var _BreadCrumb2 = _interopRequireDefault(_BreadCrumb);
+
+var _Tablet = __webpack_require__(484);
+
+var _Tablet2 = _interopRequireDefault(_Tablet);
+
+var _Produce = __webpack_require__(80);
+
+var _Produce2 = _interopRequireDefault(_Produce);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Category = function (_React$Component) {
+    _inherits(Category, _React$Component);
+
+    function Category() {
+        _classCallCheck(this, Category);
+
+        return _possibleConstructorReturn(this, (Category.__proto__ || Object.getPrototypeOf(Category)).apply(this, arguments));
+    }
+
+    _createClass(Category, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(_BreadCrumb2.default, null),
+                _react2.default.createElement(
+                    'main',
+                    { id: 'shop' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'container' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'row' },
+                            _react2.default.createElement(_SideBar2.default, null),
+                            _react2.default.createElement(_Tablet2.default, null)
+                        )
+                    )
+                ),
+                _react2.default.createElement(_Produce2.default, { name: 'H\xE0ng gia d\u1EE5ng', produce: this.props.produce }),
+                _react2.default.createElement(_Produce2.default, { name: 'H\xE0ng \u0111i\u1EC7n t\u1EED', produce: this.props.produce })
+            );
+        }
+    }]);
+
+    return Category;
+}(_react2.default.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+    return {
+        produce: state.homeReducer.produce
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(Category);
+
+/***/ }),
+/* 484 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -40070,7 +42349,7 @@ var Tablet = function (_React$Component) {
 exports.default = Tablet;
 
 /***/ }),
-/* 472 */
+/* 485 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40082,7 +42361,70 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(3);
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ProductContent = __webpack_require__(486);
+
+var _ProductContent2 = _interopRequireDefault(_ProductContent);
+
+var _Produce = __webpack_require__(80);
+
+var _Produce2 = _interopRequireDefault(_Produce);
+
+var _BreadCrumb = __webpack_require__(120);
+
+var _BreadCrumb2 = _interopRequireDefault(_BreadCrumb);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ProductDetail = function (_React$Component) {
+    _inherits(ProductDetail, _React$Component);
+
+    function ProductDetail() {
+        _classCallCheck(this, ProductDetail);
+
+        return _possibleConstructorReturn(this, (ProductDetail.__proto__ || Object.getPrototypeOf(ProductDetail)).apply(this, arguments));
+    }
+
+    _createClass(ProductDetail, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(_BreadCrumb2.default, null),
+                _react2.default.createElement(_ProductContent2.default, null)
+            );
+        }
+    }]);
+
+    return ProductDetail;
+}(_react2.default.Component);
+
+exports.default = ProductDetail;
+
+/***/ }),
+/* 486 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -41045,12 +43387,2365 @@ var ProductContent = function (_React$Component) {
 exports.default = ProductContent;
 
 /***/ }),
-/* 473 */,
-/* 474 */,
-/* 475 */,
-/* 476 */,
-/* 477 */,
-/* 478 */
+/* 487 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(49);
+
+var _action = __webpack_require__(488);
+
+var _SideBar = __webpack_require__(179);
+
+var _SideBar2 = _interopRequireDefault(_SideBar);
+
+var _BreadCrumb = __webpack_require__(120);
+
+var _BreadCrumb2 = _interopRequireDefault(_BreadCrumb);
+
+var _Tablet = __webpack_require__(489);
+
+var _Tablet2 = _interopRequireDefault(_Tablet);
+
+var _Produce = __webpack_require__(80);
+
+var _Produce2 = _interopRequireDefault(_Produce);
+
+var _InfoShop = __webpack_require__(490);
+
+var _InfoShop2 = _interopRequireDefault(_InfoShop);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Shop = function (_React$Component) {
+    _inherits(Shop, _React$Component);
+
+    function Shop() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
+        _classCallCheck(this, Shop);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Shop.__proto__ || Object.getPrototypeOf(Shop)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            success: false
+        }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(Shop, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.props.fetchCollection(this.props.match.params.pageid);
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            if (!nextProps.isLoading) {
+                this.setState({ success: true });
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                this.state.success && _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(_InfoShop2.default, { pageid: this.props.match.params.pageid }),
+                    _react2.default.createElement(_BreadCrumb2.default, null),
+                    _react2.default.createElement(
+                        'main',
+                        { id: 'shop' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'container' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'row' },
+                                _react2.default.createElement(_SideBar2.default, null),
+                                _react2.default.createElement(_Tablet2.default, null)
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(_Produce2.default, { name: 'H\xE0ng gia d\u1EE5ng', produce: this.props.produce }),
+                    _react2.default.createElement(_Produce2.default, { name: 'H\xE0ng \u0111i\u1EC7n t\u1EED', produce: this.props.produce })
+                )
+            );
+        }
+    }]);
+
+    return Shop;
+}(_react2.default.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+    return {
+        produce: state.homeReducer.produce,
+        isLoading: state.shopReducer.isLoading
+    };
+};
+
+var mapDispatchToProps = {
+    fetchCollection: _action.fetchCollection
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Shop);
+
+/***/ }),
+/* 488 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var fetchCollection = exports.fetchCollection = function fetchCollection(pageid) {
+    return {
+        type: "LOADING_DATA",
+        pageid: pageid
+    };
+};
+
+/***/ }),
+/* 489 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(49);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Tablet = function (_React$Component) {
+    _inherits(Tablet, _React$Component);
+
+    function Tablet() {
+        _classCallCheck(this, Tablet);
+
+        return _possibleConstructorReturn(this, (Tablet.__proto__ || Object.getPrototypeOf(Tablet)).apply(this, arguments));
+    }
+
+    _createClass(Tablet, [{
+        key: 'render',
+        value: function render() {
+            var props = this.props.data.page;
+            return _react2.default.createElement(
+                'div',
+                { className: 'col-lg-10 col-md-9' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'main-shop' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'wrap-imagebox' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'flat-row-title' },
+                            _react2.default.createElement(
+                                'h3',
+                                { className: 'TITLE' },
+                                '\u0110i\u1EC7n tho\u1EA1i di \u0111\u1ED9ng & M\xE1y t\xEDnh b\u1EA3ng'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'sort-product', style: { float: 'right' } },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'sort', style: { float: 'left' } },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'popularity' },
+                                        _react2.default.createElement(
+                                            'select',
+                                            { name: 'popularity' },
+                                            _react2.default.createElement(
+                                                'option',
+                                                { value: '' },
+                                                '\u0110\u1ED9 ph\u1ED5 bi\u1EBFn'
+                                            ),
+                                            _react2.default.createElement(
+                                                'option',
+                                                { value: '' },
+                                                'Gi\xE1 t\u1EEB th\u1EA5p \u0111\u1EBFn cao'
+                                            ),
+                                            _react2.default.createElement(
+                                                'option',
+                                                { value: '' },
+                                                'Gi\xE1 t\u1EEB cao \u0111\u1EBFn th\u1EA5p'
+                                            )
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'ul',
+                                        { className: 'icons', style: { float: 'right' } },
+                                        _react2.default.createElement(
+                                            'li',
+                                            null,
+                                            _react2.default.createElement('img', { src: './images/icons/list-1.png', alt: '' })
+                                        ),
+                                        _react2.default.createElement(
+                                            'li',
+                                            null,
+                                            _react2.default.createElement('img', { src: './images/icons/list-2.png', alt: '' })
+                                        )
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'tab-product' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'row sort-box' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-lg-3 col-sm-6' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'product-box' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'imagebox' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-image owl-carousel-1' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/02.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/02.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/02.jpg', alt: '' })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-content' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'cat-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Cameras'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'product-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'New X5C-1 2.4Ghz Gyro',
+                                                        _react2.default.createElement('br', null),
+                                                        'RC Quadcopter Drone'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'price' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sale' },
+                                                        '$2,009.00'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'regular' },
+                                                        '$2,999.00'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-bottom' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'btn-add-cart' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                        'Mua'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'compare-wishlist' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'compare', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                        'Quan t\xE2m'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'wishlist', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                        '\u01AFa chu\u1ED9ng'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-lg-3 col-sm-6' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'product-box' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'imagebox' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-image owl-carousel-1' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/03.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/03.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/03.jpg', alt: '' })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-content' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'cat-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Headphones'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'product-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Beats Solo',
+                                                        _react2.default.createElement('br', null),
+                                                        'HD'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'price' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sale' },
+                                                        '$1,999.00'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'regular' },
+                                                        '$2,999.00'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-bottom' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'btn-add-cart' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                        'Mua'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'compare-wishlist' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'compare', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                        'Quan t\xE2m'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'wishlist', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                        '\u01AFa chu\u1ED9ng'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-lg-3 col-sm-6' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'product-box' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'imagebox' },
+                                            _react2.default.createElement(
+                                                'span',
+                                                { className: 'item-sale' },
+                                                'SALE'
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-image owl-carousel-1' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/04.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/04.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/04.jpg', alt: '' })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-content' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'cat-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Computers'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'product-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Apple \u0130mac Z0SC4824',
+                                                        _react2.default.createElement('br', null),
+                                                        'Retina'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'price' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sale' },
+                                                        '$5,759.68'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'regular' },
+                                                        '$2,999.00'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-bottom' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'btn-add-cart' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                        'Mua'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'compare-wishlist' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'compare', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                        'Quan t\xE2m'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'wishlist', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                        '\u01AFa chu\u1ED9ng'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-lg-3 col-sm-6' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'product-box' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'imagebox' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-image owl-carousel-1' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/06.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/06.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/06.jpg', alt: '' })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-content' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'cat-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Cameras'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'product-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'New X5C-1 2.4Ghz Gyro ',
+                                                        _react2.default.createElement('br', null),
+                                                        'RC Quadcopter Drone'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'price' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sale' },
+                                                        '$2,009.00'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'regular' },
+                                                        '$2,999.00'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-bottom' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'btn-add-cart' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                        'Mua'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'compare-wishlist' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'compare' },
+                                                        _react2.default.createElement(
+                                                            'a',
+                                                            { href: '#', title: '' },
+                                                            _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                            'Quan t\xE2m'
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'wishlist' },
+                                                        _react2.default.createElement(
+                                                            'a',
+                                                            { href: '#', title: '' },
+                                                            _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                            '\u01AFa chu\u1ED9ng'
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-lg-3 col-sm-6' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'product-box' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'imagebox' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-image owl-carousel-1' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/07.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/07.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/07.jpg', alt: '' })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-content' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'cat-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Computers'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'product-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Apple iPad Air 2 32GB 9.7" ',
+                                                        _react2.default.createElement('br', null),
+                                                        'Tablet'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'price' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sale' },
+                                                        '$5,759.68'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'regular' },
+                                                        '$2,999.00'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-bottom' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'btn-add-cart' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                        'Mua'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'compare-wishlist' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'compare', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                        'Quan t\xE2m'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'wishlist', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                        '\u01AFa chu\u1ED9ng'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-lg-3 col-sm-6' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'product-box' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'imagebox' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-image owl-carousel-1' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: '../images/product/other/08.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: '../images/product/other/08.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/08.jpg', alt: '' })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-content' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'cat-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Computers'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'product-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Apple \u0130mac Z0SC4824',
+                                                        _react2.default.createElement('br', null),
+                                                        'Retina'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'price' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sale' },
+                                                        '$5,759.68'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'regular' },
+                                                        '$2,999.00'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-bottom' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'btn-add-cart' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                        'Mua'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'compare-wishlist' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'compare', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                        'Quan t\xE2m'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'wishlist', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                        '\u01AFa chu\u1ED9ng'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-lg-3 col-sm-6' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'product-box' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'imagebox' },
+                                            _react2.default.createElement(
+                                                'span',
+                                                { className: 'item-new' },
+                                                'NEW'
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-image owl-carousel-1' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/01.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/01.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/01.jpg', alt: '' })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-content' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'cat-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Laptops'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'product-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Apple iPad Mini',
+                                                        _react2.default.createElement('br', null),
+                                                        'G2356'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'price' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sale' },
+                                                        '$1,250.00'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'regular' },
+                                                        '$2,999.00'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-bottom' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'btn-add-cart' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                        'Add to Cart'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'compare-wishlist' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'compare', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                        'Compare'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'wishlist', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                        'Wishlist'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-lg-3 col-sm-6' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'product-box' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'imagebox' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-image owl-carousel-1' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/05.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/05.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/05.jpg', alt: '' })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-content' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'cat-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Cameras'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'product-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Apple iPad Mini',
+                                                        _react2.default.createElement('br', null),
+                                                        'G2356'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'price' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sale' },
+                                                        '$1,250.00'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'regular' },
+                                                        '$2,999.00'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-bottom' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'btn-add-cart' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                        'Add to Cart'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'compare-wishlist' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'compare' },
+                                                        _react2.default.createElement(
+                                                            'a',
+                                                            { href: '#', title: '' },
+                                                            _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                            'Compare'
+                                                        )
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'wishlist' },
+                                                        _react2.default.createElement(
+                                                            'a',
+                                                            { href: '#', title: '' },
+                                                            _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                            'Wishlist'
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-lg-3 col-sm-6' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'product-box' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'imagebox' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-image owl-carousel-1' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: '../images/product/other/l03.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: '../images/product/other/l03.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/l03.jpg', alt: '' })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-content' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'cat-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Laptops'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'product-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Apple iPad Mini',
+                                                        _react2.default.createElement('br', null),
+                                                        'G2356'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'price' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sale' },
+                                                        '$1,250.00'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'regular' },
+                                                        '$2,999.00'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-bottom' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'btn-add-cart' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                        'Add to Cart'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'compare-wishlist' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'compare', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                        'Compare'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'wishlist', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                        'Wishlist'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-lg-3 col-sm-6' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'product-box' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'imagebox' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-image owl-carousel-1' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/l02.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/l02.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/l02.jpg', alt: '' })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-content' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'cat-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Laptops'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'product-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Apple iPad Mini ',
+                                                        _react2.default.createElement('br', null),
+                                                        'G2356'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'price' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sale' },
+                                                        '$1,250.00'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'regular' },
+                                                        '$2,999.00'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-bottom' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'btn-add-cart' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                        'Add to Cart'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'compare-wishlist' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'compare', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                        'Compare'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'wishlist', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                        'Wishlist'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-lg-3 col-sm-6' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'product-box' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'imagebox' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-image owl-carousel-1' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/l04.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/l04.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/l04.jpg', alt: '' })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-content' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'cat-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Cameras'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'product-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'HTC One M8'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'price' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sale' },
+                                                        '$2,009.00'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'regular' },
+                                                        '$2,999.00'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-bottom' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'btn-add-cart' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                        'Add to Cart'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'compare-wishlist' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'compare', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                        'Compare'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'wishlist', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                        'Wishlist'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-lg-3 col-sm-6' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'product-box' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'imagebox' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-image owl-carousel-1' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/l05.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/l05.jpg', alt: '' })
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/product/other/l05.jpg', alt: '' })
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-content' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'cat-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Computers'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'product-name' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        'Apple macbook pro Z0SC4824',
+                                                        _react2.default.createElement('br', null),
+                                                        'Retina'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'price' },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sale' },
+                                                        '$5,759.68'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'regular' },
+                                                        '$2,999.00'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box-bottom' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'btn-add-cart' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                        'Add to Cart'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'compare-wishlist' },
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'compare', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                        'Compare'
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        'a',
+                                                        { href: '#', className: 'wishlist', title: '' },
+                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                        'Wishlist'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'sort-box' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'product-box style3' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'imagebox style1 v3' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-image' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('img', { src: './images/product/other/s02.jpg', alt: '' })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-content' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'cat-name' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    'Cameras'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'product-name' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    'Apple iPad Air 2 32GB 9.7"',
+                                                    _react2.default.createElement('br', null),
+                                                    'Tablet'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'status' },
+                                                'Availablity: In stock'
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'info' },
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    null,
+                                                    'The iPhone 5c replaces the iPhone 5 in the Apple stable, inheriting its internals, like the A6 processor, 4" screen...'
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-price' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'price' },
+                                                _react2.default.createElement(
+                                                    'span',
+                                                    { className: 'regular' },
+                                                    '$2,999.00'
+                                                ),
+                                                _react2.default.createElement(
+                                                    'span',
+                                                    { className: 'sale' },
+                                                    '$1,999.00'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'btn-add-cart' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                    'Add to Cart'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'compare-wishlist' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', className: 'compare', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                    'Compare'
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', className: 'wishlist', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                    'Wishlist'
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'product-box style3' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'imagebox style1 v3' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-image' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('img', { src: './images/product/other/01-v3.jpg', alt: '' })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-content' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'cat-name' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    'Cameras'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'product-name' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    'New X5C-1 2.4Ghz Gyro ',
+                                                    _react2.default.createElement('br', null),
+                                                    'RC Quadcopter Drone'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'status' },
+                                                'Availablity: In stock'
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'info' },
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    null,
+                                                    'The iPhone 5c replaces the iPhone 5 in the Apple stable, inheriting its internals, like the A6 processor, 4" screen...'
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-price' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'price' },
+                                                _react2.default.createElement(
+                                                    'span',
+                                                    { className: 'regular' },
+                                                    '$2,999.00'
+                                                ),
+                                                _react2.default.createElement(
+                                                    'span',
+                                                    { className: 'sale' },
+                                                    '$1,999.00'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'btn-add-cart' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                    'Add to Cart'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'compare-wishlist' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', className: 'compare', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                    'Compare'
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', className: 'wishlist', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                    'Wishlist'
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'product-box style3' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'imagebox style1 v3' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-image' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('img', { src: './images/product/other/02-v3.jpg', alt: '' })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-content' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'cat-name' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    'Cameras'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'product-name' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    'Apple \u0130mac Z0SC4824',
+                                                    _react2.default.createElement('br', null),
+                                                    'Retina'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'status' },
+                                                'Availablity: In stock'
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'info' },
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    null,
+                                                    'The iPhone 5c replaces the iPhone 5 in the Apple stable, inheriting its internals, like the A6 processor, 4" screen...'
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-price' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'price' },
+                                                _react2.default.createElement(
+                                                    'span',
+                                                    { className: 'regular' },
+                                                    '$2,999.00'
+                                                ),
+                                                _react2.default.createElement(
+                                                    'span',
+                                                    { className: 'sale' },
+                                                    '$1,999.00'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'btn-add-cart' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                    'Add to Cart'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'compare-wishlist' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', className: 'compare', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                    'Compare'
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', className: 'wishlist', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                    'Wishlist'
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'product-box style3' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'imagebox style1 v3' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-image' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('img', { src: './images/product/other/03-v3.jpg', alt: '' })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-content' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'cat-name' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    'Cameras'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'product-name' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    'New X5C-1 2.4Ghz Gyro ',
+                                                    _react2.default.createElement('br', null),
+                                                    'RC Quadcopter Drone'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'status' },
+                                                'Availablity: In stock'
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'info' },
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    null,
+                                                    'The iPhone 5c replaces the iPhone 5 in the Apple stable, inheriting its internals, like the A6 processor, 4" screen...'
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-price' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'price' },
+                                                _react2.default.createElement(
+                                                    'span',
+                                                    { className: 'regular' },
+                                                    '$2,999.00'
+                                                ),
+                                                _react2.default.createElement(
+                                                    'span',
+                                                    { className: 'sale' },
+                                                    '$1,999.00'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'btn-add-cart' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                    'Add to Cart'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'compare-wishlist' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', className: 'compare', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                    'Compare'
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', className: 'wishlist', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                    'Wishlist'
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'product-box style3' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'imagebox style1 v3' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-image' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: '#', title: '' },
+                                                _react2.default.createElement('img', { src: './images/product/other/04-v3.jpg', alt: '' })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-content' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'cat-name' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    'Cameras'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'product-name' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    'Apple iPad Air 2 32GB 9.7"',
+                                                    _react2.default.createElement('br', null),
+                                                    'Tablet'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'status' },
+                                                'Availablity: In stock'
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'info' },
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    null,
+                                                    'The iPhone 5c replaces the iPhone 5 in the Apple stable, inheriting its internals, like the A6 processor, 4" screen...'
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'box-price' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'price' },
+                                                _react2.default.createElement(
+                                                    'span',
+                                                    { className: 'regular' },
+                                                    '$2,999.00'
+                                                ),
+                                                _react2.default.createElement(
+                                                    'span',
+                                                    { className: 'sale' },
+                                                    '$1,999.00'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'btn-add-cart' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+                                                    'Add to Cart'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'compare-wishlist' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', className: 'compare', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
+                                                    'Compare'
+                                                ),
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#', className: 'wishlist', title: '' },
+                                                    _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
+                                                    'Wishlist'
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement('div', { style: { height: '9px' } })
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'blog-pagination' },
+                        _react2.default.createElement(
+                            'span',
+                            null,
+                            '1\u201315 tr\xEAn 20 s\u1EA3n ph\u1EA9m'
+                        ),
+                        _react2.default.createElement(
+                            'ul',
+                            { className: 'flat-pagination style1' },
+                            _react2.default.createElement(
+                                'li',
+                                { className: 'prev' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: '#', title: '' },
+                                    _react2.default.createElement('img', { src: './images/icons/left-1.png', alt: '' }),
+                                    'Trang tr\u01B0\u1EDBc'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: '#', className: 'waves-effect', title: '' },
+                                    '01'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: '#', className: 'waves-effect', title: '' },
+                                    '02'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: 'active' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: '#', className: 'waves-effect', title: '' },
+                                    '03'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: '#', className: 'waves-effect', title: '' },
+                                    '04'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: 'next' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: '#', title: '' },
+                                    'Trang sau',
+                                    _react2.default.createElement('img', { src: './images/icons/right-1.png', alt: '' })
+                                )
+                            )
+                        ),
+                        _react2.default.createElement('div', { className: 'clearfix' })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Tablet;
+}(_react2.default.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+    return {
+        data: state.shopReducer.data
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(Tablet);
+
+/***/ }),
+/* 490 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(49);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var InfoShop = function (_React$PureComponent) {
+    _inherits(InfoShop, _React$PureComponent);
+
+    function InfoShop() {
+        _classCallCheck(this, InfoShop);
+
+        return _possibleConstructorReturn(this, (InfoShop.__proto__ || Object.getPrototypeOf(InfoShop)).apply(this, arguments));
+    }
+
+    _createClass(InfoShop, [{
+        key: 'render',
+        value: function render() {
+            var props = this.props.data.page;
+            return _react2.default.createElement(
+                'div',
+                { className: 'info-shop' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'row shop' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'col-md-12 cover-top' },
+                        _react2.default.createElement('img', { className: 'img-cover', src: props.cover.source, alt: '' })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'col-md-3' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'cover' },
+                            _react2.default.createElement('img', { className: 'avatar', src: 'https://graph.facebook.com/' + this.props.pageid + '/picture?type=square&height=320&width=320', alt: '' })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'col-md-9' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'row info' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-md-4' },
+                                _react2.default.createElement(
+                                    'li',
+                                    { className: 'info-detail col-4' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'div-info' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: '/shop' },
+                                            _react2.default.createElement('img', { className: 'icon-info', src: './images/icons/fb.png', alt: '' }),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info-cate' },
+                                                'T\u1EC9 l\u1EC7 ph\u1EA3n h\u1ED3i:'
+                                            ),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info' },
+                                                '93%'
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    { className: 'info-detail col-4' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'div-info' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: '/shop' },
+                                            _react2.default.createElement('img', { className: 'icon-info', src: './images/icons/fb.png', alt: '' }),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info-cate' },
+                                                'S\u1EA3n ph\u1EA9m:'
+                                            ),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info' },
+                                                '345'
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    { className: 'info-detail col-4' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'div-info' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: '/shop' },
+                                            _react2.default.createElement('img', { className: 'icon-info', src: './images/icons/fb.png', alt: '' }),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info-cate' },
+                                                'L\u01B0\u1EE3t like:'
+                                            ),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info' },
+                                                props.fan_count
+                                            )
+                                        )
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-md-4' },
+                                _react2.default.createElement(
+                                    'li',
+                                    { className: 'info-detail col-4' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'div-info' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: '/shop' },
+                                            _react2.default.createElement('img', { className: 'icon-info', src: './images/icons/fb.png', alt: '' }),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info-cate' },
+                                                'Th\u1EDDi gian ph\u1EA3n h\u1ED3i:'
+                                            ),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info' },
+                                                'Trong v\xE0i gi\u1EDD'
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    { className: 'info-detail col-4' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'div-info' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: '/shop' },
+                                            _react2.default.createElement('img', { className: 'icon-info', src: './images/icons/fb.png', alt: '' }),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info-cate' },
+                                                'Tham gia:'
+                                            ),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info' },
+                                                '3 th\xE1ng tr\u01B0\u1EDBc'
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    { className: 'info-detail col-4' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'div-info' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: '/shop' },
+                                            _react2.default.createElement('img', { className: 'icon-info', src: './images/icons/fb.png', alt: '' }),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info-cate' },
+                                                '\u0110\xE1nh gi\xE1:'
+                                            ),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info' },
+                                                '4,5/5(1000 \u0111\xE1nh gi\xE1)'
+                                            )
+                                        )
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-md-4' },
+                                _react2.default.createElement(
+                                    'li',
+                                    { className: 'info-detail col-4' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'div-info' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: '/shop' },
+                                            _react2.default.createElement('img', { className: 'icon-info', src: './images/icons/fb.png', alt: '' }),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info-cate' },
+                                                'Th\u1EDDi gian chu\u1EA9n b\u1ECB:'
+                                            ),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info' },
+                                                '3 ng\xE0y'
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    { className: 'info-detail col-4' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'div-info' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: '/shop' },
+                                            _react2.default.createElement('img', { className: 'icon-info', src: './images/icons/fb.png', alt: '' }),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info-cate' },
+                                                'B\xECnh lu\u1EADn:'
+                                            ),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info' },
+                                                '189'
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'li',
+                                    { className: 'info-detail col-4' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'div-info' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: '/shop' },
+                                            _react2.default.createElement('img', { className: 'icon-info', src: './images/icons/fb.png', alt: '' }),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info-cate' },
+                                                'T\u1EC9 l\u1EC7 ph\u1EA3n h\u1ED3i:'
+                                            ),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'info' },
+                                                '93%'
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return InfoShop;
+}(_react2.default.PureComponent);
+
+var mapStateToProps = function mapStateToProps(state) {
+    return {
+        data: state.shopReducer.data
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(InfoShop);
+
+/***/ }),
+/* 491 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41061,25 +45756,25 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = configureStore;
 
-var _redux = __webpack_require__(167);
+var _redux = __webpack_require__(170);
 
-var _reduxSaga = __webpack_require__(479);
+var _reduxSaga = __webpack_require__(492);
 
 var _reduxSaga2 = _interopRequireDefault(_reduxSaga);
 
-var _saga = __webpack_require__(485);
+var _saga = __webpack_require__(498);
 
 var _saga2 = _interopRequireDefault(_saga);
 
-var _reducer = __webpack_require__(487);
+var _reducer = __webpack_require__(521);
 
 var _reducer2 = _interopRequireDefault(_reducer);
 
-var _reducer3 = __webpack_require__(488);
+var _reducer3 = __webpack_require__(522);
 
 var _reducer4 = _interopRequireDefault(_reducer3);
 
-var _reducer5 = __webpack_require__(499);
+var _reducer5 = __webpack_require__(523);
 
 var _reducer6 = _interopRequireDefault(_reducer5);
 
@@ -41100,31 +45795,31 @@ function configureStore() {
 }
 
 /***/ }),
-/* 479 */
+/* 492 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__internal_middleware__ = __webpack_require__(480);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__internal_runSaga__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__internal_middleware__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__internal_runSaga__ = __webpack_require__(181);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "runSaga", function() { return __WEBPACK_IMPORTED_MODULE_1__internal_runSaga__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__internal_channel__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__internal_channel__ = __webpack_require__(55);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "END", function() { return __WEBPACK_IMPORTED_MODULE_2__internal_channel__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "eventChannel", function() { return __WEBPACK_IMPORTED_MODULE_2__internal_channel__["d"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "channel", function() { return __WEBPACK_IMPORTED_MODULE_2__internal_channel__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__internal_buffers__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__internal_buffers__ = __webpack_require__(81);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "buffers", function() { return __WEBPACK_IMPORTED_MODULE_3__internal_buffers__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__internal_sagaHelpers__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__internal_sagaHelpers__ = __webpack_require__(183);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "takeEvery", function() { return __WEBPACK_IMPORTED_MODULE_4__internal_sagaHelpers__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "takeLatest", function() { return __WEBPACK_IMPORTED_MODULE_4__internal_sagaHelpers__["c"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "throttle", function() { return __WEBPACK_IMPORTED_MODULE_4__internal_sagaHelpers__["e"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__internal_utils__ = __webpack_require__(22);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "delay", function() { return __WEBPACK_IMPORTED_MODULE_5__internal_utils__["m"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CANCEL", function() { return __WEBPACK_IMPORTED_MODULE_5__internal_utils__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__internal_io__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__internal_io__ = __webpack_require__(50);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "detach", function() { return __WEBPACK_IMPORTED_MODULE_6__internal_io__["i"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__effects__ = __webpack_require__(181);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils__ = __webpack_require__(484);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__effects__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils__ = __webpack_require__(497);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "effects", function() { return __WEBPACK_IMPORTED_MODULE_7__effects__; });
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "utils", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__; });
 
@@ -41143,14 +45838,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 480 */
+/* 493 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = sagaMiddlewareFactory;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__channel__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__runSaga__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__channel__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__runSaga__ = __webpack_require__(181);
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 
@@ -41236,14 +45931,14 @@ function sagaMiddlewareFactory() {
 }
 
 /***/ }),
-/* 481 */
+/* 494 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = takeEvery;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__fsmIterator__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__io__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__channel__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__fsmIterator__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__io__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__channel__ = __webpack_require__(55);
 
 
 
@@ -41274,14 +45969,14 @@ function takeEvery(patternOrChannel, worker) {
 }
 
 /***/ }),
-/* 482 */
+/* 495 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = takeLatest;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__fsmIterator__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__io__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__channel__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__fsmIterator__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__io__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__channel__ = __webpack_require__(55);
 
 
 
@@ -41322,15 +46017,15 @@ function takeLatest(patternOrChannel, worker) {
 }
 
 /***/ }),
-/* 483 */
+/* 496 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = throttle;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__fsmIterator__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__io__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__channel__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__buffers__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__fsmIterator__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__io__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__channel__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__buffers__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils__ = __webpack_require__(22);
 
 
@@ -41379,7 +46074,7 @@ function throttle(delayLength, pattern, worker) {
 }
 
 /***/ }),
-/* 484 */
+/* 497 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -41393,16 +46088,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "arrayOfDeffered", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_utils__["g"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createMockTask", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_utils__["j"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "cloneableGenerator", function() { return __WEBPACK_IMPORTED_MODULE_0__internal_utils__["i"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__internal_io__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__internal_io__ = __webpack_require__(50);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "asEffect", function() { return __WEBPACK_IMPORTED_MODULE_1__internal_io__["d"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__internal_proc__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__internal_proc__ = __webpack_require__(182);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CHANNEL_END", function() { return __WEBPACK_IMPORTED_MODULE_2__internal_proc__["a"]; });
 
 
 
 
 /***/ }),
-/* 485 */
+/* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41413,9 +46108,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = rootSaga;
 
-var _effects = __webpack_require__(181);
+var _effects = __webpack_require__(122);
 
-var _saga = __webpack_require__(486);
+var _saga = __webpack_require__(499);
 
 var _saga2 = _interopRequireDefault(_saga);
 
@@ -41433,7 +46128,7 @@ function rootSaga() {
             switch (_context.prev = _context.next) {
                 case 0:
                     _context.next = 2;
-                    return [(0, _effects.fork)(_saga2.default), (0, _effects.fork)(_saga4.default)];
+                    return [(0, _effects.fork)(_saga4.default)];
 
                 case 2:
                 case 'end':
@@ -41444,14 +46139,1170 @@ function rootSaga() {
 }
 
 /***/ }),
-/* 486 */
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 /***/ }),
-/* 487 */
+/* 500 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _effects = __webpack_require__(122);
+
+var _axios = __webpack_require__(501);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _marked = /*#__PURE__*/regeneratorRuntime.mark(fetchData),
+    _marked2 = /*#__PURE__*/regeneratorRuntime.mark(shopSaga);
+
+function fetchData(action) {
+    var pageid, response;
+    return regeneratorRuntime.wrap(function fetchData$(_context) {
+        while (1) {
+            switch (_context.prev = _context.next) {
+                case 0:
+                    _context.prev = 0;
+
+                    console.log('emit');
+                    pageid = action.pageid;
+                    _context.next = 5;
+                    return (0, _effects.call)(_axios2.default.get, 'https://api.botbanhang.vn/v1/webapp/page?id=' + pageid);
+
+                case 5:
+                    response = _context.sent;
+                    _context.next = 8;
+                    return (0, _effects.put)({ type: 'LOADING_DATA_SUCCESS', message: 'Success', data: response.data.data });
+
+                case 8:
+                    _context.next = 14;
+                    break;
+
+                case 10:
+                    _context.prev = 10;
+                    _context.t0 = _context['catch'](0);
+                    _context.next = 14;
+                    return (0, _effects.put)({ type: 'LOADING_DATA_FAILED', message: 'Something wrong' });
+
+                case 14:
+                case 'end':
+                    return _context.stop();
+            }
+        }
+    }, _marked, this, [[0, 10]]);
+}
+
+function shopSaga() {
+    return regeneratorRuntime.wrap(function shopSaga$(_context2) {
+        while (1) {
+            switch (_context2.prev = _context2.next) {
+                case 0:
+                    _context2.next = 2;
+                    return (0, _effects.takeLatest)('LOADING_DATA', fetchData);
+
+                case 2:
+                case 'end':
+                    return _context2.stop();
+            }
+        }
+    }, _marked2, this);
+}
+
+exports.default = shopSaga;
+
+/***/ }),
+/* 501 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(502);
+
+/***/ }),
+/* 502 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(23);
+var bind = __webpack_require__(184);
+var Axios = __webpack_require__(504);
+var defaults = __webpack_require__(123);
+
+/**
+ * Create an instance of Axios
+ *
+ * @param {Object} defaultConfig The default config for the instance
+ * @return {Axios} A new instance of Axios
+ */
+function createInstance(defaultConfig) {
+  var context = new Axios(defaultConfig);
+  var instance = bind(Axios.prototype.request, context);
+
+  // Copy axios.prototype to instance
+  utils.extend(instance, Axios.prototype, context);
+
+  // Copy context to instance
+  utils.extend(instance, context);
+
+  return instance;
+}
+
+// Create the default instance to be exported
+var axios = createInstance(defaults);
+
+// Expose Axios class to allow class inheritance
+axios.Axios = Axios;
+
+// Factory for creating new instances
+axios.create = function create(instanceConfig) {
+  return createInstance(utils.merge(defaults, instanceConfig));
+};
+
+// Expose Cancel & CancelToken
+axios.Cancel = __webpack_require__(188);
+axios.CancelToken = __webpack_require__(519);
+axios.isCancel = __webpack_require__(187);
+
+// Expose all/spread
+axios.all = function all(promises) {
+  return Promise.all(promises);
+};
+axios.spread = __webpack_require__(520);
+
+module.exports = axios;
+
+// Allow use of default import syntax in TypeScript
+module.exports.default = axios;
+
+
+/***/ }),
+/* 503 */
+/***/ (function(module, exports) {
+
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+// The _isBuffer check is for Safari 5-7 support, because it's missing
+// Object.prototype.constructor. Remove this eventually
+module.exports = function (obj) {
+  return obj != null && (isBuffer(obj) || isSlowBuffer(obj) || !!obj._isBuffer)
+}
+
+function isBuffer (obj) {
+  return !!obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
+}
+
+// For Node v0.10 support. Remove this eventually.
+function isSlowBuffer (obj) {
+  return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
+}
+
+
+/***/ }),
+/* 504 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var defaults = __webpack_require__(123);
+var utils = __webpack_require__(23);
+var InterceptorManager = __webpack_require__(514);
+var dispatchRequest = __webpack_require__(515);
+
+/**
+ * Create a new instance of Axios
+ *
+ * @param {Object} instanceConfig The default config for the instance
+ */
+function Axios(instanceConfig) {
+  this.defaults = instanceConfig;
+  this.interceptors = {
+    request: new InterceptorManager(),
+    response: new InterceptorManager()
+  };
+}
+
+/**
+ * Dispatch a request
+ *
+ * @param {Object} config The config specific for this request (merged with this.defaults)
+ */
+Axios.prototype.request = function request(config) {
+  /*eslint no-param-reassign:0*/
+  // Allow for axios('example/url'[, config]) a la fetch API
+  if (typeof config === 'string') {
+    config = utils.merge({
+      url: arguments[0]
+    }, arguments[1]);
+  }
+
+  config = utils.merge(defaults, this.defaults, { method: 'get' }, config);
+  config.method = config.method.toLowerCase();
+
+  // Hook up interceptors middleware
+  var chain = [dispatchRequest, undefined];
+  var promise = Promise.resolve(config);
+
+  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+    chain.unshift(interceptor.fulfilled, interceptor.rejected);
+  });
+
+  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+    chain.push(interceptor.fulfilled, interceptor.rejected);
+  });
+
+  while (chain.length) {
+    promise = promise.then(chain.shift(), chain.shift());
+  }
+
+  return promise;
+};
+
+// Provide aliases for supported request methods
+utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, config) {
+    return this.request(utils.merge(config || {}, {
+      method: method,
+      url: url
+    }));
+  };
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, data, config) {
+    return this.request(utils.merge(config || {}, {
+      method: method,
+      url: url,
+      data: data
+    }));
+  };
+});
+
+module.exports = Axios;
+
+
+/***/ }),
+/* 505 */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+/* 506 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(23);
+
+module.exports = function normalizeHeaderName(headers, normalizedName) {
+  utils.forEach(headers, function processHeader(value, name) {
+    if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
+      headers[normalizedName] = value;
+      delete headers[name];
+    }
+  });
+};
+
+
+/***/ }),
+/* 507 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var createError = __webpack_require__(186);
+
+/**
+ * Resolve or reject a Promise based on response status.
+ *
+ * @param {Function} resolve A function that resolves the promise.
+ * @param {Function} reject A function that rejects the promise.
+ * @param {object} response The response.
+ */
+module.exports = function settle(resolve, reject, response) {
+  var validateStatus = response.config.validateStatus;
+  // Note: status is not exposed by XDomainRequest
+  if (!response.status || !validateStatus || validateStatus(response.status)) {
+    resolve(response);
+  } else {
+    reject(createError(
+      'Request failed with status code ' + response.status,
+      response.config,
+      null,
+      response.request,
+      response
+    ));
+  }
+};
+
+
+/***/ }),
+/* 508 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Update an Error with the specified config, error code, and response.
+ *
+ * @param {Error} error The error to update.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The error.
+ */
+module.exports = function enhanceError(error, config, code, request, response) {
+  error.config = config;
+  if (code) {
+    error.code = code;
+  }
+  error.request = request;
+  error.response = response;
+  return error;
+};
+
+
+/***/ }),
+/* 509 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(23);
+
+function encode(val) {
+  return encodeURIComponent(val).
+    replace(/%40/gi, '@').
+    replace(/%3A/gi, ':').
+    replace(/%24/g, '$').
+    replace(/%2C/gi, ',').
+    replace(/%20/g, '+').
+    replace(/%5B/gi, '[').
+    replace(/%5D/gi, ']');
+}
+
+/**
+ * Build a URL by appending params to the end
+ *
+ * @param {string} url The base of the url (e.g., http://www.google.com)
+ * @param {object} [params] The params to be appended
+ * @returns {string} The formatted url
+ */
+module.exports = function buildURL(url, params, paramsSerializer) {
+  /*eslint no-param-reassign:0*/
+  if (!params) {
+    return url;
+  }
+
+  var serializedParams;
+  if (paramsSerializer) {
+    serializedParams = paramsSerializer(params);
+  } else if (utils.isURLSearchParams(params)) {
+    serializedParams = params.toString();
+  } else {
+    var parts = [];
+
+    utils.forEach(params, function serialize(val, key) {
+      if (val === null || typeof val === 'undefined') {
+        return;
+      }
+
+      if (utils.isArray(val)) {
+        key = key + '[]';
+      }
+
+      if (!utils.isArray(val)) {
+        val = [val];
+      }
+
+      utils.forEach(val, function parseValue(v) {
+        if (utils.isDate(v)) {
+          v = v.toISOString();
+        } else if (utils.isObject(v)) {
+          v = JSON.stringify(v);
+        }
+        parts.push(encode(key) + '=' + encode(v));
+      });
+    });
+
+    serializedParams = parts.join('&');
+  }
+
+  if (serializedParams) {
+    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+  }
+
+  return url;
+};
+
+
+/***/ }),
+/* 510 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(23);
+
+// Headers whose duplicates are ignored by node
+// c.f. https://nodejs.org/api/http.html#http_message_headers
+var ignoreDuplicateOf = [
+  'age', 'authorization', 'content-length', 'content-type', 'etag',
+  'expires', 'from', 'host', 'if-modified-since', 'if-unmodified-since',
+  'last-modified', 'location', 'max-forwards', 'proxy-authorization',
+  'referer', 'retry-after', 'user-agent'
+];
+
+/**
+ * Parse headers into an object
+ *
+ * ```
+ * Date: Wed, 27 Aug 2014 08:58:49 GMT
+ * Content-Type: application/json
+ * Connection: keep-alive
+ * Transfer-Encoding: chunked
+ * ```
+ *
+ * @param {String} headers Headers needing to be parsed
+ * @returns {Object} Headers parsed into an object
+ */
+module.exports = function parseHeaders(headers) {
+  var parsed = {};
+  var key;
+  var val;
+  var i;
+
+  if (!headers) { return parsed; }
+
+  utils.forEach(headers.split('\n'), function parser(line) {
+    i = line.indexOf(':');
+    key = utils.trim(line.substr(0, i)).toLowerCase();
+    val = utils.trim(line.substr(i + 1));
+
+    if (key) {
+      if (parsed[key] && ignoreDuplicateOf.indexOf(key) >= 0) {
+        return;
+      }
+      if (key === 'set-cookie') {
+        parsed[key] = (parsed[key] ? parsed[key] : []).concat([val]);
+      } else {
+        parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+      }
+    }
+  });
+
+  return parsed;
+};
+
+
+/***/ }),
+/* 511 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(23);
+
+module.exports = (
+  utils.isStandardBrowserEnv() ?
+
+  // Standard browser envs have full support of the APIs needed to test
+  // whether the request URL is of the same origin as current location.
+  (function standardBrowserEnv() {
+    var msie = /(msie|trident)/i.test(navigator.userAgent);
+    var urlParsingNode = document.createElement('a');
+    var originURL;
+
+    /**
+    * Parse a URL to discover it's components
+    *
+    * @param {String} url The URL to be parsed
+    * @returns {Object}
+    */
+    function resolveURL(url) {
+      var href = url;
+
+      if (msie) {
+        // IE needs attribute set twice to normalize properties
+        urlParsingNode.setAttribute('href', href);
+        href = urlParsingNode.href;
+      }
+
+      urlParsingNode.setAttribute('href', href);
+
+      // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+      return {
+        href: urlParsingNode.href,
+        protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+        host: urlParsingNode.host,
+        search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+        hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+        hostname: urlParsingNode.hostname,
+        port: urlParsingNode.port,
+        pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
+                  urlParsingNode.pathname :
+                  '/' + urlParsingNode.pathname
+      };
+    }
+
+    originURL = resolveURL(window.location.href);
+
+    /**
+    * Determine if a URL shares the same origin as the current location
+    *
+    * @param {String} requestURL The URL to test
+    * @returns {boolean} True if URL shares the same origin, otherwise false
+    */
+    return function isURLSameOrigin(requestURL) {
+      var parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
+      return (parsed.protocol === originURL.protocol &&
+            parsed.host === originURL.host);
+    };
+  })() :
+
+  // Non standard browser envs (web workers, react-native) lack needed support.
+  (function nonStandardBrowserEnv() {
+    return function isURLSameOrigin() {
+      return true;
+    };
+  })()
+);
+
+
+/***/ }),
+/* 512 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// btoa polyfill for IE<10 courtesy https://github.com/davidchambers/Base64.js
+
+var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+
+function E() {
+  this.message = 'String contains an invalid character';
+}
+E.prototype = new Error;
+E.prototype.code = 5;
+E.prototype.name = 'InvalidCharacterError';
+
+function btoa(input) {
+  var str = String(input);
+  var output = '';
+  for (
+    // initialize result and counter
+    var block, charCode, idx = 0, map = chars;
+    // if the next str index does not exist:
+    //   change the mapping table to "="
+    //   check if d has no fractional digits
+    str.charAt(idx | 0) || (map = '=', idx % 1);
+    // "8 - idx % 1 * 8" generates the sequence 2, 4, 6, 8
+    output += map.charAt(63 & block >> 8 - idx % 1 * 8)
+  ) {
+    charCode = str.charCodeAt(idx += 3 / 4);
+    if (charCode > 0xFF) {
+      throw new E();
+    }
+    block = block << 8 | charCode;
+  }
+  return output;
+}
+
+module.exports = btoa;
+
+
+/***/ }),
+/* 513 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(23);
+
+module.exports = (
+  utils.isStandardBrowserEnv() ?
+
+  // Standard browser envs support document.cookie
+  (function standardBrowserEnv() {
+    return {
+      write: function write(name, value, expires, path, domain, secure) {
+        var cookie = [];
+        cookie.push(name + '=' + encodeURIComponent(value));
+
+        if (utils.isNumber(expires)) {
+          cookie.push('expires=' + new Date(expires).toGMTString());
+        }
+
+        if (utils.isString(path)) {
+          cookie.push('path=' + path);
+        }
+
+        if (utils.isString(domain)) {
+          cookie.push('domain=' + domain);
+        }
+
+        if (secure === true) {
+          cookie.push('secure');
+        }
+
+        document.cookie = cookie.join('; ');
+      },
+
+      read: function read(name) {
+        var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+        return (match ? decodeURIComponent(match[3]) : null);
+      },
+
+      remove: function remove(name) {
+        this.write(name, '', Date.now() - 86400000);
+      }
+    };
+  })() :
+
+  // Non standard browser env (web workers, react-native) lack needed support.
+  (function nonStandardBrowserEnv() {
+    return {
+      write: function write() {},
+      read: function read() { return null; },
+      remove: function remove() {}
+    };
+  })()
+);
+
+
+/***/ }),
+/* 514 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(23);
+
+function InterceptorManager() {
+  this.handlers = [];
+}
+
+/**
+ * Add a new interceptor to the stack
+ *
+ * @param {Function} fulfilled The function to handle `then` for a `Promise`
+ * @param {Function} rejected The function to handle `reject` for a `Promise`
+ *
+ * @return {Number} An ID used to remove interceptor later
+ */
+InterceptorManager.prototype.use = function use(fulfilled, rejected) {
+  this.handlers.push({
+    fulfilled: fulfilled,
+    rejected: rejected
+  });
+  return this.handlers.length - 1;
+};
+
+/**
+ * Remove an interceptor from the stack
+ *
+ * @param {Number} id The ID that was returned by `use`
+ */
+InterceptorManager.prototype.eject = function eject(id) {
+  if (this.handlers[id]) {
+    this.handlers[id] = null;
+  }
+};
+
+/**
+ * Iterate over all the registered interceptors
+ *
+ * This method is particularly useful for skipping over any
+ * interceptors that may have become `null` calling `eject`.
+ *
+ * @param {Function} fn The function to call for each interceptor
+ */
+InterceptorManager.prototype.forEach = function forEach(fn) {
+  utils.forEach(this.handlers, function forEachHandler(h) {
+    if (h !== null) {
+      fn(h);
+    }
+  });
+};
+
+module.exports = InterceptorManager;
+
+
+/***/ }),
+/* 515 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(23);
+var transformData = __webpack_require__(516);
+var isCancel = __webpack_require__(187);
+var defaults = __webpack_require__(123);
+var isAbsoluteURL = __webpack_require__(517);
+var combineURLs = __webpack_require__(518);
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+function throwIfCancellationRequested(config) {
+  if (config.cancelToken) {
+    config.cancelToken.throwIfRequested();
+  }
+}
+
+/**
+ * Dispatch a request to the server using the configured adapter.
+ *
+ * @param {object} config The config that is to be used for the request
+ * @returns {Promise} The Promise to be fulfilled
+ */
+module.exports = function dispatchRequest(config) {
+  throwIfCancellationRequested(config);
+
+  // Support baseURL config
+  if (config.baseURL && !isAbsoluteURL(config.url)) {
+    config.url = combineURLs(config.baseURL, config.url);
+  }
+
+  // Ensure headers exist
+  config.headers = config.headers || {};
+
+  // Transform request data
+  config.data = transformData(
+    config.data,
+    config.headers,
+    config.transformRequest
+  );
+
+  // Flatten headers
+  config.headers = utils.merge(
+    config.headers.common || {},
+    config.headers[config.method] || {},
+    config.headers || {}
+  );
+
+  utils.forEach(
+    ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
+    function cleanHeaderConfig(method) {
+      delete config.headers[method];
+    }
+  );
+
+  var adapter = config.adapter || defaults.adapter;
+
+  return adapter(config).then(function onAdapterResolution(response) {
+    throwIfCancellationRequested(config);
+
+    // Transform response data
+    response.data = transformData(
+      response.data,
+      response.headers,
+      config.transformResponse
+    );
+
+    return response;
+  }, function onAdapterRejection(reason) {
+    if (!isCancel(reason)) {
+      throwIfCancellationRequested(config);
+
+      // Transform response data
+      if (reason && reason.response) {
+        reason.response.data = transformData(
+          reason.response.data,
+          reason.response.headers,
+          config.transformResponse
+        );
+      }
+    }
+
+    return Promise.reject(reason);
+  });
+};
+
+
+/***/ }),
+/* 516 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(23);
+
+/**
+ * Transform the data for a request or a response
+ *
+ * @param {Object|String} data The data to be transformed
+ * @param {Array} headers The headers for the request or response
+ * @param {Array|Function} fns A single function or Array of functions
+ * @returns {*} The resulting transformed data
+ */
+module.exports = function transformData(data, headers, fns) {
+  /*eslint no-param-reassign:0*/
+  utils.forEach(fns, function transform(fn) {
+    data = fn(data, headers);
+  });
+
+  return data;
+};
+
+
+/***/ }),
+/* 517 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Determines whether the specified URL is absolute
+ *
+ * @param {string} url The URL to test
+ * @returns {boolean} True if the specified URL is absolute, otherwise false
+ */
+module.exports = function isAbsoluteURL(url) {
+  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+  // by any combination of letters, digits, plus, period, or hyphen.
+  return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+};
+
+
+/***/ }),
+/* 518 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Creates a new URL by combining the specified URLs
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} relativeURL The relative URL
+ * @returns {string} The combined URL
+ */
+module.exports = function combineURLs(baseURL, relativeURL) {
+  return relativeURL
+    ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '')
+    : baseURL;
+};
+
+
+/***/ }),
+/* 519 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var Cancel = __webpack_require__(188);
+
+/**
+ * A `CancelToken` is an object that can be used to request cancellation of an operation.
+ *
+ * @class
+ * @param {Function} executor The executor function.
+ */
+function CancelToken(executor) {
+  if (typeof executor !== 'function') {
+    throw new TypeError('executor must be a function.');
+  }
+
+  var resolvePromise;
+  this.promise = new Promise(function promiseExecutor(resolve) {
+    resolvePromise = resolve;
+  });
+
+  var token = this;
+  executor(function cancel(message) {
+    if (token.reason) {
+      // Cancellation has already been requested
+      return;
+    }
+
+    token.reason = new Cancel(message);
+    resolvePromise(token.reason);
+  });
+}
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+CancelToken.prototype.throwIfRequested = function throwIfRequested() {
+  if (this.reason) {
+    throw this.reason;
+  }
+};
+
+/**
+ * Returns an object that contains a new `CancelToken` and a function that, when called,
+ * cancels the `CancelToken`.
+ */
+CancelToken.source = function source() {
+  var cancel;
+  var token = new CancelToken(function executor(c) {
+    cancel = c;
+  });
+  return {
+    token: token,
+    cancel: cancel
+  };
+};
+
+module.exports = CancelToken;
+
+
+/***/ }),
+/* 520 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Syntactic sugar for invoking a function and expanding an array for arguments.
+ *
+ * Common use case would be to use `Function.prototype.apply`.
+ *
+ *  ```js
+ *  function f(x, y, z) {}
+ *  var args = [1, 2, 3];
+ *  f.apply(null, args);
+ *  ```
+ *
+ * With `spread` this example can be re-written.
+ *
+ *  ```js
+ *  spread(function(x, y, z) {})([1, 2, 3]);
+ *  ```
+ *
+ * @param {Function} callback
+ * @returns {Function}
+ */
+module.exports = function spread(callback) {
+  return function wrap(arr) {
+    return callback.apply(null, arr);
+  };
+};
+
+
+/***/ }),
+/* 521 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41484,7 +47335,7 @@ var appReducer = function appReducer() {
 exports.default = appReducer;
 
 /***/ }),
-/* 488 */
+/* 522 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41515,2054 +47366,7 @@ var homeReducer = function homeReducer() {
 exports.default = homeReducer;
 
 /***/ }),
-/* 489 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Menu = __webpack_require__(492);
-
-var _Menu2 = _interopRequireDefault(_Menu);
-
-var _HeaderMobile = __webpack_require__(491);
-
-var _HeaderMobile2 = _interopRequireDefault(_HeaderMobile);
-
-var _HeaderSuggestion = __webpack_require__(490);
-
-var _HeaderSuggestion2 = _interopRequireDefault(_HeaderSuggestion);
-
-var _IconCart = __webpack_require__(498);
-
-var _IconCart2 = _interopRequireDefault(_IconCart);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Header = function (_React$Component) {
-	_inherits(Header, _React$Component);
-
-	function Header() {
-		_classCallCheck(this, Header);
-
-		return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
-	}
-
-	_createClass(Header, [{
-		key: 'shouldComponentUpdate',
-		value: function shouldComponentUpdate(nextProps) {
-			if (this.props.items !== nextProps.items) {
-				return true;
-			}
-			if (this.props.electric !== nextProps.electric) {
-				return true;
-			}
-			if (this.props.electricAds !== nextProps.electricAds) {
-				return true;
-			}
-			return false;
-		}
-	}, {
-		key: 'render',
-		value: function render() {
-			return _react2.default.createElement(
-				'div',
-				null,
-				_react2.default.createElement(
-					'section',
-					{ id: 'header', className: 'header' },
-					_react2.default.createElement(
-						'div',
-						{ className: 'header-top' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'container' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'row' },
-								_react2.default.createElement(
-									'div',
-									{ className: 'col-md-6' },
-									_react2.default.createElement(
-										'ul',
-										null,
-										_react2.default.createElement(
-											'li',
-											null,
-											_react2.default.createElement(
-												'a',
-												{ href: 'faq.html', title: '' },
-												'Hotline: 19001583'
-											)
-										)
-									)
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: 'col-md-6 text-right' },
-									_react2.default.createElement(
-										'ul',
-										{ className: 'flat-support' },
-										_react2.default.createElement(
-											'li',
-											null,
-											_react2.default.createElement(
-												'a',
-												{ href: 'order-tracking.html', title: '' },
-												'\u0110\u0103ng nh\u1EADp'
-											)
-										),
-										_react2.default.createElement(
-											'li',
-											null,
-											_react2.default.createElement(
-												'a',
-												{ href: 'order-tracking.html', title: '' },
-												'B\xE1n h\xE0ng'
-											)
-										),
-										_react2.default.createElement(
-											'li',
-											{ id: 'li-top' },
-											_react2.default.createElement(
-												'a',
-												{ href: 'order-tracking.html', title: '' },
-												'Ch\u0103m s\xF3c kh\xE1ch h\xE0ng'
-											)
-										)
-									)
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'header-middle' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'container' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'row' },
-								_react2.default.createElement(
-									'div',
-									{ className: 'col-md-2 col-sm-3' },
-									_react2.default.createElement(
-										'div',
-										{ id: 'logo', className: 'logo' },
-										_react2.default.createElement(
-											'a',
-											{ href: 'https://mesi.vn', title: '' },
-											'Mesi.vn'
-										),
-										_react2.default.createElement(
-											'i',
-											null,
-											'C\u1EA3m \u01A1n qu\xFD kh\xE1ch ! '
-										)
-									)
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: 'col-md-8 col-sm-' },
-									_react2.default.createElement(
-										'div',
-										{ className: 'top-search' },
-										_react2.default.createElement(
-											'form',
-											{ action: '#', method: 'get', className: 'form-search', acceptCharset: 'utf-8' },
-											_react2.default.createElement(
-												'div',
-												{ className: 'cat-wrap' },
-												_react2.default.createElement(
-													'select',
-													{ name: 'category' },
-													_react2.default.createElement(
-														'option',
-														{ hidden: true, value: '' },
-														'Danh m\u1EE5c'
-													),
-													_react2.default.createElement(
-														'option',
-														{ hidden: true, value: '' },
-														'\u0110i\u1EC7n tho\u1EA1i'
-													),
-													_react2.default.createElement(
-														'option',
-														{ hidden: true, value: '' },
-														'M\xE1y t\xEDnh'
-													),
-													_react2.default.createElement(
-														'option',
-														{ hidden: true, value: '' },
-														'Laptops'
-													)
-												),
-												_react2.default.createElement(
-													'span',
-													null,
-													_react2.default.createElement('i', { className: 'fa fa-angle-down', 'aria-hidden': 'true' })
-												),
-												_react2.default.createElement(
-													'div',
-													{ className: 'all-categories' },
-													_react2.default.createElement(
-														'div',
-														{ className: 'cat-list-search' },
-														_react2.default.createElement(
-															'div',
-															{ className: 'title' },
-															'Electronics'
-														),
-														_react2.default.createElement(
-															'ul',
-															null,
-															_react2.default.createElement(
-																'li',
-																null,
-																'Components'
-															),
-															_react2.default.createElement(
-																'li',
-																null,
-																'Laptop'
-															),
-															_react2.default.createElement(
-																'li',
-																null,
-																'Monitor'
-															),
-															_react2.default.createElement(
-																'li',
-																null,
-																'Mp3 player'
-															),
-															_react2.default.createElement(
-																'li',
-																null,
-																'Scanners'
-															)
-														)
-													),
-													_react2.default.createElement(
-														'div',
-														{ className: 'cat-list-search' },
-														_react2.default.createElement(
-															'div',
-															{ className: 'title' },
-															'Furniture'
-														),
-														_react2.default.createElement(
-															'ul',
-															null,
-															_react2.default.createElement(
-																'li',
-																null,
-																'Bookcases'
-															),
-															_react2.default.createElement(
-																'li',
-																null,
-																'Barstools'
-															),
-															_react2.default.createElement(
-																'li',
-																null,
-																'TV stands'
-															),
-															_react2.default.createElement(
-																'li',
-																null,
-																'Desks'
-															),
-															_react2.default.createElement(
-																'li',
-																null,
-																'Accent chairs'
-															)
-														)
-													),
-													_react2.default.createElement(
-														'div',
-														{ className: 'cat-list-search' },
-														_react2.default.createElement(
-															'div',
-															{ className: 'title' },
-															'Accessories'
-														),
-														_react2.default.createElement(
-															'ul',
-															null,
-															_react2.default.createElement(
-																'li',
-																null,
-																'Software'
-															),
-															_react2.default.createElement(
-																'li',
-																null,
-																'Mobile'
-															),
-															_react2.default.createElement(
-																'li',
-																null,
-																'TV stands'
-															),
-															_react2.default.createElement(
-																'li',
-																null,
-																'Printers'
-															),
-															_react2.default.createElement(
-																'li',
-																null,
-																'Media'
-															)
-														)
-													)
-												)
-											),
-											_react2.default.createElement(
-												'div',
-												{ className: 'box-search' },
-												_react2.default.createElement('input', { type: 'text', name: 'search', placeholder: 'T\xECm ki\u1EBFm tr\xEAn Mesi' }),
-												_react2.default.createElement(
-													'span',
-													{ className: 'btn-search' },
-													_react2.default.createElement(
-														'button',
-														{ type: 'submit', className: 'waves-effect' },
-														_react2.default.createElement('img', { src: './images/icons/search.png', alt: '' })
-													)
-												),
-												_react2.default.createElement(
-													'div',
-													{ className: 'search-suggestions' },
-													_react2.default.createElement(
-														'div',
-														{ className: 'box-suggestions' },
-														_react2.default.createElement(
-															'div',
-															{ className: 'title' },
-															'Search Suggestions'
-														),
-														_react2.default.createElement(
-															'ul',
-															null,
-															_react2.default.createElement(_HeaderSuggestion2.default, { items: this.props.items })
-														)
-													),
-													_react2.default.createElement(
-														'div',
-														{ className: 'box-cat' },
-														_react2.default.createElement(
-															'div',
-															{ className: 'cat-list-search' },
-															_react2.default.createElement(
-																'div',
-																{ className: 'title' },
-																'Categories'
-															),
-															_react2.default.createElement(
-																'ul',
-																null,
-																_react2.default.createElement(
-																	'li',
-																	null,
-																	_react2.default.createElement(
-																		'a',
-																		{ href: '#' },
-																		'Networking  Internet Devices'
-																	)
-																),
-																_react2.default.createElement(
-																	'li',
-																	null,
-																	_react2.default.createElement(
-																		'a',
-																		{ href: '#' },
-																		'Laptops, Desktops  Monitors'
-																	)
-																),
-																_react2.default.createElement(
-																	'li',
-																	null,
-																	_react2.default.createElement(
-																		'a',
-																		{ href: '#' },
-																		'Hard Drives  Memory Cards'
-																	)
-																),
-																_react2.default.createElement(
-																	'li',
-																	null,
-																	_react2.default.createElement(
-																		'a',
-																		{ href: '#' },
-																		'Printers  Ink'
-																	)
-																),
-																_react2.default.createElement(
-																	'li',
-																	null,
-																	_react2.default.createElement(
-																		'a',
-																		{ href: '#' },
-																		'Networking  Internet Devices'
-																	)
-																),
-																_react2.default.createElement(
-																	'li',
-																	null,
-																	_react2.default.createElement(
-																		'a',
-																		{ href: '#' },
-																		'Computer Accessories'
-																	)
-																),
-																_react2.default.createElement(
-																	'li',
-																	null,
-																	_react2.default.createElement(
-																		'a',
-																		{ href: '#' },
-																		'Software'
-																	)
-																)
-															)
-														)
-													)
-												)
-											)
-										)
-									)
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: 'col-md-2 col-sm-3' },
-									_react2.default.createElement(
-										'div',
-										{ className: 'box-cart' },
-										_react2.default.createElement(
-											'div',
-											{ className: 'inner-box' },
-											_react2.default.createElement(
-												'a',
-												{ href: '#', title: '' },
-												_react2.default.createElement(
-													'div',
-													{ className: 'icon-cart' },
-													_react2.default.createElement('img', { src: './images/icons/cart.png', alt: '' }),
-													_react2.default.createElement(
-														'span',
-														null,
-														'4'
-													)
-												)
-											),
-											_react2.default.createElement(_IconCart2.default, null)
-										)
-									)
-								)
-							)
-						)
-					),
-					_react2.default.createElement(_Menu2.default, { items: this.props.items, electric: this.props.electric, electricAds: this.props.electricAds })
-				),
-				_react2.default.createElement(_HeaderMobile2.default, null)
-			);
-		}
-	}]);
-
-	return Header;
-}(_react2.default.Component);
-
-exports.default = Header;
-
-/***/ }),
-/* 490 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var HeaderSuggestion = function (_React$PureComponent) {
-    _inherits(HeaderSuggestion, _React$PureComponent);
-
-    function HeaderSuggestion() {
-        _classCallCheck(this, HeaderSuggestion);
-
-        return _possibleConstructorReturn(this, (HeaderSuggestion.__proto__ || Object.getPrototypeOf(HeaderSuggestion)).apply(this, arguments));
-    }
-
-    _createClass(HeaderSuggestion, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                null,
-                this.props.items.map(function (item, index) {
-                    return _react2.default.createElement(
-                        "li",
-                        { key: index },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "image" },
-                            _react2.default.createElement("img", { src: item.src, alt: "" })
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "info-product" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "name" },
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    item.name
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "price" },
-                                _react2.default.createElement(
-                                    "span",
-                                    { className: "sale" },
-                                    item.sale
-                                ),
-                                _react2.default.createElement(
-                                    "span",
-                                    { className: "regular" },
-                                    item.price
-                                )
-                            )
-                        )
-                    );
-                })
-            );
-        }
-    }]);
-
-    return HeaderSuggestion;
-}(_react2.default.PureComponent);
-
-exports.default = HeaderSuggestion;
-
-/***/ }),
-/* 491 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _IconCart = __webpack_require__(498);
-
-var _IconCart2 = _interopRequireDefault(_IconCart);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var HeaderMobile = function (_React$Component) {
-    _inherits(HeaderMobile, _React$Component);
-
-    function HeaderMobile() {
-        _classCallCheck(this, HeaderMobile);
-
-        return _possibleConstructorReturn(this, (HeaderMobile.__proto__ || Object.getPrototypeOf(HeaderMobile)).apply(this, arguments));
-    }
-
-    _createClass(HeaderMobile, [{
-        key: 'render',
-
-        // shouldComponentUpdate(){
-        //     return true;
-        // }
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                    'section',
-                    { id: 'header-mobile' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'row header-mobile' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'col-md-9 col-2' },
-                            _react2.default.createElement('div', { className: 'nav-wrap' }),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'btn-menu' },
-                                _react2.default.createElement('span', null)
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'col-8' },
-                            _react2.default.createElement(
-                                'form',
-                                { action: '' },
-                                _react2.default.createElement('input', { type: 'text', id: 'input-mobile', placeholder: 'B\u1EA1n c\u1EA7n t\xECm g\xEC?' })
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'col-2 inner-box' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'inner-box mobile' },
-                                _react2.default.createElement(
-                                    'a',
-                                    { href: '#', title: '' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'icon-cart mobile' },
-                                        _react2.default.createElement('img', { src: './images/icons/cart.png', alt: '' })
-                                    )
-                                ),
-                                _react2.default.createElement(_IconCart2.default, null)
-                            )
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return HeaderMobile;
-}(_react2.default.Component);
-
-exports.default = HeaderMobile;
-
-/***/ }),
-/* 492 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _MenuProduce = __webpack_require__(494);
-
-var _MenuProduce2 = _interopRequireDefault(_MenuProduce);
-
-var _MenuAds = __webpack_require__(495);
-
-var _MenuAds2 = _interopRequireDefault(_MenuAds);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Menu = function (_React$PureComponent) {
-    _inherits(Menu, _React$PureComponent);
-
-    function Menu() {
-        _classCallCheck(this, Menu);
-
-        return _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).apply(this, arguments));
-    }
-
-    _createClass(Menu, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: 'header-bottom' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'container' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'row' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'col-md-12 text-center col-12' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'nav-wrap' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { id: 'mainnav', className: 'mainnav' },
-                                    _react2.default.createElement(
-                                        'ul',
-                                        { className: 'menu' },
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu first', id: 'focusmeplease' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('i', { className: 'fa fa-television img-submenu-mobile', 'aria-hidden': 'true' }),
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    { className: 'menu-item' },
-                                                    '\u0110i\u1EC7n t\u1EED'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'submenu first', id: 'menu-first' },
-                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
-                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu second' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('i', { className: 'fa fa-female img-submenu-mobile', 'aria-hidden': 'true' }),
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    { className: 'menu-item' },
-                                                    'Th\u1EDDi trang'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'submenu' },
-                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
-                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu second' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('i', { className: 'fa fa-bath img-submenu-mobile', 'aria-hidden': 'true' }),
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    { className: 'menu-item' },
-                                                    '\u0110\u1ED3 gia d\u1EE5ng'
-                                                ),
-                                                ' '
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'submenu' },
-                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
-                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu second' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('i', { className: 'fa fa-futbol-o img-submenu-mobile', 'aria-hidden': 'true' }),
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    { className: 'menu-item' },
-                                                    'Th\u1EC3 thao'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'submenu' },
-                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
-                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu second' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('i', { className: 'fa fa-lemon-o img-submenu-mobile', 'aria-hidden': 'true' }),
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    { className: 'menu-item' },
-                                                    '\u0110\u1ED3 cho b\xE9'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'submenu' },
-                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
-                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu second' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('i', { className: 'fa fa-microchip img-submenu-mobile', 'aria-hidden': 'true' }),
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    { className: 'menu-item' },
-                                                    'Ph\u1EE5 ki\u1EC7n'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'submenu' },
-                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
-                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu second' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('i', { className: 'fa fa-print img-submenu-mobile', 'aria-hidden': 'true' }),
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    { className: 'menu-item' },
-                                                    '\u0110\u1ED3 gia d\u1EE5ng'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'submenu' },
-                                                _react2.default.createElement(_MenuProduce2.default, { electric: this.props.electric }),
-                                                _react2.default.createElement(_MenuAds2.default, { electricAds: this.props.electricAds })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu second mobile' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('i', { className: 'fa fa-print img-submenu-mobile', 'aria-hidden': 'true' }),
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    { className: 'menu-item' },
-                                                    'Li\xEAn h\u1EC7'
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu second mobile' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('i', { className: 'fa fa-print img-submenu-mobile', 'aria-hidden': 'true' }),
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    { className: 'menu-item' },
-                                                    'H\u1ED7 tr\u1EE3'
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu second mobile' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('i', { className: 'fa fa-print img-submenu-mobile', 'aria-hidden': 'true' }),
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    { className: 'menu-item' },
-                                                    'Ki\u1EC3m tra'
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu second mobile' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('i', { className: 'fa fa-print img-submenu-mobile', 'aria-hidden': 'true' }),
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    { className: 'menu-item' },
-                                                    'Giao d\u1ECBch'
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu second mobile' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('i', { className: 'fa fa-print img-submenu-mobile', 'aria-hidden': 'true' }),
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    { className: 'menu-item' },
-                                                    '\u0110\u0103ng nh\u1EADp'
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            { className: 'has-mega-menu second mobile' },
-                                            _react2.default.createElement('a', { href: '#', title: '' })
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'btn-menu' },
-                                _react2.default.createElement('span', null)
-                            )
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Menu;
-}(_react2.default.PureComponent);
-
-exports.default = Menu;
-
-/***/ }),
-/* 493 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Footer = function Footer() {
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "footer",
-            null,
-            _react2.default.createElement(
-                "div",
-                { className: "container" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "row" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-lg-3 col-md-6" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "widget-ft widget-about" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "logo logo-ft" },
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "https://mesi.vn", title: "" },
-                                    "Mesi.vn"
-                                ),
-                                _react2.default.createElement(
-                                    "i",
-                                    null,
-                                    "C\u1EA3m \u01A1n qu\xFD kh\xE1ch !"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "ul",
-                                { className: "social-list" },
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        _react2.default.createElement("i", { className: "fa fa-facebook", "aria-hidden": "true" })
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        _react2.default.createElement("i", { className: "fa fa-twitter", "aria-hidden": "true" })
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        _react2.default.createElement("i", { className: "fa fa-instagram", "aria-hidden": "true" })
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        _react2.default.createElement("i", { className: "fa fa-pinterest", "aria-hidden": "true" })
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        _react2.default.createElement("i", { className: "fa fa-dribbble", "aria-hidden": "true" })
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        _react2.default.createElement("i", { className: "fa fa-google", "aria-hidden": "true" })
-                                    )
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-lg-3 col-md-6" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "widget-ft widget-categories-ft" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "widget-title" },
-                                _react2.default.createElement(
-                                    "h3",
-                                    null,
-                                    "Danh m\u1EE5c"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "ul",
-                                { className: "cat-list-ft" },
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "M\xE1y t\xEDnh b\xE0n"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "Laptops & Notebooks"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "Thi\u1EBFt b\u1ECB \u0111i\u1EC7n t\u1EED"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "M\xE1y t\xEDnh b\u1EA3ng"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "Ph\u1EA7n m\u1EC1m"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "Phones & PDAs"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "Cameras"
-                                    )
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-lg-2 col-md-6" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "widget-ft widget-menu" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "widget-title" },
-                                _react2.default.createElement(
-                                    "h3",
-                                    null,
-                                    "Ch\u0103m s\xF3c kh\xE1ch h\xE0ng"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "ul",
-                                null,
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "Li\xEAn h\u1EC7"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "\u0110\u1ECBa ch\u1EC9"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "T\xE0i kho\u1EA3n"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "H\xE0ng h\xF3a y\xEAu th\xEDch"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "Th\xF4ng tin giao h\xE0ng"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "Ch\xEDch s\xE1ch b\u1EA3o m\u1EADt"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        "\u0110i\u1EC1u kho\u1EA3n & Ch\xEDnh s\xE1ch"
-                                    )
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-lg-4 col-md-6" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "widget-ft widget-newsletter" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "widget-title" },
-                                _react2.default.createElement(
-                                    "h3",
-                                    null,
-                                    "\u0110\u0103ng k\xED nh\u1EADn th\u01B0 m\u1EDDi"
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "p",
-                                null,
-                                "H\xE3y ch\u1EAFc ch\u1EAFn r\u1EB1ng b\u1EA1n kh\xF4ng bao gi\u1EDD b\u1ECF l\u1EE1 l\u1EDDi m\u1EDDi h\u1EA5p d\u1EABn ",
-                                _react2.default.createElement("br", null),
-                                "b\u1EB1ng c\xE1ch tham gia c\xE1c ch\u01B0\u01A1ng tr\xECnh tin t\u1EE9c c\u1EE7a c\xF4ng ty"
-                            ),
-                            _react2.default.createElement(
-                                "form",
-                                { action: "#", className: "subscribe-form", method: "get", acceptCharset: "utf-8" },
-                                _react2.default.createElement(
-                                    "div",
-                                    { className: "subscribe-content" },
-                                    _react2.default.createElement("input", { type: "text", name: "email", className: "subscribe-email", placeholder: "E-Mail c\u1EE7a b\u1EA1n" }),
-                                    _react2.default.createElement(
-                                        "button",
-                                        { type: "submit" },
-                                        _react2.default.createElement("img", { src: "./images/icons/right-2.png", alt: "" })
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "ul",
-                                { className: "pay-list" },
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        _react2.default.createElement("img", { src: "./images/logos/ft-01.png", alt: "" })
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        _react2.default.createElement("img", { src: "./images/logos/ft-02.png", alt: "" })
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        _react2.default.createElement("img", { src: "./images/logos/ft-03.png", alt: "" })
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        _react2.default.createElement("img", { src: "./images/logos/ft-04.png", alt: "" })
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#", title: "" },
-                                        _react2.default.createElement("img", { src: "./images/logos/ft-05.png", alt: "" })
-                                    )
-                                )
-                            )
-                        )
-                    )
-                )
-            )
-        ),
-        _react2.default.createElement(
-            "section",
-            { className: "footer-bottom" },
-            _react2.default.createElement(
-                "div",
-                { className: "container" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "row" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-md-12" },
-                        _react2.default.createElement(
-                            "p",
-                            { className: "copyright" },
-                            " Mesi.vn - 2018"
-                        ),
-                        _react2.default.createElement(
-                            "p",
-                            { className: "btn-scroll" },
-                            _react2.default.createElement(
-                                "a",
-                                { href: "#", title: "" },
-                                _react2.default.createElement("img", { src: "./images/icons/top.png", alt: "" })
-                            )
-                        )
-                    )
-                )
-            )
-        )
-    );
-};
-
-exports.default = Footer;
-
-/***/ }),
-/* 494 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var MenuProduce = function (_React$Component) {
-    _inherits(MenuProduce, _React$Component);
-
-    function MenuProduce() {
-        _classCallCheck(this, MenuProduce);
-
-        return _possibleConstructorReturn(this, (MenuProduce.__proto__ || Object.getPrototypeOf(MenuProduce)).apply(this, arguments));
-    }
-
-    _createClass(MenuProduce, [{
-        key: "shouldComponentUpdate",
-        value: function shouldComponentUpdate(nextProps) {
-            if (nextProps.electric !== this.props.electric) {
-                return true;
-            }
-            return false;
-        }
-    }, {
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { className: "row" },
-                this.props.electric.map(function (item, index) {
-                    return _react2.default.createElement(
-                        "div",
-                        { className: "col-lg-3 col-md-12 col-6", key: index },
-                        _react2.default.createElement(
-                            "a",
-                            { className: "home-category-list__category-grid", href: "" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "home-category-list__category-grid-content" },
-                                _react2.default.createElement(
-                                    "div",
-                                    { className: "lazy-image__container home-category-list__category-grid-thumbnail" },
-                                    _react2.default.createElement("img", { className: "lazy-image__image", src: item.src })
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { className: "home-category-list__category-grid-name" },
-                                    item.name
-                                )
-                            )
-                        )
-                    );
-                })
-            );
-        }
-    }]);
-
-    return MenuProduce;
-}(_react2.default.Component);
-
-exports.default = MenuProduce;
-
-/***/ }),
-/* 495 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var MenuAds = function (_React$PureComponent) {
-    _inherits(MenuAds, _React$PureComponent);
-
-    function MenuAds() {
-        _classCallCheck(this, MenuAds);
-
-        return _possibleConstructorReturn(this, (MenuAds.__proto__ || Object.getPrototypeOf(MenuAds)).apply(this, arguments));
-    }
-
-    _createClass(MenuAds, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { className: "row" },
-                this.props.electricAds.map(function (item, index) {
-                    return _react2.default.createElement(
-                        "div",
-                        { className: "col-md-6", key: index },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "banner-box" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "inner-box" },
-                                _react2.default.createElement(
-                                    "a",
-                                    { href: "#", title: "" },
-                                    _react2.default.createElement("img", { src: item.src, alt: "" })
-                                )
-                            )
-                        )
-                    );
-                })
-            );
-        }
-    }]);
-
-    return MenuAds;
-}(_react2.default.PureComponent);
-
-exports.default = MenuAds;
-
-/***/ }),
-/* 496 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRedux = __webpack_require__(115);
-
-var _SideBar = __webpack_require__(470);
-
-var _SideBar2 = _interopRequireDefault(_SideBar);
-
-var _BreadCrumb = __webpack_require__(119);
-
-var _BreadCrumb2 = _interopRequireDefault(_BreadCrumb);
-
-var _Tablet = __webpack_require__(471);
-
-var _Tablet2 = _interopRequireDefault(_Tablet);
-
-var _Produce = __webpack_require__(118);
-
-var _Produce2 = _interopRequireDefault(_Produce);
-
-var _InfoShop = __webpack_require__(497);
-
-var _InfoShop2 = _interopRequireDefault(_InfoShop);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Shop = function (_React$Component) {
-    _inherits(Shop, _React$Component);
-
-    function Shop() {
-        _classCallCheck(this, Shop);
-
-        return _possibleConstructorReturn(this, (Shop.__proto__ || Object.getPrototypeOf(Shop)).apply(this, arguments));
-    }
-
-    _createClass(Shop, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(_InfoShop2.default, null),
-                _react2.default.createElement(_BreadCrumb2.default, null),
-                _react2.default.createElement(
-                    'main',
-                    { id: 'shop' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'container' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'row' },
-                            _react2.default.createElement(_SideBar2.default, null),
-                            _react2.default.createElement(_Tablet2.default, null)
-                        )
-                    )
-                ),
-                _react2.default.createElement(_Produce2.default, { name: 'H\xE0ng gia d\u1EE5ng', produce: this.props.produce }),
-                _react2.default.createElement(_Produce2.default, { name: 'H\xE0ng \u0111i\u1EC7n t\u1EED', produce: this.props.produce })
-            );
-        }
-    }]);
-
-    return Shop;
-}(_react2.default.Component);
-
-var mapStateToProps = function mapStateToProps(state) {
-    return {
-        produce: state.homeReducer.produce
-    };
-};
-
-exports.default = (0, _reactRedux.connect)(mapStateToProps)(Shop);
-
-/***/ }),
-/* 497 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var InfoShop = function (_React$PureComponent) {
-    _inherits(InfoShop, _React$PureComponent);
-
-    function InfoShop() {
-        _classCallCheck(this, InfoShop);
-
-        return _possibleConstructorReturn(this, (InfoShop.__proto__ || Object.getPrototypeOf(InfoShop)).apply(this, arguments));
-    }
-
-    _createClass(InfoShop, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { className: "info-shop" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "row shop" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-md-12 cover-top" },
-                        _react2.default.createElement("img", { className: "img-cover", src: "./images/slider/cover.jpg", alt: "" })
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-md-3" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "cover" },
-                            _react2.default.createElement("img", { className: "avatar", src: "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/23622073_1950964498562151_2958304923289956772_n.jpg?oh=314e61ee2b409453145dca111675ac53&oe=5ACAC209", alt: "" })
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-md-9" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "row info" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-md-4" },
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "info-detail col-4" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "div-info" },
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "/shop" },
-                                            _react2.default.createElement("img", { className: "icon-info", src: "./images/icons/fb.png", alt: "" }),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info-cate" },
-                                                "T\u1EC9 l\u1EC7 ph\u1EA3n h\u1ED3i:"
-                                            ),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info" },
-                                                "93%"
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "info-detail col-4" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "div-info" },
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "/shop" },
-                                            _react2.default.createElement("img", { className: "icon-info", src: "./images/icons/fb.png", alt: "" }),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info-cate" },
-                                                "S\u1EA3n ph\u1EA9m:"
-                                            ),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info" },
-                                                "345"
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "info-detail col-4" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "div-info" },
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "/shop" },
-                                            _react2.default.createElement("img", { className: "icon-info", src: "./images/icons/fb.png", alt: "" }),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info-cate" },
-                                                "L\u01B0\u1EE3t like:"
-                                            ),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info" },
-                                                "600"
-                                            )
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-md-4" },
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "info-detail col-4" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "div-info" },
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "/shop" },
-                                            _react2.default.createElement("img", { className: "icon-info", src: "./images/icons/fb.png", alt: "" }),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info-cate" },
-                                                "Th\u1EDDi gian ph\u1EA3n h\u1ED3i:"
-                                            ),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info" },
-                                                "Trong v\xE0i gi\u1EDD"
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "info-detail col-4" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "div-info" },
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "/shop" },
-                                            _react2.default.createElement("img", { className: "icon-info", src: "./images/icons/fb.png", alt: "" }),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info-cate" },
-                                                "Tham gia:"
-                                            ),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info" },
-                                                "3 th\xE1ng tr\u01B0\u1EDBc"
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "info-detail col-4" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "div-info" },
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "/shop" },
-                                            _react2.default.createElement("img", { className: "icon-info", src: "./images/icons/fb.png", alt: "" }),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info-cate" },
-                                                "\u0110\xE1nh gi\xE1:"
-                                            ),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info" },
-                                                "4,5/5(1000 \u0111\xE1nh gi\xE1)"
-                                            )
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-md-4" },
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "info-detail col-4" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "div-info" },
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "/shop" },
-                                            _react2.default.createElement("img", { className: "icon-info", src: "./images/icons/fb.png", alt: "" }),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info-cate" },
-                                                "Th\u1EDDi gian chu\u1EA9n b\u1ECB:"
-                                            ),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info" },
-                                                "3 ng\xE0y"
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "info-detail col-4" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "div-info" },
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "/shop" },
-                                            _react2.default.createElement("img", { className: "icon-info", src: "./images/icons/fb.png", alt: "" }),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info-cate" },
-                                                "B\xECnh lu\u1EADn:"
-                                            ),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info" },
-                                                "189"
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "info-detail col-4" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "div-info" },
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "/shop" },
-                                            _react2.default.createElement("img", { className: "icon-info", src: "./images/icons/fb.png", alt: "" }),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info-cate" },
-                                                "T\u1EC9 l\u1EC7 ph\u1EA3n h\u1ED3i:"
-                                            ),
-                                            _react2.default.createElement(
-                                                "p",
-                                                { className: "info" },
-                                                "93%"
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return InfoShop;
-}(_react2.default.PureComponent);
-
-exports.default = InfoShop;
-
-/***/ }),
-/* 498 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (props) {
-    return _react2.default.createElement(
-        "div",
-        { className: "dropdown-box mobile" },
-        _react2.default.createElement(
-            "ul",
-            null,
-            _react2.default.createElement(
-                "li",
-                null,
-                _react2.default.createElement(
-                    "div",
-                    { className: "img-product" },
-                    _react2.default.createElement("img", { src: "./images/product/other/img-cart-1.jpg", alt: "" })
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "info-product" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "name" },
-                        "Samsung - Galaxy S6 4G LTE ",
-                        _react2.default.createElement("br", null),
-                        "with 32GB Memory Cell Phone"
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "price" },
-                        _react2.default.createElement(
-                            "span",
-                            null,
-                            "1 x"
-                        ),
-                        _react2.default.createElement(
-                            "span",
-                            null,
-                            "$250.00"
-                        )
-                    )
-                ),
-                _react2.default.createElement("div", { className: "clearfix" }),
-                _react2.default.createElement(
-                    "span",
-                    { className: "delete" },
-                    "x"
-                )
-            ),
-            _react2.default.createElement(
-                "li",
-                null,
-                _react2.default.createElement(
-                    "div",
-                    { className: "img-product" },
-                    _react2.default.createElement("img", { src: "./images/product/other/img-cart-2.jpg", alt: "" })
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "info-product" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "name" },
-                        "Sennheiser - Over-the-Ear Headphone System - Black"
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "price" },
-                        _react2.default.createElement(
-                            "span",
-                            null,
-                            "1 x"
-                        ),
-                        _react2.default.createElement(
-                            "span",
-                            null,
-                            "$250.00"
-                        )
-                    )
-                ),
-                _react2.default.createElement("div", { className: "clearfix" }),
-                _react2.default.createElement(
-                    "span",
-                    { className: "delete" },
-                    "x"
-                )
-            )
-        ),
-        _react2.default.createElement(
-            "div",
-            { className: "total" },
-            _react2.default.createElement(
-                "span",
-                null,
-                "Subtotal:"
-            ),
-            _react2.default.createElement(
-                "span",
-                { className: "price" },
-                "$1,999.00"
-            )
-        ),
-        _react2.default.createElement(
-            "div",
-            { className: "btn-cart" },
-            _react2.default.createElement(
-                "a",
-                { href: "shop-cart.html", className: "view-cart", title: "" },
-                "View Cart"
-            ),
-            _react2.default.createElement(
-                "a",
-                { href: "shop-checkout.html", className: "check-out", title: "" },
-                "Checkout"
-            )
-        )
-    );
-};
-
-/***/ }),
-/* 499 */
+/* 523 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43588,22 +47392,15 @@ var shopReducer = function shopReducer() {
         case 'LOADING_DATA':
             return _extends({}, state, { isLoading: true });
         case 'LOADING_DATA_SUCCESS':
-            return _extends({}, state, { isLoading: false, data: action.data, message: 'SUCCESS' });
+            return _extends({}, state, { isLoading: false, data: action.data, message: action.message });
         case 'LOADING_DATA_FAILED':
-            return _extends({}, state, { isLoading: false, message: 'FAILED' });
+            return _extends({}, state, { isLoading: false, message: action.message });
         default:
             return state;
     }
 };
 
 exports.default = shopReducer;
-
-/***/ }),
-/* 500 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 
 /***/ })
 /******/ ]);
