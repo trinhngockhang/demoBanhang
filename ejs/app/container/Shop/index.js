@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchCollection } from './action';
 import SideBar from '../../components/Category/SideBar';
 import BreadCrumb from '../../components/BreadCrumb';
-import Tablet from '../../components/Shop/Tablet';
+import Tablet from '../Tablet';
 import Produce from '../../components/Home/Produce';
 import InfoShop from '../../components/Shop/InfoShop';
 
