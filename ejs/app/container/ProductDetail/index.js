@@ -9,7 +9,7 @@ class ProductDetail extends React.Component {
             <div>
                 <BreadCrumb/>
                 <ProductContent/>
-                <Produce/>
+                
             </div>
         )
     }

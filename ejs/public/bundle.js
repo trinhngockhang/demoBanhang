@@ -8342,8 +8342,7 @@ var ProductDetail = function (_React$Component) {
                 'div',
                 null,
                 _react2.default.createElement(_BreadCrumb2.default, null),
-                _react2.default.createElement(_ProductContent2.default, null),
-                _react2.default.createElement(_Produce2.default, null)
+                _react2.default.createElement(_ProductContent2.default, null)
             );
         }
     }]);
@@ -37950,7 +37949,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox1", name: "checkbox1" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "checkbox1" },
+                                { htmlFor: "checkbox1" },
                                 "Apple ",
                                 _react2.default.createElement(
                                     "span",
@@ -37965,7 +37964,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox2", name: "checkbox2" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "checkbox2" },
+                                { htmlFor: "checkbox2" },
                                 "Samsung ",
                                 _react2.default.createElement(
                                     "span",
@@ -37980,7 +37979,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox3", name: "checkbox3" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "checkbox3" },
+                                { htmlFor: "checkbox3" },
                                 "HTC ",
                                 _react2.default.createElement(
                                     "span",
@@ -37995,7 +37994,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox4", name: "checkbox4" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "checkbox4" },
+                                { htmlFor: "checkbox4" },
                                 "LG ",
                                 _react2.default.createElement(
                                     "span",
@@ -38010,7 +38009,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox5", name: "checkbox5" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "checkbox5" },
+                                { htmlFor: "checkbox5" },
                                 "Dell ",
                                 _react2.default.createElement(
                                     "span",
@@ -38025,7 +38024,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox6", name: "checkbox6" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "checkbox6" },
+                                { htmlFor: "checkbox6" },
                                 "Sony ",
                                 _react2.default.createElement(
                                     "span",
@@ -38040,7 +38039,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox7", name: "checkbox7" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "checkbox7" },
+                                { htmlFor: "checkbox7" },
                                 "Bphone ",
                                 _react2.default.createElement(
                                     "span",
@@ -38055,7 +38054,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox8", name: "checkbox8" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "checkbox8" },
+                                { htmlFor: "checkbox8" },
                                 "Oppo ",
                                 _react2.default.createElement(
                                     "span",
@@ -38099,7 +38098,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "check1", name: "check1" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "check1" },
+                                { htmlFor: "check1" },
                                 "\u0110en ",
                                 _react2.default.createElement(
                                     "span",
@@ -38114,7 +38113,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "check2", name: "check2" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "check2" },
+                                { htmlFor: "check2" },
                                 "V\xE0ng ",
                                 _react2.default.createElement(
                                     "span",
@@ -38129,7 +38128,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "check3", name: "check3" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "check3" },
+                                { htmlFor: "check3" },
                                 "Tr\u1EAFng ",
                                 _react2.default.createElement(
                                     "span",
@@ -38144,7 +38143,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "check4", name: "check4" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "check4" },
+                                { htmlFor: "check4" },
                                 "Xanh n\u01B0\u1EDBc bi\u1EC3n ",
                                 _react2.default.createElement(
                                     "span",
@@ -38159,7 +38158,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "check5", name: "check5" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "check5" },
+                                { htmlFor: "check5" },
                                 "\u0110\u1ECF ",
                                 _react2.default.createElement(
                                     "span",
@@ -38174,7 +38173,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "check6", name: "check6" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "check6" },
+                                { htmlFor: "check6" },
                                 "H\u1ED3ng ",
                                 _react2.default.createElement(
                                     "span",
@@ -38189,7 +38188,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "check7", name: "check7" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "check7" },
+                                { htmlFor: "check7" },
                                 "Xanh l\xE1 xanh ",
                                 _react2.default.createElement(
                                     "span",
@@ -38204,7 +38203,7 @@ exports.default = function () {
                             _react2.default.createElement("input", { type: "checkbox", id: "check8", name: "check8" }),
                             _react2.default.createElement(
                                 "label",
-                                { "for": "check8" },
+                                { htmlFor: "check8" },
                                 "V\xE0ng ",
                                 _react2.default.createElement(
                                     "span",

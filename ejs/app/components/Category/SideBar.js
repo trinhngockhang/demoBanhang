@@ -148,35 +148,35 @@ export default () => {
                         <ul className="box-checkbox scroll">
                             <li className="check-box">
                                 <input type="checkbox" id="checkbox1" name="checkbox1" />
-                                <label for="checkbox1">Apple <span>(4)</span></label>
+                                <label htmlFor="checkbox1">Apple <span>(4)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="checkbox2" name="checkbox2" />
-                                <label for="checkbox2">Samsung <span>(2)</span></label>
+                                <label htmlFor="checkbox2">Samsung <span>(2)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="checkbox3" name="checkbox3" />
-                                <label for="checkbox3">HTC <span>(2)</span></label>
+                                <label htmlFor="checkbox3">HTC <span>(2)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="checkbox4" name="checkbox4" />
-                                <label for="checkbox4">LG <span>(2)</span></label>
+                                <label htmlFor="checkbox4">LG <span>(2)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="checkbox5" name="checkbox5" />
-                                <label for="checkbox5">Dell <span>(1)</span></label>
+                                <label htmlFor="checkbox5">Dell <span>(1)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="checkbox6" name="checkbox6" />
-                                <label for="checkbox6">Sony <span>(3)</span></label>
+                                <label htmlFor="checkbox6">Sony <span>(3)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="checkbox7" name="checkbox7" />
-                                <label for="checkbox7">Bphone <span>(4)</span></label>
+                                <label htmlFor="checkbox7">Bphone <span>(4)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="checkbox8" name="checkbox8" />
-                                <label for="checkbox8">Oppo <span>(4)</span></label>
+                                <label htmlFor="checkbox8">Oppo <span>(4)</span></label>
                             </li>
                         </ul>
                     </div>
@@ -194,35 +194,35 @@ export default () => {
                         <ul className="box-checkbox scroll">
                             <li className="check-box">
                                 <input type="checkbox" id="check1" name="check1" />
-                                <label for="check1">Đen <span>(4)</span></label>
+                                <label htmlFor="check1">Đen <span>(4)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="check2" name="check2" />
-                                <label for="check2">Vàng <span>(2)</span></label>
+                                <label htmlFor="check2">Vàng <span>(2)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="check3" name="check3" />
-                                <label for="check3">Trắng <span>(2)</span></label>
+                                <label htmlFor="check3">Trắng <span>(2)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="check4" name="check4" />
-                                <label for="check4">Xanh nước biển <span>(2)</span></label>
+                                <label htmlFor="check4">Xanh nước biển <span>(2)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="check5" name="check5" />
-                                <label for="check5">Đỏ <span>(1)</span></label>
+                                <label htmlFor="check5">Đỏ <span>(1)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="check6" name="check6" />
-                                <label for="check6">Hồng <span>(3)</span></label>
+                                <label htmlFor="check6">Hồng <span>(3)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="check7" name="check7" />
-                                <label for="check7">Xanh lá xanh <span>(4)</span></label>
+                                <label htmlFor="check7">Xanh lá xanh <span>(4)</span></label>
                             </li>
                             <li className="check-box">
                                 <input type="checkbox" id="check8" name="check8" />
-                                <label for="check8">Vàng <span>(4)</span></label>
+                                <label htmlFor="check8">Vàng <span>(4)</span></label>
                             </li>
                         </ul>
                     </div>
