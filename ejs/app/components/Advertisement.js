@@ -1,18 +1,11 @@
 import React from 'react';
 
 export default class Advertisement extends React.PureComponent {
-	render() {
-		return (
-			<div>
-				<div className="banner-mobile">
-					<div className="row">
-						<div className="col-12 hidden-xs">
-							<div className="col-xs-12">
-								<h2 className="home__title home__title--section-5" style={{ borderColor: '#ef5350' }}><a href="#">Khuyến mãi hấp dẫn<span className="adr-icon icon-arrow-next visible-xs"></span></a></h2>
-								<ul className="home__title__menu  hidden-sm hidden-xs">
-								</ul>
-							</div>
-						</div>
+    render() {
+        return (
+            <div>
+                <div className="banner-mobile">
+				    <div className="row">				
 						<div className="col-sm-6 col-12 banner-left-section">
 							<div className="row">
 								<div className="col-xs-6">

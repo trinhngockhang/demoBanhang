@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class Produce extends React.Component {
     shouldComponentUpdate(nextProps) {
-        if (this.props.produce !== nextProps.produce) {
+        if (nextProps.produce !== this.props.produce) {
             return true;
         }
         return false;
@@ -26,7 +26,7 @@ export default class Produce extends React.Component {
                                     {
                                         this.props.produce.map((item, index) => {
                                             return (
-                                                <div className="imagebox style4">
+                                                <div className="imagebox style4" key={index}>
                                                     <div className="box-image">
                                                         <a href="#" title="">
                                                             <img src={item.src} alt="" />

@@ -3,8 +3,8 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Home from '../Home';
 import Main from '../Main';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Header from '../../components/SharedComponent/Header';
+import Footer from '../../components/SharedComponent/Footer';
 import Category from '../Category';
 import ProductDetail from '../ProductDetail';
 
