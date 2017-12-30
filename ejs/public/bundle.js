@@ -43539,7 +43539,7 @@ var fetchCollection = exports.fetchCollection = function fetchCollection(pageid)
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -43559,1884 +43559,257 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Tablet = function (_React$Component) {
-    _inherits(Tablet, _React$Component);
+	_inherits(Tablet, _React$Component);
 
-    function Tablet() {
-        _classCallCheck(this, Tablet);
+	function Tablet() {
+		_classCallCheck(this, Tablet);
 
-        return _possibleConstructorReturn(this, (Tablet.__proto__ || Object.getPrototypeOf(Tablet)).apply(this, arguments));
-    }
+		return _possibleConstructorReturn(this, (Tablet.__proto__ || Object.getPrototypeOf(Tablet)).apply(this, arguments));
+	}
 
-    _createClass(Tablet, [{
-        key: 'render',
-        value: function render() {
-            var props = this.props.data.page;
-            return _react2.default.createElement(
-                'div',
-                { className: 'col-lg-10 col-md-9' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'main-shop' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'wrap-imagebox' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'flat-row-title' },
-                            _react2.default.createElement(
-                                'h3',
-                                { className: 'TITLE' },
-                                '\u0110i\u1EC7n tho\u1EA1i di \u0111\u1ED9ng & M\xE1y t\xEDnh b\u1EA3ng'
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'sort-product', style: { float: 'right' } },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'sort', style: { float: 'left' } },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'popularity' },
-                                        _react2.default.createElement(
-                                            'select',
-                                            { name: 'popularity' },
-                                            _react2.default.createElement(
-                                                'option',
-                                                { value: '' },
-                                                '\u0110\u1ED9 ph\u1ED5 bi\u1EBFn'
-                                            ),
-                                            _react2.default.createElement(
-                                                'option',
-                                                { value: '' },
-                                                'Gi\xE1 t\u1EEB th\u1EA5p \u0111\u1EBFn cao'
-                                            ),
-                                            _react2.default.createElement(
-                                                'option',
-                                                { value: '' },
-                                                'Gi\xE1 t\u1EEB cao \u0111\u1EBFn th\u1EA5p'
-                                            )
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        'ul',
-                                        { className: 'icons', style: { float: 'right' } },
-                                        _react2.default.createElement(
-                                            'li',
-                                            null,
-                                            _react2.default.createElement('img', { src: './images/icons/list-1.png', alt: '' })
-                                        ),
-                                        _react2.default.createElement(
-                                            'li',
-                                            null,
-                                            _react2.default.createElement('img', { src: './images/icons/list-2.png', alt: '' })
-                                        )
-                                    )
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'tab-product' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'row sort-box' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-lg-3 col-sm-6' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'product-box' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'imagebox' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-image owl-carousel-1' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/02.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/02.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/02.jpg', alt: '' })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-content' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'cat-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Cameras'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'product-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'New X5C-1 2.4Ghz Gyro',
-                                                        _react2.default.createElement('br', null),
-                                                        'RC Quadcopter Drone'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'price' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sale' },
-                                                        '$2,009.00'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'regular' },
-                                                        '$2,999.00'
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-bottom' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'btn-add-cart' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                        'Mua'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'compare-wishlist' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'compare', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                        'Quan t\xE2m'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'wishlist', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                        '\u01AFa chu\u1ED9ng'
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-lg-3 col-sm-6' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'product-box' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'imagebox' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-image owl-carousel-1' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/03.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/03.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/03.jpg', alt: '' })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-content' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'cat-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Headphones'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'product-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Beats Solo',
-                                                        _react2.default.createElement('br', null),
-                                                        'HD'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'price' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sale' },
-                                                        '$1,999.00'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'regular' },
-                                                        '$2,999.00'
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-bottom' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'btn-add-cart' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                        'Mua'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'compare-wishlist' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'compare', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                        'Quan t\xE2m'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'wishlist', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                        '\u01AFa chu\u1ED9ng'
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-lg-3 col-sm-6' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'product-box' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'imagebox' },
-                                            _react2.default.createElement(
-                                                'span',
-                                                { className: 'item-sale' },
-                                                'SALE'
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-image owl-carousel-1' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/04.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/04.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/04.jpg', alt: '' })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-content' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'cat-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Computers'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'product-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Apple \u0130mac Z0SC4824',
-                                                        _react2.default.createElement('br', null),
-                                                        'Retina'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'price' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sale' },
-                                                        '$5,759.68'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'regular' },
-                                                        '$2,999.00'
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-bottom' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'btn-add-cart' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                        'Mua'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'compare-wishlist' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'compare', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                        'Quan t\xE2m'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'wishlist', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                        '\u01AFa chu\u1ED9ng'
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-lg-3 col-sm-6' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'product-box' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'imagebox' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-image owl-carousel-1' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/06.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/06.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/06.jpg', alt: '' })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-content' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'cat-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Cameras'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'product-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'New X5C-1 2.4Ghz Gyro ',
-                                                        _react2.default.createElement('br', null),
-                                                        'RC Quadcopter Drone'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'price' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sale' },
-                                                        '$2,009.00'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'regular' },
-                                                        '$2,999.00'
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-bottom' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'btn-add-cart' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                        'Mua'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'compare-wishlist' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'compare' },
-                                                        _react2.default.createElement(
-                                                            'a',
-                                                            { href: '#', title: '' },
-                                                            _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                            'Quan t\xE2m'
-                                                        )
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'wishlist' },
-                                                        _react2.default.createElement(
-                                                            'a',
-                                                            { href: '#', title: '' },
-                                                            _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                            '\u01AFa chu\u1ED9ng'
-                                                        )
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-lg-3 col-sm-6' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'product-box' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'imagebox' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-image owl-carousel-1' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/07.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/07.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/07.jpg', alt: '' })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-content' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'cat-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Computers'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'product-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Apple iPad Air 2 32GB 9.7" ',
-                                                        _react2.default.createElement('br', null),
-                                                        'Tablet'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'price' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sale' },
-                                                        '$5,759.68'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'regular' },
-                                                        '$2,999.00'
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-bottom' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'btn-add-cart' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                        'Mua'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'compare-wishlist' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'compare', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                        'Quan t\xE2m'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'wishlist', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                        '\u01AFa chu\u1ED9ng'
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-lg-3 col-sm-6' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'product-box' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'imagebox' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-image owl-carousel-1' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: '../images/product/other/08.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: '../images/product/other/08.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/08.jpg', alt: '' })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-content' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'cat-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Computers'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'product-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Apple \u0130mac Z0SC4824',
-                                                        _react2.default.createElement('br', null),
-                                                        'Retina'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'price' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sale' },
-                                                        '$5,759.68'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'regular' },
-                                                        '$2,999.00'
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-bottom' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'btn-add-cart' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                        'Mua'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'compare-wishlist' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'compare', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                        'Quan t\xE2m'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'wishlist', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                        '\u01AFa chu\u1ED9ng'
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-lg-3 col-sm-6' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'product-box' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'imagebox' },
-                                            _react2.default.createElement(
-                                                'span',
-                                                { className: 'item-new' },
-                                                'NEW'
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-image owl-carousel-1' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/01.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/01.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/01.jpg', alt: '' })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-content' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'cat-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Laptops'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'product-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Apple iPad Mini',
-                                                        _react2.default.createElement('br', null),
-                                                        'G2356'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'price' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sale' },
-                                                        '$1,250.00'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'regular' },
-                                                        '$2,999.00'
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-bottom' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'btn-add-cart' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                        'Add to Cart'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'compare-wishlist' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'compare', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                        'Compare'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'wishlist', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                        'Wishlist'
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-lg-3 col-sm-6' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'product-box' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'imagebox' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-image owl-carousel-1' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/05.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/05.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/05.jpg', alt: '' })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-content' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'cat-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Cameras'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'product-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Apple iPad Mini',
-                                                        _react2.default.createElement('br', null),
-                                                        'G2356'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'price' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sale' },
-                                                        '$1,250.00'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'regular' },
-                                                        '$2,999.00'
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-bottom' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'btn-add-cart' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                        'Add to Cart'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'compare-wishlist' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'compare' },
-                                                        _react2.default.createElement(
-                                                            'a',
-                                                            { href: '#', title: '' },
-                                                            _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                            'Compare'
-                                                        )
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'wishlist' },
-                                                        _react2.default.createElement(
-                                                            'a',
-                                                            { href: '#', title: '' },
-                                                            _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                            'Wishlist'
-                                                        )
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-lg-3 col-sm-6' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'product-box' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'imagebox' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-image owl-carousel-1' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: '../images/product/other/l03.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: '../images/product/other/l03.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/l03.jpg', alt: '' })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-content' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'cat-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Laptops'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'product-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Apple iPad Mini',
-                                                        _react2.default.createElement('br', null),
-                                                        'G2356'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'price' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sale' },
-                                                        '$1,250.00'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'regular' },
-                                                        '$2,999.00'
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-bottom' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'btn-add-cart' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                        'Add to Cart'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'compare-wishlist' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'compare', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                        'Compare'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'wishlist', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                        'Wishlist'
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-lg-3 col-sm-6' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'product-box' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'imagebox' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-image owl-carousel-1' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/l02.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/l02.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/l02.jpg', alt: '' })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-content' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'cat-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Laptops'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'product-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Apple iPad Mini ',
-                                                        _react2.default.createElement('br', null),
-                                                        'G2356'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'price' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sale' },
-                                                        '$1,250.00'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'regular' },
-                                                        '$2,999.00'
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-bottom' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'btn-add-cart' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                        'Add to Cart'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'compare-wishlist' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'compare', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                        'Compare'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'wishlist', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                        'Wishlist'
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-lg-3 col-sm-6' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'product-box' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'imagebox' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-image owl-carousel-1' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/l04.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/l04.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/l04.jpg', alt: '' })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-content' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'cat-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Cameras'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'product-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'HTC One M8'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'price' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sale' },
-                                                        '$2,009.00'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'regular' },
-                                                        '$2,999.00'
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-bottom' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'btn-add-cart' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                        'Add to Cart'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'compare-wishlist' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'compare', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                        'Compare'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'wishlist', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                        'Wishlist'
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'col-lg-3 col-sm-6' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'product-box' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'imagebox' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-image owl-carousel-1' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/l05.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/l05.jpg', alt: '' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/product/other/l05.jpg', alt: '' })
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-content' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'cat-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Computers'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'product-name' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        'Apple macbook pro Z0SC4824',
-                                                        _react2.default.createElement('br', null),
-                                                        'Retina'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'price' },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sale' },
-                                                        '$5,759.68'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'regular' },
-                                                        '$2,999.00'
-                                                    )
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'box-bottom' },
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'btn-add-cart' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                        'Add to Cart'
-                                                    )
-                                                ),
-                                                _react2.default.createElement(
-                                                    'div',
-                                                    { className: 'compare-wishlist' },
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'compare', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                        'Compare'
-                                                    ),
-                                                    _react2.default.createElement(
-                                                        'a',
-                                                        { href: '#', className: 'wishlist', title: '' },
-                                                        _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                        'Wishlist'
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'sort-box' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'product-box style3' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'imagebox style1 v3' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-image' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('img', { src: './images/product/other/s02.jpg', alt: '' })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-content' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'cat-name' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    'Cameras'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'product-name' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    'Apple iPad Air 2 32GB 9.7"',
-                                                    _react2.default.createElement('br', null),
-                                                    'Tablet'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'status' },
-                                                'Availablity: In stock'
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'info' },
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    null,
-                                                    'The iPhone 5c replaces the iPhone 5 in the Apple stable, inheriting its internals, like the A6 processor, 4" screen...'
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-price' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'price' },
-                                                _react2.default.createElement(
-                                                    'span',
-                                                    { className: 'regular' },
-                                                    '$2,999.00'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'span',
-                                                    { className: 'sale' },
-                                                    '$1,999.00'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'btn-add-cart' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                    'Add to Cart'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'compare-wishlist' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', className: 'compare', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                    'Compare'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', className: 'wishlist', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                    'Wishlist'
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'product-box style3' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'imagebox style1 v3' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-image' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('img', { src: './images/product/other/01-v3.jpg', alt: '' })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-content' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'cat-name' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    'Cameras'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'product-name' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    'New X5C-1 2.4Ghz Gyro ',
-                                                    _react2.default.createElement('br', null),
-                                                    'RC Quadcopter Drone'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'status' },
-                                                'Availablity: In stock'
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'info' },
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    null,
-                                                    'The iPhone 5c replaces the iPhone 5 in the Apple stable, inheriting its internals, like the A6 processor, 4" screen...'
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-price' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'price' },
-                                                _react2.default.createElement(
-                                                    'span',
-                                                    { className: 'regular' },
-                                                    '$2,999.00'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'span',
-                                                    { className: 'sale' },
-                                                    '$1,999.00'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'btn-add-cart' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                    'Add to Cart'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'compare-wishlist' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', className: 'compare', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                    'Compare'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', className: 'wishlist', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                    'Wishlist'
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'product-box style3' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'imagebox style1 v3' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-image' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('img', { src: './images/product/other/02-v3.jpg', alt: '' })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-content' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'cat-name' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    'Cameras'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'product-name' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    'Apple \u0130mac Z0SC4824',
-                                                    _react2.default.createElement('br', null),
-                                                    'Retina'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'status' },
-                                                'Availablity: In stock'
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'info' },
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    null,
-                                                    'The iPhone 5c replaces the iPhone 5 in the Apple stable, inheriting its internals, like the A6 processor, 4" screen...'
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-price' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'price' },
-                                                _react2.default.createElement(
-                                                    'span',
-                                                    { className: 'regular' },
-                                                    '$2,999.00'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'span',
-                                                    { className: 'sale' },
-                                                    '$1,999.00'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'btn-add-cart' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                    'Add to Cart'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'compare-wishlist' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', className: 'compare', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                    'Compare'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', className: 'wishlist', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                    'Wishlist'
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'product-box style3' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'imagebox style1 v3' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-image' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('img', { src: './images/product/other/03-v3.jpg', alt: '' })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-content' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'cat-name' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    'Cameras'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'product-name' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    'New X5C-1 2.4Ghz Gyro ',
-                                                    _react2.default.createElement('br', null),
-                                                    'RC Quadcopter Drone'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'status' },
-                                                'Availablity: In stock'
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'info' },
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    null,
-                                                    'The iPhone 5c replaces the iPhone 5 in the Apple stable, inheriting its internals, like the A6 processor, 4" screen...'
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-price' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'price' },
-                                                _react2.default.createElement(
-                                                    'span',
-                                                    { className: 'regular' },
-                                                    '$2,999.00'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'span',
-                                                    { className: 'sale' },
-                                                    '$1,999.00'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'btn-add-cart' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                    'Add to Cart'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'compare-wishlist' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', className: 'compare', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                    'Compare'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', className: 'wishlist', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                    'Wishlist'
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'product-box style3' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'imagebox style1 v3' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-image' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: '#', title: '' },
-                                                _react2.default.createElement('img', { src: './images/product/other/04-v3.jpg', alt: '' })
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-content' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'cat-name' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    'Cameras'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'product-name' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    'Apple iPad Air 2 32GB 9.7"',
-                                                    _react2.default.createElement('br', null),
-                                                    'Tablet'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'status' },
-                                                'Availablity: In stock'
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'info' },
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    null,
-                                                    'The iPhone 5c replaces the iPhone 5 in the Apple stable, inheriting its internals, like the A6 processor, 4" screen...'
-                                                )
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'box-price' },
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'price' },
-                                                _react2.default.createElement(
-                                                    'span',
-                                                    { className: 'regular' },
-                                                    '$2,999.00'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'span',
-                                                    { className: 'sale' },
-                                                    '$1,999.00'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'btn-add-cart' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
-                                                    'Add to Cart'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'div',
-                                                { className: 'compare-wishlist' },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', className: 'compare', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/compare.png', alt: '' }),
-                                                    'Compare'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { href: '#', className: 'wishlist', title: '' },
-                                                    _react2.default.createElement('img', { src: './images/icons/wishlist.png', alt: '' }),
-                                                    'Wishlist'
-                                                )
-                                            )
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement('div', { style: { height: '9px' } })
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'blog-pagination' },
-                        _react2.default.createElement(
-                            'span',
-                            null,
-                            '1\u201315 tr\xEAn 20 s\u1EA3n ph\u1EA9m'
-                        ),
-                        _react2.default.createElement(
-                            'ul',
-                            { className: 'flat-pagination style1' },
-                            _react2.default.createElement(
-                                'li',
-                                { className: 'prev' },
-                                _react2.default.createElement(
-                                    'a',
-                                    { href: '#', title: '' },
-                                    _react2.default.createElement('img', { src: './images/icons/left-1.png', alt: '' }),
-                                    'Trang tr\u01B0\u1EDBc'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                null,
-                                _react2.default.createElement(
-                                    'a',
-                                    { href: '#', className: 'waves-effect', title: '' },
-                                    '01'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                null,
-                                _react2.default.createElement(
-                                    'a',
-                                    { href: '#', className: 'waves-effect', title: '' },
-                                    '02'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                { className: 'active' },
-                                _react2.default.createElement(
-                                    'a',
-                                    { href: '#', className: 'waves-effect', title: '' },
-                                    '03'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                null,
-                                _react2.default.createElement(
-                                    'a',
-                                    { href: '#', className: 'waves-effect', title: '' },
-                                    '04'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                { className: 'next' },
-                                _react2.default.createElement(
-                                    'a',
-                                    { href: '#', title: '' },
-                                    'Trang sau',
-                                    _react2.default.createElement('img', { src: './images/icons/right-1.png', alt: '' })
-                                )
-                            )
-                        ),
-                        _react2.default.createElement('div', { className: 'clearfix' })
-                    )
-                )
-            );
-        }
-    }]);
+	_createClass(Tablet, [{
+		key: 'render',
+		value: function render() {
+			var props = this.props.data.page;
+			return _react2.default.createElement(
+				'div',
+				{ className: 'col-lg-10 col-md-9' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'main-shop' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'wrap-imagebox' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'flat-row-title' },
+							_react2.default.createElement(
+								'h3',
+								null,
+								props.products
+							),
+							_react2.default.createElement(
+								'span',
+								null,
+								'Showing 1\u201315 of 20 results'
+							),
+							_react2.default.createElement('div', { className: 'clearfix' })
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'sort-product' },
+							_react2.default.createElement(
+								'ul',
+								{ className: 'icons' },
+								_react2.default.createElement(
+									'li',
+									null,
+									_react2.default.createElement('img', { src: './images/icons/list-1.png', alt: '' })
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									_react2.default.createElement('img', { src: './images/icons/list-2.png', alt: '' })
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'sort' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'popularity' },
+									_react2.default.createElement(
+										'select',
+										{ name: 'popularity' },
+										_react2.default.createElement(
+											'option',
+											{ value: '' },
+											'Sort by popularity'
+										),
+										_react2.default.createElement(
+											'option',
+											{ value: '' },
+											'Sort by popularity'
+										),
+										_react2.default.createElement(
+											'option',
+											{ value: '' },
+											'Sort by popularity'
+										),
+										_react2.default.createElement(
+											'option',
+											{ value: '' },
+											'Sort by popularity'
+										)
+									)
+								)
+							),
+							_react2.default.createElement('div', { className: 'clearfix' })
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'tab-product' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'row sort-box' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'col-lg-3 col-sm-6 col-6 no-padding' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'product-box' },
+										_react2.default.createElement(
+											'div',
+											{ className: 'imagebox' },
+											_react2.default.createElement(
+												'div',
+												{ className: 'box-image owl-carousel-1' },
+												_react2.default.createElement(
+													'a',
+													{ href: '#', title: '' },
+													_react2.default.createElement('img', { src: './images/product/other/02.jpg', alt: '' })
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'box-content' },
+												_react2.default.createElement(
+													'div',
+													{ className: 'cat-name' },
+													_react2.default.createElement(
+														'a',
+														{ href: '#', title: '' },
+														'Cameras'
+													)
+												),
+												_react2.default.createElement(
+													'div',
+													{ className: 'product-name' },
+													_react2.default.createElement(
+														'a',
+														{ href: '#', title: '' },
+														'New X5C-1 2.4Ghz Gyro',
+														_react2.default.createElement('br', null),
+														'RC Quadcopter Drone'
+													)
+												),
+												_react2.default.createElement(
+													'div',
+													{ className: 'price' },
+													_react2.default.createElement(
+														'span',
+														{ className: 'sale' },
+														'$2,009.00'
+													),
+													_react2.default.createElement(
+														'span',
+														{ className: 'regular' },
+														'$2,999.00'
+													)
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'box-bottom' },
+												_react2.default.createElement(
+													'div',
+													{ className: 'btn-add-cart' },
+													_react2.default.createElement(
+														'a',
+														{ href: '#', title: '' },
+														_react2.default.createElement('img', { src: './images/icons/add-cart.png', alt: '' }),
+														'Mua'
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'blog-pagination' },
+						_react2.default.createElement(
+							'span',
+							null,
+							'Showing 1\u201315 of 20 results'
+						),
+						_react2.default.createElement(
+							'ul',
+							{ className: 'flat-pagination style1' },
+							_react2.default.createElement(
+								'li',
+								{ className: 'prev' },
+								_react2.default.createElement(
+									'a',
+									{ href: '#', title: '' },
+									_react2.default.createElement('img', { src: './images/icons/left-1.png', alt: '' }),
+									'Prev Page'
+								)
+							),
+							_react2.default.createElement(
+								'li',
+								null,
+								_react2.default.createElement(
+									'a',
+									{ href: '#', className: 'waves-effect', title: '' },
+									'01'
+								)
+							),
+							_react2.default.createElement(
+								'li',
+								null,
+								_react2.default.createElement(
+									'a',
+									{ href: '#', className: 'waves-effect', title: '' },
+									'02'
+								)
+							),
+							_react2.default.createElement(
+								'li',
+								{ className: 'active' },
+								_react2.default.createElement(
+									'a',
+									{ href: '#', className: 'waves-effect', title: '' },
+									'03'
+								)
+							),
+							_react2.default.createElement(
+								'li',
+								null,
+								_react2.default.createElement(
+									'a',
+									{ href: '#', className: 'waves-effect', title: '' },
+									'04'
+								)
+							),
+							_react2.default.createElement(
+								'li',
+								{ className: 'next' },
+								_react2.default.createElement(
+									'a',
+									{ href: '#', title: '' },
+									'Next Page',
+									_react2.default.createElement('img', { src: './images/icons/right-1.png', alt: '' })
+								)
+							)
+						),
+						_react2.default.createElement('div', { className: 'clearfix' })
+					)
+				)
+			);
+		}
+	}]);
 
-    return Tablet;
+	return Tablet;
 }(_react2.default.Component);
 
 var mapStateToProps = function mapStateToProps(state) {
-    return {
-        data: state.shopReducer.data
-    };
+	return {
+		data: state.shopReducer.data
+	};
 };
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(Tablet);
