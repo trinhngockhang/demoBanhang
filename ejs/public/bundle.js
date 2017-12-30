@@ -38052,760 +38052,752 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var SideBar = function (_React$Component) {
-    _inherits(SideBar, _React$Component);
-
-    function SideBar() {
-        _classCallCheck(this, SideBar);
-
-        return _possibleConstructorReturn(this, (SideBar.__proto__ || Object.getPrototypeOf(SideBar)).apply(this, arguments));
-    }
-
-    _createClass(SideBar, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
+exports.default = function () {
+    return _react2.default.createElement(
+        "div",
+        { "class": "col-lg-2 col-md-3 fill-category" },
+        _react2.default.createElement(
+            "div",
+            { "class": "sidebar " },
+            _react2.default.createElement(
                 "div",
-                { className: "col-lg-2 col-md-3" },
+                { "class": "widget widget-categories" },
                 _react2.default.createElement(
                     "div",
-                    { className: "sidebar", style: { marginTop: '18px' } },
+                    { "class": "widget-title" },
                     _react2.default.createElement(
-                        "div",
-                        { className: "widget widget-categories" },
+                        "h3",
+                        null,
+                        "Danh m\u1EE5c",
+                        _react2.default.createElement("span", null)
+                    )
+                ),
+                _react2.default.createElement(
+                    "ul",
+                    { "class": "cat-list style1 widget-content" },
+                    _react2.default.createElement(
+                        "li",
+                        null,
                         _react2.default.createElement(
-                            "div",
-                            { className: "widget-title" },
+                            "span",
+                            null,
+                            "Linh ki\u1EC7n",
                             _react2.default.createElement(
-                                "h3",
+                                "i",
                                 null,
-                                "Danh m\u1EE5c li\xEAn quan",
-                                _react2.default.createElement("span", null)
+                                "(03)"
                             )
                         ),
                         _react2.default.createElement(
                             "ul",
-                            { className: "cat-list style1 widget-content" },
+                            { "class": "cat-child" },
                             _react2.default.createElement(
                                 "li",
                                 null,
                                 _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "Ph\u1EE5 ki\u1EC7n",
-                                    _react2.default.createElement(
-                                        "i",
-                                        null,
-                                        "(03)"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "ul",
-                                    { className: "cat-child" },
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "TV"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "M\xE0n h\xECnh"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Ph\u1EA7n m\u1EC1m"
-                                        )
-                                    )
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "TV"
                                 )
                             ),
                             _react2.default.createElement(
                                 "li",
                                 null,
                                 _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "Cameras",
-                                    _react2.default.createElement(
-                                        "i",
-                                        null,
-                                        "(19)"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "ul",
-                                    { className: "cat-child" },
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Go Pro"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "M\xE1y quay phim"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "\u1EE8ng d\u1EE5ng"
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                { className: "" },
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "M\xE1y t\xEDnh",
-                                    _react2.default.createElement(
-                                        "i",
-                                        null,
-                                        "(56)"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "ul",
-                                    { className: "cat-child" },
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "B\xE0n"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "M\xE0n h\xECnh"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Ph\u1EA7n m\u1EC1m"
-                                        )
-                                    )
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Monitors"
                                 )
                             ),
                             _react2.default.createElement(
                                 "li",
                                 null,
                                 _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "Laptops",
-                                    _react2.default.createElement(
-                                        "i",
-                                        null,
-                                        "(03)"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "ul",
-                                    { className: "cat-child" },
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Desktop"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "M\xE0n h\xECnh"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Ph\u1EA7n m\u1EC1m"
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "Thi\u1EBFt b\u1ECB m\u1EA1ng",
-                                    _react2.default.createElement(
-                                        "i",
-                                        null,
-                                        "(02)"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "ul",
-                                    { className: "cat-child" },
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Monitors"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Ph\u1EA7n m\u1EC1m"
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "S\u1EA3n ph\u1EA9m c\u0169",
-                                    _react2.default.createElement(
-                                        "i",
-                                        null,
-                                        "(89)"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "ul",
-                                    { className: "cat-child" },
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Ph\u1EE5 ki\u1EC7n"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Ph\u1EA7n m\u1EC1m"
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "\u0110i\u1EC7n tho\u1EA1i di \u0111\u1ED9ng",
-                                    _react2.default.createElement(
-                                        "i",
-                                        null,
-                                        "(90)"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "ul",
-                                    { className: "cat-child" },
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Apple"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "HTC"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Sony"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Samsung"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "LG"
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    "Ph\u1EA7n m\u1EC1m",
-                                    _react2.default.createElement(
-                                        "i",
-                                        null,
-                                        "(23)"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "ul",
-                                    { className: "cat-child" },
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "M\xE1y t\xEDnh"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "Qu\u1EA3n l\xFD"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#", title: "" },
-                                            "BKAV"
-                                        )
-                                    )
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Ph\u1EA7n m\u1EC1m"
                                 )
                             )
                         )
                     ),
                     _react2.default.createElement(
-                        "div",
-                        { className: "widget widget-price" },
+                        "li",
+                        null,
                         _react2.default.createElement(
-                            "div",
-                            { className: "widget-title" },
+                            "span",
+                            null,
+                            "Cameras",
                             _react2.default.createElement(
-                                "h3",
+                                "i",
                                 null,
-                                "Gi\xE1",
-                                _react2.default.createElement("span", null)
+                                "(19)"
                             )
                         ),
                         _react2.default.createElement(
-                            "div",
-                            { className: "widget-content" },
+                            "ul",
+                            { "class": "cat-child" },
                             _react2.default.createElement(
-                                "p",
+                                "li",
                                 null,
-                                "Gi\xE1"
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Go Pro"
+                                )
                             ),
                             _react2.default.createElement(
-                                "div",
-                                { className: "price search-filter-input" },
+                                "li",
+                                null,
                                 _react2.default.createElement(
-                                    "div",
-                                    { id: "slider-range", className: "price-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" },
-                                    _react2.default.createElement("div", { className: "ui-slider-range ui-corner-all ui-widget-header" }),
-                                    _react2.default.createElement("span", { tabIndex: "0", className: "ui-slider-handle ui-corner-all ui-state-default" }),
-                                    _react2.default.createElement("span", { tabIndex: "0", className: "ui-slider-handle ui-corner-all ui-state-default" })
-                                ),
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "M\xE1y quay phim"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
                                 _react2.default.createElement(
-                                    "p",
-                                    { className: "amount" },
-                                    _react2.default.createElement("input", { type: "text", id: "amount", disabled: "" })
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Ph\u1EA7n m\u1EC1m"
                                 )
                             )
                         )
                     ),
                     _react2.default.createElement(
-                        "div",
-                        { className: "widget widget-brands" },
+                        "li",
+                        { "class": "" },
                         _react2.default.createElement(
-                            "div",
-                            { className: "widget-title" },
+                            "span",
+                            null,
+                            "M\xE1y t\xEDnh",
                             _react2.default.createElement(
-                                "h3",
+                                "i",
                                 null,
-                                "Th\u01B0\u01A1ng hi\u1EC7u",
-                                _react2.default.createElement("span", null)
+                                "(56)"
                             )
                         ),
                         _react2.default.createElement(
-                            "div",
-                            { className: "widget-content" },
+                            "ul",
+                            { "class": "cat-child" },
                             _react2.default.createElement(
-                                "form",
-                                { action: "#", method: "get", acceptCharset: "utf-8" },
-                                _react2.default.createElement("input", { type: "text", name: "brands", placeholder: "Brands Search" })
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Desktop"
+                                )
                             ),
                             _react2.default.createElement(
-                                "ul",
-                                { className: "box-checkbox scroll" },
+                                "li",
+                                null,
                                 _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "checkbox1", name: "checkbox1" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "checkbox1" },
-                                        "Apple ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(4)"
-                                        )
-                                    )
-                                ),
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "M\xE0n h\xECnh"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
                                 _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "checkbox2", name: "checkbox2" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "checkbox2" },
-                                        "Samsung ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(2)"
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "checkbox3", name: "checkbox3" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "checkbox3" },
-                                        "HTC ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(2)"
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "checkbox4", name: "checkbox4" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "checkbox4" },
-                                        "LG ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(2)"
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "checkbox5", name: "checkbox5" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "checkbox5" },
-                                        "Dell ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(1)"
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "checkbox6", name: "checkbox6" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "checkbox6" },
-                                        "Sony ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(3)"
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "checkbox7", name: "checkbox7" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "checkbox7" },
-                                        "Bphone ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(4)"
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "checkbox8", name: "checkbox8" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "checkbox8" },
-                                        "Oppo ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(4)"
-                                        )
-                                    )
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Ph\u1EA7n m\u1EC1m"
                                 )
                             )
                         )
                     ),
                     _react2.default.createElement(
-                        "div",
-                        { className: "widget widget-color" },
+                        "li",
+                        null,
                         _react2.default.createElement(
-                            "div",
-                            { className: "widget-title" },
+                            "span",
+                            null,
+                            "Laptops",
                             _react2.default.createElement(
-                                "h3",
+                                "i",
                                 null,
-                                "M\xE0u",
-                                _react2.default.createElement("span", null)
-                            ),
-                            _react2.default.createElement("div", { style: { height: '2px' } })
+                                "(03)"
+                            )
                         ),
                         _react2.default.createElement(
-                            "div",
-                            { className: "widget-content" },
+                            "ul",
+                            { "class": "cat-child" },
                             _react2.default.createElement(
-                                "form",
-                                { action: "#", method: "get", acceptCharset: "utf-8" },
-                                _react2.default.createElement("input", { type: "text", name: "color", placeholder: "Color Search" })
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Desktop"
+                                )
                             ),
-                            _react2.default.createElement("div", { style: { height: '5px' } }),
                             _react2.default.createElement(
-                                "ul",
-                                { className: "box-checkbox scroll" },
+                                "li",
+                                null,
                                 _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "check1", name: "check1" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "check1" },
-                                        "\u0110en ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(4)"
-                                        )
-                                    )
-                                ),
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "M\xE0n h\xECnh"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
                                 _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "check2", name: "check2" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "check2" },
-                                        "V\xE0ng ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(2)"
-                                        )
-                                    )
-                                ),
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Ph\u1EA7n m\u1EC1m"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "M\u1EA1ng",
+                            _react2.default.createElement(
+                                "i",
+                                null,
+                                "(03)"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { "class": "cat-child" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
                                 _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "check3", name: "check3" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "check3" },
-                                        "Tr\u1EAFng ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(2)"
-                                        )
-                                    )
-                                ),
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Monitors"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
                                 _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "check4", name: "check4" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "check4" },
-                                        "Xanh n\u01B0\u1EDBc bi\u1EC3n ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(2)"
-                                        )
-                                    )
-                                ),
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Ph\u1EA7n m\u1EC1m"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "S\u1EA3n ph\u1EA9m c\u0169",
+                            _react2.default.createElement(
+                                "i",
+                                null,
+                                "(89)"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { "class": "cat-child" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
                                 _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "check5", name: "check5" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "check5" },
-                                        "\u0110\u1ECF ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(1)"
-                                        )
-                                    )
-                                ),
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Monitors"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
                                 _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "check6", name: "check6" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "check6" },
-                                        "H\u1ED3ng ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(3)"
-                                        )
-                                    )
-                                ),
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Ph\u1EA7n m\u1EC1m"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "\u0110i\u1EC7n tho\u1EA1i di \u0111\u1ED9ng",
+                            _react2.default.createElement(
+                                "i",
+                                null,
+                                "(90)"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { "class": "cat-child" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
                                 _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "check7", name: "check7" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "check7" },
-                                        "Xanh l\xE1 c\xE2y ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(4)"
-                                        )
-                                    )
-                                ),
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Apple"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
                                 _react2.default.createElement(
-                                    "li",
-                                    { className: "check-box" },
-                                    _react2.default.createElement("input", { type: "checkbox", id: "check8", name: "check8" }),
-                                    _react2.default.createElement(
-                                        "label",
-                                        { htmlFor: "check8" },
-                                        "V\xE0ng ",
-                                        _react2.default.createElement(
-                                            "span",
-                                            null,
-                                            "(4)"
-                                        )
-                                    )
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "HTC"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Sony"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Samsung"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "LG"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        _react2.default.createElement(
+                            "span",
+                            null,
+                            "Ph\u1EA7n m\u1EC1m",
+                            _react2.default.createElement(
+                                "i",
+                                null,
+                                "(23)"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { "class": "cat-child" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Desktop"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "Qu\u1EA3n l\xFD"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "#", title: "" },
+                                    "BKAV"
                                 )
                             )
                         )
                     )
                 )
-            );
-        }
-    }]);
-
-    return SideBar;
-}(_react2.default.Component);
-
-exports.default = SideBar;
+            ),
+            _react2.default.createElement(
+                "div",
+                { "class": "widget widget-price" },
+                _react2.default.createElement(
+                    "div",
+                    { "class": "widget-title" },
+                    _react2.default.createElement(
+                        "h3",
+                        null,
+                        "Gi\xE1",
+                        _react2.default.createElement("span", null)
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { "class": "widget-content" },
+                    _react2.default.createElement(
+                        "p",
+                        null,
+                        "Gi\xE1"
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { "class": "price search-filter-input" },
+                        _react2.default.createElement(
+                            "div",
+                            { id: "slider-range", "class": "price-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" },
+                            _react2.default.createElement("div", { "class": "ui-slider-range ui-corner-all ui-widget-header" }),
+                            _react2.default.createElement("span", { tabindex: "0", "class": "ui-slider-handle ui-corner-all ui-state-default" }),
+                            _react2.default.createElement("span", { tabindex: "0", "class": "ui-slider-handle ui-corner-all ui-state-default" })
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { "class": "amount" },
+                            _react2.default.createElement("input", { type: "text", id: "amount", disabled: "" })
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { "class": "widget widget-brands" },
+                _react2.default.createElement(
+                    "div",
+                    { "class": "widget-title" },
+                    _react2.default.createElement(
+                        "h3",
+                        null,
+                        "Th\u01B0\u01A1ng hi\u1EC7u",
+                        _react2.default.createElement("span", null)
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { "class": "widget-content" },
+                    _react2.default.createElement(
+                        "form",
+                        { action: "#", method: "get", "accept-charset": "utf-8" },
+                        _react2.default.createElement("input", { type: "text", name: "brands", placeholder: "Brands Search" })
+                    ),
+                    _react2.default.createElement(
+                        "ul",
+                        { "class": "box-checkbox scroll" },
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox1", name: "checkbox1" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "checkbox1" },
+                                "Apple ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(4)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox2", name: "checkbox2" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "checkbox2" },
+                                "Samsung ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(2)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox3", name: "checkbox3" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "checkbox3" },
+                                "HTC ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(2)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox4", name: "checkbox4" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "checkbox4" },
+                                "LG ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(2)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox5", name: "checkbox5" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "checkbox5" },
+                                "Dell ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(1)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox6", name: "checkbox6" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "checkbox6" },
+                                "Sony ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(3)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox7", name: "checkbox7" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "checkbox7" },
+                                "Bphone ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(4)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "checkbox8", name: "checkbox8" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "checkbox8" },
+                                "Oppo ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(4)"
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { "class": "widget widget-color" },
+                _react2.default.createElement(
+                    "div",
+                    { "class": "widget-title" },
+                    _react2.default.createElement(
+                        "h3",
+                        null,
+                        "M\xE0u",
+                        _react2.default.createElement("span", null)
+                    ),
+                    _react2.default.createElement("div", { style: "height: 2px" })
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { "class": "widget-content" },
+                    _react2.default.createElement(
+                        "form",
+                        { action: "#", method: "get", acceptCharset: "utf-8" },
+                        _react2.default.createElement("input", { type: "text", name: "color", placeholder: "Color Search" })
+                    ),
+                    _react2.default.createElement("div", { style: "height: 5px" }),
+                    _react2.default.createElement(
+                        "ul",
+                        { "class": "box-checkbox scroll" },
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check1", name: "check1" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "check1" },
+                                "\u0110en ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(4)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check2", name: "check2" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "check2" },
+                                "V\xE0ng ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(2)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check3", name: "check3" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "check3" },
+                                "Tr\u1EAFng ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(2)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check4", name: "check4" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "check4" },
+                                "Xanh n\u01B0\u1EDBc bi\u1EC3n ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(2)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check5", name: "check5" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "check5" },
+                                "\u0110\u1ECF ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(1)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check6", name: "check6" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "check6" },
+                                "H\u1ED3ng ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(3)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check7", name: "check7" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "check7" },
+                                "Xanh l\xE1 xanh ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(4)"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { "class": "check-box" },
+                            _react2.default.createElement("input", { type: "checkbox", id: "check8", name: "check8" }),
+                            _react2.default.createElement(
+                                "label",
+                                { "for": "check8" },
+                                "V\xE0ng ",
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "(4)"
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { "class": "widget widget-banner" },
+                _react2.default.createElement(
+                    "div",
+                    { "class": "banner-box" },
+                    _react2.default.createElement(
+                        "div",
+                        { "class": "inner-box" },
+                        _react2.default.createElement(
+                            "a",
+                            { href: "#", title: "" },
+                            _react2.default.createElement("img", { src: "./images/banner_boxes/06.png", alt: "" })
+                        )
+                    )
+                )
+            )
+        )
+    );
+};
 
 /***/ }),
 /* 475 */
