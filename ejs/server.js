@@ -27,3 +27,7 @@ app.get('/category',(req, res) => {
 app.get('/productDetail',(req, res) => {
     res.render('home')
 })
+
+app.get('/shop:pageid',(req, res) => {
+    res.render('home')
+})

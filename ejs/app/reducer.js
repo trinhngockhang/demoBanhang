@@ -3,10 +3,12 @@ import createSagaMiddleware from 'redux-saga';
 import rootSaga from './saga';
 import appReducer from './container/App/reducer';
 import homeReducer from './container/Home/reducer';
+import shopReducer from './container/Shop/reducer';
 
 const rootReducer = combineReducers({
     appReducer,
     homeReducer,
+    shopReducer,
 })
 
 export default function configureStore() {
