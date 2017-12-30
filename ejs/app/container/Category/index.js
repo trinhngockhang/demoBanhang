@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import SideBar from '../../components/Category/SideBar';
 import BreadCrumb from '../../components/BreadCrumb';
 import Tablet from '../../components/Category/Tablet';
@@ -17,10 +18,18 @@ class Category extends React.Component {
                         </div>
                     </div>
                 </main>
-                <Produce/>
+                <Produce name="Hàng gia dụng" produce={this.props.produce}/>
+                <Produce name="Hàng điện tử" produce={this.props.produce}/>
             </div>
         )
     }
 }
 
-export default Category;
+const mapStateToProps = state => {
+    return {
+        produce: state.homeReducer.produce,
+    }
+}
+
+
+export default connect(mapStateToProps)(Category);

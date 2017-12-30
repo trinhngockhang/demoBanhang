@@ -8216,6 +8216,8 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRedux = __webpack_require__(115);
+
 var _SideBar = __webpack_require__(470);
 
 var _SideBar2 = _interopRequireDefault(_SideBar);
@@ -8270,7 +8272,8 @@ var Category = function (_React$Component) {
                         )
                     )
                 ),
-                _react2.default.createElement(_Produce2.default, null)
+                _react2.default.createElement(_Produce2.default, { name: 'H\xE0ng gia d\u1EE5ng', produce: this.props.produce }),
+                _react2.default.createElement(_Produce2.default, { name: 'H\xE0ng \u0111i\u1EC7n t\u1EED', produce: this.props.produce })
             );
         }
     }]);
@@ -8278,7 +8281,13 @@ var Category = function (_React$Component) {
     return Category;
 }(_react2.default.Component);
 
-exports.default = Category;
+var mapStateToProps = function mapStateToProps(state) {
+    return {
+        produce: state.homeReducer.produce
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(Category);
 
 /***/ }),
 /* 176 */
@@ -37490,16 +37499,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function () {
     return _react2.default.createElement(
         "div",
-        { "class": "col-lg-2 col-md-3 fill-category" },
+        { className: "col-lg-2 col-md-3 fill-category" },
         _react2.default.createElement(
             "div",
-            { "class": "sidebar " },
+            { className: "sidebar " },
             _react2.default.createElement(
                 "div",
-                { "class": "widget widget-categories" },
+                { className: "widget widget-categories" },
                 _react2.default.createElement(
                     "div",
-                    { "class": "widget-title" },
+                    { className: "widget-title" },
                     _react2.default.createElement(
                         "h3",
                         null,
@@ -37509,7 +37518,7 @@ exports.default = function () {
                 ),
                 _react2.default.createElement(
                     "ul",
-                    { "class": "cat-list style1 widget-content" },
+                    { className: "cat-list style1 widget-content" },
                     _react2.default.createElement(
                         "li",
                         null,
@@ -37525,7 +37534,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "ul",
-                            { "class": "cat-child" },
+                            { className: "cat-child" },
                             _react2.default.createElement(
                                 "li",
                                 null,
@@ -37570,7 +37579,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "ul",
-                            { "class": "cat-child" },
+                            { className: "cat-child" },
                             _react2.default.createElement(
                                 "li",
                                 null,
@@ -37602,7 +37611,7 @@ exports.default = function () {
                     ),
                     _react2.default.createElement(
                         "li",
-                        { "class": "" },
+                        { className: "" },
                         _react2.default.createElement(
                             "span",
                             null,
@@ -37615,7 +37624,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "ul",
-                            { "class": "cat-child" },
+                            { className: "cat-child" },
                             _react2.default.createElement(
                                 "li",
                                 null,
@@ -37660,7 +37669,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "ul",
-                            { "class": "cat-child" },
+                            { className: "cat-child" },
                             _react2.default.createElement(
                                 "li",
                                 null,
@@ -37705,7 +37714,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "ul",
-                            { "class": "cat-child" },
+                            { className: "cat-child" },
                             _react2.default.createElement(
                                 "li",
                                 null,
@@ -37741,7 +37750,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "ul",
-                            { "class": "cat-child" },
+                            { className: "cat-child" },
                             _react2.default.createElement(
                                 "li",
                                 null,
@@ -37777,7 +37786,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "ul",
-                            { "class": "cat-child" },
+                            { className: "cat-child" },
                             _react2.default.createElement(
                                 "li",
                                 null,
@@ -37840,7 +37849,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "ul",
-                            { "class": "cat-child" },
+                            { className: "cat-child" },
                             _react2.default.createElement(
                                 "li",
                                 null,
@@ -37874,10 +37883,10 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 "div",
-                { "class": "widget widget-price" },
+                { className: "widget widget-price" },
                 _react2.default.createElement(
                     "div",
-                    { "class": "widget-title" },
+                    { className: "widget-title" },
                     _react2.default.createElement(
                         "h3",
                         null,
@@ -37887,7 +37896,7 @@ exports.default = function () {
                 ),
                 _react2.default.createElement(
                     "div",
-                    { "class": "widget-content" },
+                    { className: "widget-content" },
                     _react2.default.createElement(
                         "p",
                         null,
@@ -37895,17 +37904,17 @@ exports.default = function () {
                     ),
                     _react2.default.createElement(
                         "div",
-                        { "class": "price search-filter-input" },
+                        { className: "price search-filter-input" },
                         _react2.default.createElement(
                             "div",
-                            { id: "slider-range", "class": "price-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" },
-                            _react2.default.createElement("div", { "class": "ui-slider-range ui-corner-all ui-widget-header" }),
-                            _react2.default.createElement("span", { tabindex: "0", "class": "ui-slider-handle ui-corner-all ui-state-default" }),
-                            _react2.default.createElement("span", { tabindex: "0", "class": "ui-slider-handle ui-corner-all ui-state-default" })
+                            { id: "slider-range", className: "price-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" },
+                            _react2.default.createElement("div", { className: "ui-slider-range ui-corner-all ui-widget-header" }),
+                            _react2.default.createElement("span", { tabIndex: "0", className: "ui-slider-handle ui-corner-all ui-state-default" }),
+                            _react2.default.createElement("span", { tabIndex: "0", className: "ui-slider-handle ui-corner-all ui-state-default" })
                         ),
                         _react2.default.createElement(
                             "p",
-                            { "class": "amount" },
+                            { className: "amount" },
                             _react2.default.createElement("input", { type: "text", id: "amount", disabled: "" })
                         )
                     )
@@ -37913,10 +37922,10 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 "div",
-                { "class": "widget widget-brands" },
+                { className: "widget widget-brands" },
                 _react2.default.createElement(
                     "div",
-                    { "class": "widget-title" },
+                    { className: "widget-title" },
                     _react2.default.createElement(
                         "h3",
                         null,
@@ -37926,18 +37935,18 @@ exports.default = function () {
                 ),
                 _react2.default.createElement(
                     "div",
-                    { "class": "widget-content" },
+                    { className: "widget-content" },
                     _react2.default.createElement(
                         "form",
-                        { action: "#", method: "get", "accept-charset": "utf-8" },
+                        { action: "#", method: "get", acceptCharset: "utf-8" },
                         _react2.default.createElement("input", { type: "text", name: "brands", placeholder: "Brands Search" })
                     ),
                     _react2.default.createElement(
                         "ul",
-                        { "class": "box-checkbox scroll" },
+                        { className: "box-checkbox scroll" },
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox1", name: "checkbox1" }),
                             _react2.default.createElement(
                                 "label",
@@ -37952,7 +37961,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox2", name: "checkbox2" }),
                             _react2.default.createElement(
                                 "label",
@@ -37967,7 +37976,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox3", name: "checkbox3" }),
                             _react2.default.createElement(
                                 "label",
@@ -37982,7 +37991,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox4", name: "checkbox4" }),
                             _react2.default.createElement(
                                 "label",
@@ -37997,7 +38006,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox5", name: "checkbox5" }),
                             _react2.default.createElement(
                                 "label",
@@ -38012,7 +38021,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox6", name: "checkbox6" }),
                             _react2.default.createElement(
                                 "label",
@@ -38027,7 +38036,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox7", name: "checkbox7" }),
                             _react2.default.createElement(
                                 "label",
@@ -38042,7 +38051,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "checkbox8", name: "checkbox8" }),
                             _react2.default.createElement(
                                 "label",
@@ -38060,33 +38069,33 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 "div",
-                { "class": "widget widget-color" },
+                { className: "widget widget-color" },
                 _react2.default.createElement(
                     "div",
-                    { "class": "widget-title" },
+                    { className: "widget-title" },
                     _react2.default.createElement(
                         "h3",
                         null,
                         "M\xE0u",
                         _react2.default.createElement("span", null)
                     ),
-                    _react2.default.createElement("div", { style: "height: 2px" })
+                    _react2.default.createElement("div", { style: { height: "2px" } })
                 ),
                 _react2.default.createElement(
                     "div",
-                    { "class": "widget-content" },
+                    { className: "widget-content" },
                     _react2.default.createElement(
                         "form",
                         { action: "#", method: "get", acceptCharset: "utf-8" },
                         _react2.default.createElement("input", { type: "text", name: "color", placeholder: "Color Search" })
                     ),
-                    _react2.default.createElement("div", { style: "height: 5px" }),
+                    _react2.default.createElement("div", { style: { height: '5px' } }),
                     _react2.default.createElement(
                         "ul",
-                        { "class": "box-checkbox scroll" },
+                        { className: "box-checkbox scroll" },
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "check1", name: "check1" }),
                             _react2.default.createElement(
                                 "label",
@@ -38101,7 +38110,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "check2", name: "check2" }),
                             _react2.default.createElement(
                                 "label",
@@ -38116,7 +38125,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "check3", name: "check3" }),
                             _react2.default.createElement(
                                 "label",
@@ -38131,7 +38140,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "check4", name: "check4" }),
                             _react2.default.createElement(
                                 "label",
@@ -38146,7 +38155,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "check5", name: "check5" }),
                             _react2.default.createElement(
                                 "label",
@@ -38161,7 +38170,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "check6", name: "check6" }),
                             _react2.default.createElement(
                                 "label",
@@ -38176,7 +38185,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "check7", name: "check7" }),
                             _react2.default.createElement(
                                 "label",
@@ -38191,7 +38200,7 @@ exports.default = function () {
                         ),
                         _react2.default.createElement(
                             "li",
-                            { "class": "check-box" },
+                            { className: "check-box" },
                             _react2.default.createElement("input", { type: "checkbox", id: "check8", name: "check8" }),
                             _react2.default.createElement(
                                 "label",
@@ -38209,13 +38218,13 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 "div",
-                { "class": "widget widget-banner" },
+                { className: "widget widget-banner" },
                 _react2.default.createElement(
                     "div",
-                    { "class": "banner-box" },
+                    { className: "banner-box" },
                     _react2.default.createElement(
                         "div",
-                        { "class": "inner-box" },
+                        { className: "inner-box" },
                         _react2.default.createElement(
                             "a",
                             { href: "#", title: "" },
