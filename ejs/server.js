@@ -28,6 +28,6 @@ app.get('/productDetail',(req, res) => {
     res.render('home')
 })
 
-app.get('/shop:pageid',(req, res) => {
+app.get('/shop',(req, res) => {
     res.render('home')
 })
