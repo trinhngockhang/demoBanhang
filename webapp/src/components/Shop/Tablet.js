@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default class Tablet extends React.Component {
+class Tablet extends React.Component {
     render() {
+        const props = this.props.data.page;
         return (
                 <div className="col-lg-10 col-md-9">
                     <div className="main-shop">
@@ -833,3 +835,11 @@ export default class Tablet extends React.Component {
         )
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        data: state.shopReducer.data,
+    }
+}
+
+export default connect(mapStateToProps)(Tablet);

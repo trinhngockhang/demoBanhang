@@ -3,7 +3,7 @@ import React from 'react';
 const BreadCrumb = () => {
     return (
         <div>
-            <section className="flat-breadcrumb">
+            <section className="flat-breadcrumb category">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">

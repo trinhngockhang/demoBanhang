@@ -7,6 +7,7 @@ import Footer from '../../components/SharedComponent/Footer';
 import Category from '../Category';
 import ProductDetail from '../ProductDetail';
 import Shop from '../Shop';
+import { Link } from 'react-router-dom'
 
 class App extends React.Component {
     render() {
@@ -14,11 +15,12 @@ class App extends React.Component {
         return (
             <div>
                 <Header items={suggest} electric={electric} electricAds={electricAds}/>
+                <Link to="/shop/111004729614967">CLick</Link>
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/category" component={Category}/>
                     <Route path="/productDetail" component={ProductDetail}/>
-                    <Route path="/shop" component={Shop}/>
+                    <Route path="/shop/:pageid" component={Shop}/>
                 </Switch>
                 <Footer/>
             </div>

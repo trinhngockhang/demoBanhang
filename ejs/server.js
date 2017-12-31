@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const PORT = process.env.PORT || 6969;
+const axios = require('axios');
 
 const app = express();
 
@@ -28,6 +29,9 @@ app.get('/productDetail',(req, res) => {
     res.render('home')
 })
 
-app.get('/shop',(req, res) => {
+app.get('/shop/:pageid',(req, res) => {
     res.render('home')
 })
+
+
+

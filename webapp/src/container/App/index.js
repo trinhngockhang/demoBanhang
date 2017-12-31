@@ -1,22 +1,25 @@
-import React,{ Component } from 'react';
+import React from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Home from '../Home';
-import Main from '../Main';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Header from '../../components/SharedComponent/Header';
+import Footer from '../../components/SharedComponent/Footer';
 import Category from '../Category';
 import ProductDetail from '../ProductDetail';
+import Shop from '../Shop';
+import { Link } from 'react-router-dom'
 
-
-class App extends Component {
+class App extends React.Component {
     render() {
+        const {suggest, electric, electricAds} = this.props;
         return (
             <div>
-                <Header/>
+                <Header items={suggest} electric={electric} electricAds={electricAds}/>
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/category" component={Category}/>
                     <Route path="/productDetail" component={ProductDetail}/>
+                    <Route path="/shop/:pageid" component={Shop}/>
                 </Switch>
                 <Footer/>
             </div>
@@ -24,4 +27,12 @@ class App extends Component {
     }
 }
 
-export default withRouter(App);
+const mapStateToProps = state => {
+    return {
+        suggest: state.appReducer.suggest,
+        electric: state.appReducer.electric,
+        electricAds: state.appReducer.electricAds,
+    }
+}
+
+export default withRouter(connect(mapStateToProps)(App));

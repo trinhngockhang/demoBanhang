@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import '../stylesheets/style.css';
 import '../stylesheets/responsive.css';
 import Advertisement from '../../components/Advertisement';

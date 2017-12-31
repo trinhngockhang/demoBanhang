@@ -30,6 +30,7 @@ class HeaderMobile extends React.Component {
                                         <img src="./images/icons/cart.png" alt="" />
                                     </div>
                                 </a>
+                                <IconCart/>
                             </div>
                         </div>
                     </div>
