@@ -20,11 +20,11 @@ export default class TabletItem extends React.PureComponent {
                                                 <a href="#" title="">{item.title}</a>
                                             </div>
                                             <div className="product-name">
-                                                <a href="#" title="">New X5C-1 2.4Ghz Gyro<br />RC Quadcopter Drone</a>
+                                                <a href="#" title="">{item.subtitle}</a>
                                             </div>
                                             <div className="price">
                                                 <span className="sale">{item.price} đ</span>
-                                                <span className="regular">$2,999.00</span>
+                                                <span className="regular">{item.sale}</span>
                                             </div>
                                         </div>
                                         <div className="box-bottom">

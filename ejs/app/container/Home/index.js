@@ -6,7 +6,6 @@ import '../stylesheets/responsive.css';
 import Advertisement from '../../components/Advertisement';
 import Produce from '../../components/Home/Produce';
 
-
 class Home extends Component {
     render() {
         return (
@@ -19,8 +18,8 @@ class Home extends Component {
                     </div> */}
                    
                     <Advertisement />
-                    <Produce name="Hàng gia dụng" produce={this.props.produce}/>
-                    <Produce name="Hàng điện tử" produce={this.props.produce}/>
+                    <Produce name="Hàng gia dụng" produce={this.props.produce} />
+                    <Produce name="Hàng điện tử" produce={this.props.produce} />
                 </div>
             </div>
         )

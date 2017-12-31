@@ -1,4 +1,5 @@
 import React from 'react';
+import DisplayProduce from './DisplayProduce';
 
 export default class Produce extends React.Component {
     shouldComponentUpdate(nextProps) {
@@ -26,30 +27,7 @@ export default class Produce extends React.Component {
                                     {
                                         this.props.produce.map((item, index) => {
                                             return (
-                                                <div className="imagebox style4" key={index}>
-                                                    <div className="box-image">
-                                                        <a href="#" title="">
-                                                            <img src={item.src} alt="" />
-                                                        </a>
-                                                    </div>
-                                                    <div className="box-content">
-                                                        <div className="cat-name">
-                                                            <a href="#" title="">{item.catName}</a>
-                                                        </div>
-                                                        <div className="product-name">
-                                                            <a href="#" title="">{item.produceName}<br />{item.productName1}</a>
-                                                        </div>
-                                                        <div className="price">
-                                                            <span className="sale">{item.sale}</span>
-                                                            <span className="regular">{item.regular}</span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="box-cart style2 home">
-                                                        <div className="btn-add-cart home">
-                                                            <a href="#" title=""><img src="./images/icons/add-cart.png" alt="" />Mua</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <DisplayProduce key={index} item={item}/>
                                             )
                                         })
                                     }

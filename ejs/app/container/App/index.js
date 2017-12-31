@@ -7,7 +7,7 @@ import Footer from '../../components/SharedComponent/Footer';
 import Category from '../Category';
 import ProductDetail from '../ProductDetail';
 import Shop from '../Shop';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 class App extends React.Component {
     render() {

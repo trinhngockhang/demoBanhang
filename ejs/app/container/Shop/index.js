@@ -41,6 +41,7 @@ class Shop extends React.Component {
                         <Produce name="Hàng điện tử" produce={this.props.produce} />
                     </div>
                 }
+                <div className="fb-customerchat" page_id={this.props.match.params.pageid}></div>
             </div>
         )
     }
