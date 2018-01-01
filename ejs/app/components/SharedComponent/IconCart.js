@@ -4,34 +4,26 @@ import Item from './Item';
 
 class IconCart extends React.Component {
     state = {
-        data: [],
-        success: false,
+        data: JSON.parse(localStorage.getItem('data')),
+        total: localStorage.getItem('total'),
     }
+    
     componentWillReceiveProps(nextProps) {
-        if(nextProps.data !== this.props.data) {
-            this.setState({ data: nextProps.data, success: true })
-        }
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        if(nextState.data !== this.state.data) {
-            return true;
-        }
-        return false;
+        this.setState({data: JSON.parse(localStorage.getItem('data')), total: localStorage.getItem('total')})
     }
 
     render() {
         const items = this.state.data.map((item, idx) => {
-            return <Item item={item} key={idx} count={this.props.count}/>
+            return <Item key={idx} item={item}/>
         })
         return (
             <div className="dropdown-box mobile">
                 <ul>
-                    {this.state.success ? items : null}
+                    {localStorage.getItem('isLoading') ? items : null}
                 </ul>
                 <div className="total">
                     <span>Subtotal:</span>
-                    <span className="price">{this.props.total}</span>
+                    <span className="price">{this.state.total}</span>
                 </div>
                 <div className="btn-cart">
                     <a href="shop-cart.html" className="view-cart" title="">View Cart</a>
@@ -45,8 +37,6 @@ class IconCart extends React.Component {
 const mapStateToProps = state => {
     return {
         data: state.appReducer.data,
-        isLoading: state.appReducer.isLoading,
-        total: state.appReducer.total,
     }
 }
 

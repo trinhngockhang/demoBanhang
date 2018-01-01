@@ -6,52 +6,66 @@ import HeaderSuggestion from './HeaderSuggestion';
 import IconCart from './IconCart';
 
 
-
 class Header extends React.Component {
+
+	state = {
+		count: localStorage.getItem('count'),
+		isLogin: false,
+	}
+
 	componentDidMount() {
-		document.addEventListener('FBObjectReady', this.initializeFacebookLogin);
+		window.fbAsyncInit = function () {
+			FB.init({
+				appId: '553865588295754',
+				cookie: true,  // enable cookies to allow the server to access
+				// the session
+				xfbml: true,  // parse social plugins on this page
+				version: 'v2.11' // use version 2.1
+			});
+			FB.getLoginStatus(function (response) {
+				this.statusChangeCallback(response);
+			}.bind(this));
+		}.bind(this);
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
 	}
 
-	componentWillUnmount() {
-		document.removeEventListener('FBObjectReady', this.initializeFacebookLogin);
+	componentWillReceiveProps(nextProps) {
+		this.setState({ count: localStorage.getItem('count') })
 	}
 
-	initializeFacebookLogin = () => {
-		this.FB = window.FB;
-		this.checkLoginStatus();
+	testAPI = () => {
+		console.log('Welcome!  Fetching your information.... ');
+		FB.api('/me', function (response) {
+			console.log('Successful login for: ' + response.name);
+		});
 	}
 
-	checkLoginStatus = () => {
-		this.FB.getLoginStatus(this.facebookLoginHandler);
-	}
-
-	facebookLogin = () => {
-		if (!this.FB) return;
-	
-		this.FB.getLoginStatus(response => {
-		  if (response.status === 'connected') {
-			this.facebookLoginHandler(response);
-		  } else {
-			this.FB.login(this.facebookLoginHandler, {scope: 'public_profile'});
-		  }
-		}, );
-	}
-
-	facebookLoginHandler = response => {
+	// This is called with the results from from FB.getLoginStatus().
+	statusChangeCallback = (response) => {
 		if (response.status === 'connected') {
-		  this.FB.api('/me', userData => {
-			let result = {
-			  ...response,
-			  user: userData
-			};
-			this.props.onLogin(true, result);
-		  });
-		} else {
-		  this.props.onLogin(false);
-		}
+			this.setState({isLogin: true})
+			this.testAPI();
+		} 
 	}
-	
+	checkLoginState = () => {
+		FB.getLoginStatus(function (response) {
+			this.statusChangeCallback(response);
+		}.bind(this));
+	}
+
+
+	handleClick = () => {
+		FB.login(this.checkLoginState());
+	}
+
 	render() {
+		const filter = this.state.isLogin ? null: "Đăng nhập";
 		return (
 			<div>
 				<section id="header" className="header">
@@ -68,7 +82,7 @@ class Header extends React.Component {
 								<div className="col-md-6 text-right">
 									<ul className="flat-support">
 										<li>
-											<a href="#" onClick={this.facebookLogin}>Đăng nhập</a>
+											<a href="#" onClick={this.handleClick}>{filter}</a>
 										</li>
 										<li>
 											<a href="order-tracking.html" title="">Bán hàng</a>
@@ -197,7 +211,7 @@ class Header extends React.Component {
 											<a href="#" title="">
 												<div className="icon-cart">
 													<img src="./images/icons/cart.png" alt="" />
-													<span>{this.props.count}</span>
+													<span>{this.state.count}</span>
 												</div>
 												{/* <div className="price">
 												$0.00
@@ -210,7 +224,7 @@ class Header extends React.Component {
 							</div>
 						</div>
 					</div>
-					<Menu items={this.props.items} electric={this.props.electric} electricAds={this.props.electricAds}/>
+					<Menu items={this.props.items} electric={this.props.electric} electricAds={this.props.electricAds} />
 
 				</section>
 				<HeaderMobile />

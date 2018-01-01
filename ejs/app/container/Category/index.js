@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SideBar from '../../components/Category/SideBar';
-import BreadCrumb from '../../components/BreadCrumb';
+import BreadCrumb from '../../components/Category/BreadCrumdCategory';
 import Produce from '../../components/Home/Produce';
 
 class Category extends React.Component {

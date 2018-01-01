@@ -2272,6 +2272,9 @@ ul.flat-infomation.style1 li img {
 	right:161px;
 }
 
+.box-cart.style2 .btn-add-cart a.add {
+    line-height: 58px;
+}
 /* Slider Item Style6 */
 .slider .slider-item.style6 {
 	height:486px;
@@ -4477,7 +4480,7 @@ input[type="checkbox"]:checked + label:before {
 .box-cart.style2 .btn-add-cart a {
 	display:inline-block;
 	height:55px;
-	line-height:38px;
+	line-height:54px;
 	text-align:center;
 	color:#fff;
 	background-color:#f92400;

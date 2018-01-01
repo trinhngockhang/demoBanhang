@@ -5,6 +5,7 @@ import '../stylesheets/style.css';
 import '../stylesheets/responsive.css';
 import Advertisement from '../../components/Advertisement';
 import Produce from '../../components/Home/Produce';
+import IconBox from '../../components/Home/IconBox';
 
 class Home extends Component {
     render() {
@@ -18,8 +19,9 @@ class Home extends Component {
                     </div> */}
                    
                     <Advertisement />
-                    <Produce name="Hàng gia dụng" produce={this.props.produce} />
-                    <Produce name="Hàng điện tử" produce={this.props.produce} />
+                    <Produce name="Hàng gia dụng" produce={this.props.produce}/>
+                    <Produce name="Hàng điện tử" produce={this.props.produce}/>
+                    <IconBox/>
                 </div>
             </div>
         )
