@@ -1,71 +1,72 @@
-// var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-var webpack = require("webpack");
+const webpack = require("webpack");
+const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const paths = require('./paths');
-const path = require('path');
-const prod = process.env.NODE_ENV === 'production';
 
 const config = {
-    entry: ['babel-polyfill','./app/index.js'],
+    entry: ['babel-polyfill', './app/index.js'],
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js',
     },
-    plugins: [      
-        new webpack.DefinePlugin({
-            'process.env': {
-              'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-            }
-        }),   
-    ],
-    module: {
-        loaders: [
-            {
-                test: /\.(jpg|png)$/,
-                loader: 'url?limit=25000',
-                
-            }        
-        ],
-        rules: [  
-            { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },    
-            {
-            // Preprocess our own .css files
-            // This is the place to add your own loaders (e.g. sass/less etc.)
-            // for a list of loaders, see https://webpack.js.org/loaders/#styling
-            test: /\.css$/,
-            exclude: /node_modules/,
-            use: ['style-loader', 'css-loader'],
-            },
-            {
-            // Preprocess 3rd party .css files located in node_modules
-            test: /\.css$/,
-            include: /node_modules/,
-            use: ['style-loader', 'css-loader'],
-            },
-            {
-            test: /\.(eot|svg|otf|ttf|woff|woff2)$/,
-            use: 'file-loader',
-            },
-        ],
-    },
+    watch: true,
     resolve: {
         modules: ['app', 'node_modules'],
         extensions: [
-          '.js',
-          '.jsx',
-          '.react.js',
-          '.css',
+            '.js',
+            '.jsx',
+            '.react.js',
+            '.css',
         ],
-    }
-}
-
-if(prod) {
-    config.push.plugins([
+    },
+    module: {
+        rules: [
+            { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                loader: 'url-loader?limit=100000'
+            },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        { loader: 'css-loader', options: { importLoaders: 1, minimize: true } },
+                        'postcss-loader'
+                    ]
+                })
+            }
+        ]
+    },
+    plugins: [
+        new ExtractTextPlugin({
+            filename: '[name].css',
+            allChunks: true
+        }),
+        new webpack.DefinePlugin({ // <-- key to reducing React's size
+            'process.env': {
+                'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+            }
+        }),
+        new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.UglifyJsPlugin({
-            minimize: true,
-            compress: false
-        }),  
+            compress: {
+                warnings: false,
+                screw_ie8: true,
+                conditionals: true,
+                unused: true,
+                comparisons: true,
+                sequences: true,
+                dead_code: true,
+                evaluate: true,
+                if_return: true,
+                join_vars: true
+            },
+            output: {
+                comments: false
+            }
+        }),
         new CompressionPlugin({
             asset: "[path].gz[query]",
             algorithm: "gzip",
@@ -73,24 +74,24 @@ if(prod) {
             threshold: 10240,
             minRatio: 0
         }),
-
-        // new HtmlWebpackPlugin({
-        //     inject: true,
-        //     template: paths.appHtml,
-        //     minify: {
-        //       removeComments: true,
-        //       collapseWhitespace: true,
-        //       removeRedundantAttributes: true,
-        //       useShortDoctype: true,
-        //       removeEmptyAttributes: true,
-        //       removeStyleLinkTypeAttributes: true,
-        //       keepClosingSlash: true,
-        //       minifyJS: true,
-        //       minifyCSS: true,
-        //       minifyURLs: true,
-        //     }
-        // })
-    ])
+        new HtmlWebpackPlugin({
+            template: 'views/home.ejs',
+            inject: false,
+            filename: 'home.ejs',
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                keepClosingSlash: true,
+                minifyJS: true,
+                minifyCSS: true,
+                minifyURLs: true,
+                }
+        })
+    ]
 }
 
 module.exports = config;

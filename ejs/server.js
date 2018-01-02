@@ -7,7 +7,7 @@ const axios = require('axios');
 const app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', './views');
+app.set('views', './public');
 app.use(express.static('public'));
 app.use(compression());
 app.use(bodyParser.json({ extend: true }));
