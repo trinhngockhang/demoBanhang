@@ -19,10 +19,11 @@ class App extends React.Component {
         return (
             <div>
                 <Header items={suggest} electric={electric} electricAds={electricAds}/>
-                <Link to="/shop/111004729614967">CLick</Link>
+                <Link to="/shop/111004729614967">Shop</Link>
+                <Link to="/category/5a007c92c846cac15b53ab81">Category</Link>
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route path="/category/:id" component={Category}/>
+                    <Route path="/category/:pageid" component={Category}/>
                     <Route path="/product/:id" component={ProductDetail}/>
                     <Route path="/shop/:pageid" component={Shop}/>
                     <Route path="/cart" component={Cart}/>

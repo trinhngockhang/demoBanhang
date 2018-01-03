@@ -21,11 +21,11 @@ app.get('/',(req, res) => {
     res.render('home');
 })
 
-app.get('/category/:id',(req, res) => {
+app.get('/category/:pageid',(req, res) => {
     res.render('home')
 })
 
-app.get('/product/:id',(req, res) => {
+app.get('/product/:pageid',(req, res) => {
     res.render('home')
 })
 

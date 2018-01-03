@@ -9,6 +9,7 @@ export default class TabletItem extends React.Component {
     }
 
     render() {
+    
         return (
             <div className="row sort-box">
                 {
@@ -31,7 +32,7 @@ export default class TabletItem extends React.Component {
                                             </div>
                                             <div className="price">
                                                 <span className="sale">{item.price} đ</span>
-                                                <span className="regular">{item.sale}</span>
+                                                <span className="regular">{item.quantity}</span>
                                             </div>
                                         </div>
                                         <div className="box-bottom">

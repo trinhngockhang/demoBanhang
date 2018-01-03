@@ -1,0 +1,1 @@
+webpackHotUpdate(0,{524:function(e,t,c){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.fetchCategory=function(e){return{type:"FETCH_CATEGORY",pageid:e}}}});

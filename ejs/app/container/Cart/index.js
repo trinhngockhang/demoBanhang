@@ -41,7 +41,7 @@ class Cart extends React.Component {
                                                 <td>
                                                     <div className="quanlity">
                                                         <span className="btn-down"></span>
-                                                        <input type="number" name="number" value="5" min="1" max="100" placeholder="Quanlity" />
+                                                        <input type="number" name="number" defaultValue="5" min="1" max="100" placeholder="Quanlity" />
                                                         <span className="btn-up"></span>
                                                     </div>
                                                 </td>
@@ -72,7 +72,7 @@ class Cart extends React.Component {
                                                 <td>
                                                     <div className="quanlity">
                                                         <span className="btn-down"></span>
-                                                        <input type="number" name="number" value="5" min="1" max="100" placeholder="Quanlity" />
+                                                        <input type="number" name="number" defaultValue="5" min="1" max="100" placeholder="Quanlity" />
                                                         <span className="btn-up"></span>
                                                     </div>
                                                 </td>
@@ -90,7 +90,7 @@ class Cart extends React.Component {
                                         </tbody>
                                     </table>
                                     <div className="form-coupon">
-                                        <form action="#" method="get" accept-charset="utf-8">
+                                        <form action="#" method="get" acceptCharset="utf-8">
                                             <div className="coupon-input">
                                                 <input type="text" name="coupon code" placeholder="Mã giảm giá" />
                                                 <button type="submit">Phiếu giảm giá</button>
@@ -102,7 +102,7 @@ class Cart extends React.Component {
                             <div className="col-lg-4">
                                 <div className="cart-totals">
                                     <h3>Tổng đơn hàng</h3>
-                                    <form action="#" method="get" accept-charset="utf-8">
+                                    <form action="#" method="get" acceptCharset="utf-8">
                                         <table>
                                             <tbody>
                                                 <tr>
@@ -113,12 +113,12 @@ class Cart extends React.Component {
                                                     <td>Giá ship</td>
                                                     <td className="btn-radio">
                                                         <div className="radio-info">
-                                                            <input type="radio" id="flat-rate" checked name="radio-flat-rate" />
-                                                            <label for="flat-rate">Giá/Km: <span>$3.00</span></label>
+                                                            <input type="radio" id="flat-rate" defaultChecked name="radio-flat-rate" />
+                                                            <label htmlFor="flat-rate">Giá/Km: <span>$3.00</span></label>
                                                         </div>
                                                         <div className="radio-info">
                                                             <input type="radio" id="free-shipping" name="radio-flat-rate" />
-                                                            <label for="free-shipping">Miễn phí giao hàng</label>
+                                                            <label htmlFor="free-shipping">Miễn phí giao hàng</label>
                                                         </div>
                                                         <div className="btn-shipping">
                                                             <a href="#" title="">Tổng giá</a>

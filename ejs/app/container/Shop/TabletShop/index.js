@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchCategory } from './action';
-import TabletItem from '../../components/SharedComponent/TabletItem';
+import { fetchCategoryShop } from './action';
+import TabletItem from '../../../components/SharedComponent/TabletItem';
 
 class Tablet extends React.Component {
     state = {
@@ -9,7 +9,7 @@ class Tablet extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchCategory(this.props.data.id);
+        this.props.fetchCategoryShop(this.props.data.id);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -142,7 +142,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = ({
-    fetchCategory,
+    fetchCategoryShop,
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Tablet);

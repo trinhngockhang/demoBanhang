@@ -7,34 +7,34 @@ class Search extends React.Component {
         return (
             <div>
                 <BreadCrumb />
-                <main id="shop" class="style2">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="main-shop">
-                                    <div class="wrap-imagebox">
-                                        <div class="flat-row-title style4">
+                <main id="shop" className="style2">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <div className="main-shop">
+                                    <div className="wrap-imagebox">
+                                        <div className="flat-row-title style4">
                                             <h3>Mobile & Tablet</h3>
                                             <span>
                                                 Showing 1–15 of 20 results
 									        </span>
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
                                         </div>
-                                        <div class="sort-product style1">
-                                            <ul class="icons">
+                                        <div className="sort-product style1">
+                                            <ul className="icons">
                                                 <li>
                                                     <img src="./images/icons/list-1.png" alt="" />
                                                 </li>
                                                 <li>
                                                     <img src="./images/icons/list-2.png" alt="" />
                                                 </li>
-                                                <li class="filter waves-effect">
+                                                <li className="filter waves-effect">
                                                     Bộ lọc
 										        </li>
                                             </ul>
                                             <BoxFilter />
-                                            <div class="sort">
-                                                <div class="popularity">
+                                            <div className="sort">
+                                                <div className="popularity">
                                                     <select name="popularity">
                                                         <option value="">Sort by popularity</option>
                                                         <option value="">Sort by popularity</option>
@@ -43,44 +43,44 @@ class Search extends React.Component {
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="clearfix"></div>
+                                            <div className="clearfix"></div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="product-box">
-                                                    <div class="imagebox">
-                                                        <span class="item-new">NEW</span>
-                                                        <div class="box-image owl-carousel-1">
-                                                            <div class="image">
+                                        <div className="row">
+                                            <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="product-box">
+                                                    <div className="imagebox">
+                                                        <span className="item-new">NEW</span>
+                                                        <div className="box-image owl-carousel-1">
+                                                            <div className="image">
                                                                 <a href="#" title="">
                                                                     <img src="./images/product/other/01.jpg" alt="" />
                                                                 </a>
                                                             </div>
-                                                            <div class="image">
+                                                            <div className="image">
                                                                 <a href="#" title="">
                                                                     <img src="./images/product/other/01.jpg" alt="" />
                                                                 </a>
                                                             </div>
-                                                            <div class="image">
+                                                            <div className="image">
                                                                 <a href="#" title="">
                                                                     <img src="./images/product/other/01.jpg" alt="" />
                                                                 </a>
                                                             </div>
                                                         </div>
-                                                        <div class="box-content">
-                                                            <div class="cat-name">
+                                                        <div className="box-content">
+                                                            <div className="cat-name">
                                                                 <a href="#" title="">Laptops</a>
                                                             </div>
-                                                            <div class="product-name">
+                                                            <div className="product-name">
                                                                 <a href="#" title="">Apple iPad Mini<br />G2356</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span class="sale">$1,250.00</span>
-                                                                <span class="regular">$2,999.00</span>
+                                                            <div className="price">
+                                                                <span className="sale">$1,250.00</span>
+                                                                <span className="regular">$2,999.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="box-bottom">
-                                                            <div class="btn-add-cart">
+                                                        <div className="box-bottom">
+                                                            <div className="btn-add-cart">
                                                                 <a href="#" title="">
                                                                     <img src="./images/icons/add-cart.png" alt="" />Add to Cart
 														</a>
@@ -90,10 +90,10 @@ class Search extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="product-box">
-                                                    <div class="imagebox">
-                                                        <div class="box-image owl-carousel-1">
+                                            <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="product-box">
+                                                    <div className="imagebox">
+                                                        <div className="box-image owl-carousel-1">
                                                             <a href="#" title="">
                                                                 <img src="./images/product/other/02.jpg" alt="" />
                                                             </a>
@@ -104,20 +104,20 @@ class Search extends React.Component {
                                                                 <img src="./images/product/other/02.jpg" alt="" />
                                                             </a>
                                                         </div>
-                                                        <div class="box-content">
-                                                            <div class="cat-name">
+                                                        <div className="box-content">
+                                                            <div className="cat-name">
                                                                 <a href="#" title="">Cameras</a>
                                                             </div>
-                                                            <div class="product-name">
+                                                            <div className="product-name">
                                                                 <a href="#" title="">New X5C-1 2.4Ghz Gyro<br />RC Quadcopter Drone</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span class="sale">$2,009.00</span>
-                                                                <span class="regular">$2,999.00</span>
+                                                            <div className="price">
+                                                                <span className="sale">$2,009.00</span>
+                                                                <span className="regular">$2,999.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="box-bottom">
-                                                            <div class="btn-add-cart">
+                                                        <div className="box-bottom">
+                                                            <div className="btn-add-cart">
                                                                 <a href="#" title="">
                                                                     <img src="./images/icons/add-cart.png" alt="" />Add to Cart
 														</a>
@@ -127,10 +127,10 @@ class Search extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="product-box">
-                                                    <div class="imagebox">
-                                                        <div class="box-image owl-carousel-1">
+                                            <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="product-box">
+                                                    <div className="imagebox">
+                                                        <div className="box-image owl-carousel-1">
                                                             <a href="#" title="">
                                                                 <img src="./images/product/other/03.jpg" alt="" />
                                                             </a>
@@ -141,20 +141,20 @@ class Search extends React.Component {
                                                                 <img src="./images/product/other/03.jpg" alt="" />
                                                             </a>
                                                         </div>
-                                                        <div class="box-content">
-                                                            <div class="cat-name">
+                                                        <div className="box-content">
+                                                            <div className="cat-name">
                                                                 <a href="#" title="">Headphones</a>
                                                             </div>
-                                                            <div class="product-name">
+                                                            <div className="product-name">
                                                                 <a href="#" title="">Beats Solo<br />HD</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span class="sale">$1,999.00</span>
-                                                                <span class="regular">$2,999.00</span>
+                                                            <div className="price">
+                                                                <span className="sale">$1,999.00</span>
+                                                                <span className="regular">$2,999.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="box-bottom">
-                                                            <div class="btn-add-cart">
+                                                        <div className="box-bottom">
+                                                            <div className="btn-add-cart">
                                                                 <a href="#" title="">
                                                                     <img src="./images/icons/add-cart.png" alt="" />Add to Cart
 														</a>
@@ -164,11 +164,11 @@ class Search extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="product-box">
-                                                    <div class="imagebox">
-                                                        <span class="item-sale">SALE</span>
-                                                        <div class="box-image owl-carousel-1">
+                                            <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="product-box">
+                                                    <div className="imagebox">
+                                                        <span className="item-sale">SALE</span>
+                                                        <div className="box-image owl-carousel-1">
                                                             <a href="#" title="">
                                                                 <img src="./images/product/other/04.jpg" alt="" />
                                                             </a>
@@ -179,20 +179,20 @@ class Search extends React.Component {
                                                                 <img src="./images/product/other/04.jpg" alt="" />
                                                             </a>
                                                         </div>
-                                                        <div class="box-content">
-                                                            <div class="cat-name">
+                                                        <div className="box-content">
+                                                            <div className="cat-name">
                                                                 <a href="#" title="">Computers</a>
                                                             </div>
-                                                            <div class="product-name">
+                                                            <div className="product-name">
                                                                 <a href="#" title="">Apple İmac Z0SC4824<br />Retina</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span class="sale">$5,759.68</span>
-                                                                <span class="regular">$2,999.00</span>
+                                                            <div className="price">
+                                                                <span className="sale">$5,759.68</span>
+                                                                <span className="regular">$2,999.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="box-bottom">
-                                                            <div class="btn-add-cart">
+                                                        <div className="box-bottom">
+                                                            <div className="btn-add-cart">
                                                                 <a href="#" title="">
                                                                     <img src="./images/icons/add-cart.png" alt="" />Add to Cart
 														</a>
@@ -202,10 +202,10 @@ class Search extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="product-box">
-                                                    <div class="imagebox">
-                                                        <div class="box-image owl-carousel-1">
+                                            <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="product-box">
+                                                    <div className="imagebox">
+                                                        <div className="box-image owl-carousel-1">
                                                             <a href="#" title="">
                                                                 <img src="./images/product/other/05.jpg" alt="" />
                                                             </a>
@@ -216,20 +216,20 @@ class Search extends React.Component {
                                                                 <img src="./images/product/other/05.jpg" alt="" />
                                                             </a>
                                                         </div>
-                                                        <div class="box-content">
-                                                            <div class="cat-name">
+                                                        <div className="box-content">
+                                                            <div className="cat-name">
                                                                 <a href="#" title="">Cameras</a>
                                                             </div>
-                                                            <div class="product-name">
+                                                            <div className="product-name">
                                                                 <a href="#" title="">Apple iPad Mini<br />G2356</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span class="sale">$1,250.00</span>
-                                                                <span class="regular">$2,999.00</span>
+                                                            <div className="price">
+                                                                <span className="sale">$1,250.00</span>
+                                                                <span className="regular">$2,999.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="box-bottom">
-                                                            <div class="btn-add-cart">
+                                                        <div className="box-bottom">
+                                                            <div className="btn-add-cart">
                                                                 <a href="#" title="">
                                                                     <img src="./images/icons/add-cart.png" alt="" />Add to Cart
 														</a>
@@ -239,10 +239,10 @@ class Search extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="product-box">
-                                                    <div class="imagebox">
-                                                        <div class="box-image owl-carousel-1">
+                                            <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="product-box">
+                                                    <div className="imagebox">
+                                                        <div className="box-image owl-carousel-1">
                                                             <a href="#" title="">
                                                                 <img src="./images/product/other/06.jpg" alt="" />
                                                             </a>
@@ -253,20 +253,20 @@ class Search extends React.Component {
                                                                 <img src="./images/product/other/06.jpg" alt="" />
                                                             </a>
                                                         </div>
-                                                        <div class="box-content">
-                                                            <div class="cat-name">
+                                                        <div className="box-content">
+                                                            <div className="cat-name">
                                                                 <a href="#" title="">Cameras</a>
                                                             </div>
-                                                            <div class="product-name">
+                                                            <div className="product-name">
                                                                 <a href="#" title="">New X5C-1 2.4Ghz Gyro <br />RC Quadcopter Drone</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span class="sale">$2,009.00</span>
-                                                                <span class="regular">$2,999.00</span>
+                                                            <div className="price">
+                                                                <span className="sale">$2,009.00</span>
+                                                                <span className="regular">$2,999.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="box-bottom">
-                                                            <div class="btn-add-cart">
+                                                        <div className="box-bottom">
+                                                            <div className="btn-add-cart">
                                                                 <a href="#" title="">
                                                                     <img src="./images/icons/add-cart.png" alt="" />Add to Cart
 														</a>
@@ -276,10 +276,10 @@ class Search extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="product-box">
-                                                    <div class="imagebox">
-                                                        <div class="box-image owl-carousel-1">
+                                            <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="product-box">
+                                                    <div className="imagebox">
+                                                        <div className="box-image owl-carousel-1">
                                                             <a href="#" title="">
                                                                 <img src="./images/product/other/07.jpg" alt="" />
                                                             </a>
@@ -290,20 +290,20 @@ class Search extends React.Component {
                                                                 <img src="./images/product/other/07.jpg" alt="" />
                                                             </a>
                                                         </div>
-                                                        <div class="box-content">
-                                                            <div class="cat-name">
+                                                        <div className="box-content">
+                                                            <div className="cat-name">
                                                                 <a href="#" title="">Computers</a>
                                                             </div>
-                                                            <div class="product-name">
+                                                            <div className="product-name">
                                                                 <a href="#" title="">Apple iPad Air 2 32GB 9.7" <br />Tablet</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span class="sale">$5,759.68</span>
-                                                                <span class="regular">$2,999.00</span>
+                                                            <div className="price">
+                                                                <span className="sale">$5,759.68</span>
+                                                                <span className="regular">$2,999.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="box-bottom">
-                                                            <div class="btn-add-cart">
+                                                        <div className="box-bottom">
+                                                            <div className="btn-add-cart">
                                                                 <a href="#" title="">
                                                                     <img src="./images/icons/add-cart.png" alt="" />Add to Cart
 														</a>
@@ -313,10 +313,10 @@ class Search extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="product-box">
-                                                    <div class="imagebox">
-                                                        <div class="box-image owl-carousel-1">
+                                            <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="product-box">
+                                                    <div className="imagebox">
+                                                        <div className="box-image owl-carousel-1">
                                                             <a href="#" title="">
                                                                 <img src="./images/product/other/08.jpg" alt="" />
                                                             </a>
@@ -327,20 +327,20 @@ class Search extends React.Component {
                                                                 <img src="./images/product/other/08.jpg" alt="" />
                                                             </a>
                                                         </div>
-                                                        <div class="box-content">
-                                                            <div class="cat-name">
+                                                        <div className="box-content">
+                                                            <div className="cat-name">
                                                                 <a href="#" title="">Computers</a>
                                                             </div>
-                                                            <div class="product-name">
+                                                            <div className="product-name">
                                                                 <a href="#" title="">Apple İmac Z0SC4824<br />Retina</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span class="sale">$5,759.68</span>
-                                                                <span class="regular">$2,999.00</span>
+                                                            <div className="price">
+                                                                <span className="sale">$5,759.68</span>
+                                                                <span className="regular">$2,999.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="box-bottom">
-                                                            <div class="btn-add-cart">
+                                                        <div className="box-bottom">
+                                                            <div className="btn-add-cart">
                                                                 <a href="#" title="">
                                                                     <img src="./images/icons/add-cart.png" alt="" />Add to Cart
 														</a>
@@ -349,11 +349,11 @@ class Search extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="product-box">
-                                                    <div class="imagebox">
-                                                        <span class="item-new">NEW</span>
-                                                        <div class="box-image owl-carousel-1">
+                                            <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="product-box">
+                                                    <div className="imagebox">
+                                                        <span className="item-new">NEW</span>
+                                                        <div className="box-image owl-carousel-1">
                                                             <a href="#" title="">
                                                                 <img src="./images/product/other/01.jpg" alt="" />
                                                             </a>
@@ -364,20 +364,20 @@ class Search extends React.Component {
                                                                 <img src="./images/product/other/01.jpg" alt="" />
                                                             </a>
                                                         </div>
-                                                        <div class="box-content">
-                                                            <div class="cat-name">
+                                                        <div className="box-content">
+                                                            <div className="cat-name">
                                                                 <a href="#" title="">Laptops</a>
                                                             </div>
-                                                            <div class="product-name">
+                                                            <div className="product-name">
                                                                 <a href="#" title="">Apple iPad Mini<br />G2356</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span class="sale">$1,250.00</span>
-                                                                <span class="regular">$2,999.00</span>
+                                                            <div className="price">
+                                                                <span className="sale">$1,250.00</span>
+                                                                <span className="regular">$2,999.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="box-bottom">
-                                                            <div class="btn-add-cart">
+                                                        <div className="box-bottom">
+                                                            <div className="btn-add-cart">
                                                                 <a href="#" title="">
                                                                     <img src="./images/icons/add-cart.png" alt="" />Add to Cart
 														</a>
@@ -386,10 +386,10 @@ class Search extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="product-box">
-                                                    <div class="imagebox">
-                                                        <div class="box-image owl-carousel-1">
+                                            <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="product-box">
+                                                    <div className="imagebox">
+                                                        <div className="box-image owl-carousel-1">
                                                             <a href="#" title="">
                                                                 <img src="./images/product/other/02.jpg" alt="" />
                                                             </a>
@@ -400,20 +400,20 @@ class Search extends React.Component {
                                                                 <img src="./images/product/other/02.jpg" alt="" />
                                                             </a>
                                                         </div>
-                                                        <div class="box-content">
-                                                            <div class="cat-name">
+                                                        <div className="box-content">
+                                                            <div className="cat-name">
                                                                 <a href="#" title="">Cameras</a>
                                                             </div>
-                                                            <div class="product-name">
+                                                            <div className="product-name">
                                                                 <a href="#" title="">New X5C-1 2.4Ghz Gyro<br />RC Quadcopter Drone</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span class="sale">$2,009.00</span>
-                                                                <span class="regular">$2,999.00</span>
+                                                            <div className="price">
+                                                                <span className="sale">$2,009.00</span>
+                                                                <span className="regular">$2,999.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="box-bottom">
-                                                            <div class="btn-add-cart">
+                                                        <div className="box-bottom">
+                                                            <div className="btn-add-cart">
                                                                 <a href="#" title="">
                                                                     <img src="./images/icons/add-cart.png" alt="" />Add to Cart
 														</a>
@@ -422,10 +422,10 @@ class Search extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="product-box">
-                                                    <div class="imagebox">
-                                                        <div class="box-image owl-carousel-1">
+                                            <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="product-box">
+                                                    <div className="imagebox">
+                                                        <div className="box-image owl-carousel-1">
                                                             <a href="#" title="">
                                                                 <img src="./images/product/other/03.jpg" alt="" />
                                                             </a>
@@ -436,20 +436,20 @@ class Search extends React.Component {
                                                                 <img src="./images/product/other/03.jpg" alt="" />
                                                             </a>
                                                         </div>
-                                                        <div class="box-content">
-                                                            <div class="cat-name">
+                                                        <div className="box-content">
+                                                            <div className="cat-name">
                                                                 <a href="#" title="">Headphones</a>
                                                             </div>
-                                                            <div class="product-name">
+                                                            <div className="product-name">
                                                                 <a href="#" title="">Beats Solo<br />HD</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span class="sale">$1,999.00</span>
-                                                                <span class="regular">$2,999.00</span>
+                                                            <div className="price">
+                                                                <span className="sale">$1,999.00</span>
+                                                                <span className="regular">$2,999.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="box-bottom">
-                                                            <div class="btn-add-cart">
+                                                        <div className="box-bottom">
+                                                            <div className="btn-add-cart">
                                                                 <a href="#" title="">
                                                                     <img src="./images/icons/add-cart.png" alt="" />Mua
 														</a>
@@ -458,11 +458,11 @@ class Search extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="product-box">
-                                                    <div class="imagebox">
-                                                        <span class="item-sale">SALE</span>
-                                                        <div class="box-image owl-carousel-1">
+                                            <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="product-box">
+                                                    <div className="imagebox">
+                                                        <span className="item-sale">SALE</span>
+                                                        <div className="box-image owl-carousel-1">
                                                             <a href="#" title="">
                                                                 <img src="./images/product/other/04.jpg" alt="" />
                                                             </a>
@@ -473,20 +473,20 @@ class Search extends React.Component {
                                                                 <img src="./images/product/other/04.jpg" alt="" />
                                                             </a>
                                                         </div>
-                                                        <div class="box-content">
-                                                            <div class="cat-name">
+                                                        <div className="box-content">
+                                                            <div className="cat-name">
                                                                 <a href="#" title="">Computers</a>
                                                             </div>
-                                                            <div class="product-name">
+                                                            <div className="product-name">
                                                                 <a href="#" title="">Apple İmac Z0SC4824<br />Retina</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span class="sale">$5,759.68</span>
-                                                                <span class="regular">$2,999.00</span>
+                                                            <div className="price">
+                                                                <span className="sale">$5,759.68</span>
+                                                                <span className="regular">$2,999.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="box-bottom">
-                                                            <div class="btn-add-cart">
+                                                        <div className="box-bottom">
+                                                            <div className="btn-add-cart">
                                                                 <a href="#" title="">
                                                                     <img src="./images/icons/add-cart.png" alt="" />Mua
 														</a>
@@ -497,35 +497,35 @@ class Search extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="blog-pagination style1">
+                                    <div className="blog-pagination style1">
                                         <span>
                                             1-15 trên 20
 								</span>
-                                        <ul class="flat-pagination style1">
-                                            <li class="prev">
+                                        <ul className="flat-pagination style1">
+                                            <li className="prev">
                                                 <a href="#" title="">
                                                     <img src="./images/icons/left-1.png" alt="" />Trang trước
 										</a>
                                             </li>
                                             <li>
-                                                <a href="#" class="waves-effect" title="">01</a>
+                                                <a href="#" className="waves-effect" title="">01</a>
                                             </li>
                                             <li>
-                                                <a href="#" class="waves-effect" title="">02</a>
+                                                <a href="#" className="waves-effect" title="">02</a>
                                             </li>
-                                            <li class="active">
-                                                <a href="#" class="waves-effect" title="">03</a>
+                                            <li className="active">
+                                                <a href="#" className="waves-effect" title="">03</a>
                                             </li>
                                             <li>
-                                                <a href="#" class="waves-effect" title="">04</a>
+                                                <a href="#" className="waves-effect" title="">04</a>
                                             </li>
-                                            <li class="next">
+                                            <li className="next">
                                                 <a href="#" title="">
                                                     Trang sau<img src="./images/icons/right-1.png" alt="" />
                                                 </a>
                                             </li>
                                         </ul>
-                                        <div class="clearfix"></div>
+                                        <div className="clearfix"></div>
                                     </div>
                                 </div>
                             </div>

@@ -79,7 +79,7 @@ class Checkout extends React.Component {
                                                     <div className="clearfix"></div>
                                                 </div>
                                                 <div className="checkbox">
-                                                    <input type="checkbox" id="create-account" name="create-account" checked />
+                                                    <input type="checkbox" id="create-account" name="create-account" defaultChecked />
                                                     <label htmlFor="create-account">Tạo tài khoản?</label>
                                                 </div>
                                             </div>
@@ -92,7 +92,7 @@ class Checkout extends React.Component {
                                             </div>
                                             <div className="fields-content">
                                                 <div className="checkbox">
-                                                    <input type="checkbox" id="create-account-2" name="create-account-2" checked />
+                                                    <input type="checkbox" id="create-account-2" name="create-account-2" defaultChecked />
                                                     <label htmlFor="create-account-2">Nơi nhận ?</label>
                                                 </div>
                                                 <div className="field-row">
@@ -179,7 +179,7 @@ class Checkout extends React.Component {
                                                     <td>Tiền ship</td>
                                                     <td className="btn-radio">
                                                         <div className="radio-info">
-                                                            <input type="radio" checked id="flat-rate" name="radio-flat-rate" />
+                                                            <input type="radio" defaultChecked id="flat-rate" name="radio-flat-rate" />
                                                             <label htmlFor="flat-rate">Giá/Km: <span>$3.00</span></label>
                                                         </div>
                                                         <div className="radio-info">
@@ -199,7 +199,7 @@ class Checkout extends React.Component {
                                         </table>
                                         <div className="btn-radio style2">
                                             <div className="checkbox">
-                                                <input type="checkbox" id="checked-order" name="checked-order" checked />
+                                                <input type="checkbox" id="checked-order" name="checked-order" defaultChecked />
                                                 <label htmlFor="checked-order">Hình thức thanh toán*</label>
                                             </div>
                                             <form>
@@ -218,7 +218,7 @@ class Checkout extends React.Component {
                                             </form>
                                         </div>
                                         <div className="checkbox">
-                                            <input type="checkbox" id="checked-order" name="checked-order" checked />
+                                            <input type="checkbox" id="checked-order" name="checked-order" defaultChecked />
                                             <label htmlFor="checked-order">Tôi chấp nhận điều khoản trên*</label>
                                         </div>
                                         <div className="btn-order">

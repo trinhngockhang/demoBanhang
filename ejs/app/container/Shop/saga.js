@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function* fetchData(action) {
     try {
-        console.log('emit');
+        console.log('shop');
         const pageid = action.pageid;
         const response = yield call(axios.get,`https://api.botbanhang.vn/v1/webapp/page?id=${pageid}`);
         yield put({type: 'LOADING_DATA_SUCCESS', message: 'Success', data: response.data.data,})
