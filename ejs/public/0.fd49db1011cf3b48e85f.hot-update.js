@@ -1,1 +1,0 @@
-webpackHotUpdate(0,{482:function(e,t,c){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.fetchCategory=function(e){return{type:"FETCH_CATEGORY",id:e}}}});
