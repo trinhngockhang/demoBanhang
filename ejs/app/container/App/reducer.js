@@ -32,25 +32,11 @@ const appReducer = (state = initialState, action) => {
         case 'LOADING':
             return { ...state, }
         case 'FETCH_INFO_ITEM':{
-            state.data= state.data.concat(action.item);
-            state.isLoading = true;
-            state.total= state.total + parseFloat(action.price);
-            state.count= state.count + 1;
-            localStorage.setItem('data',JSON.stringify(state.data));
-            localStorage.setItem('isLoading', state.isLoading);
-            localStorage.setItem('total', state.total);
-            localStorage.setItem('count', state.count);
+           
             return {...state}
         }
         case 'REMOVE_ITEM': {
-            state.data= state.data.map(item => !item.id);
-            state.isLoading = true;
-            state.total= state.total - parseFloat(action.price);
-            state.count= state.count - 1;
-            localStorage.setItem('data',JSON.stringify(state.data));
-            localStorage.setItem('isLoading', state.isLoading);
-            localStorage.setItem('total', state.total);
-            localStorage.setItem('count', state.count);
+            
             return {...state}
         }
         default:

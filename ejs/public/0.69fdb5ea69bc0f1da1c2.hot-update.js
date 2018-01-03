@@ -1,0 +1,1 @@
+webpackHotUpdate(0,{466:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.fetchInfoItem=function(e,t){return{type:"FETCH_INFO_ITEM",item:e,price:t}},t.removeItem=function(e,t){return{type:"REMOVE_ITEM",item:e,price:t}}}});

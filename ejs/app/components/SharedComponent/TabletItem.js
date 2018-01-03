@@ -1,6 +1,13 @@
 import React from 'react';
 
-export default class TabletItem extends React.PureComponent {
+export default class TabletItem extends React.Component {
+    shouldComponentUpdate(nextProps) {
+        if(nextProps.items !== this.props.items) {
+            return true;
+        }
+        return false;
+    }
+
     render() {
         return (
             <div className="row sort-box">

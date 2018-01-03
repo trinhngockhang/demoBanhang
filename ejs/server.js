@@ -21,11 +21,11 @@ app.get('/',(req, res) => {
     res.render('home');
 })
 
-app.get('/category',(req, res) => {
+app.get('/category/:id',(req, res) => {
     res.render('home')
 })
 
-app.get('/productDetail',(req, res) => {
+app.get('/product/:id',(req, res) => {
     res.render('home')
 })
 
@@ -33,5 +33,14 @@ app.get('/shop/:pageid',(req, res) => {
     res.render('home')
 })
 
+app.get('/cart',(req, res) => {
+    res.render('home')
+})
 
+app.get('/checkout',(req, res) => {
+    res.render('home')
+})
 
+app.get('/search',(req, res) => {
+    res.render('home')
+})
