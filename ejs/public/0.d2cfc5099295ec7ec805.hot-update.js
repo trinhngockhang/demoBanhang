@@ -1,1 +1,0 @@
-webpackHotUpdate(0,{466:function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.injectCart=function(e,t){return{type:"FETCH_INFO_ITEM",item:e,price:t}},t.removeItem=function(e,t){return{type:"REMOVE_ITEM",item:e,price:t}}}});

@@ -1,1 +1,0 @@
-webpackHotUpdate(0,{468:function(o,e){"use strict";throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'D:\\demoBanhang\\ejs\\app\\components\\Home\\IconBox.js'\n    at Error (native)")}});
