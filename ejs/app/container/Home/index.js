@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import '../stylesheets/style.css';
-import '../stylesheets/responsive.css';
 import Advertisement from '../../components/Advertisement';
 import Produce from '../../components/Home/Produce';
 
@@ -11,11 +9,11 @@ class Home extends Component {
         return (
             <div className="header_sticky">
                 <div className="boxed">
-                    {/* <div className="preloader">
+                    <div className="preloader">
                         <div className="clear-loading loading-effect-2">
                             <span></span>
                         </div>
-                    </div> */}
+                    </div>
                    
                     <Advertisement />
                     <Produce name="Hàng gia dụng" produce={this.props.produce}/>

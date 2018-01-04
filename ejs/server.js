@@ -6,10 +6,10 @@ const axios = require('axios');
 
 const app = express();
 
+app.use(compression());
 app.set('view engine', 'ejs');
 app.set('views', './public');
 app.use(express.static('public'));
-app.use(compression());
 app.use(bodyParser.json({ extend: true }));
 app.use(bodyParser.urlencoded({ extend: true }));
 
