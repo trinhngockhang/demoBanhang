@@ -2,6 +2,8 @@ import React from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import '../stylesheets/style.css';
+import '../stylesheets/responsive.css';
 import Home from '../Home';
 import Header from '../../components/SharedComponent/Header/Header';
 import Footer from '../../components/SharedComponent/Footer';
