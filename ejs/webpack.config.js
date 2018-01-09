@@ -43,11 +43,7 @@ const config = {
                   { loader: 'css-loader', options: { importLoaders: 1 } },
                   'postcss-loader'
                 ]
-<<<<<<< HEAD
             }
-=======
-              }
->>>>>>> 264c0e2cc3283d41d647e496d020647a0a4f1dc2
         ]
     },
     plugins: [
@@ -84,26 +80,6 @@ const config = {
         //     threshold: 10240,
         //     minRatio: 0
         // }),
-<<<<<<< HEAD
-=======
-        // new HtmlWebpackPlugin({
-        //     template: 'views/home.ejs',
-        //     inject: false,
-        //     filename: 'home.ejs',
-        //     minify: {
-        //         removeComments: true,
-        //         collapseWhitespace: true,
-        //         removeRedundantAttributes: true,
-        //         useShortDoctype: true,
-        //         removeEmptyAttributes: true,
-        //         removeStyleLinkTypeAttributes: true,
-        //         keepClosingSlash: true,
-        //         minifyJS: true,
-        //         minifyCSS: true,
-        //         minifyURLs: true,
-        //         }
-        // })
->>>>>>> 264c0e2cc3283d41d647e496d020647a0a4f1dc2
     ]
 }
 
