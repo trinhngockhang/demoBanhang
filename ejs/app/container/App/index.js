@@ -1,7 +1,10 @@
 import React from 'react';
 import { Route, Switch, withRouter, HashRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { connect } from 'react-redux';
+=======
+>>>>>>> 264c0e2cc3283d41d647e496d020647a0a4f1dc2
 import '../stylesheets/style.css';
 import '../stylesheets/responsive.css';
 import Home from '../Home';
