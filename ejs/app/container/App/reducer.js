@@ -4,6 +4,7 @@ const initialState = {
     pageid: '',
     item: [],
     sub_total: 0,
+    count: 0,
 }
 
 const inList = (e, item) => {
@@ -34,24 +35,42 @@ const appReducer = (state = initialState, action) => {
             }
             return { ...state, item };
         }
-        case 'ADD_SHOPING_BASKET':
+        case 'ADD_SHOPING_BASKET':{
+            var sub_total = state.sub_total + parseInt(action.item.price);
+            localStorage.setItem("sub_total", sub_total);
+            var item = state.item.map(e => {
+                if (e.id !== action.item.id) return e;
+                return { ...e, stock: e.stock + 1 }
+            });
+            localStorage.setItem("item", JSON.stringify(item));
+            var count = state.count + 1;
+            localStorage.setItem("count", count);
             return {
                 ...state,
-                sub_total: state.sub_total + parseInt(action.item.price),
-                item: state.item.map(e => {
-                    if (e.id !== action.item.id) return e;
-                    return { ...e, stock: e.stock + 1 }
-                })
+                sub_total,
+                item,
+                count,
             };
+        }
         case 'SUB_SHOPING_BASKET':
-            return {
-                ...state,
-                sub_total: state.sub_total - parseInt(action.item.price),
-                item: state.item.map(e => {
-                    if (e.id !== action.item.id) return e;
-                    return { ...e, stock: e.stock - 1 }
-                })
-            };
+        var sub_total = state.sub_total - parseInt(action.item.price);
+        localStorage.setItem("sub_total", sub_total);
+        var items = state.item.map(e => {
+            if (e.id !== action.item.id) return e;
+            return { ...e, stock: e.stock - 1 }
+        });
+        var item = items.filter(e => {
+            if(e.stock !== 0) return e;
+        });
+        localStorage.setItem("item", JSON.stringify(item));
+        var count = state.count - 1;
+        localStorage.setItem("count", count);
+        return {
+            ...state,
+            sub_total,
+            item,
+            count,
+        };
         default:
             return state;
     }

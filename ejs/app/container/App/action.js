@@ -20,6 +20,7 @@ export const addShopingBasket = (item) => {
 }
 
 export const subShopingBasket = (item) => {
+    console.log("a");
     return {
         type: 'SUB_SHOPING_BASKET',
         item: item,

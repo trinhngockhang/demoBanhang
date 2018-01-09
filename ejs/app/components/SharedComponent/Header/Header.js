@@ -202,15 +202,7 @@ class Header extends React.Component {
 								</div>
 								<div className="col-md-2 col-sm-3">
 									<div className="box-cart">
-										<div className="inner-box">
-											<a href="#" title="">
-												<div className="icon-cart">
-													<img src="./images/icons/cart.png" alt="" />
-													<span></span>
-												</div>
-											</a>
-											<IconCart />
-										</div>
+										<IconCart/>
 									</div>
 								</div>
 							</div>
