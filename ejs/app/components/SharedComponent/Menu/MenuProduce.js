@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchProduct } from '../../../container/ProductDetail/action';
 
-export default class MenuProduce extends React.Component {
+class MenuProduce extends React.Component {
     shouldComponentUpdate(nextProps) {
-        if (nextProps.electric !== this.props.electric) {
+        if (nextProps.items !== this.props.items) {
             return true;
         }
         return false;
@@ -11,16 +14,15 @@ export default class MenuProduce extends React.Component {
         return (
             <div className="row">
                 {
-                    this.props.electric.map((item, index) => {
+                    this.props.items.map((item, index) => {
                         return (
                             <div className="col-lg-3 col-md-12 col-6" key={index}>
                                 <a className="home-category-list__category-grid" href="">
                                     <div className="home-category-list__category-grid-content">
                                         <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                            <img className="lazy-image__image" src={item.src}>
-                                            </img>
+                                            <Link to={`/product/${item.id}`}><img className="lazy-image__image" src={item.image_url}/></Link>
                                         </div>
-                                        <div className="home-category-list__category-grid-name">{item.name}</div>
+                                        <div className="home-category-list__category-grid-name">{item.title}</div>
                                     </div>
                                 </a>
                             </div>
@@ -31,3 +33,9 @@ export default class MenuProduce extends React.Component {
         )
     }
 }
+
+const mapDispatchToProps = ({
+    fetchProduct,
+})
+
+export default connect(null, mapDispatchToProps)(MenuProduce);

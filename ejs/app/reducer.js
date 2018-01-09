@@ -4,15 +4,17 @@ import rootSaga from './saga';
 import appReducer from './container/App/reducer';
 import homeReducer from './container/Home/reducer';
 import shopReducer from './container/Shop/reducer';
-import tabletReducer from './container/Shop/TabletShop/reducer';
+import tabletShopReducer from './container/Shop/TabletShop/reducer';
 import categoryReducer from './container/Category/reducer';
+import productReducer from './container/ProductDetail/reducer';
 
 const rootReducer = combineReducers({
     appReducer,
     homeReducer,
     shopReducer,
-    tabletReducer,
+    tabletShopReducer,
     categoryReducer,
+    productReducer,
 })
 
 export default function configureStore() {

@@ -2,9 +2,9 @@ import React from 'react';
 import IconCart from './IconCart';
 
 class HeaderMobile extends React.Component {
-    shouldComponentUpdate(nextProps) {
-        return false;
-    }
+    // shouldComponentUpdate(){
+    //     return true;
+    // }
     render() {
         return (
             <div>

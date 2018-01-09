@@ -162,7 +162,7 @@ class Header extends React.Component {
 															Search Suggestions
 												</div>
 														<ul>
-															<HeaderSuggestion items={this.props.items} />
+															<HeaderSuggestion items={this.props.categoryLevel2} />
 														</ul>
 													</div>
 													<div className="box-cat">
@@ -216,7 +216,7 @@ class Header extends React.Component {
 							</div>
 						</div>
 					</div>
-					<Menu items={this.props.items} electric={this.props.electric} electricAds={this.props.electricAds} />
+					<Menu items={this.props.categoryLevel2}/>
 
 				</section>
 				<HeaderMobile />

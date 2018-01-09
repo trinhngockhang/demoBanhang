@@ -9,15 +9,9 @@ class Home extends Component {
         return (
             <div className="header_sticky">
                 <div className="boxed">
-                    <div className="preloader">
-                        <div className="clear-loading loading-effect-2">
-                            <span></span>
-                        </div>
-                    </div>
-                   
                     <Advertisement />
-                    <Produce name="Hàng gia dụng" produce={this.props.produce}/>
-                    <Produce name="Hàng điện tử" produce={this.props.produce}/>
+                    <Produce name="Dịch vụ" produce={this.props.categoryLevel2} />
+                    <Produce name="Dịch vụ" produce={this.props.categoryLevel2} />
                 </div>
             </div>
         )
@@ -26,7 +20,7 @@ class Home extends Component {
 
 const mapStateToProps = state => {
     return {
-        produce: state.homeReducer.produce,
+        categoryLevel2: state.appReducer.categoryLevel2,
     }
 }
 

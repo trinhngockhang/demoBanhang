@@ -1,6 +1,12 @@
 import React from 'react';
 
 export default class HeaderSuggestion extends React.Component {
+    shouldComponentUpdate(nexpProps) {
+        if(nexpProps.items !== this.props.items) {
+            return true;
+        }
+        return false;
+    }
     render() {
         return (
             <div>
@@ -8,18 +14,18 @@ export default class HeaderSuggestion extends React.Component {
                     return (
                         <li key={index}>
                             <div className="image">
-                                <img src={item.src} alt="" />
+                                <img src={item.image_url} alt="" />
                             </div>
                             <div className="info-product">
                                 <div className="name">
-                                    <a href="#" title="">{item.name}</a>
+                                    <a href="#" title="">{item.title}</a>
                                 </div>
                                 <div className="price">
                                     <span className="sale">
-                                        {item.sale}
+                                        {item.price}
                                     </span>
                                     <span className="regular">
-                                        {item.price}
+                                        {item.quantity}
                                     </span>
                                 </div>
                             </div>

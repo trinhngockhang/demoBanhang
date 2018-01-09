@@ -1,17 +1,16 @@
 const inittialState = {
-    data: [],
-    isLoading: false,
+    shop: [],
     message: '',
 }
 
 const shopReducer = (state = inittialState, action) => {
     switch (action.type) {
         case 'LOADING_DATA':
-            return {...state, isLoading: true,}
+            return {...state,}
         case 'LOADING_DATA_SUCCESS':
-            return {...state, isLoading: false, data: action.data, message: action.message}
+            return {...state,shop: action.shop, message: action.message}
         case 'LOADING_DATA_FAILED':
-            return {...state, isLoading: false, message: action.message} 
+            return {...state, message: action.message} 
         default:
             return state   
     }

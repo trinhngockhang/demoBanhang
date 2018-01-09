@@ -1,44 +1,57 @@
 const initialState = {
-    suggest: [
-        {src: "./images/product/other/s05.jpg", name: "Razer RZ02-01071500-R3M1", sale: "$50.00", price: "$2,999.00"},
-        {src: "./images/product/other/s05.jpg", name: "Razer RZ02-01071500-R3M1", sale: "$50.00", price: "$2,999.00"},
-        {src: "./images/product/other/s05.jpg", name: "Razer RZ02-01071500-R3M1", sale: "$50.00", price: "$2,999.00"},
-        {src: "./images/product/other/s05.jpg", name: "Razer RZ02-01071500-R3M1", sale: "$50.00", price: "$2,999.00"},
-        {src: "./images/product/other/s05.jpg", name: "Razer RZ02-01071500-R3M1", sale: "$50.00", price: "$2,999.00"},
-        {src: "./images/product/other/s05.jpg", name: "Razer RZ02-01071500-R3M1", sale: "$50.00", price: "$2,999.00"},
-        {src: "./images/product/other/s05.jpg", name: "Razer RZ02-01071500-R3M1", sale: "$50.00", price: "$2,999.00"},
-    ],
-    electric: [
-        {src: "./images/logos/subMenuThietbi.jpg", name:"Thiết bị khác"},
-        {src: "./images/logos/subMenuThietbi.jpg", name:"Thiết bị khác"},
-        {src: "./images/logos/subMenuThietbi.jpg", name:"Thiết bị khác"},
-        {src: "./images/logos/subMenuThietbi.jpg", name:"Thiết bị khác"},
-    ],
-    electricAds: [
-        {src:"./images/banner_boxes/submenu-02.png"},
-        {src:"./images/banner_boxes/submenu-02.png"},
-        {src:"./images/banner_boxes/submenu-02.png"},
-        {src:"./images/banner_boxes/submenu-02.png"},
-    ],
-    data: [],
-    isLoading: false,
-    total: 0,
-    price:0,
-    count:0,
+    categoryLevel2: [],
+    message: '',
+    pageid: '',
+    item: [],
+    sub_total: 0,
+}
+
+const inList = (e, item) => {
+    var n = item.length;
+    if(n == 0) {
+        return true;
+    }else {
+        for(var i = 0; i < n; i++) {
+            if(item[i].id === e.id) return false;
+            return true;
+        }
+    }
 }
 
 const appReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'LOADING':
-            return { ...state, }
-        case 'FETCH_INFO_ITEM':{
-           
-            return {...state}
+        case 'FETCH_CATEGORY_LEVEL2':
+            return { ...state, pageid: action.pageid, }
+        case 'FETCH_CATEGORY_LEVEL2_SUCCESS':
+            return { ...state, categoryLevel2: action.categoryLevel2, message: action.message }
+        case 'FETCH_CATEGORY_LEVEL2_FAILED':
+            return { ...state, message: action.message }
+        case 'SHOPING_BASKET': {
+            var e = action.item !== undefined ? Object.assign({}, action.item, { stock: 0 }) : [];
+            var item = state.item;
+            if(inList(e, item)) {
+                item.push(e);
+            }
+            return { ...state, item };
         }
-        case 'REMOVE_ITEM': {
-            
-            return {...state}
-        }
+        case 'ADD_SHOPING_BASKET':
+            return {
+                ...state,
+                sub_total: state.sub_total + parseInt(action.item.price),
+                item: state.item.map(e => {
+                    if (e.id !== action.item.id) return e;
+                    return { ...e, stock: e.stock + 1 }
+                })
+            };
+        case 'SUB_SHOPING_BASKET':
+            return {
+                ...state,
+                sub_total: state.sub_total - parseInt(action.item.price),
+                item: state.item.map(e => {
+                    if (e.id !== action.item.id) return e;
+                    return { ...e, stock: e.stock - 1 }
+                })
+            };
         default:
             return state;
     }

@@ -4,8 +4,7 @@ import MenuAds from './MenuAds';
 
 export default class Menu extends React.Component {
     shouldComponentUpdate(nextProps) {
-        if(nextProps.electric !== this.props.electric ||
-            nextProps.electricAds !== this.props.electricAds) {
+        if(nextProps.items !== this.props.items) {
             return true;
         }
         return false;
@@ -26,8 +25,8 @@ export default class Menu extends React.Component {
                                                 <p className="menu-item">Điện tử</p>
                                             </a>
                                             <div className="submenu first" id="menu-first">
-                                                <MenuProduce electric={this.props.electric} />
-                                                <MenuAds electricAds={this.props.electricAds} />
+                                                <MenuProduce items={this.props.items} />
+                                                <MenuAds items={this.props.items} />
                                             </div>
                                         </li>
                                         <li className="has-mega-menu second">
@@ -35,8 +34,8 @@ export default class Menu extends React.Component {
                                                 <i className="fa fa-female img-submenu-mobile" aria-hidden="true"></i>
                                                 <p className="menu-item">Thời trang</p></a>
                                             <div className="submenu">
-                                                <MenuProduce electric={this.props.electric} />
-                                                <MenuAds electricAds={this.props.electricAds} />
+                                                <MenuProduce items={this.props.items} />
+                                                <MenuAds items={this.props.items} />
                                             </div>
                                         </li>
                                         <li className="has-mega-menu second">
@@ -44,8 +43,8 @@ export default class Menu extends React.Component {
                                                 <i className="fa fa-bath img-submenu-mobile" aria-hidden="true"></i>
                                                 <p className="menu-item">Đồ gia dụng</p>	</a>
                                             <div className="submenu">
-                                                <MenuProduce electric={this.props.electric} />
-                                                <MenuAds electricAds={this.props.electricAds} />
+                                                <MenuProduce items={this.props.items} />
+                                                <MenuAds items={this.props.items} />
                                             </div>
                                         </li>
                                         <li className="has-mega-menu second">
@@ -53,8 +52,8 @@ export default class Menu extends React.Component {
                                                 <i className="fa fa-futbol-o img-submenu-mobile" aria-hidden="true"></i>
                                                 <p className="menu-item">Thể thao</p></a>
                                             <div className="submenu">
-                                                <MenuProduce electric={this.props.electric} />
-                                                <MenuAds electricAds={this.props.electricAds} />
+                                                <MenuProduce items={this.props.items} />
+                                                <MenuAds items={this.props.items}/>
                                             </div>
                                         </li>
                                         <li className="has-mega-menu second">
@@ -62,8 +61,8 @@ export default class Menu extends React.Component {
                                                 <i className="fa fa-lemon-o img-submenu-mobile" aria-hidden="true"></i>
                                                 <p className="menu-item">Đồ cho bé</p></a>
                                             <div className="submenu">
-                                                <MenuProduce electric={this.props.electric} />
-                                                <MenuAds electricAds={this.props.electricAds} />
+                                                <MenuProduce items={this.props.items} />
+                                                <MenuAds items={this.props.items}/>
                                             </div>
                                         </li>
                                         <li className="has-mega-menu second">
@@ -71,16 +70,16 @@ export default class Menu extends React.Component {
                                                 <i className="fa fa-microchip img-submenu-mobile" aria-hidden="true"></i>
                                                 <p className="menu-item">Phụ kiện</p></a>
                                             <div className="submenu">
-                                                <MenuProduce electric={this.props.electric} />
-                                                <MenuAds electricAds={this.props.electricAds} />
+                                                <MenuProduce items={this.props.items} />
+                                                <MenuAds items={this.props.items}/>
                                             </div>
                                         </li>
                                         <li className="has-mega-menu second">
                                             <a href="#" title="">
                                                 <i className="fa fa-print img-submenu-mobile" aria-hidden="true"></i><p className="menu-item">Đồ gia dụng</p></a>
                                             <div className="submenu">
-                                                <MenuProduce electric={this.props.electric} />
-                                                <MenuAds electricAds={this.props.electricAds} />
+                                                <MenuProduce items={this.props.items} />
+                                                <MenuAds items={this.props.items}/>
                                             </div>
                                         </li>
                                         <li className="has-mega-menu second mobile">

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class InfoShop extends React.PureComponent {
     render() {
-        const props = this.props.data.page;
+        const props = this.props.shop.page;
         return (
                     <div className="info-shop">
                         <div className="row shop">
@@ -12,7 +12,7 @@ class InfoShop extends React.PureComponent {
                             </div>
                             <div className="col-md-3">
                                 <div className="cover" >
-                                    <img className="avatar" src={`https://graph.facebook.com/${this.props.pageid}/picture?type=square&height=320&width=320`} alt="" />
+                                    <img className="avatar" src={`https://graph.facebook.com/${props.id}/picture?type=square&height=320&width=320`} alt="" />
                                 </div>
                             </div>
                             <div className="col-md-9">
@@ -116,7 +116,7 @@ class InfoShop extends React.PureComponent {
 
 const mapStateToProps = state => {
     return {
-        data: state.shopReducer.data,
+        shop: state.shopReducer.shop,
     }
 }
 

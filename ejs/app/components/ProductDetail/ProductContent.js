@@ -1,6 +1,21 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { shopingBasket, addShopingBasket } from '../../container/App/action';
 
-export default class ProductContent extends React.Component {
+class ProductContent extends React.Component {
+    shouldComponentUpdate(nextProps) {
+        if(nextProps.product !== this.props.product){
+            return true;
+        } 
+        return false;
+    }
+
+    save = (e,item) => {
+        e.preventDefault();
+        this.props.shopingBasket(item);
+        this.props.addShopingBasket(item);
+    }
+
     render() {
         return (
             <div>
@@ -11,21 +26,8 @@ export default class ProductContent extends React.Component {
                                 <div className="flexslider">
                                     <ul className="slides">
                                         <li data-thumb="./images/product/flexslider/thumb/2.jpg">
-                                            <img src="./images/product/flexslider/l01.jpg" alt="image slider" />
+                                            <img src={this.props.product.image_url} alt="image slider" />
                                             <span>NEW</span>
-                                        </li>
-                                        <li data-thumb="./images/product/flexslider/thumb/3.jpg">
-                                            <img src="./images/product/flexslider/l01.jpg" alt="image slider" />
-                                        </li>
-                                        <li data-thumb="./images/product/flexslider/thumb/4.jpg">
-                                            <img src="./images/product/flexslider/l01.jpg" alt="image slider" />
-                                            <span>NEW</span>
-                                        </li>
-                                        <li data-thumb="./images/product/flexslider/thumb/5.jpg">
-                                            <img src="./images/product/flexslider/l01.jpg" alt="image slider" />
-                                        </li>
-                                        <li data-thumb="./images/product/flexslider/thumb/6.jpg">
-                                            <img src="./images/product/flexslider/l01.jpg" alt="image slider" />
                                         </li>
                                     </ul>
                                 </div>
@@ -33,10 +35,10 @@ export default class ProductContent extends React.Component {
                             <div className="col-md-6">
                                 <div className="product-detail">
                                     <div className="header-detail">
-                                        <h4 className="name">Warch 42 mm Smart Watches</h4>
-                                        <div className="category">
+                                        <h4 className="name">{this.props.product.title}</h4>
+                                        {/* <div className="category">
                                             Smart Watches
-								</div>
+								</div> */}
                                         <div className="reviewed">
                                             <div className="review">
                                                 <div className="queue">
@@ -46,10 +48,10 @@ export default class ProductContent extends React.Component {
                                                     <i className="fa fa-star" aria-hidden="true"></i>
                                                     <i className="fa fa-star" aria-hidden="true"></i>
                                                 </div>
-                                                <div className="text">
+                                                {/* <div className="text">
                                                     <span>3 Reviews</span>
                                                     <span className="add-review">Add Your Review</span>
-                                                </div>
+                                                </div> */}
                                             </div>
                                             <div className="status-product">
                                                 Availablity <span>In stock</span>
@@ -59,17 +61,17 @@ export default class ProductContent extends React.Component {
                                     <div className="content-detail">
                                         <div className="price">
                                             <div className="regular">
-                                                $2,999.00
+                                                {this.props.product.quantity}
 									</div>
                                             <div className="sale">
-                                                $1,589.00
+                                                {this.props.product.price}
 									</div>
                                         </div>
                                         <div className="info-text">
                                             Vivamus in tempor eros. Phasellus rhoncus in nunc sit amet mattis. Integer in ipsum vestibulum, molestie arcu ac, efficitur tellus. Phasellus id vulputate erat.
-								</div>
+								        </div>
                                         <div className="product-id">
-                                            SKU: <span className="id">FW511948218</span>
+                                            SKU: <span className="id">{this.props.product.id}</span>
                                         </div>
                                     </div>
                                     <div className="footer-detail">
@@ -90,12 +92,9 @@ export default class ProductContent extends React.Component {
                                         </div>
                                         <div className="box-cart style2">
                                             <div className="btn-add-cart">
-                                                <a href="#" title=""><img src="./images/icons/add-cart.png" alt="" />Add to Cart</a>
+                                                <a href="#" onClick={e => this.save(e, this.props.product)}><img src="./images/icons/add-cart.png" alt="" />Mua</a>
                                             </div>
-                                            <div className="compare-wishlist">
-                                                <a href="compare.html" className="compare" title=""><img src="./images/icons/compare.png" alt="" />Compare</a>
-                                                <a href="compare.html" className="wishlist" title=""><img src="./images/icons/wishlist.png" alt="" />Wishlist</a>
-                                            </div>
+                                            
                                         </div>
                                         <div className="social-single">
                                             <span>SHARE</span>
@@ -425,3 +424,10 @@ export default class ProductContent extends React.Component {
         )
     }
 }
+
+const mapDispatchToProps = ({
+    shopingBasket,
+    addShopingBasket,
+})
+
+export default connect(null, mapDispatchToProps)(ProductContent);
