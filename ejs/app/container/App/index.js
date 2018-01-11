@@ -15,7 +15,6 @@ import Checkout from '../Checkout';
 import IconBox from '../../components/SharedComponent/IconBox';
 import Search from '../Search';
 
-
 class App extends React.Component {
     render() {
         return (

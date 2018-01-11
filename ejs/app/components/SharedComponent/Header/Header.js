@@ -37,6 +37,7 @@ class Header extends React.Component {
 	testAPI = () => {
 		console.log('Welcome!  Fetching your information.... ');
 		FB.api('/me', function (response) {
+			localStorage.getItem("username", response.name);
 			console.log('Successful login for: ' + response.name);
 		});
 	}

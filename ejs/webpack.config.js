@@ -56,30 +56,30 @@ const config = {
                 'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
             }
         }),
-        // new webpack.optimize.UglifyJsPlugin({
-        //     compress: {
-        //         warnings: false,
-        //         screw_ie8: true,
-        //         conditionals: true,
-        //         unused: true,
-        //         comparisons: true,
-        //         sequences: true,
-        //         dead_code: true,
-        //         evaluate: true,
-        //         if_return: true,
-        //         join_vars: true
-        //     },
-        //     output: {
-        //         comments: false
-        //     }
-        // }),
-        // new CompressionPlugin({
-        //     asset: "[path].gz[query]",
-        //     algorithm: "gzip",
-        //     test: /\.js$|\.css$|\.html$/,
-        //     threshold: 10240,
-        //     minRatio: 0
-        // }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false,
+                screw_ie8: true,
+                conditionals: true,
+                unused: true,
+                comparisons: true,
+                sequences: true,
+                dead_code: true,
+                evaluate: true,
+                if_return: true,
+                join_vars: true
+            },
+            output: {
+                comments: false
+            }
+        }),
+        new CompressionPlugin({
+            asset: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0
+        }),
     ]
 }
 

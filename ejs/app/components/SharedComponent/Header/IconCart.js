@@ -36,8 +36,8 @@ class IconCart extends React.Component {
                         <span className="price">{ localStorage.getItem("sub_total") }</span>
                     </div>
                     <div className="btn-cart">
-                        <a href="shop-cart.html" className="view-cart" title="">View Cart</a>
-                        <a href="shop-checkout.html" className="check-out" title="">Checkout</a>
+                        <a href="/cart" className="view-cart" title="">View Cart</a>
+                        <a href="/checkout" className="check-out" title="">Checkout</a>
                     </div>
                 </div>
             </div>

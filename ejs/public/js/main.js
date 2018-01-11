@@ -344,7 +344,7 @@
                     }
                 }
             });
-        };// slide Most Viewer
+        };
 
         var slideMostViewer_s2 = function() {
             $(".owl-carousel-4").owlCarousel({

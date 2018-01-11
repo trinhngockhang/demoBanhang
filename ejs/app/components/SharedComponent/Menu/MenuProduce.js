@@ -20,7 +20,7 @@ class MenuProduce extends React.Component {
                                 <a className="home-category-list__category-grid" href="">
                                     <div className="home-category-list__category-grid-content">
                                         <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                            <Link to={`/product/${item.id}`}><img className="lazy-image__image" src={item.image_url}/></Link>
+                                            <a href={`/product/${item.id}`}><img className="lazy-image__image" src={item.image_url}/></a>
                                         </div>
                                         <div className="home-category-list__category-grid-name">{item.title}</div>
                                     </div>

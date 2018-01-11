@@ -4,24 +4,14 @@ import { connect } from 'react-redux';
 import { fetchProduct } from './action';
 
 class ProductDetail extends React.Component {
-    state = {
-        success: false,
-    }
-
     componentDidMount() {
         this.props.fetchProduct(this.props.match.params.id, this.props.pageid);
-    }
-
-    componentWillReceiveProps(nextProps) {
-        if(!nextProps.isLoading) {
-            this.setState({ success: true });
-        }
     }
 
     render() {
         return (
             <div>
-                { this.state.success && <ProductContent product={this.props.product}/> }
+                <ProductContent product={this.props.product}/>
             </div>
         )
     }

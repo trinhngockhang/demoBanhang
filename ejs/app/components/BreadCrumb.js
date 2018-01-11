@@ -15,8 +15,8 @@ const BreadCrumb = () => {
                                 <li className="trail-item">
                                     <a href="#" title="">Danh mục</a>
                                 </li>
-                                <li class ="fill">
-									<i class="fa fa-filter" aria-hidden="true"></i>
+                                <li className="fill">
+									<i className="fa fa-filter" aria-hidden="true"></i>
 									<p id="fill-p">Bộ lọc</p>
 								</li>
                             </ul>
