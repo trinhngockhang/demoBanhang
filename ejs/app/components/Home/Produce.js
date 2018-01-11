@@ -1,5 +1,4 @@
 import React from 'react';
-import loadjs from 'loadjs';
 import DisplayProduce from './DisplayProduce';
 
 export default class Produce extends React.Component {
