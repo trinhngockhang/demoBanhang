@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "dev": "cross-env NODE_ENV=development & webpack -w",
-    "build": "cross-env NODE_ENV=production & webpack"
+    "dev": "cross-env NODE_ENV=development & webpack -w --config webpack.dev.config.js",
+    "build": "cross-env NODE_ENV=production & webpack --config webpack.prod.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,12 +19,12 @@
     "compression": "^1.7.1",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "loadjs": "^3.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-slick": "^0.16.0",
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0"
   },

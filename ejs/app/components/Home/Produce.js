@@ -1,22 +1,19 @@
 import React from 'react';
+import Slider from 'react-slick';
 import DisplayProduce from './DisplayProduce';
 
+
 export default class Produce extends React.Component {
-    // componentDidMount(){
-    //     loadjs(['./js/owl.carousel.js','./minify/loading.js'], {
-    //         success: function() { /* foo.js loaded */},
-    //         async: false
-    //     });
-    // }
-
-    shouldComponentUpdate(nextProps) {
-        if (nextProps.produce !== this.props.produce) {
-            return true;
-        }
-        return false;
-    }
-
     render() {
+        var settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            className: 'slides'
+        };
         return (
             <section className="flat-imagebox style4" key={this.props.name}>
                 <div className="container">
@@ -32,15 +29,17 @@ export default class Produce extends React.Component {
                             <img src="./images/slider/img_tittle.jpg" className="img_tittle" alt="" />
                         </div>
                         <div className="col-md-9 col-sm-12">
-                            <div className="owl-carousel-3">
+                            <Slider {...settings}>
                                 {
                                     this.props.produce.map((item, index) => {
                                         return (
-                                            <DisplayProduce item={item} key={index} />
+                                            <div>
+                                                <DisplayProduce item={item} key={index} />
+                                            </div>
                                         )
                                     })
                                 }
-                            </div>
+                            </Slider>
                         </div>
                     </div>
                 </div>

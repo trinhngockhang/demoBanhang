@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchInfoItem } from '../../container/App/action';
+import { shopingBasket, addShopingBasket } from '../../container/App/action';
 
 class DisplayProduce extends React.Component {
-    onClick(e, item) {
+    save = (e,item) => {
         e.preventDefault();
-        this.props.fetchInfoItem(item, item.regular);
+        this.props.shopingBasket(item);
+        this.props.addShopingBasket(item);
     }
-
     render() {
         return (
             <div className="imagebox style4" >
@@ -30,7 +30,7 @@ class DisplayProduce extends React.Component {
                 </div>
                 <div className="box-cart style2 home">
                     <div className="btn-add-cart home">
-                        <a href="#" title="" onClick={(e) => this.onClick(e, this.props.item)}><img src="./images/icons/add-cart.png" alt="" />Mua</a>
+                        <a href="#" title="" onClick={e => this.save(e, this.props.item)}><img src="./images/icons/add-cart.png" alt="" />Mua</a>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,8 @@ class DisplayProduce extends React.Component {
 }
 
 const mapDispatchToProps = ({
-    fetchInfoItem,
+    shopingBasket,
+    addShopingBasket,
 })
 
 export default connect(null, mapDispatchToProps)(DisplayProduce);
