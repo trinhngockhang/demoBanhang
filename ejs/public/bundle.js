@@ -9944,10 +9944,12 @@ var _ref18 = _jsx("ul", {
 }, void 0, "BKAV")));
 
 var _ref19 = _jsx("div", {
-    className: "widget widget-price"
-}, void 0, _jsx("div", {
     className: "widget-title"
-}, void 0, _jsx("h3", {}, void 0, "Gi\xE1", _jsx("span", {}))), _jsx("div", {
+}, void 0, _jsx("h3", {}, void 0, "Gi\xE1", _jsx("span", {
+    id: "price"
+})));
+
+var _ref20 = _jsx("div", {
     className: "widget-content"
 }, void 0, _jsx("p", {}, void 0, "Gi\xE1"), _jsx("div", {
     className: "price search-filter-input"
@@ -9968,13 +9970,15 @@ var _ref19 = _jsx("div", {
     type: "text",
     id: "amount",
     disabled: ""
-})))));
+}))));
 
-var _ref20 = _jsx("div", {
-    className: "widget widget-brands"
-}, void 0, _jsx("div", {
+var _ref21 = _jsx("div", {
     className: "widget-title"
-}, void 0, _jsx("h3", {}, void 0, "Th\u01B0\u01A1ng hi\u1EC7u", _jsx("span", {}))), _jsx("div", {
+}, void 0, _jsx("h3", {}, void 0, "Th\u01B0\u01A1ng hi\u1EC7u", _jsx("span", {
+    id: "trade"
+})));
+
+var _ref22 = _jsx("div", {
     className: "widget-content"
 }, void 0, _jsx("form", {
     action: "#",
@@ -10050,11 +10054,13 @@ var _ref20 = _jsx("div", {
     name: "checkbox8"
 }), _jsx("label", {
     htmlFor: "checkbox8"
-}, void 0, "Oppo ", _jsx("span", {}, void 0, "(4)"))))));
+}, void 0, "Oppo ", _jsx("span", {}, void 0, "(4)")))));
 
-var _ref21 = _jsx("h3", {}, void 0, "M\xE0u", _jsx("span", {}));
+var _ref23 = _jsx("h3", {}, void 0, "M\xE0u", _jsx("span", {
+    id: "color"
+}));
 
-var _ref22 = _jsx("form", {
+var _ref24 = _jsx("form", {
     action: "#",
     method: "get",
     acceptCharset: "utf-8"
@@ -10064,7 +10070,7 @@ var _ref22 = _jsx("form", {
     placeholder: "Color Search"
 }));
 
-var _ref23 = _jsx("ul", {
+var _ref25 = _jsx("ul", {
     className: "box-checkbox scroll"
 }, void 0, _jsx("li", {
     className: "check-box"
@@ -10132,7 +10138,7 @@ var _ref23 = _jsx("ul", {
     htmlFor: "check8"
 }, void 0, "V\xE0ng ", _jsx("span", {}, void 0, "(4)"))));
 
-var _ref24 = _jsx("div", {
+var _ref26 = _jsx("div", {
     className: "widget widget-banner"
 }, void 0, _jsx("div", {
     className: "banner-box"
@@ -10161,7 +10167,7 @@ var SideBar = function (_React$Component) {
         }
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SideBar.__proto__ || Object.getPrototypeOf(SideBar)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            position0: false,
+            position0: true,
             position: false,
             position1: false,
             position2: false,
@@ -10169,7 +10175,10 @@ var SideBar = function (_React$Component) {
             position4: false,
             position5: false,
             position6: false,
-            position7: false
+            position7: false,
+            price: true,
+            trade: true,
+            color: true
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -10180,29 +10189,14 @@ var SideBar = function (_React$Component) {
             document.getElementById("0").onclick = function () {
                 that.setState({ position0: !that.state.position0 });
             };
-            document.getElementById("1").onclick = function () {
-                that.setState({ position: !that.state.position });
+            document.getElementById("price").onclick = function () {
+                that.setState({ price: !that.state.price });
             };
-            document.getElementById("2").onclick = function () {
-                that.setState({ position1: !that.state.position1 });
+            document.getElementById("trade").onclick = function () {
+                that.setState({ trade: !that.state.trade });
             };
-            document.getElementById("3").onclick = function () {
-                that.setState({ position2: !that.state.position2 });
-            };
-            document.getElementById("4").onclick = function () {
-                that.setState({ position3: !that.state.position3 });
-            };
-            document.getElementById("5").onclick = function () {
-                that.setState({ position4: !that.state.position4 });
-            };
-            document.getElementById("6").onclick = function () {
-                that.setState({ position5: !that.state.position5 });
-            };
-            document.getElementById("7").onclick = function () {
-                that.setState({ position6: !that.state.position6 });
-            };
-            document.getElementById("8").onclick = function () {
-                that.setState({ position7: !that.state.position7 });
+            document.getElementById("color").onclick = function () {
+                that.setState({ color: !that.state.color });
             };
         }
     }, {
@@ -10216,17 +10210,21 @@ var SideBar = function (_React$Component) {
                 className: "widget widget-categories"
             }, void 0, _ref2, this.state.position0 && _jsx("ul", {
                 className: "cat-list style1 widget-content"
-            }, void 0, _jsx("li", {}, void 0, _ref3, this.state.position && _ref4), _jsx("li", {}, void 0, _ref5, this.state.position1 && _ref6), _jsx("li", {}, void 0, _ref7, this.state.position2 && _ref8), _jsx("li", {}, void 0, _ref9, this.state.position3 && _ref10), _jsx("li", {}, void 0, _ref11, this.state.position4 && _ref12), _jsx("li", {}, void 0, _ref13, this.state.position5 && _ref14), _jsx("li", {}, void 0, _ref15, this.state.position6 && _ref16), _jsx("li", {}, void 0, _ref17, this.state.position7 && _ref18))), _ref19, _ref20, _jsx("div", {
+            }, void 0, _jsx("li", {}, void 0, _ref3, this.state.position && _ref4), _jsx("li", {}, void 0, _ref5, this.state.position1 && _ref6), _jsx("li", {}, void 0, _ref7, this.state.position2 && _ref8), _jsx("li", {}, void 0, _ref9, this.state.position3 && _ref10), _jsx("li", {}, void 0, _ref11, this.state.position4 && _ref12), _jsx("li", {}, void 0, _ref13, this.state.position5 && _ref14), _jsx("li", {}, void 0, _ref15, this.state.position6 && _ref16), _jsx("li", {}, void 0, _ref17, this.state.position7 && _ref18))), _jsx("div", {
+                className: "widget widget-price"
+            }, void 0, _ref19, this.state.price && _ref20), _jsx("div", {
+                className: "widget widget-brands"
+            }, void 0, _ref21, this.state.trade && _ref22), _jsx("div", {
                 className: "widget widget-color"
             }, void 0, _jsx("div", {
                 className: "widget-title"
-            }, void 0, _ref21, _jsx("div", {
+            }, void 0, _ref23, _jsx("div", {
                 style: { height: "2px" }
-            })), _jsx("div", {
+            })), this.state.color && _jsx("div", {
                 className: "widget-content"
-            }, void 0, _ref22, _jsx("div", {
+            }, void 0, _ref24, _jsx("div", {
                 style: { height: '5px' }
-            }), _ref23)), _ref24));
+            }), _ref25)), _ref26));
         }
     }]);
 
