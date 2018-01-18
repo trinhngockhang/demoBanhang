@@ -15,13 +15,13 @@ export default ({ children, title = 'Mesi.vn-Mua sắm online', description = 'm
                 <link rel="stylesheet" href="/static/minify/slick-theme.css" /> */}
                 <link rel="stylesheet" href="/static/stylesheets/style.css" />
                 <link rel="stylesheet" href="/static/stylesheets/responsive.css" />
+                <script type="text/javascript" src="/static/minify/jquery.min.js"></script>
+                <script type="text/javascript" src="/static/minify/tether.min.js"></script>
+                <script type="text/javascript" src="/static/minify/bootstrap.min.js"></script>
+                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtRmXKclfDp20TvfQnpgXSDPjut14x5wk&region=GB"></script>
+                <script type="text/javascript" src="/static/minify/script.js"></script>
             </Head>
             {children}
-            <script type="text/javascript" src="/static/minify/jquery.min.js"></script>
-            <script type="text/javascript" src="/static/minify/tether.min.js"></script>
-            <script type="text/javascript" src="/static/minify/bootstrap.min.js"></script>
-            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtRmXKclfDp20TvfQnpgXSDPjut14x5wk&region=GB"></script>
-            <script type="text/javascript" src="/static/minify/script.js"></script>
         </div>
     )
 }
