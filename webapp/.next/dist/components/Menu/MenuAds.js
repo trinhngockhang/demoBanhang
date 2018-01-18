@@ -13,13 +13,13 @@ function _interopRequireDefault(obj) {
 }
 
 var _ref = (0, _jsx3.default)("div", {}, void 0, (0, _jsx3.default)("div", {
-    "class": "row"
+    className: "row"
 }, void 0, (0, _jsx3.default)("div", {
-    "class": "col-md-6"
+    className: "col-md-6"
 }, void 0, (0, _jsx3.default)("div", {
-    "class": "banner-box"
+    className: "banner-box"
 }, void 0, (0, _jsx3.default)("div", {
-    "class": "inner-box"
+    className: "inner-box"
 }, void 0, (0, _jsx3.default)("a", {
     href: "#",
     title: ""
@@ -27,11 +27,11 @@ var _ref = (0, _jsx3.default)("div", {}, void 0, (0, _jsx3.default)("div", {
     src: "/static/images/banner_boxes/submenu-01.png",
     alt: ""
 }))))), (0, _jsx3.default)("div", {
-    "class": "col-md-6"
+    className: "col-md-6"
 }, void 0, (0, _jsx3.default)("div", {
-    "class": "banner-box"
+    className: "banner-box"
 }, void 0, (0, _jsx3.default)("div", {
-    "class": "inner-box"
+    className: "inner-box"
 }, void 0, (0, _jsx3.default)("a", {
     href: "#",
     title: ""
@@ -39,13 +39,13 @@ var _ref = (0, _jsx3.default)("div", {}, void 0, (0, _jsx3.default)("div", {
     src: "/static/images/banner_boxes/submenu-02.png",
     alt: ""
 })))))), (0, _jsx3.default)("div", {
-    "class": "row"
+    className: "row"
 }, void 0, (0, _jsx3.default)("div", {
-    "class": "col-md-6"
+    className: "col-md-6"
 }, void 0, (0, _jsx3.default)("div", {
-    "class": "banner-box"
+    className: "banner-box"
 }, void 0, (0, _jsx3.default)("div", {
-    "class": "inner-box"
+    className: "inner-box"
 }, void 0, (0, _jsx3.default)("a", {
     href: "#",
     title: ""
@@ -53,11 +53,11 @@ var _ref = (0, _jsx3.default)("div", {}, void 0, (0, _jsx3.default)("div", {
     src: "/static/images/banner_boxes/submenu-01.png",
     alt: ""
 }))))), (0, _jsx3.default)("div", {
-    "class": "col-md-6"
+    className: "col-md-6"
 }, void 0, (0, _jsx3.default)("div", {
-    "class": "banner-box"
+    className: "banner-box"
 }, void 0, (0, _jsx3.default)("div", {
-    "class": "inner-box"
+    className: "inner-box"
 }, void 0, (0, _jsx3.default)("a", {
     href: "#",
     title: ""
@@ -69,4 +69,4 @@ var _ref = (0, _jsx3.default)("div", {}, void 0, (0, _jsx3.default)("div", {
 exports.default = function () {
     return _ref;
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXE1lbnVcXE1lbnVBZHMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7O2FBR3VCOzthQUNJOzthQUNJOzthQUNJOztVQUNDLEE7V0FBVTs7U0FDTCxBO1NBQWlEOzthQUsvRDs7YUFDSTs7YUFDSTs7VUFDQyxBO1dBQVU7O1NBQ0wsQTtTQUFpRDs7YUFNbkU7O2FBQ0k7O2FBQ0k7O2FBQ0k7O1VBQ0MsQTtXQUFVOztTQUNMLEE7U0FBaUQ7O2FBSy9EOzthQUNJOzthQUNJOztVQUNDLEE7V0FBVTs7U0FDTCxBO1NBQWlEOzs7a0JBckMzRSxZQUFNLEFBQ2pCO1dBNENIO0EiLCJmaWxlIjoiTWVudUFkcy5qcyIsInNvdXJjZVJvb3QiOiJEOi9kZW1vQmFuaGFuZy9uZXh0anMifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXE1lbnVcXE1lbnVBZHMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7O2VBRzJCOztlQUNJOztlQUNJOztlQUNJOztVQUNILEE7V0FBVTs7U0FDTCxBO1NBQWlEOztlQUszRDs7ZUFDSTs7ZUFDSTs7VUFDSCxBO1dBQVU7O1NBQ0wsQTtTQUFpRDs7ZUFNL0Q7O2VBQ0k7O2VBQ0k7O2VBQ0k7O1VBQ0gsQTtXQUFVOztTQUNMLEE7U0FBaUQ7O2VBSzNEOztlQUNJOztlQUNJOztVQUNILEE7V0FBVTs7U0FDTCxBO1NBQWlEOzs7a0JBckMzRSxZQUFNLEFBQ2pCO1dBNENIO0EiLCJmaWxlIjoiTWVudUFkcy5qcyIsInNvdXJjZVJvb3QiOiJEOi9kZW1vQmFuaGFuZy93ZWJhcHAifQ==
