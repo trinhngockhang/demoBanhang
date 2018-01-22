@@ -25,11 +25,7 @@ export default class Menu extends React.Component {
                                                 <p className="menu-item">Điện tử</p>
                                             </a>
                                             <div className="submenu first" id="menu-first">
-                                                {
-                                                    this.props.items.map((item, idx) => {
-                                                        return <MenuProduce items={item} key={idx} />
-                                                    })
-                                                }
+                                                <MenuProduce items={this.props.items} /> 
                                                 <MenuAds/>
                                             </div>
                                         </li>
@@ -38,12 +34,8 @@ export default class Menu extends React.Component {
                                                 <i className="fa fa-female img-submenu-mobile" aria-hidden="true"></i>
                                                 <p className="menu-item">Thời trang</p></a>
                                             <div className="submenu">
-                                                {
-                                                    this.props.items.map((item, idx) => {
-                                                        return <MenuProduce items={item} key={idx} />
-                                                    })
-                                                }
-                                                 <MenuAds/>
+                                                <MenuProduce items={this.props.items} />
+                                                <MenuAds/>
                                             </div>
                                         </li>
                                         <li className="has-mega-menu second">
@@ -51,11 +43,7 @@ export default class Menu extends React.Component {
                                                 <i className="fa fa-bath img-submenu-mobile" aria-hidden="true"></i>
                                                 <p className="menu-item">Đồ gia dụng</p>	</a>
                                             <div className="submenu">
-                                                {
-                                                    this.props.items.map((item, idx) => {
-                                                        return <MenuProduce items={item} key={idx} />
-                                                    })
-                                                }
+                                                <MenuProduce items={this.props.items} />
                                                 <MenuAds/>
                                             </div>
                                         </li>
@@ -64,11 +52,7 @@ export default class Menu extends React.Component {
                                                 <i className="fa fa-futbol-o img-submenu-mobile" aria-hidden="true"></i>
                                                 <p className="menu-item">Thể thao</p></a>
                                             <div className="submenu">
-                                                {
-                                                    this.props.items.map((item, idx) => {
-                                                        return <MenuProduce items={item} key={idx} />
-                                                    })
-                                                }
+                                                <MenuProduce items={this.props.items} />
                                                 <MenuAds/>
                                             </div>
                                         </li>
@@ -77,12 +61,8 @@ export default class Menu extends React.Component {
                                                 <i className="fa fa-lemon-o img-submenu-mobile" aria-hidden="true"></i>
                                                 <p className="menu-item">Đồ cho bé</p></a>
                                             <div className="submenu">
-                                                {
-                                                    this.props.items.map((item, idx) => {
-                                                        return <MenuProduce items={item} key={idx} />
-                                                    })
-                                                }
-                                                 <MenuAds/>
+                                                <MenuProduce items={this.props.items} />
+                                                <MenuAds/>
                                             </div>
                                         </li>
                                         <li className="has-mega-menu second">
@@ -90,23 +70,15 @@ export default class Menu extends React.Component {
                                                 <i className="fa fa-microchip img-submenu-mobile" aria-hidden="true"></i>
                                                 <p className="menu-item">Phụ kiện</p></a>
                                             <div className="submenu">
-                                                {
-                                                    this.props.items.map((item, idx) => {
-                                                        return <MenuProduce items={item} key={idx} />
-                                                    })
-                                                }
-                                                 <MenuAds/>
+                                                <MenuProduce items={this.props.items} />
+                                                <MenuAds/>
                                             </div>
                                         </li>
                                         <li className="has-mega-menu second">
                                             <a href="#" title="">
                                                 <i className="fa fa-print img-submenu-mobile" aria-hidden="true"></i><p className="menu-item">Đồ gia dụng</p></a>
                                             <div className="submenu">
-                                                {
-                                                    this.props.items.map((item, idx) => {
-                                                        return <MenuProduce items={item} key={idx} />
-                                                    })
-                                                }
+                                                <MenuProduce items={this.props.items} />
                                                  <MenuAds/>
                                             </div>
                                         </li>
@@ -147,5 +119,3 @@ export default class Menu extends React.Component {
         )
     }
 }
-
-//

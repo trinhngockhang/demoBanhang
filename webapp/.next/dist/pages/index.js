@@ -16,10 +16,6 @@ var _jsx2 = require('babel-runtime/helpers/jsx');
 
 var _jsx3 = _interopRequireDefault(_jsx2);
 
-var _values = require('babel-runtime/core-js/object/values');
-
-var _values2 = _interopRequireDefault(_values);
-
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -46,17 +42,13 @@ var _react2 = _interopRequireDefault(_react);
 
 require('isomorphic-unfetch');
 
+var _store = require('../store');
+
+var _store2 = _interopRequireDefault(_store);
+
 var _layouts = require('../layouts');
 
 var _layouts2 = _interopRequireDefault(_layouts);
-
-var _Header = require('../components/Header');
-
-var _Header2 = _interopRequireDefault(_Header);
-
-var _Footer = require('../components/SharedComponent/Footer');
-
-var _Footer2 = _interopRequireDefault(_Footer);
 
 var _Home = require('../components/Home');
 
@@ -72,8 +64,6 @@ function _interopRequireDefault(obj) {
 
 var _ref = (0, _jsx3.default)(_Advertisments2.default, {});
 
-var _ref2 = (0, _jsx3.default)(_Footer2.default, {});
-
 var Home = function (_React$Component) {
     (0, _inherits3.default)(Home, _React$Component);
 
@@ -85,41 +75,46 @@ var Home = function (_React$Component) {
     (0, _createClass3.default)(Home, [{
         key: 'render',
         value: function render() {
-            var items = (0, _values2.default)(this.props.json).map(function (s) {
-                return s;
-            });
-            return (0, _jsx3.default)(_layouts2.default, {}, void 0, (0, _jsx3.default)(_Header2.default, {
-                categoryLevel2: items
-            }), _ref, (0, _jsx3.default)(_Home2.default, {
+            return (0, _jsx3.default)(_layouts2.default, {}, void 0, _ref, (0, _jsx3.default)(_Home2.default, {
                 name: 'D\u1ECBch v\u1EE5',
-                produce: this.props.json
+                produce: this.props.ads
             }), (0, _jsx3.default)(_Home2.default, {
                 name: '\u0110i\u1EC7n t\u1EED',
-                produce: this.props.json
-            }), _ref2);
+                produce: this.props.ads
+            }));
         }
     }], [{
         key: 'getInitialProps',
         value: function () {
-            var _ref3 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
-                var res, json;
+            var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(_ref3) {
+                var store = _ref3.store;
+                var pageid, response, listId, id, result;
                 return _regenerator2.default.wrap(function _callee$(_context) {
                     while (1) {
                         switch (_context.prev = _context.next) {
                             case 0:
-                                _context.next = 2;
-                                return fetch('https://api.botbanhang.vn/v1/webapp/category?pageid=5a007c92c846cac15b53ab81&level=2&parent=5a008022c846cac15b53ab98');
+                                pageid = '5a007c92c846cac15b53ab81';
+                                _context.next = 3;
+                                return fetch('https://api.botbanhang.vn/v1/webapp/category?pageid=' + pageid + '&level=1').then(function (r) {
+                                    return r.json();
+                                });
 
-                            case 2:
-                                res = _context.sent;
-                                _context.next = 5;
-                                return res.json();
+                            case 3:
+                                response = _context.sent;
+                                listId = response.data.map(function (s) {
+                                    return s.id;
+                                });
+                                id = listId[0];
+                                _context.next = 8;
+                                return fetch('https://api.botbanhang.vn/v1/webapp/category?pageid=' + pageid + '&level=2&parent=' + id).then(function (r) {
+                                    return r.json();
+                                });
 
-                            case 5:
-                                json = _context.sent;
-                                return _context.abrupt('return', { json: json });
+                            case 8:
+                                result = _context.sent;
+                                return _context.abrupt('return', { ads: result.data });
 
-                            case 7:
+                            case 10:
                             case 'end':
                                 return _context.stop();
                         }
@@ -127,8 +122,8 @@ var Home = function (_React$Component) {
                 }, _callee, this);
             }));
 
-            function getInitialProps() {
-                return _ref3.apply(this, arguments);
+            function getInitialProps(_x) {
+                return _ref2.apply(this, arguments);
             }
 
             return getInitialProps;
@@ -137,5 +132,5 @@ var Home = function (_React$Component) {
     return Home;
 }(_react2.default.Component);
 
-exports.default = Home;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJIb21lIiwiaXRlbXMiLCJwcm9wcyIsImpzb24iLCJtYXAiLCJzIiwiZmV0Y2giLCJyZXMiLCJDb21wb25lbnQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBQ0E7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7Ozs7Ozs7Ozs7O0lBRU0sQTs7Ozs7Ozs7OztpQ0FNTyxBQUNMO2dCQUFNLDhCQUFzQixLQUFBLEFBQUssTUFBbkIsQUFBeUIsTUFBekIsQUFBK0IsSUFBSSxhQUFBO3VCQUFBLEFBQUs7QUFBdEQsQUFBYyxBQUNkLGFBRGM7O2dDQUNkLEFBRWdDO0FBRmhDO3NCQUFBLEFBSXNCO3lCQUFtQixLQUFBLEFBQUssTUFKOUMsQUFJb0Q7QUFKcEQ7c0JBQUEsQUFLc0I7eUJBQW1CLEtBQUEsQUFBSyxNQUw5QyxBQUtvRDtBQUxwRCxnQkFTSDs7Ozs7Ozs7Ozs7O3VDQWZxQixNQUFBLEFBQU0sQTs7aUNBQWxCO0E7O3VDQUNhLElBQUEsQUFBSSxBOztpQ0FBakI7QTtpRUFDQyxFQUFFLE1BQUYsQTs7Ozs7Ozs7Ozs7Ozs7Ozs7O0VBSkksZ0JBQU0sQTs7a0JBb0JWLEEiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiRDovZGVtb0Jhbmhhbmcvd2ViYXBwIn0=
+exports.default = (0, _store2.default)(null, null)(Home);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJIb21lIiwicHJvcHMiLCJhZHMiLCJzdG9yZSIsInBhZ2VpZCIsImZldGNoIiwidGhlbiIsInIiLCJqc29uIiwicmVzcG9uc2UiLCJsaXN0SWQiLCJkYXRhIiwibWFwIiwicyIsImlkIiwicmVzdWx0IiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBQ0E7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7Ozs7Ozs7Ozs7SUFFTSxBOzs7Ozs7Ozs7O2lDQVVPLEFBQ0w7O3NCQUFBLEFBR3NCO3lCQUFtQixLQUFBLEFBQUssTUFIOUMsQUFHb0Q7QUFIcEQ7c0JBQUEsQUFJc0I7eUJBQW1CLEtBQUEsQUFBSyxNQUo5QyxBQUlvRCxBQUd2RDtBQVBHOzs7Ozs7b0IsQUFWMkIsYyxBQUFBOzs7OztpQ0FDckI7QSx5Q0FBUyxBOztzR0FDUSxBQUE2RCxxQkFBN0QsQUFBK0UsS0FBSyxhQUFBOzJDQUFLLEVBQUwsQUFBSyxBQUFFO0EsQUFBM0YsaUNBQUE7O2lDQUFqQjtBLG9EQUNBO0Esa0RBQVMsQUFBUyxLQUFULEFBQWMsSUFBSSxhQUFBOzJDQUFLLEVBQUwsQUFBTztBQUF6QixBLEFBQ1QsaUNBRFM7QSxxQ0FDSixPQUFPLEEsQUFBUDs7c0dBQ1UsQUFBNkQsOEJBQTdELEFBQXNGLElBQXRGLEFBQTRGLEtBQUssYUFBQTsyQ0FBSyxFQUFMLEFBQUssQUFBRTtBQUF4RyxBLGlDQUFBOztpQ0FBZjtBO2lFQUNDLEVBQUUsS0FBSyxPQUFQLEEsQUFBYzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0VBUFYsZ0IsQUFBTTs7a0JBcUJWLHFCQUFBLEFBQVEsTUFBUixBQUFjLE1BQWQsQUFBb0IsQSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiJEOi9kZW1vQmFuaGFuZy93ZWJhcHAifQ==

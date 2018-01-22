@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 class MenuProduce extends React.Component {
     shouldComponentUpdate(nextProps) {
@@ -17,7 +18,7 @@ class MenuProduce extends React.Component {
                                 <a className="home-category-list__category-grid" href="">
                                     <div className="home-category-list__category-grid-content">
                                         <div className="lazy-image__container home-category-list__category-grid-thumbnail">
-                                            <a href={`/product/${item.id}`}><img className="lazy-image__image" src={item.image_url}/></a>
+                                            <Link href={{ pathname: '/sanpham', query: { id: item.id } }}><img className="lazy-image__image" src={item.image_url}/></Link>
                                         </div>
                                         <div className="home-category-list__category-grid-name">{item.title}</div>
                                     </div>

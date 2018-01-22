@@ -1,20 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Link from 'next/link';
 import Item from './Item';
 
 class IconCart extends React.Component {
     state = {
         success: false,
+        count: 0,
+        sub_total: 0,
     }
 
     componentDidMount() {
         if(JSON.parse(localStorage.getItem("item"))) {
             this.setState({ success: true });
         }
+        this.setState({count: localStorage.getItem("count"), sub_total: localStorage.getItem("sub_total")});
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({ success: true });
+        this.setState({count: localStorage.getItem("count"), sub_total: localStorage.getItem("sub_total")});
     }
 
     render() {
@@ -22,8 +26,8 @@ class IconCart extends React.Component {
             <div className="inner-box">
                 <a href="#" title="">
                     <div className="icon-cart">
-                        <img src="./images/icons/cart.png" alt="" />
-                        <span>{ localStorage.getItem("count") }</span>
+                        <img src="/static/images/icons/cart.png" alt="" />
+                        <span>{ this.state.count }</span>
                     </div>
                 </a>
                 <div className="dropdown-box mobile">
@@ -33,15 +37,22 @@ class IconCart extends React.Component {
                     </ul>
                     <div className="total">
                         <span>Subtotal:</span>
-                        <span className="price">{ localStorage.getItem("sub_total") }</span>
+                        <span className="price">{ this.state.sub_total }</span>
                     </div>
                     <div className="btn-cart">
-                        <a href="/cart" className="view-cart" title="">View Cart</a>
-                        <a href="/checkout" className="check-out" title="">Checkout</a>
+                        <Link href="/giohang" className="view-cart" title="">View Cart</Link>
+                        <Link href="/dathangonline" className="check-out" title="">Checkout</Link>
                     </div>
                 </div>
             </div>
         )
+    }
+}
+
+const mapStateToProps = state => {
+    return {
+        item: state.receiptReducers.item,
+        sub_total: state.receiptReducers.sub_total,
     }
 }
 

@@ -1,16 +1,21 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { loadAds } from '../../actions';
+import 'isomorphic-unfetch';
 import HeaderMobile from './HeaderMobile';
 import HeaderSuggestion from './HeaderSuggestion';
 import Menu from '../Menu';
-// import IconCart from './IconCart';
+import IconCart from './IconCart';
 
 class Header extends React.Component {
 
 	state = {
+		success: false,
 		isLogin: false,
 	}
 
 	componentDidMount() {
+		this.props.loadAds('5a007c92c846cac15b53ab81');
 		window.fbAsyncInit = function () {
 			FB.init({
 				appId: '553865588295754',
@@ -43,9 +48,9 @@ class Header extends React.Component {
 	// This is called with the results from from FB.getLoginStatus().
 	statusChangeCallback = (response) => {
 		if (response.status === 'connected') {
-			this.setState({isLogin: true})
+			this.setState({ isLogin: true })
 			this.testAPI();
-		} 
+		}
 	}
 	checkLoginState = () => {
 		FB.getLoginStatus(function (response) {
@@ -58,8 +63,19 @@ class Header extends React.Component {
 		FB.login(this.checkLoginState());
 	}
 
+	componentWillReceiveProps(nextProps) {
+		this.setState({ success: true });
+	}
+
+	shouldComponentUpdate(nextProps) {
+		if (nextProps.ads !== this.props.ads) {
+			return true;
+		}
+		return false;
+	}
+
 	render() {
-		const filter = this.state.isLogin ? null: "Đăng nhập";
+		const filter = this.state.isLogin ? null : "Đăng nhập";
 		return (
 			<div>
 				<section id="header" className="header">
@@ -162,9 +178,7 @@ class Header extends React.Component {
 												</div>
 														<ul>
 															{
-																this.props.categoryLevel2.map((s, idx) => {
-																	return <HeaderSuggestion items={s} key={idx}/>
-																})
+																this.state.success && <HeaderSuggestion items={this.props.ads} />
 															}
 														</ul>
 													</div>
@@ -205,13 +219,13 @@ class Header extends React.Component {
 								</div>
 								<div className="col-md-2 col-sm-3">
 									<div className="box-cart">
-										{/* <IconCart/>	 */}
+										<IconCart />
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<Menu items={this.props.categoryLevel2}/>
+					{ this.state.success && <Menu items={this.props.ads} /> }
 				</section>
 				<HeaderMobile />
 			</div>
@@ -219,5 +233,14 @@ class Header extends React.Component {
 	}
 }
 
+const mapStateToProps = state => {
+	return {
+		ads: state.advertisementReducer.ads,
+	}
+}
 
-export default Header;
+const mapDispatchToProps = ({
+	loadAds,
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -3,27 +3,36 @@ import { connect } from 'react-redux';
 
 class Receipt extends React.Component {
     state = {
-        shopBasket: JSON.parse(localStorage.getItem("item")),
-        sub_total: localStorage.getItem("sub_total"),
-        price_total: localStorage.getItem("price_total"), 
+        shopBasket: [],
+        sub_total: 0,
+        price_total: 0,
+    }
+
+    componentDidMount() {
+        this.setState({
+            shopBasket: JSON.parse(localStorage.getItem("item")),
+            sub_total: localStorage.getItem("sub_total"),
+            price_total: localStorage.getItem("price_total"),
+        })
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({ sub_total: localStorage.getItem("sub_total"), 
-                        price_total: localStorage.getItem("price_total"),
-                        shopBasket: JSON.parse(localStorage.getItem("item")) 
-                    });
+        this.setState({
+            sub_total: localStorage.getItem("sub_total"),
+            price_total: localStorage.getItem("price_total"),
+            shopBasket: JSON.parse(localStorage.getItem("item"))
+        });
     }
 
     handleClick = e => {
         e.preventDefault();
-		if(typeof localStorage["username"] == 'undefined') {
+        if (typeof localStorage["username"] == 'undefined') {
             alert("Bạn phải đăng nhập để đặt hàng");
-        }else {
+        } else {
             alert("Đặt hàng thành công");
         }
     }
-    
+
     render() {
         return (
             <div className="col-md-5">
@@ -38,12 +47,12 @@ class Receipt extends React.Component {
                         </thead>
                         <tbody>
                             {
-                                this.state.shopBasket.map((e,idx) => {
+                                this.state.shopBasket.map((e, idx) => {
                                     return (
                                         <tr>
-                                            <td>{ e.title }</td>
-                                            <td>{ e.price }</td>
-                                        </tr>     
+                                            <td>{e.title}</td>
+                                            <td>{e.price}</td>
+                                        </tr>
                                     )
                                 })
                             }
@@ -53,7 +62,7 @@ class Receipt extends React.Component {
                         <tbody>
                             <tr>
                                 <td>Tổng</td>
-                                <td className="subtotal">{ this.state.sub_total }</td>
+                                <td className="subtotal">{this.state.sub_total}</td>
                             </tr>
                             <tr>
                                 <td>Tiền ship</td>
@@ -73,7 +82,7 @@ class Receipt extends React.Component {
                             </tr>
                             <tr>
                                 <td>Tổng tiền</td>
-                                <td className="price-total">{ this.state.price_total }</td>
+                                <td className="price-total">{this.state.price_total}</td>
                             </tr>
                         </tbody>
                     </table>
