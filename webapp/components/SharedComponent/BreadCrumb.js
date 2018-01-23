@@ -10,7 +10,7 @@ const BreadCrumb = () => {
                         <div className="col-md-12">
                             <ul className="breadcrumbs">
                                 <li className="trail-item">
-                                    <Link href="/" title="Mesi.vn - Mua sắm online">Trang chủ</Link>
+                                    <a href="/" title="Mesi.vn - Mua sắm online">Trang chủ</a>
                                     <span><img src="/static/images/icons/arrow-right.png" alt="Mesi.vn - Mua sắn online" /></span>
                                 </li>
                                 <li className="trail-item">
