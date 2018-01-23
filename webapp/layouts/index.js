@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/SharedComponent/Footer';
 
 
-export default ({ children, title = 'Mesi.vn-Mua sắm online', description = 'mua hang online' }) => {
+export default ({ children, title = 'Mesi.vn-Mua sắm online', description = 'Lễ hội mua sắm Tết Nguyên Đán - Mua Lễ hội mua sắm Tết Nguyên Đán ở giá tốt nhất Vietnam | https://box.mesi.vn' }) => {
     return (
         <div>
             <Head>
@@ -13,6 +13,8 @@ export default ({ children, title = 'Mesi.vn-Mua sắm online', description = 'm
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>{title}</title>
                 <meta name="description" content={description} />
+                <meta name="robots" content="noindex,follow" />
+                <meta property="fb:admins" content="553865588295754"/>
                 <link rel="stylesheet" href="/static/minify/bootstrap.min.css" />
                 <link rel="stylesheet" href="/static/stylesheets/style.css" />
                 <link rel="stylesheet" href="/static/stylesheets/responsive.css" />
@@ -30,6 +32,8 @@ export default ({ children, title = 'Mesi.vn-Mua sắm online', description = 'm
                 <script type="text/javascript" src="/static/minify/jquery.countdown.js" defer></script>
 
                 <script type="text/javascript" src="/static/minify/main.js" defer></script>
+                <meta property="og:title" content={title} />
+                  
             </Head>
             <Header/>
             {children}
