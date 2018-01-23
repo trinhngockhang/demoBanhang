@@ -10,8 +10,9 @@ class Product extends React.Component {
         return { product: item.data }
     }
     render() {
+        var description="Mua ngay"+ this.props.title + "chính hãng giá tốt tại box.mesi.vn. Mua hàng online giá rẻ, bảo hành chính hãng, giao hàng tận nơi, thanh toán khi giao hàng!";
         return (
-            <PageWrapper title={ this.props.product.title }>
+            <PageWrapper title={ this.props.product.title } description={ description }>
                 <ProductContent product={this.props.product}/>
             </PageWrapper>
         )
